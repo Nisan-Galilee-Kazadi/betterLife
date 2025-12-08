@@ -7,3 +7,34 @@
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   background-color: #f8fafc;
 }
+
+.nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  background-position: 0 100%;
+  transition: background-size 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.nav-link:hover {
+  background-size: 100% 2px;
+}
+
+.nav-link.is-active {
+  background-size: 100% 2px;
+  color: #0f70b7;
+  background-image: linear-gradient(#0f70b7, #0f70b7);
+}
+
+.nav-link:focus,
+.nav-link:active,
+.nav-link:focus-visible {
+  outline: none;
+  color: #63b32e !important;
+  background-image: linear-gradient(#63b32e, #63b32e);
+  background-size: 100% 2px;
+}

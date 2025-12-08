@@ -1,62 +1,20 @@
 import { useEffect, useState } from 'react'
-import { NavLink, Routes, Route, Link } from 'react-router-dom'
+import { NavLink, Routes, Route, Link, useLocation } from 'react-router-dom'
 import logoOfficial from './images/cropped-Logo-betterlife-officiel.png'
 import logoWhite from './images/Logo-betterlife-officiel-Blanc-300x300.png'
-
-const services = [
-  {
-    title: 'Culture de Cacaoyer',
-    desc: 'Production, encadrement des producteurs, formation, suivi des plantations, valorisation locale…',
-  },
-  {
-    title: 'Reboisement & Environnement',
-    desc: 'Programmes de reboisement, restauration des sols, lutte contre la déforestation…',
-  },
-  {
-    title: 'Crédit Carbone',
-    desc: 'Introduction au marché carbone, méthode de calcul, accompagnement, certificats…',
-  },
-  {
-    title: 'Projets Communautaires',
-    desc: 'Santé, éducation, accès à l’eau, développement rural participatif…',
-  },
-  {
-    title: 'Contrats de Préachat de Cacao',
-    desc: 'Modèle, partenaires, garanties aux producteurs, fonctionnement…',
-  },
-  {
-    title: 'Équipements Agricoles',
-    desc: 'Location, vente, maintenance, accompagnement à l’utilisation…',
-  },
-]
-
-const joinCards = [
-  { title: 'Producteurs', desc: 'Accompagnement technique, accès aux intrants, valorisation des récoltes.' },
-  { title: 'Partenaires', desc: 'ONG, entreprises, bailleurs : co-construction de projets à impact.' },
-  { title: 'Bénévoles / Stagiaires', desc: 'Opérations terrain, logistique, communication, recherche.' },
-]
-
-const blogItems = [
-  { title: 'Programme cacao durable 2025', tag: 'Formation', date: 'Jan 2025' },
-  { title: 'Lancement d’un nouveau projet communautaire', tag: 'Communauté', date: 'Dec 2024' },
-  { title: 'Guide pratique crédit carbone', tag: 'Carbone', date: 'Nov 2024' },
-]
-
-function SectionTitle({ kicker, title, children }) {
-  return (
-    <div className="space-y-3">
-      <p className="text-xs font-semibold uppercase tracking-[0.3em] text-sky-600">{kicker}</p>
-      <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">{title}</h2>
-      {children ? <div className="text-lg text-slate-600">{children}</div> : null}
-    </div>
-  )
-}
+import AccueilPage from './pages/Accueil.jsx'
+import DomainesPage from './pages/Domaines.jsx'
+import ProjetsPage from './pages/Projets.jsx'
+import RejoindrePage from './pages/Rejoindre.jsx'
+import BlogPage from './pages/Blog.jsx'
+import ContactPage from './pages/Contact.jsx'
 
 function Shell({ children }) {
   const [showTopBar, setShowTopBar] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [isDesktop, setIsDesktop] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -83,6 +41,11 @@ function Shell({ children }) {
     return () => media.removeEventListener('change', handler)
   }, [])
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+    setMobileOpen(false)
+  }, [location.pathname])
+
   const links = [
     { to: '/', label: 'Accueil' },
     { to: '/domaines', label: 'Domaines d’action' },
@@ -92,7 +55,7 @@ function Shell({ children }) {
     { to: '/contact', label: 'Contact' },
   ]
 
-  const headerHeight = isDesktop && showTopBar ? 112 : 72
+  const headerHeight = isDesktop ? (showTopBar ? 88 : 68) : 64
 
   return (
     <div className="bg-slate-50 text-slate-900">
@@ -118,9 +81,9 @@ function Shell({ children }) {
         className="sticky z-20 border-b border-slate-200 bg-white/90 backdrop-blur transition-all duration-200"
         style={{ top: isDesktop && showTopBar ? 32 : 0 }}
       >
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-2.5">
           <Link to="/" className="flex items-center gap-2">
-            <img src={logoOfficial} alt="Better Life" className="h-12 w-auto" />
+            <img src={logoOfficial} alt="Better Life" className="h-14 w-auto" />
           </Link>
           <nav className="hidden flex-wrap items-center gap-2 text-sm md:flex">
             {links.map((link) => (
@@ -130,10 +93,10 @@ function Shell({ children }) {
                 onClick={() => setMobileOpen(false)}
                 className={({ isActive }) =>
                   [
-                    'rounded-lg px-3 py-1.5 font-semibold transition',
+                    'nav-link rounded-lg px-3 py-1.5 font-semibold transition',
                     isActive
-                      ? 'bg-sky-600 text-white shadow-sm'
-                      : 'text-slate-700 hover:text-sky-700 hover:bg-slate-100',
+                      ? 'bg-sky-50 text-slate-900 is-active'
+                      : 'text-slate-700 hover:text-sky-700 hover:bg-slate-50',
                   ].join(' ')
                 }
               >
@@ -150,15 +113,15 @@ function Shell({ children }) {
               Faire un don
             </Link>
             <button
-              className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 text-slate-800 shadow-sm transition hover:bg-slate-100 md:hidden"
+              className="inline-flex h-14 w-14 items-center justify-center rounded-lg border border-slate-200 text-slate-800 shadow-sm transition hover:bg-slate-100 md:hidden"
               onClick={() => setMobileOpen((v) => !v)}
               aria-label="Ouvrir le menu"
             >
               <span className="sr-only">Menu</span>
-              <div className="space-y-1.5">
-                <span className="block h-0.5 w-6 bg-slate-800" />
-                <span className="block h-0.5 w-6 bg-slate-800" />
-                <span className="block h-0.5 w-6 bg-slate-800" />
+              <div className="space-y-2.5">
+                <span className="block h-[3px] w-8 bg-slate-800" />
+                <span className="block h-[3px] w-8 bg-slate-800" />
+                <span className="block h-[3px] w-8 bg-slate-800" />
               </div>
             </button>
           </div>
@@ -176,10 +139,10 @@ function Shell({ children }) {
                 onClick={() => setMobileOpen(false)}
                 className={({ isActive }) =>
                   [
-                    'rounded-lg px-3 py-2 font-semibold transition',
+                    'nav-link rounded-lg px-3 py-2 font-semibold transition',
                     isActive
-                      ? 'bg-sky-600 text-white shadow-sm'
-                      : 'text-slate-700 hover:text-sky-700 hover:bg-slate-100',
+                      ? 'bg-sky-50 text-slate-900 is-active'
+                      : 'text-slate-700 hover:text-sky-700 hover:bg-slate-50',
                   ].join(' ')
                 }
               >
@@ -265,7 +228,7 @@ function Shell({ children }) {
           </div>
         </div>
         <div className="border-t border-white/20 bg-black/10">
-          <div className="mx-auto max-w-6xl px-6 py-4 text-xs text-white/70">
+          <div className="mx-auto max-w-6xl px-6 py-4 text-xs text-white/70 text-center">
             © {new Date().getFullYear()} Better Life — Tous droits réservés.
           </div>
         </div>
@@ -277,7 +240,7 @@ function Shell({ children }) {
 function AccueilPage() {
   return (
     <div className="bg-gradient-to-br from-sky-50 via-white to-slate-50">
-      <div className="mx-auto max-w-6xl px-6 py-16 sm:py-24">
+      <div className="mx-auto max-w-6xl px-6 py-10 sm:py-12">
         <div className="grid gap-10 lg:grid-cols-[1.2fr,0.8fr]">
           <div className="space-y-6">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-sky-600">Better Life</p>
@@ -345,7 +308,7 @@ function AccueilPage() {
 
 function DomainesPage() {
   return (
-    <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+    <div className="mx-auto max-w-6xl px-6 py-10 sm:py-14">
       <SectionTitle kicker="Nos domaines d’action" title="6 leviers d’impact" />
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((item) => (
@@ -383,7 +346,7 @@ function DomainesPage() {
 function ProjetsPage() {
   return (
     <div className="bg-white">
-      <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+      <div className="mx-auto max-w-6xl px-6 py-10 sm:py-14">
         <SectionTitle kicker="Nos projets" title="En cours et réalisés">
           Présentation synthétique des projets, leurs localisations et retours d’expérience.
         </SectionTitle>
@@ -430,7 +393,7 @@ function ProjetsPage() {
 
 function RejoindrePage() {
   return (
-    <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+    <div className="mx-auto max-w-6xl px-6 py-10 sm:py-14">
       <SectionTitle kicker="Rejoindre le mouvement" title="3 portes d’entrée" />
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {joinCards.map((card) => (
@@ -473,7 +436,7 @@ function RejoindrePage() {
 function BlogPage() {
   return (
     <div className="bg-white">
-      <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+      <div className="mx-auto max-w-6xl px-6 py-6 sm:py-10">
         <SectionTitle kicker="Actualités / Blog" title="Articles et annonces" />
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {blogItems.map((item) => (
@@ -510,7 +473,7 @@ function BlogPage() {
 function ContactPage() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-sky-50 via-white to-slate-50">
-      <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+      <div className="mx-auto max-w-6xl px-6 py-10 sm:py-14">
         <div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr]">
           <div className="space-y-6">
             <SectionTitle kicker="Contact & suivi" title="Restons en lien">
