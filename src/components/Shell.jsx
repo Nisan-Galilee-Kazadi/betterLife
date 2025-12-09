@@ -95,7 +95,7 @@ function NavItem({ item, depth = 0, isScrolled }) {
         // Main Nav Item styling
         linkClass += ''
 
-        const baseStyle = "flex items-center gap-0.5 px-4 py-2.5 rounded-lg border-b-[3px] transition-all duration-200"
+        const baseStyle = "flex items-center gap-0.5 px-4 py-2.5 rounded-md border-b-[3px] transition-all duration-200"
 
         if (isActive) {
             // Active State / Focus -> GREEN
@@ -150,7 +150,7 @@ function NavItem({ item, depth = 0, isScrolled }) {
 
             {hasChildren && isOpen && (
                 <div
-                    className={`absolute z-50 min-w-[220px] border border-slate-100 bg-white py-2 shadow-xl ring-1 ring-black/5 rounded-xl
+                    className={`absolute z-50 min-w-[220px] border border-slate-100 bg-white py-2 shadow-xl ring-1 ring-black/5 rounded-lg
             ${depth === 0
                             ? 'left-0 top-full mt-0 origin-top-left'
                             : 'left-full top-0 ml-1 origin-top-left'
@@ -267,7 +267,7 @@ export function Shell({ children }) {
         <div className="flex min-h-screen flex-col font-sans">
             {/* Top Bar */}
             <div
-                className={`fixed top-0 -mb-10 z-40 w-full transition-transform duration-300 ${showTopBar ? 'translate-y-0' : '-translate-y-full'
+                className={`fixed top-0 z-40 w-full transition-transform duration-300 ${showTopBar ? 'translate-y-0' : '-translate-y-full'
                     }`}
                 style={{ backgroundColor: '#63b32e' }}
             >
@@ -302,7 +302,7 @@ export function Shell({ children }) {
                 className={`fixed z-30 w-full transition-all duration-300 top-0  ${headerBgClass}`}
                 style={{ top: showTopBar ? 32 : 0 }}
             >
-                <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-0 mt-0">
+                <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-0">
                     <Link to="/" className="flex items-center gap-2">
                         <img src={logoSrc} alt="Better Life" className="h-16 w-auto transition-all duration-300 sm:h-24" />
                     </Link>
