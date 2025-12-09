@@ -300,7 +300,7 @@ export function Shell({ children }) {
             {/* Navbar */}
             <header
                 className={`fixed z-30 w-full transition-all duration-300 top-0  ${headerBgClass}`}
-                style={{ top: showTopBar ? 32 : 0 }}
+                style={{ top: showTopBar ? 28 : 0 }}
             >
                 <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-0">
                     <Link to="/" className="flex items-center gap-2">
@@ -330,11 +330,11 @@ export function Shell({ children }) {
                             className={`lg:hidden ${isScrolled ? 'text-slate-800' : 'text-white'}`}
                             onClick={() => setMobileOpen(!mobileOpen)}
                         >
-                            <span className="sr-only">Menu</span>
-                            <div className="space-y-1.5">
-                                <span className="block h-0.5 w-6 bg-current" />
-                                <span className="block h-0.5 w-6 bg-current" />
-                                <span className="block h-0.5 w-6 bg-current" />
+                            <span className="sr-only">{mobileOpen ? 'Fermer le menu' : 'Ouvrir le menu'}</span>
+                            <div className="relative h-6 w-6">
+                                <span className={`absolute left-0 block h-0.5 w-6 bg-current transition-all duration-300 ${mobileOpen ? 'top-1/2 rotate-45' : 'top-0 rotate-0'}`} />
+                                <span className={`absolute top-1/2 left-0 block h-0.5 w-6 bg-current transition-all duration-300 ${mobileOpen ? 'opacity-0' : 'opacity-100'}`} />
+                                <span className={`absolute left-0 block h-0.5 w-6 bg-current transition-all duration-300 ${mobileOpen ? 'top-1/2 -rotate-45' : 'top-full rotate-0'}`} />
                             </div>
                         </button>
                     </div>
@@ -342,10 +342,10 @@ export function Shell({ children }) {
 
                 {/* Mobile Menu */}
                 <div
-                    className={`absolute left-0 top-full w-full overflow-hidden bg-white shadow-xl transition-all duration-300 lg:hidden ${mobileOpen ? 'max-h-[85vh] opacity-100 overflow-y-auto' : 'max-h-0 opacity-0'
+                    className={`absolute left-0 top-full w-full overflow-hidden shadow-xl transition-all duration-300 lg:hidden ${mobileOpen ? 'max-h-[85vh] opacity-100 overflow-y-auto' : 'max-h-0 opacity-0'} ${isScrolled ? 'bg-white' : 'bg-white/10 backdrop-blur-md'}
                         }`}
                 >
-                    <div className="flex flex-col text-slate-800">
+                    <div className={`flex flex-col ${isScrolled ? 'text-slate-800' : 'text-white'}`}>
                         {navigation.map((item) => (
                             <MobileNavItem key={item.name} item={item} setMobileOpen={setMobileOpen} />
                         ))}

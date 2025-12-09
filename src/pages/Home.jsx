@@ -1,21 +1,70 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { SectionTitle } from '../components/SectionTitle'
-import heroImage from '../images/hero_clean.png'
+import heroImage1 from '../images/hero_clean.png'
+import heroImage2 from '../images/hero_agriculture.png'
+import heroImage3 from '../images/hero_reforestation.png'
 
 export function Home() {
+    const [currentSlide, setCurrentSlide] = useState(0)
+    const heroImages = [
+        { src: heroImage1, alt: 'Plantation de cacao durable' },
+        { src: heroImage2, alt: 'Agriculture durable au Congo' },
+        { src: heroImage3, alt: 'Reboisement et reforestation' },
+    ]
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % heroImages.length)
+        }, 3000) // Change every 3 seconds
+        return () => clearInterval(interval)
+    }, [])
+
+    const nextSlide = () => {
+        setCurrentSlide((prev) => (prev + 1) % heroImages.length)
+    }
+
+    const prevSlide = () => {
+        setCurrentSlide((prev) => (prev - 1 + heroImages.length) % heroImages.length)
+    }
+
     return (
         <div className="bg-white">
             {/* Hero Section - Full height or near full height */}
             <div className="relative isolate flex min-h-[90vh] items-center justify-center overflow-hidden">
-                <img
-                    src={heroImage}
-                    alt="Plantation de cacao durable"
-                    className="absolute inset-0 -z-10 h-full w-full object-cover brightness-[0.6]" // Increased brightness slightly for "cleaner" look, but still dark enough for text
-                />
+                {/* Carousel Images */}
+                {heroImages.map((image, index) => (
+                    <img
+                        key={index}
+                        src={image.src}
+                        alt={image.alt}
+                        className={`absolute inset-0 -z-10 h-full w-full object-cover brightness-[0.6] transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'
+                            }`}
+                    />
+                ))}
 
                 {/* Gradient overlay for text readability */}
                 <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/60 via-black/20 to-black/40" />
+
+                {/* Navigation Buttons - Show on hover */}
+                <button
+                    onClick={prevSlide}
+                    className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm p-3 rounded-full text-white hover:bg-white/30 transition-all hidden md:block md:opacity-0 md:hover:opacity-100 z-10"
+                    aria-label="Image précédente"
+                >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button
+                    onClick={nextSlide}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm p-3 rounded-full text-white hover:bg-white/30 transition-all hidden md:block md:opacity-0 md:hover:opacity-100 z-10"
+                    aria-label="Image suivante"
+                >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
 
                 <div className="mx-auto max-w-5xl px-6 py-32 text-center lg:py-48">
                     <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl drop-shadow-sm">
@@ -25,14 +74,14 @@ export function Home() {
                         Notre mission est de protéger l'environnement, la biodiversité, lutter pour la conservation de la nature,
                         le bien-être de la population ainsi que la promotion de la sécurité alimentaire.
                     </p>
-                    <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6">
+                    <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6">
                         <Link
                             to="/domaines"
-                            className="rounded-full bg-[#63b32e] px-8 py-3.5 text-base font-semibold text-white shadow-lg transition hover:bg-[#529624] hover:scale-105"
+                            className="rounded-md bg-[#63b32e] px-8 py-3.5 text-base font-semibold text-white shadow-lg transition hover:bg-[#529624] hover:brightness-110"
                         >
                             Découvrir nos actions
                         </Link>
-                        <Link to="/contact" className="rounded-full bg-white/10 px-8 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition hover:bg-white/20">
+                        <Link to="/contact" className="rounded-md bg-white/10 px-8 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition hover:bg-white/20">
                             Nous contacter <span aria-hidden="true">→</span>
                         </Link>
                     </div>
