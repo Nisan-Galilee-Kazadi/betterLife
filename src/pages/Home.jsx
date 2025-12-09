@@ -25,7 +25,7 @@ export function Home() {
                         Notre mission est de protéger l'environnement, la biodiversité, lutter pour la conservation de la nature,
                         le bien-être de la population ainsi que la promotion de la sécurité alimentaire.
                     </p>
-                    <div className="mt-10 flex items-center justify-center gap-x-6">
+                    <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6">
                         <Link
                             to="/domaines"
                             className="rounded-full bg-[#63b32e] px-8 py-3.5 text-base font-semibold text-white shadow-lg transition hover:bg-[#529624] hover:scale-105"
