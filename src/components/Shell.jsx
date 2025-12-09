@@ -1,8 +1,18 @@
 import { useEffect, useState, useRef } from 'react'
 import { NavLink, Link, useLocation } from 'react-router-dom'
-import { FaFacebook, FaLinkedin, FaTwitter, FaYoutube, FaPlay } from 'react-icons/fa6'
+import { FaFacebook, FaLinkedin, FaYoutube, FaPlay, FaInstagram, FaTiktok, FaWhatsapp, FaXTwitter } from 'react-icons/fa6'
 import logoOfficial from '../images/cropped-Logo-betterlife-officiel.png'
 import logoWhite from '../images/Logo-betterlife-officiel-Blanc-300x300.png'
+
+const socialLinks = [
+    { icon: FaFacebook, href: 'https://facebook.com/betterlife-ong', color: 'bg-[#1877F2]' },
+    { icon: FaXTwitter, href: '#', color: 'bg-black' },
+    { icon: FaLinkedin, href: '#', color: 'bg-[#0077b5]' },
+    { icon: FaYoutube, href: 'https://youtube.com/@betterlife-ong', color: 'bg-[#FF0000]' },
+    { icon: FaInstagram, href: '#', color: 'bg-[#E1306C]' },
+    { icon: FaTiktok, href: '#', color: 'bg-[#000000]' },
+    { icon: FaWhatsapp, href: '#', color: 'bg-[#25D366]' },
+]
 
 const navigation = [
     { name: 'Accueil', to: '/' },
@@ -74,33 +84,52 @@ function NavItem({ item, depth = 0, isScrolled }) {
     }, [location.pathname])
 
     const hasChildren = item.children && item.children.length > 0
-
-    // Styles based on depth and scroll
-    // Depth 0: Main Nav (Horizontal)
-    // Depth 1: Standard Dropdown (Vertical, below parent)
-    // Depth 2+: Flyout (Vertical, right of parent)
-
     const isActive = location.pathname.startsWith(item.to) && (item.to !== '/' || location.pathname === '/')
 
-    // Text Colors
-    let textColorClass = ''
+    // Base Text Colors & Styles
+    let containerClass = ''
+    let linkClass = 'block whitespace-nowrap text-sm font-bold transition-colors duration-200'
+    let iconClass = 'transition-transform duration-200'
+
     if (depth === 0) {
-        if (isScrolled) {
-            textColorClass = isActive ? 'text-[#63b32e]' : 'text-slate-700 hover:text-[#63b32e]'
+        // Main Nav Item styling
+        linkClass += ''
+
+        const baseStyle = "flex items-center gap-0.5 px-4 py-2.5 rounded-lg border-b-[3px] transition-all duration-200"
+
+        if (isActive) {
+            // Active State / Focus -> GREEN
+            const activeClass = isScrolled
+                ? 'bg-[#63b32e]/10 border-[#63b32e] text-[#63b32e]'
+                : 'bg-[#63b32e]/10 border-[#63b32e] text-[#63b32e]'
+
+            containerClass = `${baseStyle} ${activeClass}`
         } else {
-            textColorClass = isActive ? 'text-white' : 'text-white/90 hover:text-white'
+            // Inactive State
+            const textColor = isScrolled ? 'text-slate-700' : 'text-white/90'
+
+            // Hover -> BLUE
+            const hoverClass = isScrolled
+                ? 'hover:bg-[#0f70b7]/10 hover:border-[#0f70b7] hover:text-[#0f70b7]'
+                : 'hover:bg-[#63b32e]/10 hover:border-[#63b32e] hover:text-[#63b32e]'
+
+            containerClass = `${baseStyle} border-transparent ${textColor} ${hoverClass}`
         }
     } else {
-        // Dropdown items
-        textColorClass = isActive ? 'text-[#63b32e]' : 'text-slate-700 hover:text-[#63b32e]'
+        // Dropdown Items
+        containerClass = "flex items-center justify-between w-full px-4 py-2 hover:bg-slate-50 text-slate-700 hover:text-[#0f70b7]"
+        linkClass += " w-full"
+        if (isActive) {
+            linkClass += " text-[#63b32e]"
+        }
     }
 
     return (
         <div className="relative group" ref={ref}>
-            <div className={`flex items-center ${depth === 0 ? 'gap-1' : 'justify-between w-full'}`}>
+            <div className={containerClass}>
                 <Link
                     to={item.to}
-                    className={`block whitespace-nowrap py-2 text-sm font-semibold transition ${textColorClass} ${depth > 0 ? 'px-4 w-full' : 'px-3 rounded-sm'}`}
+                    className={linkClass}
                 >
                     {item.name}
                 </Link>
@@ -109,26 +138,26 @@ function NavItem({ item, depth = 0, isScrolled }) {
                     <button
                         onClick={(e) => {
                             e.preventDefault()
-                            e.stopPropagation() // Prevent link click if nested inside
+                            e.stopPropagation()
                             setIsOpen(!isOpen)
                         }}
-                        className={`p-1 transition-transform ${textColorClass} ${isOpen ? 'rotate-90' : ''}`}
+                        className={`p-1.5 ${iconClass} ${isOpen ? 'rotate-90' : ''}`}
                     >
-                        <FaPlay className={`${depth === 0 ? 'h-2 w-2' : 'h-2 w-2'}`} />
+                        <FaPlay className={`${depth === 0 ? 'h-2.5 w-2.5' : 'h-2.5 w-2.5'}`} />
                     </button>
                 )}
             </div>
 
             {hasChildren && isOpen && (
                 <div
-                    className={`absolute z-50 min-w-[200px] border border-slate-100 bg-white py-2 shadow-xl ring-1 ring-black/5 rounded-xl
+                    className={`absolute z-50 min-w-[220px] border border-slate-100 bg-white py-2 shadow-xl ring-1 ring-black/5 rounded-xl
             ${depth === 0
-                            ? 'left-0 top-full mt-2 origin-top-left' // L1 Dropdown
-                            : 'left-full top-0 ml-1 origin-top-left' // L2+ Flyout
+                            ? 'left-0 top-full mt-0 origin-top-left'
+                            : 'left-full top-0 ml-1 origin-top-left'
                         }`}
                 >
                     {item.children.map((child) => (
-                        <NavItem key={child.name} item={child} depth={depth + 1} isScrolled={true} /> // Children always "scrolled" style (white bg)
+                        <NavItem key={child.name} item={child} depth={depth + 1} isScrolled={true} />
                     ))}
                 </div>
             )}
@@ -238,7 +267,7 @@ export function Shell({ children }) {
         <div className="flex min-h-screen flex-col font-sans">
             {/* Top Bar */}
             <div
-                className={`fixed top-0 z-40 w-full transition-transform duration-300 ${showTopBar ? 'translate-y-0' : '-translate-y-full'
+                className={`fixed top-0 -mb-10 z-40 w-full transition-transform duration-300 ${showTopBar ? 'translate-y-0' : '-translate-y-full'
                     }`}
                 style={{ backgroundColor: '#63b32e' }}
             >
@@ -248,22 +277,38 @@ export function Shell({ children }) {
                         <span className="hidden h-3 w-px bg-white/50 sm:block" />
                         <span className="font-semibold">info@betterlife-ong.org</span>
                     </div>
-                    <div className="text-white/90">Engagés pour un avenir durable</div>
+
+                    {/* Social Icons (Reduced Size) */}
+                    <div className="hidden md:flex gap-1.5 transform scale-75">
+                        {socialLinks.map((social, index) => (
+                            <a
+                                key={index}
+                                href={social.href}
+                                target="_blank"
+                                rel="noreferrer"
+                                className={`${social.color} p-1.5 rounded-md text-white hover:brightness-110 transition`}
+                            >
+                                <social.icon className="h-3.5 w-3.5" />
+                            </a>
+                        ))}
+                    </div>
+
+                    <div className="text-white/90 hidden lg:block">Engagés pour un avenir durable</div>
                 </div>
             </div>
 
             {/* Navbar */}
             <header
-                className={`fixed z-30 w-full transition-all duration-300 ${headerBgClass}`}
+                className={`fixed z-30 w-full transition-all duration-300 top-0  ${headerBgClass}`}
                 style={{ top: showTopBar ? 32 : 0 }}
             >
-                <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
+                <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-0 mt-0">
                     <Link to="/" className="flex items-center gap-2">
-                        <img src={logoSrc} alt="Better Life" className="h-[0px] w-auto transition-all duration-300 sm:h-14" />
+                        <img src={logoSrc} alt="Better Life" className="h-16 w-auto transition-all duration-300 sm:h-24" />
                     </Link>
 
                     {/* Desktop Nav - Recursive */}
-                    <nav className="hidden items-center gap-2 lg:flex">
+                    <nav className="hidden items-center gap-1 lg:flex">
                         {navigation.map((item) => (
                             <NavItem key={item.name} item={item} isScrolled={isScrolled} />
                         ))}
@@ -273,7 +318,7 @@ export function Shell({ children }) {
                     <div className="flex items-center gap-4">
                         <Link
                             to="/contact"
-                            className={`hidden rounded-full px-5 py-2.5 text-sm font-semibold shadow-sm transition hover:brightness-110 lg:block ${isScrolled
+                            className={`hidden rounded-md px-5 py-2.5 text-sm font-semibold shadow-sm transition hover:brightness-110 lg:block ${isScrolled
                                 ? 'bg-[#63b32e] text-white'
                                 : 'bg-white text-[#63b32e] hover:bg-slate-100'
                                 }`}
@@ -331,11 +376,18 @@ export function Shell({ children }) {
                         <p className="text-white/80 leading-relaxed max-w-xs">
                             Protection de l'Environnement, Biodiversité, et Développement Durable en République Démocratique du Congo.
                         </p>
-                        <div className="flex gap-4">
-                            <a href="https://facebook.com/betterlife-ong" className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition"><FaFacebook className="h-5 w-5" /></a>
-                            <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition"><FaLinkedin className="h-5 w-5" /></a>
-                            <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition"><FaTwitter className="h-5 w-5" /></a>
-                            <a href="https://youtube.com/@betterlife-ong" className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition"><FaYoutube className="h-5 w-5" /></a>
+                        <div className="flex flex-wrap gap-2 text-white">
+                            {socialLinks.map((social, index) => (
+                                <a
+                                    key={index}
+                                    href={social.href}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition"
+                                >
+                                    <social.icon className="h-4 w-4" />
+                                </a>
+                            ))}
                         </div>
                     </div>
                     <div>
@@ -363,7 +415,7 @@ export function Shell({ children }) {
                         <ul className="space-y-3 text-white/80">
                             <li className="flex gap-3">
                                 <span className="font-semibold text-white">Adresse:</span>
-                                <span>ByPass, C/ Mon-Ngafula,<br />Kinshasa, RDC</span>
+                                <span className='w-[100%]'>ByPass, C/ Mont-Ngafula,Kinshasa, RDC</span>
                             </li>
                             <li className="flex gap-3">
                                 <span className="font-semibold text-white">Email:</span>
