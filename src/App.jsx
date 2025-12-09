@@ -2,12 +2,55 @@ import { useEffect, useState } from 'react'
 import { NavLink, Routes, Route, Link, useLocation } from 'react-router-dom'
 import logoOfficial from './images/cropped-Logo-betterlife-officiel.png'
 import logoWhite from './images/Logo-betterlife-officiel-Blanc-300x300.png'
-import AccueilPage from './pages/Accueil.jsx'
-import DomainesPage from './pages/Domaines.jsx'
-import ProjetsPage from './pages/Projets.jsx'
-import RejoindrePage from './pages/Rejoindre.jsx'
-import BlogPage from './pages/Blog.jsx'
-import ContactPage from './pages/Contact.jsx'
+
+const services = [
+  {
+    title: 'Culture de Cacaoyer',
+    desc: 'Production, encadrement des producteurs, formation, suivi des plantations, valorisation locale…',
+  },
+  {
+    title: 'Reboisement & Environnement',
+    desc: 'Programmes de reboisement, restauration des sols, lutte contre la déforestation…',
+  },
+  {
+    title: 'Crédit Carbone',
+    desc: 'Introduction au marché carbone, méthode de calcul, accompagnement, certificats…',
+  },
+  {
+    title: 'Projets Communautaires',
+    desc: 'Santé, éducation, accès à l’eau, développement rural participatif…',
+  },
+  {
+    title: 'Contrats de Préachat de Cacao',
+    desc: 'Modèle, partenaires, garanties aux producteurs, fonctionnement…',
+  },
+  {
+    title: 'Équipements Agricoles',
+    desc: 'Location, vente, maintenance, accompagnement à l’utilisation…',
+  },
+]
+
+const joinCards = [
+  { title: 'Producteurs', desc: 'Accompagnement technique, accès aux intrants, valorisation des récoltes.' },
+  { title: 'Partenaires', desc: 'ONG, entreprises, bailleurs : co-construction de projets à impact.' },
+  { title: 'Bénévoles / Stagiaires', desc: 'Opérations terrain, logistique, communication, recherche.' },
+]
+
+const blogItems = [
+  { title: 'Programme cacao durable 2025', tag: 'Formation', date: 'Jan 2025' },
+  { title: 'Lancement d’un nouveau projet communautaire', tag: 'Communauté', date: 'Dec 2024' },
+  { title: 'Guide pratique crédit carbone', tag: 'Carbone', date: 'Nov 2024' },
+]
+
+function SectionTitle({ kicker, title, children }) {
+  return (
+    <div className="space-y-3">
+      <p className="text-xs font-semibold uppercase tracking-[0.3em] text-sky-600">{kicker}</p>
+      <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">{title}</h2>
+      {children ? <div className="text-lg text-slate-600">{children}</div> : null}
+    </div>
+  )
+}
 
 function Shell({ children }) {
   const [showTopBar, setShowTopBar] = useState(true)
@@ -83,7 +126,7 @@ function Shell({ children }) {
       >
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-2.5">
           <Link to="/" className="flex items-center gap-2">
-            <img src={logoOfficial} alt="Better Life" className="h-14 w-auto" />
+            <img src={logoOfficial} alt="Better Life" className="h-12 w-auto" />
           </Link>
           <nav className="hidden flex-wrap items-center gap-2 text-sm md:flex">
             {links.map((link) => (
@@ -113,15 +156,15 @@ function Shell({ children }) {
               Faire un don
             </Link>
             <button
-              className="inline-flex h-14 w-14 items-center justify-center rounded-lg border border-slate-200 text-slate-800 shadow-sm transition hover:bg-slate-100 md:hidden"
+              className="inline-flex h-12 w-12 items-center justify-center rounded-lg border border-slate-200 text-slate-800 shadow-sm transition hover:bg-slate-100 md:hidden"
               onClick={() => setMobileOpen((v) => !v)}
               aria-label="Ouvrir le menu"
             >
               <span className="sr-only">Menu</span>
-              <div className="space-y-2.5">
-                <span className="block h-[3px] w-8 bg-slate-800" />
-                <span className="block h-[3px] w-8 bg-slate-800" />
-                <span className="block h-[3px] w-8 bg-slate-800" />
+              <div className="space-y-2">
+                <span className="block h-0.5 w-7 bg-slate-800" />
+                <span className="block h-0.5 w-7 bg-slate-800" />
+                <span className="block h-0.5 w-7 bg-slate-800" />
               </div>
             </button>
           </div>
@@ -228,7 +271,7 @@ function Shell({ children }) {
           </div>
         </div>
         <div className="border-t border-white/20 bg-black/10">
-          <div className="mx-auto max-w-6xl px-6 py-4 text-xs text-white/70 text-center">
+          <div className="mx-auto max-w-6xl px-6 py-4 text-xs text-white/70">
             © {new Date().getFullYear()} Better Life — Tous droits réservés.
           </div>
         </div>
