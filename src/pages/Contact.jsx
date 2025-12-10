@@ -23,7 +23,7 @@ export function Contact() {
                                 <p className="text-sm font-semibold text-slate-800">Contact</p>
                                 <p className="mt-2 text-sm text-slate-600">
                                     Email: info@betterlife-ong.org<br />
-                                    Tél: +243 00 000 0000 (À vérifier)
+                                    Tél: +243 82 9495 919 (À vérifier)
                                 </p>
                             </div>
                         </div>

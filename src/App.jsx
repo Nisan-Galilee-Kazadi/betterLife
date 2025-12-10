@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import { Shell } from './components/Shell'
 import { Home } from './pages/Home'
-import { Domaines } from './pages/Domaines'
+import { Services } from './pages/Services'
 import { Projets } from './pages/Projets'
 import { Rejoindre } from './pages/Rejoindre'
 import { Blog } from './pages/Blog'
@@ -20,13 +20,13 @@ function App() {
         <Route path="/about/team" element={<PlaceholderPage />} />
         <Route path="/about/partners" element={<PlaceholderPage />} />
 
-        {/* Domaines Submenus */}
-        <Route path="/domaines" element={<Domaines />} />
-        <Route path="/domaines/agriculture" element={<PlaceholderPage />} />
-        <Route path="/domaines/reboisement" element={<PlaceholderPage />} />
-        <Route path="/domaines/biodiversite" element={<PlaceholderPage />} />
-        <Route path="/domaines/communautaire" element={<PlaceholderPage />} />
-        <Route path="/domaines/elevage" element={<PlaceholderPage />} />
+        {/* Services Submenus */}
+        <Route path="/Services" element={<Services />} />
+        <Route path="/Services/agriculture" element={<PlaceholderPage />} />
+        <Route path="/Services/reboisement" element={<PlaceholderPage />} />
+        <Route path="/Services/biodiversite" element={<PlaceholderPage />} />
+        <Route path="/Services/communautaire" element={<PlaceholderPage />} />
+        <Route path="/Services/elevage" element={<PlaceholderPage />} />
 
         {/* Projets Submenus */}
         <Route path="/projets" element={<Projets />} />

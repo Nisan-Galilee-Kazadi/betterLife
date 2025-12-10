@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react'
 import { NavLink, Link, useLocation } from 'react-router-dom'
-import { FaFacebook, FaLinkedin, FaYoutube, FaPlay, FaInstagram, FaTiktok, FaWhatsapp, FaXTwitter } from 'react-icons/fa6'
+import { FaFacebook, FaLinkedin, FaYoutube, FaPlay, FaInstagram, FaTiktok, FaWhatsapp, FaXTwitter, FaEnvelope, FaLocationDot, FaPhone } from 'react-icons/fa6'
 import logoOfficial from '../images/cropped-Logo-betterlife-officiel.png'
 import logoWhite from '../images/Logo-betterlife-officiel-Blanc-300x300.png'
 
@@ -26,13 +26,13 @@ const navigation = [
         ],
     },
     {
-        name: 'Nos Domaines',
-        to: '/domaines',
+        name: 'Nos Services',
+        to: '/Services',
         children: [
-            { name: 'Agriculture Durable', to: '/domaines/agriculture' },
-            { name: 'Reboisement', to: '/domaines/reboisement' },
-            { name: 'Biodiversité', to: '/domaines/biodiversite' },
-            { name: 'Projets Communautaires', to: '/domaines/communautaire' },
+            { name: 'Agriculture Durable', to: '/Services/agriculture' },
+            { name: 'Reboisement', to: '/Services/reboisement' },
+            { name: 'Biodiversité', to: '/Services/biodiversite' },
+            { name: 'Projets Communautaires', to: '/Services/communautaire' },
         ],
     },
     {
@@ -273,7 +273,7 @@ export function Shell({ children }) {
             >
                 <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-1.5 text-xs text-white lg:py-2 lg:text-sm">
                     <div className="flex flex-wrap items-center gap-3">
-                        <span className="font-semibold hidden sm:inline">ByPass, C/ Mon-Ngafula</span>
+                        <span className="font-semibold hidden sm:inline">Joli Parc, C/Ngaliema</span>
                         <span className="hidden h-3 w-px bg-white/50 sm:block" />
                         <span className="font-semibold">info@betterlife-ong.org</span>
                     </div>
@@ -331,10 +331,10 @@ export function Shell({ children }) {
                             onClick={() => setMobileOpen(!mobileOpen)}
                         >
                             <span className="sr-only">{mobileOpen ? 'Fermer le menu' : 'Ouvrir le menu'}</span>
-                            <div className="relative h-6 w-6">
-                                <span className={`absolute left-0 block h-0.5 w-6 bg-current transition-all duration-300 ${mobileOpen ? 'top-1/2 rotate-45' : 'top-0 rotate-0'}`} />
-                                <span className={`absolute top-1/2 left-0 block h-0.5 w-6 bg-current transition-all duration-300 ${mobileOpen ? 'opacity-0' : 'opacity-100'}`} />
-                                <span className={`absolute left-0 block h-0.5 w-6 bg-current transition-all duration-300 ${mobileOpen ? 'top-1/2 -rotate-45' : 'top-full rotate-0'}`} />
+                            <div className="relative h-5 w-6 gap-5">
+                                <span className={`absolute left-0 block h-0.5 w-7 transition-all duration-300 ${mobileOpen ? 'top-1/2 rotate-45' : 'top-0 rotate-0'} ${isScrolled ? 'bg-[#0f70b7]' : 'bg-white'}`} />
+                                <span className={`absolute top-1/2 left-0 block h-0.5 w-5 transition-all duration-300 ${mobileOpen ? 'opacity-0' : 'opacity-100'} ${isScrolled ? 'bg-[#63b32e]' : 'bg-white'}`} />
+                                <span className={`absolute left-0 block h-0.5 w-7 transition-all duration-300 ${mobileOpen ? 'top-1/2 -rotate-45' : 'top-full rotate-0'} ${isScrolled ? 'bg-[#0f70b7]' : 'bg-white'}`} />
                             </div>
                         </button>
                     </div>
@@ -395,7 +395,7 @@ export function Shell({ children }) {
                         <ul className="space-y-3">
                             <li><Link to="/" className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4">Accueil</Link></li>
                             <li><Link to="/about" className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4">À Propos</Link></li>
-                            <li><Link to="/domaines" className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4">Nos Domaines</Link></li>
+                            <li><Link to="/Services" className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4">Nos Services</Link></li>
                             <li><Link to="/projets" className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4">Projets</Link></li>
                             <li><Link to="/contact" className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4">Contact</Link></li>
                         </ul>
@@ -403,27 +403,27 @@ export function Shell({ children }) {
                     <div>
                         <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-white/60">Activités</h3>
                         <ul className="space-y-3">
-                            <li><Link to="/domaines/agriculture" className="hover:text-white/80">Agriculture Durable</Link></li>
-                            <li><Link to="/domaines/reboisement" className="hover:text-white/80">Reboisement & Climat</Link></li>
-                            <li><Link to="/domaines/biodiversite" className="hover:text-white/80">Biodiversité</Link></li>
-                            <li><Link to="/domaines/communautaire" className="hover:text-white/80">Projets Communautaires</Link></li>
-                            <li><Link to="/domaines/elevage" className="hover:text-white/80">Élevage Responsable</Link></li>
+                            <li><Link to="/Services/agriculture" className="hover:text-white/80">Agriculture Durable</Link></li>
+                            <li><Link to="/Services/reboisement" className="hover:text-white/80">Reboisement & Climat</Link></li>
+                            <li><Link to="/Services/biodiversite" className="hover:text-white/80">Biodiversité</Link></li>
+                            <li><Link to="/Services/communautaire" className="hover:text-white/80">Projets Communautaires</Link></li>
+                            <li><Link to="/Services/elevage" className="hover:text-white/80">Élevage Responsable</Link></li>
                         </ul>
                     </div>
                     <div>
                         <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-white/60">Nous Contacter</h3>
-                        <ul className="space-y-3 text-white/80">
-                            <li className="flex gap-3">
-                                <span className="font-semibold text-white">Adresse:</span>
-                                <span className='w-[100%]'>ByPass, C/ Mont-Ngafula,Kinshasa, RDC</span>
+                        <ul className="space-y-3 text-white/80 w-full">
+                            <li className="flex flex-row item-center gap-3 w-full">
+                                <span className="ffont-semibold text-[#0f70b7] text-[12px] bg-[#fafafa] w-50 h-50 rounded-full flex item-center p-2 absolute mt-2"><FaLocationDot className=''></FaLocationDot> </span>
+                                <span className='ml-11'>N°5 Av. Des Etangs , Q/ Joli Parc,<br /> C/ Ngaliema, Kinshasa - RDC</span>
                             </li>
-                            <li className="flex gap-3">
-                                <span className="font-semibold text-white">Email:</span>
+                            <li className="flex gap-3 pb-3">
+                                <span className="font-semibold text-[12px]  text-[#0f70b7] bg-[#fafafa] w-50 h-50 rounded-full flex item-center p-2"><FaEnvelope></FaEnvelope></span>
                                 <span>info@betterlife-ong.org</span>
                             </li>
                             <li className="flex gap-3">
-                                <span className="font-semibold text-white">Tél:</span>
-                                <span>+243 00 000 0000</span>
+                                <span className="font-semibold text-[12px] text-[#0f70b7] bg-[#fafafa]  w-50 h-50 rounded-full flex item-center p-2"><FaPhone></FaPhone></span>
+                                <span>+243 82 9495 919</span>
                             </li>
                         </ul>
                     </div>

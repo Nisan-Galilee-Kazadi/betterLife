@@ -76,7 +76,7 @@ export function Home() {
                     </p>
                     <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6">
                         <Link
-                            to="/domaines"
+                            to="/Services"
                             className="rounded-md bg-[#63b32e] px-8 py-3.5 text-base font-semibold text-white shadow-lg transition hover:bg-[#529624] hover:brightness-110"
                         >
                             Découvrir nos actions
