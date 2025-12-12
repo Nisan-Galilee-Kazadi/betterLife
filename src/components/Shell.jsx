@@ -153,8 +153,16 @@ function NavItem({ item, depth = 0, isScrolled }) {
 }
 
 // Mobile recursive nav item
-function MobileNavItem({ item, level = 0, setMobileOpen }) {
-  const [isOpen, setIsOpen] = useState(false);
+function MobileNavItem({
+  item,
+  level = 0,
+  setMobileOpen,
+  openMobileItem,
+  setOpenMobileItem,
+}) {
+  // Controlled by parent using per-level open state
+  const id = `${item.to || item.name}-${level}`;
+  const isOpen = (openMobileItem && openMobileItem[level]) === id;
   const hasChildren = item.children && item.children.length > 0;
   const location = useLocation();
   const isActive = location.pathname.startsWith(item.to);
@@ -171,30 +179,62 @@ function MobileNavItem({ item, level = 0, setMobileOpen }) {
             isActive ? "text-[#63b32e]" : "text-slate-800"
           }`}
           onClick={() => {
-            if (!hasChildren) setMobileOpen(false);
+            if (!hasChildren) {
+              setMobileOpen(false);
+              if (setOpenMobileItem) setOpenMobileItem({});
+            }
           }}
         >
           {item.name}
         </Link>
         {hasChildren && (
           <button
-            onClick={() => setIsOpen(!isOpen)}
-            className={`p-2 text-slate-400 transition-transform ${
-              isOpen ? "rotate-90" : ""
+            onClick={() => {
+              setOpenMobileItem((prev = {}) => {
+                const current = prev[level];
+                const next = { ...prev };
+                if (current === id) {
+                  // Close current
+                  delete next[level];
+                } else {
+                  // Open this and clear deeper levels
+                  next[level] = id;
+                  Object.keys(next)
+                    .map((k) => Number(k))
+                    .filter((k) => k > level)
+                    .forEach((k) => delete next[k]);
+                }
+                return next;
+              });
+            }}
+            className={`p-2 text-slate-400 transition-transform duration-200 ${
+              isOpen ? "rotate-90 text-[#63b32e]" : "text-slate-400"
             }`}
+            aria-expanded={isOpen}
+            aria-controls={`submenu-${id}`}
           >
             <FaPlay className="h-3 w-3" />
           </button>
         )}
       </div>
-      {hasChildren && isOpen && (
-        <div className="bg-slate-50">
+      {hasChildren && (
+        <div
+          id={`submenu-${id}`}
+          className={`bg-slate-50 overflow-hidden transition-all duration-300 ease-in-out ${
+            isOpen
+              ? "max-h-[2000px] opacity-100 py-2"
+              : "max-h-0 opacity-0 py-0"
+          }`}
+          aria-hidden={!isOpen}
+        >
           {item.children.map((child) => (
             <MobileNavItem
               key={child.name}
               item={child}
               level={level + 1}
               setMobileOpen={setMobileOpen}
+              openMobileItem={openMobileItem}
+              setOpenMobileItem={setOpenMobileItem}
             />
           ))}
         </div>
@@ -279,6 +319,7 @@ export function Shell({ children }) {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [openMobileItem, setOpenMobileItem] = useState({});
   const { t } = useLanguage();
 
   const navigation = [
@@ -483,7 +524,16 @@ export function Shell({ children }) {
               className={`lg:hidden ${
                 isScrolled ? "text-slate-800" : "text-white"
               }`}
-              onClick={() => setMobileOpen(!mobileOpen)}
+              onClick={() =>
+                setMobileOpen((prev) => {
+                  const next = !prev;
+                  if (prev === true) {
+                    // closing menu -> clear open submenu state
+                    setOpenMobileItem({});
+                  }
+                  return next;
+                })
+              }
             >
               <span className="sr-only">
                 {mobileOpen ? "Fermer le menu" : "Ouvrir le menu"}
@@ -528,6 +578,8 @@ export function Shell({ children }) {
                 key={item.name}
                 item={item}
                 setMobileOpen={setMobileOpen}
+                openMobileItem={openMobileItem}
+                setOpenMobileItem={setOpenMobileItem}
               />
             ))}
             <div className="p-4">
