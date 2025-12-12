@@ -13,14 +13,18 @@ export function Phase1() {
   const { t } = useLanguage();
 
   const activityIcons = [FaUsers, MdScience, FaGraduationCap, FaHandsHelping];
-  const activitiesData = t("projets.phase1.activities.items") || [];
+  const activitiesData = Array.isArray(t("projets.phase1.activities.items"))
+    ? t("projets.phase1.activities.items")
+    : [];
 
   const activities = activitiesData.map((item, index) => ({
     ...item,
     icon: activityIcons[index],
   }));
 
-  const objectives = t("projets.phase1.objectives.items") || [];
+  const objectives = Array.isArray(t("projets.phase1.objectives.items"))
+    ? t("projets.phase1.objectives.items")
+    : [];
 
   return (
     <div className="bg-white min-h-screen">

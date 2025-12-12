@@ -14,7 +14,9 @@ export function ProjetsEnCours() {
   const { t } = useLanguage();
 
   const projectsProgress = [65, 45, 72];
-  const projectsData = t("projets.en_cours.list") || [];
+  const projectsData = Array.isArray(t("projets.en_cours.list"))
+    ? t("projets.en_cours.list")
+    : [];
 
   const projects = projectsData.map((project, index) => ({
     ...project,
@@ -22,7 +24,9 @@ export function ProjetsEnCours() {
   }));
 
   const statsIcons = [FaChartLine, FaUsers, FaDollarSign, FaMapMarkedAlt];
-  const statsData = t("projets.en_cours.stats.items") || [];
+  const statsData = Array.isArray(t("projets.en_cours.stats.items"))
+    ? t("projets.en_cours.stats.items")
+    : [];
   const stats = statsData.map((item, index) => ({
     ...item,
     icon: statsIcons[index],

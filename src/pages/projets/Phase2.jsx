@@ -21,15 +21,21 @@ export function Phase2() {
     FaHammer,
     FaUsers,
   ];
-  const activitiesData = t("projets.phase2.activities.items") || [];
+  const activitiesData = Array.isArray(t("projets.phase2.activities.items"))
+    ? t("projets.phase2.activities.items")
+    : [];
 
   const activities = activitiesData.map((item, index) => ({
     ...item,
     icon: activityIcons[index],
   }));
 
-  const objectives = t("projets.phase2.objectives.items") || [];
-  const attentionPoints = t("projets.phase2.attention.items") || [];
+  const objectives = Array.isArray(t("projets.phase2.objectives.items"))
+    ? t("projets.phase2.objectives.items")
+    : [];
+  const attentionPoints = Array.isArray(t("projets.phase2.attention.items"))
+    ? t("projets.phase2.attention.items")
+    : [];
 
   return (
     <div className="bg-white min-h-screen">

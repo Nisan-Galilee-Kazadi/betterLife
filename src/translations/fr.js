@@ -1670,6 +1670,159 @@ export const fr = {
       },
     },
   },
+  projets: {
+    common: {
+      readMore: "En savoir plus",
+      details: "Voir les détails",
+      achievements: "Voir les réalisations",
+      budget: "Budget",
+      beneficiaries: "Bénéficiaires",
+      trees: "Arbres",
+      duration: "Durée",
+      progress: "Progression",
+      phase: "Phase",
+      objectives: "Objectifs",
+      realizations: "Réalisations",
+      successFactors: "Facteurs de Succès",
+      support: "Soutenir un Projet",
+      partner: "Devenir Partenaire",
+      donate: "Faire un Don",
+      viewOngoing: "Voir Projets en Cours",
+      viewCompleted: "Voir Projets Réalisés",
+      backToProjects: "Retour aux Projets",
+      phase1: "Phase 1",
+      phase2: "Phase 2",
+    },
+    index: {
+      hero: {
+        title: "Nos Projets",
+        subtitle: "Découvrez nos projets en cours et réalisés à travers la RDC",
+      },
+      map: {
+        kicker: "Nos Zones d'Intervention",
+        title: "Carte des Projets",
+        text: "Nos projets couvrent plusieurs provinces de la RDC, de Kinshasa au Parc National de la Salonga",
+      },
+      quickLinks: {
+        ongoing: {
+          title: "Projets en Cours",
+          text: "Découvrez nos 12 projets actifs qui transforment des vies à travers le pays",
+        },
+        completed: {
+          title: "Projets Réalisés",
+          text: "28 projets complétés avec succès, 85,000+ bénéficiaires directs",
+        },
+      },
+      featured: {
+        kicker: "Projets Phares",
+        title: "Nos Principales Initiatives",
+        items: [
+          {
+            title: "Reboisement Massif Kinshasa",
+            location: "Kinshasa, RDC",
+            status: "En cours",
+            beneficiaries: "50,000",
+            budget: "2.5M USD",
+            trees: "500,000",
+          },
+          {
+            title: "Agriculture Climato-Intelligente Kikwit",
+            location: "Kikwit, Kwilu",
+            status: "En cours",
+            beneficiaries: "3,000",
+            budget: "1.8M USD",
+            trees: "0",
+          },
+          {
+            title: "Protection Biodiversité Salonga",
+            location: "Parc National Salonga",
+            status: "En cours",
+            beneficiaries: "15 communautés",
+            budget: "3.2M USD",
+            trees: "0",
+          },
+        ],
+      },
+      cta: {
+        title: "Soutenez Nos Projets",
+        text: "Votre contribution peut faire la différence dans la vie de milliers de personnes",
+      },
+    },
+
+    en_cours: {
+      hero: {
+        title: "Projets en Cours",
+        subtitle:
+          "Découvrez nos initiatives actuelles pour un développement durable",
+      },
+      stats: {
+        items: [
+          { number: "12", label: "Projets actifs" },
+          { number: "75,000+", label: "Bénéficiaires" },
+          { number: "8.5M USD", label: "Budget total" },
+        ],
+      },
+      cta: {
+        title: "Soutenez nos projets",
+        text: "Contribuez pour soutenir nos actions sur le terrain",
+      },
+    },
+
+    realises: {
+      hero: {
+        title: "Projets Réalisés",
+        subtitle: "28 projets complétés avec succès",
+      },
+      impact: { kicker: "Notre Impact", title: "Résultats Cumulés 2019-2023" },
+      factors: {
+        kicker: "Facteurs de Succès",
+        title: "Ce Qui Fait Notre Différence",
+      },
+      cta: {
+        title: "Créons Ensemble de Nouvelles Réussites",
+        text: "Votre soutien nous permet de multiplier ces succès",
+      },
+    },
+  },
+
+  contact: {
+    hero: {
+      title: "Contactez-nous",
+      subtitle:
+        "N'hésitez pas à nous contacter pour toute question ou partenariat",
+    },
+    info: {
+      kicker: "Restons en lien",
+      title: "Nos Coordonnées",
+      address: {
+        title: "Adresse",
+        value: "N°5 Av. Des Etangs, Q/ Joli Parc, C/ Ngaliema, Kinshasa - RDC",
+      },
+      email: { title: "Email", value: "info@betterlife-ong.org" },
+      phone: { title: "Téléphone", value: "+243 82 9495 919" },
+      hours: {
+        title: "Heures d'ouverture",
+        value: "Lundi - Vendredi : 8h00 - 17h00",
+      },
+    },
+    form: {
+      title: "Envoyez-nous un message",
+      name: "Nom complet",
+      name_placeholder: "Votre nom",
+      email: "Email",
+      email_placeholder: "email@exemple.com",
+      subject: "Sujet",
+      subject_placeholder: "Objet de votre message",
+      message: "Message",
+      message_placeholder: "Votre message...",
+      btn: "Envoyer le message",
+    },
+    map: {
+      title: "Nous Trouver",
+      text: "N°5 Av. Des Etangs, Q/ Joli Parc, C/ Ngaliema, Kinshasa - RDC",
+    },
+  },
+
   home: {
     hero: {
       title: "Choisissez un Environnement Sain,\nUne Alimentation Saine",

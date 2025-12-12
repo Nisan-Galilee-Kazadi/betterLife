@@ -8,7 +8,9 @@ export function Projets() {
   const { t } = useLanguage();
 
   // Get projects from translation
-  const projectsData = t("projets.index.featured.items") || [];
+  const projectsData = Array.isArray(t("projets.index.featured.items"))
+    ? t("projets.index.featured.items")
+    : [];
 
   // Add id and link to each project (assuming same order as original)
   const projects = projectsData.map((project, index) => ({

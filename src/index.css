@@ -4,7 +4,7 @@
 
 :root {
   color-scheme: light;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   background-color: #f8fafc;
 }
 
@@ -41,4 +41,5 @@
 
 * {
   font-size: 14px;
+  outline: none;
 }

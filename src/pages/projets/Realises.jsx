@@ -17,11 +17,15 @@ import { useLanguage } from "../../contexts/LanguageContext";
 export function ProjetsRealises() {
   const { t } = useLanguage();
 
-  const completedProjects = t("projets.realises.list") || [];
+  const completedProjects = Array.isArray(t("projets.realises.list"))
+    ? t("projets.realises.list")
+    : [];
 
   const impactIcons = [FaCheckCircle, FaUsers, FaDollarSign, FaTree];
   const impactColors = ["green", "blue", "green", "blue"];
-  const impactData = t("projets.realises.impact.items") || [];
+  const impactData = Array.isArray(t("projets.realises.impact.items"))
+    ? t("projets.realises.impact.items")
+    : [];
 
   // Merge impact data with visual props
   const impactStats = impactData.map((item, index) => ({
@@ -31,7 +35,9 @@ export function ProjetsRealises() {
   }));
 
   const factorIcons = [FaHandsHelping, FaChartLine, MdTrendingUp];
-  const factorsData = t("projets.realises.factors.items") || [];
+  const factorsData = Array.isArray(t("projets.realises.factors.items"))
+    ? t("projets.realises.factors.items")
+    : [];
 
   // Merge factors with icons
   const factors = factorsData.map((item, index) => ({
