@@ -1,540 +1,730 @@
-import { useEffect, useState, useRef } from 'react'
-import { NavLink, Link, useLocation } from 'react-router-dom'
-import { FaFacebook, FaLinkedin, FaYoutube, FaPlay, FaInstagram, FaTiktok, FaWhatsapp, FaXTwitter, FaEnvelope, FaLocationDot, FaPhone } from 'react-icons/fa6'
-import { FaSearch, FaGlobe } from 'react-icons/fa'
-import { SearchOverlay } from './SearchOverlay'
-import { Breadcrumb } from './Breadcrumb'
-import { useLanguage } from '../contexts/LanguageContext'
-import logoOfficial from '../images/cropped-Logo-betterlife-officiel.png'
-import logoWhite from '../images/Logo-betterlife-officiel-Blanc-300x300.png'
+import { useEffect, useState, useRef } from "react";
+import { NavLink, Link, useLocation } from "react-router-dom";
+import {
+  FaFacebook,
+  FaLinkedin,
+  FaYoutube,
+  FaPlay,
+  FaInstagram,
+  FaTiktok,
+  FaWhatsapp,
+  FaXTwitter,
+  FaEnvelope,
+  FaLocationDot,
+  FaPhone,
+} from "react-icons/fa6";
+import { FaSearch, FaGlobe } from "react-icons/fa";
+import { SearchOverlay } from "./SearchOverlay";
+import { Breadcrumb } from "./Breadcrumb";
+import { useLanguage } from "../contexts/LanguageContext";
+import logoOfficial from "../images/cropped-Logo-betterlife-officiel.png";
+import logoWhite from "../images/Logo-betterlife-officiel-Blanc-300x300.png";
 
 const socialLinks = [
-    { icon: FaFacebook, href: 'https://facebook.com/betterlife-ong', color: 'bg-[#1877F2]' },
-    { icon: FaXTwitter, href: '#', color: 'bg-black' },
-    { icon: FaLinkedin, href: '#', color: 'bg-[#0077b5]' },
-    { icon: FaYoutube, href: 'https://youtube.com/@betterlife-ong', color: 'bg-[#FF0000]' },
-    { icon: FaInstagram, href: '#', color: 'bg-[#E1306C]' },
-    { icon: FaTiktok, href: '#', color: 'bg-[#000000]' },
-    { icon: FaWhatsapp, href: '#', color: 'bg-[#25D366]' },
-]
+  {
+    icon: FaFacebook,
+    href: "https://facebook.com/betterlife-ong",
+    color: "bg-[#1877F2]",
+  },
+  { icon: FaXTwitter, href: "#", color: "bg-black" },
+  { icon: FaLinkedin, href: "#", color: "bg-[#0077b5]" },
+  {
+    icon: FaYoutube,
+    href: "https://youtube.com/@betterlife-ong",
+    color: "bg-[#FF0000]",
+  },
+  { icon: FaInstagram, href: "#", color: "bg-[#E1306C]" },
+  { icon: FaTiktok, href: "#", color: "bg-[#000000]" },
+  { icon: FaWhatsapp, href: "#", color: "bg-[#25D366]" },
+];
 
 // Recursive NavItem Component
 function NavItem({ item, depth = 0, isScrolled }) {
-    const [isOpen, setIsOpen] = useState(false)
-    const location = useLocation()
-    const ref = useRef(null)
+  const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const ref = useRef(null);
 
-    // Close dropdown if clicking outside
-    useEffect(() => {
-        function handleClickOutside(event) {
-            if (ref.current && !ref.current.contains(event.target)) {
-                setIsOpen(false)
-            }
-        }
-        document.addEventListener('mousedown', handleClickOutside)
-        return () => document.removeEventListener('mousedown', handleClickOutside)
-    }, [])
-
-    // Close when route changes
-    useEffect(() => {
-        setIsOpen(false)
-    }, [location.pathname])
-
-    const hasChildren = item.children && item.children.length > 0
-    const isActive = location.pathname.startsWith(item.to) && (item.to !== '/' || location.pathname === '/')
-
-    // Base Text Colors & Styles
-    let containerClass = ''
-    let linkClass = 'block whitespace-nowrap text-sm font-bold transition-colors duration-200'
-    let iconClass = 'transition-transform duration-200'
-
-    if (depth === 0) {
-        // Main Nav Item styling
-        linkClass += ''
-
-        const baseStyle = "flex items-center gap-0.5 px-4 py-2.5 rounded-md border-b-[3px] transition-all duration-200"
-
-        if (isActive) {
-            // Active State / Focus -> GREEN
-            const activeClass = isScrolled
-                ? 'bg-[#63b32e]/10 border-[#63b32e] text-[#63b32e]'
-                : 'bg-[#63b32e]/10 border-[#63b32e] text-[#63b32e]'
-
-            containerClass = `${baseStyle} ${activeClass}`
-        } else {
-            // Inactive State
-            const textColor = isScrolled ? 'text-slate-700' : 'text-white/90'
-
-            // Hover -> BLUE
-            const hoverClass = isScrolled
-                ? 'hover:bg-[#0f70b7]/10 hover:border-[#0f70b7] hover:text-[#0f70b7]'
-                : 'hover:bg-[#63b32e]/10 hover:border-[#63b32e] hover:text-[#63b32e]'
-
-            containerClass = `${baseStyle} border-transparent ${textColor} ${hoverClass}`
-        }
-    } else {
-        // Dropdown Items
-        containerClass = "flex items-center justify-between w-full px-4 py-2 hover:bg-slate-50 text-slate-700 hover:text-[#0f70b7]"
-        linkClass += " w-full"
-        if (isActive) {
-            linkClass += " text-[#63b32e]"
-        }
+  // Close dropdown if clicking outside
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        setIsOpen(false);
+      }
     }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
-    return (
-        <div className="relative group" ref={ref}>
-            <div className={containerClass}>
-                <Link
-                    to={item.to}
-                    className={linkClass}
-                >
-                    {item.name}
-                </Link>
+  // Close when route changes
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
 
-                {hasChildren && (
-                    <button
-                        onClick={(e) => {
-                            e.preventDefault()
-                            e.stopPropagation()
-                            setIsOpen(!isOpen)
-                        }}
-                        className={`p-1.5 ${iconClass} ${isOpen ? 'rotate-90' : ''}`}
-                    >
-                        <FaPlay className={`${depth === 0 ? 'h-2.5 w-2.5' : 'h-2.5 w-2.5'}`} />
-                    </button>
-                )}
-            </div>
+  const hasChildren = item.children && item.children.length > 0;
+  const isActive =
+    location.pathname.startsWith(item.to) &&
+    (item.to !== "/" || location.pathname === "/");
 
-            {hasChildren && isOpen && (
-                <div
-                    className={`absolute z-50 min-w-[220px] border border-slate-100 bg-white py-2 shadow-xl ring-1 ring-black/5 rounded-lg
-            ${depth === 0
-                            ? 'left-0 top-full mt-0 origin-top-left'
-                            : 'left-full top-0 ml-1 origin-top-left'
-                        }`}
-                >
-                    {item.children.map((child) => (
-                        <NavItem key={child.name} item={child} depth={depth + 1} isScrolled={true} />
-                    ))}
-                </div>
-            )}
+  // Base Text Colors & Styles
+  let containerClass = "";
+  let linkClass =
+    "block whitespace-nowrap text-sm font-bold transition-colors duration-200";
+  let iconClass = "transition-transform duration-200";
+
+  if (depth === 0) {
+    // Main Nav Item styling
+    linkClass += "";
+
+    const baseStyle =
+      "flex items-center gap-0.5 px-4 py-2.5 rounded-md border-b-[3px] transition-all duration-200";
+
+    if (isActive) {
+      // Active State / Focus -> GREEN
+      const activeClass = isScrolled
+        ? "bg-[#63b32e]/10 border-[#63b32e] text-[#63b32e]"
+        : "bg-[#63b32e]/10 border-[#63b32e] text-[#63b32e]";
+
+      containerClass = `${baseStyle} ${activeClass}`;
+    } else {
+      // Inactive State
+      const textColor = isScrolled ? "text-slate-700" : "text-white/90";
+
+      // Hover -> BLUE
+      const hoverClass = isScrolled
+        ? "hover:bg-[#0f70b7]/10 hover:border-[#0f70b7] hover:text-[#0f70b7]"
+        : "hover:bg-[#63b32e]/10 hover:border-[#63b32e] hover:text-[#63b32e]";
+
+      containerClass = `${baseStyle} border-transparent ${textColor} ${hoverClass}`;
+    }
+  } else {
+    // Dropdown Items
+    containerClass =
+      "flex items-center justify-between w-full px-4 py-2 hover:bg-slate-50 text-slate-700 hover:text-[#0f70b7]";
+    linkClass += " w-full";
+    if (isActive) {
+      linkClass += " text-[#63b32e]";
+    }
+  }
+
+  return (
+    <div className="relative group" ref={ref}>
+      <div className={containerClass}>
+        <Link to={item.to} className={linkClass}>
+          {item.name}
+        </Link>
+
+        {hasChildren && (
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              setIsOpen(!isOpen);
+            }}
+            className={`p-1.5 ${iconClass} ${isOpen ? "rotate-90" : ""}`}
+          >
+            <FaPlay
+              className={`${depth === 0 ? "h-2.5 w-2.5" : "h-2.5 w-2.5"}`}
+            />
+          </button>
+        )}
+      </div>
+
+      {hasChildren && isOpen && (
+        <div
+          className={`absolute z-50 min-w-[220px] border border-slate-100 bg-white py-2 shadow-xl ring-1 ring-black/5 rounded-lg
+            ${
+              depth === 0
+                ? "left-0 top-full mt-0 origin-top-left"
+                : "left-full top-0 ml-1 origin-top-left"
+            }`}
+        >
+          {item.children.map((child) => (
+            <NavItem
+              key={child.name}
+              item={child}
+              depth={depth + 1}
+              isScrolled={true}
+            />
+          ))}
         </div>
-    )
+      )}
+    </div>
+  );
 }
 
 // Mobile recursive nav item
 function MobileNavItem({ item, level = 0, setMobileOpen }) {
-    const [isOpen, setIsOpen] = useState(false)
-    const hasChildren = item.children && item.children.length > 0
-    const location = useLocation()
-    const isActive = location.pathname.startsWith(item.to)
+  const [isOpen, setIsOpen] = useState(false);
+  const hasChildren = item.children && item.children.length > 0;
+  const location = useLocation();
+  const isActive = location.pathname.startsWith(item.to);
 
-    return (
-        <div className="border-b border-gray-50 last:border-0">
-            <div className="flex items-center justify-between py-3 pr-4" style={{ paddingLeft: `${level * 16 + 16}px` }}>
-                <Link
-                    to={item.to}
-                    className={`text-base font-semibold ${isActive ? 'text-[#63b32e]' : 'text-slate-800'}`}
-                    onClick={() => {
-                        if (!hasChildren) setMobileOpen(false)
-                    }}
-                >
-                    {item.name}
-                </Link>
-                {hasChildren && (
-                    <button
-                        onClick={() => setIsOpen(!isOpen)}
-                        className={`p-2 text-slate-400 transition-transform ${isOpen ? 'rotate-90' : ''}`}
-                    >
-                        <FaPlay className="h-3 w-3" />
-                    </button>
-                )}
-            </div>
-            {hasChildren && isOpen && (
-                <div className="bg-slate-50">
-                    {item.children.map(child => (
-                        <MobileNavItem key={child.name} item={child} level={level + 1} setMobileOpen={setMobileOpen} />
-                    ))}
-                </div>
-            )}
+  return (
+    <div className="border-b border-gray-50 last:border-0">
+      <div
+        className="flex items-center justify-between py-3 pr-4"
+        style={{ paddingLeft: `${level * 16 + 16}px` }}
+      >
+        <Link
+          to={item.to}
+          className={`text-base font-semibold ${
+            isActive ? "text-[#63b32e]" : "text-slate-800"
+          }`}
+          onClick={() => {
+            if (!hasChildren) setMobileOpen(false);
+          }}
+        >
+          {item.name}
+        </Link>
+        {hasChildren && (
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className={`p-2 text-slate-400 transition-transform ${
+              isOpen ? "rotate-90" : ""
+            }`}
+          >
+            <FaPlay className="h-3 w-3" />
+          </button>
+        )}
+      </div>
+      {hasChildren && isOpen && (
+        <div className="bg-slate-50">
+          {item.children.map((child) => (
+            <MobileNavItem
+              key={child.name}
+              item={child}
+              level={level + 1}
+              setMobileOpen={setMobileOpen}
+            />
+          ))}
         </div>
-    )
+      )}
+    </div>
+  );
 }
 
 // Language Selector Component
 function LanguageSelector({ isScrolled }) {
-    const [isOpen, setIsOpen] = useState(false)
-    const { language, setLanguage } = useLanguage()
-    const ref = useRef(null)
+  const [isOpen, setIsOpen] = useState(false);
+  const { language, setLanguage } = useLanguage();
+  const ref = useRef(null);
 
-    const languages = [
-        { code: 'fr', name: 'Français', flag: '🇫🇷' },
-        { code: 'en', name: 'English', flag: '🇬🇧' },
-        { code: 'es', name: 'Español', flag: '🇪🇸' }
-    ]
+  const languages = [
+    { code: "fr", name: "Français", flag: "🇫🇷" },
+    { code: "en", name: "English", flag: "🇬🇧" },
+    { code: "es", name: "Español", flag: "🇪🇸" },
+  ];
 
-    useEffect(() => {
-        function handleClickOutside(event) {
-            if (ref.current && !ref.current.contains(event.target)) {
-                setIsOpen(false)
-            }
-        }
-        document.addEventListener('mousedown', handleClickOutside)
-        return () => document.removeEventListener('mousedown', handleClickOutside)
-    }, [])
-
-    const handleLanguageChange = (code) => {
-        setLanguage(code)
-        // localStorage is handled in Context
-        setIsOpen(false)
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        setIsOpen(false);
+      }
     }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
-    const currentLang = languages.find(l => l.code === language) || languages[0]
+  const handleLanguageChange = (code) => {
+    setLanguage(code);
+    // localStorage is handled in Context
+    setIsOpen(false);
+  };
 
-    return (
-        <div className="relative" ref={ref}>
+  const currentLang =
+    languages.find((l) => l.code === language) || languages[0];
+
+  return (
+    <div className="relative" ref={ref}>
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className={`flex items-center gap-2 px-3 py-2 rounded-md transition ${
+          isScrolled
+            ? "text-slate-700 hover:bg-slate-100"
+            : "text-white hover:bg-white/10"
+        }`}
+      >
+        <span className="text-xl">{currentLang.flag}</span>
+        <FaGlobe className="text-sm" />
+      </button>
+
+      {isOpen && (
+        <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-lg shadow-xl border border-slate-200 py-2 z-50">
+          {languages.map((lang) => (
             <button
-                onClick={() => setIsOpen(!isOpen)}
-                className={`flex items-center gap-2 px-3 py-2 rounded-md transition ${isScrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'
-                    }`}
+              key={lang.code}
+              onClick={() => handleLanguageChange(lang.code)}
+              className={`w-full flex items-center gap-3 px-4 py-2 hover:bg-slate-50 transition ${
+                language === lang.code
+                  ? "bg-green-50 text-[#63b32e]"
+                  : "text-slate-700"
+              }`}
             >
-                <span className="text-xl">{currentLang.flag}</span>
-                <FaGlobe className="text-sm" />
+              <span className="text-2xl">{lang.flag}</span>
+              <span className="font-medium">{lang.name}</span>
             </button>
-
-            {isOpen && (
-                <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-lg shadow-xl border border-slate-200 py-2 z-50">
-                    {languages.map((lang) => (
-                        <button
-                            key={lang.code}
-                            onClick={() => handleLanguageChange(lang.code)}
-                            className={`w-full flex items-center gap-3 px-4 py-2 hover:bg-slate-50 transition ${language === lang.code ? 'bg-green-50 text-[#63b32e]' : 'text-slate-700'
-                                }`}
-                        >
-                            <span className="text-2xl">{lang.flag}</span>
-                            <span className="font-medium">{lang.name}</span>
-                        </button>
-                    ))}
-                </div>
-            )}
+          ))}
         </div>
-    )
+      )}
+    </div>
+  );
 }
 
 export function Shell({ children }) {
-    const location = useLocation()
-    const isHome = location.pathname === '/'
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
-    const [showTopBar, setShowTopBar] = useState(!isHome)
-    const [isScrolled, setIsScrolled] = useState(!isHome)
-    const [lastScrollY, setLastScrollY] = useState(0)
-    const [mobileOpen, setMobileOpen] = useState(false)
-    const [searchOpen, setSearchOpen] = useState(false)
-    const { t } = useLanguage()
+  const [showTopBar, setShowTopBar] = useState(!isHome);
+  const [isScrolled, setIsScrolled] = useState(!isHome);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const { t } = useLanguage();
 
-    const navigation = [
-        { name: t('nav.home'), to: '/' },
+  const navigation = [
+    { name: t("nav.home"), to: "/" },
+    {
+      name: t("nav.about"),
+      to: "/about",
+      children: [
+        { name: t("nav.mission"), to: "/about/mission" },
+        { name: t("nav.team"), to: "/about/team" },
+        { name: t("nav.partners"), to: "/about/partners" },
+      ],
+    },
+    {
+      name: t("nav.services"),
+      to: "/Services",
+      children: [
+        { name: t("nav.agriculture"), to: "/Services/agriculture" },
+        { name: t("nav.reboisement"), to: "/Services/reboisement" },
+        { name: t("nav.biodiversity"), to: "/Services/biodiversite" },
+        { name: t("nav.community"), to: "/Services/communautaire" },
+      ],
+    },
+    {
+      name: t("nav.offers"),
+      to: "/Offres",
+      children: [
+        { name: t("nav.offers_agriculture"), to: "/Offres/agriculture" },
+        { name: t("nav.apiculture"), to: "/Offres/apiculture" },
+        { name: t("nav.bancal"), to: "/Offres/bancal" },
+        { name: t("nav.climate"), to: "/Offres/Changement" },
+      ],
+    },
+    {
+      name: t("nav.projects"),
+      to: "/projets",
+      children: [
         {
-            name: t('nav.about'),
-            to: '/about',
-            children: [
-                { name: t('nav.mission'), to: '/about/mission' },
-                { name: t('nav.team'), to: '/about/team' },
-                { name: t('nav.partners'), to: '/about/partners' },
-            ],
+          name: t("nav.ongoing"),
+          to: "/projets/en-cours",
+          children: [
+            { name: t("nav.phase1"), to: "/projets/en-cours/phase1" },
+            { name: t("nav.phase2"), to: "/projets/en-cours/phase2" },
+          ],
         },
-        {
-            name: t('nav.services'),
-            to: '/Services',
-            children: [
-                { name: t('nav.agriculture'), to: '/Services/agriculture' },
-                { name: t('nav.reboisement'), to: '/Services/reboisement' },
-                { name: t('nav.biodiversity'), to: '/Services/biodiversite' },
-                { name: t('nav.community'), to: '/Services/communautaire' },
-            ],
-        },
-        {
-            name: t('nav.offers'),
-            to: '/Offres',
-            children: [
-                { name: t('nav.offers_agriculture'), to: '/Offres/agriculture' },
-                { name: t('nav.apiculture'), to: '/Offres/apiculture' },
-                { name: t('nav.bancal'), to: '/Offres/bancal' },
-                { name: t('nav.climate'), to: '/Offres/Changement' },
-            ],
-        },
-        {
-            name: t('nav.projects'),
-            to: '/projets',
-            children: [
-                {
-                    name: t('nav.ongoing'),
-                    to: '/projets/en-cours',
-                    children: [
-                        { name: t('nav.phase1'), to: '/projets/en-cours/phase1' },
-                        { name: t('nav.phase2'), to: '/projets/en-cours/phase2' }
-                    ]
-                },
-                { name: t('nav.completed'), to: '/projets/realises' },
-            ],
-        },
-        {
-            name: t('nav.media'),
-            to: '/blog',
-            children: [
-                { name: t('nav.news'), to: '/blog/news' },
-                { name: t('nav.gallery'), to: '/blog/gallery' },
-            ],
-        },
-        { name: t('nav.contact'), to: '/contact' },
-    ]
+        { name: t("nav.completed"), to: "/projets/realises" },
+      ],
+    },
+    {
+      name: t("nav.media"),
+      to: "/blog",
+      children: [
+        { name: t("nav.news"), to: "/blog/news" },
+        { name: t("nav.gallery"), to: "/blog/gallery" },
+      ],
+    },
+    { name: t("nav.contact"), to: "/contact" },
+  ];
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const current = window.scrollY
-            const scrollingDown = current > lastScrollY && current > 0
+  useEffect(() => {
+    const handleScroll = () => {
+      const current = window.scrollY;
+      const scrollingDown = current > lastScrollY && current > 0;
 
-            if (isHome) {
-                if (current < 20) {
-                    setShowTopBar(false)
-                    setIsScrolled(false)
-                } else {
-                    setIsScrolled(true)
-                    if (scrollingDown) {
-                        setShowTopBar(false)
-                    } else if (current < lastScrollY - 2) {
-                        setShowTopBar(true)
-                    }
-                }
-            } else {
-                setIsScrolled(true)
-                if (current < 20) {
-                    setShowTopBar(true)
-                } else if (scrollingDown) {
-                    setShowTopBar(false)
-                } else if (current < lastScrollY - 2) {
-                    setShowTopBar(true)
-                }
-            }
-            setLastScrollY(current)
-        }
-
-        window.addEventListener('scroll', handleScroll, { passive: true })
-        handleScroll()
-        return () => window.removeEventListener('scroll', handleScroll)
-    }, [lastScrollY, isHome])
-
-    useEffect(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' })
-        setMobileOpen(false)
-        if (location.pathname !== '/') {
-            setShowTopBar(true)
-            setIsScrolled(true)
+      if (isHome) {
+        if (current < 20) {
+          setShowTopBar(false);
+          setIsScrolled(false);
         } else {
-            setShowTopBar(false)
-            setIsScrolled(false)
+          setIsScrolled(true);
+          if (scrollingDown) {
+            setShowTopBar(false);
+          } else if (current < lastScrollY - 2) {
+            setShowTopBar(true);
+          }
         }
-    }, [location.pathname])
+      } else {
+        setIsScrolled(true);
+        if (current < 20) {
+          setShowTopBar(true);
+        } else if (scrollingDown) {
+          setShowTopBar(false);
+        } else if (current < lastScrollY - 2) {
+          setShowTopBar(true);
+        }
+      }
+      setLastScrollY(current);
+    };
 
-    const headerBgClass = isScrolled ? 'bg-white shadow-md text-slate-800' : 'bg-transparent text-white'
-    const logoSrc = isScrolled ? logoOfficial : logoWhite
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY, isHome]);
 
-    return (
-        <div className="flex min-h-screen flex-col font-sans">
-            {/* Top Bar */}
-            <div
-                className={`fixed top-0 z-40 w-full transition-transform duration-300 ${showTopBar ? 'translate-y-0' : '-translate-y-full'
-                    }`}
-                style={{ backgroundColor: '#63b32e' }}
-            >
-                <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-1.5 text-xs text-white lg:py-2 lg:text-sm">
-                    <div className="flex flex-wrap items-center gap-3">
-                        <span className="font-semibold hidden sm:inline">{t('footer.location')}</span>
-                        <span className="hidden h-3 w-px bg-white/50 sm:block" />
-                        <span className="font-semibold">info@betterlife-ong.org</span>
-                    </div>
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setMobileOpen(false);
+    if (location.pathname !== "/") {
+      setShowTopBar(true);
+      setIsScrolled(true);
+    } else {
+      setShowTopBar(false);
+      setIsScrolled(false);
+    }
+  }, [location.pathname]);
 
-                    {/* Social Icons (Reduced Size) */}
-                    <div className="hidden md:flex gap-1.5 transform scale-75">
-                        {socialLinks.map((social, index) => (
-                            <a
-                                key={index}
-                                href={social.href}
-                                target="_blank"
-                                rel="noreferrer"
-                                className={`${social.color} p-1.5 rounded-md text-white hover:brightness-110 transition`}
-                            >
-                                <social.icon className="h-3.5 w-3.5" />
-                            </a>
-                        ))}
-                    </div>
+  const headerBgClass = isScrolled
+    ? "bg-white shadow-md text-slate-800"
+    : "bg-transparent text-white";
+  const logoSrc = isScrolled ? logoOfficial : logoWhite;
 
-                    <div className="text-white/90 hidden lg:block italic font-semibold">{t('footer.tagline')}
-                    </div>
-                </div>
-            </div>
+  return (
+    <div className="flex min-h-screen flex-col font-sans">
+      {/* Top Bar */}
+      <div
+        className={`fixed top-0 z-40 w-full transition-transform duration-300 ${
+          showTopBar ? "translate-y-0" : "-translate-y-full"
+        }`}
+        style={{ backgroundColor: "#63b32e" }}
+      >
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-1.5 text-xs text-white lg:py-2 lg:text-sm">
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="font-semibold hidden sm:inline">
+              {t("footer.location")}
+            </span>
+            <span className="hidden h-3 w-px bg-white/50 sm:block" />
+            <span className="font-semibold">info@betterlife-ong.org</span>
+          </div>
 
-            {/* Navbar */}
-            <header
-                className={`fixed z-30 w-full transition-all duration-300 top-0  ${headerBgClass}`}
-                style={{ top: showTopBar ? 28 : 0 }}
-            >
-                <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-0">
-                    <Link to="/" className="flex items-center gap-2">
-                        <img src={logoSrc} alt="Better Life" className="h-16 w-auto transition-all duration-300 sm:h-24" />
-                    </Link>
+          {/* Social Icons (Reduced Size) */}
+          <div className="hidden md:flex gap-1.5 transform scale-75">
+            {socialLinks.map((social, index) => (
+              <a
+                key={index}
+                href={social.href}
+                target="_blank"
+                rel="noreferrer"
+                className={`${social.color} p-1.5 rounded-md text-white hover:brightness-110 transition`}
+              >
+                <social.icon className="h-3.5 w-3.5" />
+              </a>
+            ))}
+          </div>
 
-                    {/* Desktop Nav - Recursive */}
-                    <nav className="hidden items-center gap-1 lg:flex">
-                        {navigation.map((item) => (
-                            <NavItem key={item.name} item={item} isScrolled={isScrolled} />
-                        ))}
-                    </nav>
-
-                    {/* Action / Mobile Toggle */}
-                    <div className="flex items-center gap-2">
-                        {/* Search Button */}
-                        <button
-                            onClick={() => setSearchOpen(true)}
-                            className={`p-2.5 rounded-md transition ${isScrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'
-                                }`}
-                            aria-label={t('common.search')}
-                        >
-                            <FaSearch className="text-lg" />
-                        </button>
-
-                        {/* Language Selector */}
-                        <LanguageSelector isScrolled={isScrolled} />
-
-                        <Link
-                            to="/contact"
-                            className={`hidden rounded-md px-5 py-2.5 text-sm font-semibold shadow-sm transition hover:brightness-110 lg:block ${isScrolled
-                                ? 'bg-[#63b32e] text-white'
-                                : 'bg-white text-[#63b32e] hover:bg-slate-100'
-                                }`}
-                        >
-                            {t('common.donate')}
-                        </Link>
-
-                        <button
-                            className={`lg:hidden ${isScrolled ? 'text-slate-800' : 'text-white'}`}
-                            onClick={() => setMobileOpen(!mobileOpen)}
-                        >
-                            <span className="sr-only">{mobileOpen ? 'Fermer le menu' : 'Ouvrir le menu'}</span>
-                            <div className="relative h-5 w-6 gap-5">
-                                <span className={`absolute left-0 block h-0.5 w-7 transition-all duration-300 ${mobileOpen ? 'top-1/2 rotate-45' : 'top-0 rotate-0'} ${isScrolled ? 'bg-[#0f70b7]' : 'bg-white'}`} />
-                                <span className={`absolute top-1/2 left-0 block h-0.5 w-5 transition-all duration-300 ${mobileOpen ? 'opacity-0' : 'opacity-100'} ${isScrolled ? 'bg-[#63b32e]' : 'bg-white'}`} />
-                                <span className={`absolute left-0 block h-0.5 w-7 transition-all duration-300 ${mobileOpen ? 'top-1/2 -rotate-45' : 'top-full rotate-0'} ${isScrolled ? 'bg-[#0f70b7]' : 'bg-white'}`} />
-                            </div>
-                        </button>
-                    </div>
-                </div>
-
-                {/* Mobile Menu */}
-                <div
-                    className={`absolute left-0 top-full w-full overflow-hidden shadow-xl transition-all duration-300 lg:hidden ${mobileOpen ? 'max-h-[85vh] opacity-100 overflow-y-auto' : 'max-h-0 opacity-0'} ${isScrolled ? 'bg-white' : 'bg-white/10 backdrop-blur-md'}
-                        }`}
-                >
-                    <div className={`flex flex-col ${isScrolled ? 'text-slate-800' : 'text-white'}`}>
-                        {navigation.map((item) => (
-                            <MobileNavItem key={item.name} item={item} setMobileOpen={setMobileOpen} />
-                        ))}
-                        <div className="p-4">
-                            <Link
-                                to="/contact"
-                                onClick={() => setMobileOpen(false)}
-                                className="flex w-full items-center justify-center rounded-lg bg-[#63b32e] py-3 text-center font-bold text-white shadow-sm"
-                            >
-                                {t('common.donate')}
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </header>
-
-            {/* Search Overlay */}
-            <SearchOverlay isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
-
-            {/* Breadcrumb - Only for submenus (depth > 1) */}
-            {location.pathname.split('/').filter(x => x).length > 1 && (
-                <div className="pt-[40px] lg:pt-[110px]">
-                    <Breadcrumb />
-                </div>
-            )}
-
-            <main className={`flex-grow ${isHome ? 'pt-0' : (location.pathname.split('/').filter(x => x).length > 1 ? '' : 'pt-24 lg:pt-28')}`}>
-                {children}
-            </main>
-
-            <footer className="bg-[#0f70b7] pt-16 pb-0 text-white">
-                {/* Footer content preserved */}
-                <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-4">
-                    <div className="space-y-6">
-                        <div className="flex items-center gap-3">
-                            <img src={logoWhite} alt="Better Life" className="h-16 w-auto" />
-                        </div>
-                        <p className="text-white/80 leading-relaxed max-w-xs">
-                            {t('footer.description')}
-                        </p>
-                        <div className="flex flex-wrap gap-2 text-white">
-                            {socialLinks.map((social, index) => (
-                                <a
-                                    key={index}
-                                    href={social.href}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="bg-white/10 p-2 rounded-full hover:text-[#63b32e]  /20 transition"
-                                >
-                                    <social.icon className="h-4 w-4" />
-                                </a>
-                            ))}
-                        </div>
-                    </div>
-                    <div>
-                        <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-[#63b32e]">{t('footer.nav_title')}</h3>
-                        <ul className="space-y-3">
-                            <li><Link to="/" className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4">{t('nav.home')}</Link></li>
-                            <li><Link to="/about" className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4">{t('nav.about')}</Link></li>
-                            <li><Link to="/Services" className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4">{t('nav.services')}</Link></li>
-                            <li><Link to="/Offres" className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4">{t('nav.offers')}</Link></li>
-                            <li><Link to="/projets" className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4">{t('nav.projects')}</Link></li>
-                            <li><Link to="/contact" className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4">{t('nav.contact')}</Link></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-[#63b32e]">{t('footer.activities_title')}</h3>
-                        <ul className="space-y-3">
-                            <li><Link to="/Services/agriculture" className="hover:text-white/80">{t('nav.agriculture')}</Link></li>
-                            <li><Link to="/Services/reboisement" className="hover:text-white/80">{t('nav.reboisement')}</Link></li>
-                            <li><Link to="/Services/biodiversite" className="hover:text-white/80">{t('nav.biodiversity')}</Link></li>
-                            <li><Link to="/Services/communautaire" className="hover:text-white/80">{t('nav.community')}</Link></li>
-                            <li><Link to="/Services/elevage" className="hover:text-white/80">{t('nav.breeding')}</Link></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-[#63b32e]">{t('footer.contact_title')}</h3>
-                        <ul className="space-y-3 text-white/80 w-full">
-                            <li className="flex flex-row item-center gap-3 w-full">
-                                <span className="ffont-semibold text-[#0f70b7] text-[12px] bg-white/70 w-50 h-50 rounded-full flex item-center p-2 absolute mt-2"><FaLocationDot className=''></FaLocationDot> </span>
-                                <span className='ml-11'>N°5 Av. Des Etangs , Q/ Joli Parc,<br /> C/ Ngaliema, Kinshasa - RDC</span>
-                            </li>
-                            <li className="flex gap-3 pb-2">
-                                <span className="font-semibold text-[12px]  text-[#0f70b7] bg-white/70 w-50 h-50 rounded-full flex item-center p-2"><FaEnvelope></FaEnvelope></span>
-                                <span className='pt-1'>info@betterlife-ong.org</span>
-                            </li>
-                            <li className="flex gap-3">
-                                <span className="font-semibold text-[12px] text-[#0f70b7] bg-white/70  w-50 h-50 rounded-full flex item-center p-2"><FaPhone></FaPhone></span>
-                                <span className='pt-1'>+243 82 9495 919</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div className="mt-12 border-t border-white/10 bg-black/10">
-                    <div className="mx-auto max-w-7xl px-6 py-6 text-center text-white/60">
-                        <p className='text-[11px]'>© {new Date().getFullYear()} Better Life ONG. {t('footer.rights')}</p>
-                    </div>
-                </div>
-            </footer>
+          <div className="text-white/90 hidden lg:block italic font-semibold">
+            {t("footer.tagline")}
+          </div>
         </div>
-    )
+      </div>
+
+      {/* Navbar */}
+      <header
+        className={`fixed z-30 w-full transition-all duration-300 top-0  ${headerBgClass}`}
+        style={{ top: showTopBar ? 28 : 0 }}
+      >
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-0">
+          <Link to="/" className="flex items-center gap-2">
+            <img
+              src={logoSrc}
+              alt="Better Life"
+              className="h-16 w-auto transition-all duration-300 sm:h-24"
+            />
+          </Link>
+
+          {/* Desktop Nav - Recursive */}
+          <nav className="hidden items-center gap-1 lg:flex">
+            {navigation.map((item) => (
+              <NavItem key={item.name} item={item} isScrolled={isScrolled} />
+            ))}
+          </nav>
+
+          {/* Action / Mobile Toggle */}
+          <div className="flex items-center gap-2">
+            {/* Search Button */}
+            <button
+              onClick={() => setSearchOpen(true)}
+              className={`p-2.5 rounded-md transition ${
+                isScrolled
+                  ? "text-slate-700 hover:bg-slate-100"
+                  : "text-white hover:bg-white/10"
+              }`}
+              aria-label={t("common.search")}
+            >
+              <FaSearch className="text-lg" />
+            </button>
+
+            {/* Language Selector */}
+            <LanguageSelector isScrolled={isScrolled} />
+
+            <Link
+              to="/contact"
+              className={`hidden rounded-md px-5 py-2.5 text-sm font-semibold shadow-sm transition hover:brightness-110 lg:block ${
+                isScrolled
+                  ? "bg-[#63b32e] text-white"
+                  : "bg-white text-[#63b32e] hover:bg-slate-100"
+              }`}
+            >
+              {t("common.donate")}
+            </Link>
+
+            <button
+              className={`lg:hidden ${
+                isScrolled ? "text-slate-800" : "text-white"
+              }`}
+              onClick={() => setMobileOpen(!mobileOpen)}
+            >
+              <span className="sr-only">
+                {mobileOpen ? "Fermer le menu" : "Ouvrir le menu"}
+              </span>
+              <div className="relative h-5 w-6 gap-5">
+                <span
+                  className={`absolute left-0 block h-0.5 w-7 transition-all duration-300 ${
+                    mobileOpen ? "top-1/2 rotate-45" : "top-0 rotate-0"
+                  } ${isScrolled ? "bg-[#0f70b7]" : "bg-white"}`}
+                />
+                <span
+                  className={`absolute top-1/2 left-0 block h-0.5 w-5 transition-all duration-300 ${
+                    mobileOpen ? "opacity-0" : "opacity-100"
+                  } ${isScrolled ? "bg-[#63b32e]" : "bg-white"}`}
+                />
+                <span
+                  className={`absolute left-0 block h-0.5 w-7 transition-all duration-300 ${
+                    mobileOpen ? "top-1/2 -rotate-45" : "top-full rotate-0"
+                  } ${isScrolled ? "bg-[#0f70b7]" : "bg-white"}`}
+                />
+              </div>
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        <div
+          className={`absolute left-0 top-full w-full overflow-hidden shadow-xl transition-all duration-300 lg:hidden ${
+            mobileOpen
+              ? "max-h-[85vh] opacity-100 overflow-y-auto"
+              : "max-h-0 opacity-0"
+          } ${isScrolled ? "bg-white" : "bg-white/10 backdrop-blur-md"}
+                        }`}
+        >
+          <div
+            className={`flex flex-col ${
+              isScrolled ? "text-slate-800" : "text-white"
+            }`}
+          >
+            {navigation.map((item) => (
+              <MobileNavItem
+                key={item.name}
+                item={item}
+                setMobileOpen={setMobileOpen}
+              />
+            ))}
+            <div className="p-4">
+              <Link
+                to="/contact"
+                onClick={() => setMobileOpen(false)}
+                className="flex w-full items-center justify-center rounded-lg bg-[#63b32e] py-3 text-center font-bold text-white shadow-sm"
+              >
+                {t("common.donate")}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Search Overlay */}
+      <SearchOverlay isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
+
+      {/* Breadcrumb - Only for submenus (depth > 1) */}
+      {location.pathname.split("/").filter((x) => x).length > 1 && (
+        <div className="pt-[40px] lg:pt-[110px]">
+          <Breadcrumb />
+        </div>
+      )}
+
+      <main
+        className={`flex-grow ${
+          isHome
+            ? "pt-0"
+            : location.pathname.split("/").filter((x) => x).length > 1
+            ? ""
+            : "pt-24 lg:pt-28"
+        }`}
+      >
+        {children}
+      </main>
+
+      <footer className="bg-[#0f70b7] pt-16 pb-0 text-white">
+        {/* Footer content preserved */}
+        <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-4">
+          <div className="space-y-6">
+            <div className="flex items-center gap-3">
+              <img src={logoWhite} alt="Better Life" className="h-16 w-auto" />
+            </div>
+            <p className="text-white/80 leading-relaxed max-w-xs">
+              {t("footer.description")}
+            </p>
+            <div className="flex flex-wrap gap-2 text-white">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="bg-white/10 p-2 rounded-full hover:text-[#63b32e]  /20 transition"
+                >
+                  <social.icon className="h-4 w-4" />
+                </a>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-[#63b32e]">
+              {t("footer.nav_title")}
+            </h3>
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  to="/"
+                  className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4"
+                >
+                  {t("nav.home")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/about"
+                  className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4"
+                >
+                  {t("nav.about")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/Services"
+                  className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4"
+                >
+                  {t("nav.services")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/Offres"
+                  className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4"
+                >
+                  {t("nav.offers")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/projets"
+                  className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4"
+                >
+                  {t("nav.projects")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4"
+                >
+                  {t("nav.contact")}
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-[#63b32e]">
+              {t("footer.activities_title")}
+            </h3>
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  to="/Services/agriculture"
+                  className="hover:text-white/80"
+                >
+                  {t("nav.agriculture")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/Services/reboisement"
+                  className="hover:text-white/80"
+                >
+                  {t("nav.reboisement")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/Services/biodiversite"
+                  className="hover:text-white/80"
+                >
+                  {t("nav.biodiversity")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/Services/communautaire"
+                  className="hover:text-white/80"
+                >
+                  {t("nav.community")}
+                </Link>
+              </li>
+              <li>
+                <Link to="/Services/elevage" className="hover:text-white/80">
+                  {t("nav.breeding")}
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-[#63b32e]">
+              {t("footer.contact_title")}
+            </h3>
+            <ul className="space-y-3 text-white/80 w-full">
+              <li className="flex flex-row item-center gap-3 w-full">
+                <span className="ffont-semibold text-[#0f70b7] text-[12px] bg-white/70 w-50 h-50 rounded-full flex item-center p-2 absolute mt-2">
+                  <FaLocationDot className=""></FaLocationDot>{" "}
+                </span>
+                <span className="ml-11">
+                  N°5 Av. Des Etangs , Q/ Joli Parc,
+                  <br /> C/ Ngaliema, Kinshasa - RDC
+                </span>
+              </li>
+              <li className="flex gap-3 pb-2">
+                <span className="font-semibold text-[12px]  text-[#0f70b7] bg-white/70 w-50 h-50 rounded-full flex item-center p-2">
+                  <FaEnvelope></FaEnvelope>
+                </span>
+                <span className="pt-1">info@betterlife-ong.org</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="font-semibold text-[12px] text-[#0f70b7] bg-white/70  w-50 h-50 rounded-full flex item-center p-2">
+                  <FaPhone></FaPhone>
+                </span>
+                <span className="pt-1">+243 82 9495 919</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-12 border-t border-white/10 bg-black/10">
+          <div className="mx-auto max-w-7xl px-6 py-6 text-center text-white/60">
+            <p className="text-[11px]">
+              © {new Date().getFullYear()} Better Life ONG. {t("footer.rights")}
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
 }
