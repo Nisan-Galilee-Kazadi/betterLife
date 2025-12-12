@@ -1,6 +1,6 @@
 import React from 'react'
 import { SectionTitle } from '../components/SectionTitle'
-import { FaSeedling, FaTree, FaCloud, FaPeopleGroup, FaTractor, FaCow } from 'react-icons/fa6'
+import { FaSeedling, FaTree, FaCloud, FaPeopleGroup, FaTractor, FaCow, FaJava, FaCircleDot } from 'react-icons/fa6'
 
 // Updated services based on old site content: Agriculture, Elevage, Biodiversite, Climat, etc.
 const services = [
@@ -10,6 +10,11 @@ const services = [
         icon: FaSeedling,
     },
     {
+        title: 'Tu connais le jeu',
+        desc: 'c’est une façon pour moi de te montrer qui controle le jeu par ici mec .',
+        icon: FaJava,
+    },
+    {
         title: 'Reboisement & Climat',
         desc: 'Pépinières scolaires, reboisement et lutte contre le réchauffement climatique via des essences forestières et fruitières.',
         icon: FaTree,
@@ -17,7 +22,7 @@ const services = [
     {
         title: 'Biodiversité',
         desc: 'Protection des écosystèmes, éducation sur l’impact des comportements humains et conservation de la nature.',
-        icon: FaCloud, // Using Cloud/Nature concept
+        icon: FaCloud,
     },
     {
         title: 'Projets Communautaires',
@@ -58,17 +63,17 @@ export function Services() {
                 <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
                     <p className="text-sm font-semibold text-slate-800">Approche Intégrée</p>
                     <ul className="mt-3 space-y-2 text-sm text-slate-600">
-                        <li>• Synergie entre agriculture et conservation</li>
-                        <li>• Implication des communautés locales</li>
-                        <li>• Innovation technologique et écologique</li>
+                        <li className='flex flex-row item-center gap-2'><FaCircleDot className='mt-[6px] text-[#0f70b7] text-[8px]'></FaCircleDot> Synergie entre agriculture et conservation</li>
+                        <li className='flex flex-row item-center gap-2'><FaCircleDot className='mt-[6px] text-[#0f70b7] text-[8px]'></FaCircleDot> Implication des communautés locales</li>
+                        <li className='flex flex-row item-center gap-2'><FaCircleDot className='mt-[6px] text-[#0f70b7] text-[8px]'></FaCircleDot> Innovation technologique et écologique</li>
                     </ul>
                 </div>
                 <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
                     <p className="text-sm font-semibold text-slate-800">Objectifs Clés</p>
                     <ul className="mt-3 space-y-2 text-sm text-slate-600">
-                        <li>• Sécurité alimentaire durable</li>
-                        <li>• Résilience climatique accrue</li>
-                        <li>• Restauration des paysages dégradés</li>
+                        <li className='flex flex-row item-center gap-2'><FaCircleDot className='mt-[6px] text-[#0f70b7] text-[8px]'></FaCircleDot> Sécurité alimentaire durable</li>
+                        <li className='flex flex-row item-center gap-2'><FaCircleDot className='mt-[6px] text-[#0f70b7] text-[8px]'></FaCircleDot> Résilience climatique accrue</li>
+                        <li className='flex flex-row item-center gap-2'><FaCircleDot className='mt-[6px] text-[#0f70b7] text-[8px]'></FaCircleDot> Restauration des paysages dégradés</li>
                     </ul>
                 </div>
             </div>

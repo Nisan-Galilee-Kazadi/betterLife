@@ -1,6 +1,10 @@
 import { useEffect, useState, useRef } from 'react'
 import { NavLink, Link, useLocation } from 'react-router-dom'
 import { FaFacebook, FaLinkedin, FaYoutube, FaPlay, FaInstagram, FaTiktok, FaWhatsapp, FaXTwitter, FaEnvelope, FaLocationDot, FaPhone } from 'react-icons/fa6'
+import { FaSearch, FaGlobe } from 'react-icons/fa'
+import { SearchOverlay } from './SearchOverlay'
+import { Breadcrumb } from './Breadcrumb'
+import { useLanguage } from '../contexts/LanguageContext'
 import logoOfficial from '../images/cropped-Logo-betterlife-officiel.png'
 import logoWhite from '../images/Logo-betterlife-officiel-Blanc-300x300.png'
 
@@ -12,53 +16,6 @@ const socialLinks = [
     { icon: FaInstagram, href: '#', color: 'bg-[#E1306C]' },
     { icon: FaTiktok, href: '#', color: 'bg-[#000000]' },
     { icon: FaWhatsapp, href: '#', color: 'bg-[#25D366]' },
-]
-
-const navigation = [
-    { name: 'Accueil', to: '/' },
-    {
-        name: 'À Propos',
-        to: '/about',
-        children: [
-            { name: 'Mission & Vision', to: '/about/mission' },
-            { name: 'Notre Équipe', to: '/about/team' },
-            { name: 'Partenaires', to: '/about/partners' },
-        ],
-    },
-    {
-        name: 'Nos Services',
-        to: '/Services',
-        children: [
-            { name: 'Agriculture Durable', to: '/Services/agriculture' },
-            { name: 'Reboisement', to: '/Services/reboisement' },
-            { name: 'Biodiversité', to: '/Services/biodiversite' },
-            { name: 'Projets Communautaires', to: '/Services/communautaire' },
-        ],
-    },
-    {
-        name: 'Projets',
-        to: '/projets',
-        children: [
-            {
-                name: 'En cours',
-                to: '/projets/en-cours',
-                children: [
-                    { name: 'Phase 1', to: '/projets/en-cours/phase1' },
-                    { name: 'Phase 2', to: '/projets/en-cours/phase2' }
-                ]
-            },
-            { name: 'Réalisés', to: '/projets/realises' },
-        ],
-    },
-    {
-        name: 'Média',
-        to: '/blog',
-        children: [
-            { name: 'Actualités', to: '/blog/news' },
-            { name: 'Galerie', to: '/blog/gallery' },
-        ],
-    },
-    { name: 'Contact', to: '/contact' },
 ]
 
 // Recursive NavItem Component
@@ -204,14 +161,133 @@ function MobileNavItem({ item, level = 0, setMobileOpen }) {
     )
 }
 
-export function Shell({ children }) {
-    const [showTopBar, setShowTopBar] = useState(true)
-    const [isScrolled, setIsScrolled] = useState(false)
-    const [lastScrollY, setLastScrollY] = useState(0)
-    const [mobileOpen, setMobileOpen] = useState(false)
+// Language Selector Component
+function LanguageSelector({ isScrolled }) {
+    const [isOpen, setIsOpen] = useState(false)
+    const { language, setLanguage } = useLanguage()
+    const ref = useRef(null)
 
+    const languages = [
+        { code: 'fr', name: 'Français', flag: '🇫🇷' },
+        { code: 'en', name: 'English', flag: '🇬🇧' },
+        { code: 'es', name: 'Español', flag: '🇪🇸' }
+    ]
+
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (ref.current && !ref.current.contains(event.target)) {
+                setIsOpen(false)
+            }
+        }
+        document.addEventListener('mousedown', handleClickOutside)
+        return () => document.removeEventListener('mousedown', handleClickOutside)
+    }, [])
+
+    const handleLanguageChange = (code) => {
+        setLanguage(code)
+        // localStorage is handled in Context
+        setIsOpen(false)
+    }
+
+    const currentLang = languages.find(l => l.code === language) || languages[0]
+
+    return (
+        <div className="relative" ref={ref}>
+            <button
+                onClick={() => setIsOpen(!isOpen)}
+                className={`flex items-center gap-2 px-3 py-2 rounded-md transition ${isScrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'
+                    }`}
+            >
+                <span className="text-xl">{currentLang.flag}</span>
+                <FaGlobe className="text-sm" />
+            </button>
+
+            {isOpen && (
+                <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-lg shadow-xl border border-slate-200 py-2 z-50">
+                    {languages.map((lang) => (
+                        <button
+                            key={lang.code}
+                            onClick={() => handleLanguageChange(lang.code)}
+                            className={`w-full flex items-center gap-3 px-4 py-2 hover:bg-slate-50 transition ${language === lang.code ? 'bg-green-50 text-[#63b32e]' : 'text-slate-700'
+                                }`}
+                        >
+                            <span className="text-2xl">{lang.flag}</span>
+                            <span className="font-medium">{lang.name}</span>
+                        </button>
+                    ))}
+                </div>
+            )}
+        </div>
+    )
+}
+
+export function Shell({ children }) {
     const location = useLocation()
     const isHome = location.pathname === '/'
+
+    const [showTopBar, setShowTopBar] = useState(!isHome)
+    const [isScrolled, setIsScrolled] = useState(!isHome)
+    const [lastScrollY, setLastScrollY] = useState(0)
+    const [mobileOpen, setMobileOpen] = useState(false)
+    const [searchOpen, setSearchOpen] = useState(false)
+    const { t } = useLanguage()
+
+    const navigation = [
+        { name: t('nav.home'), to: '/' },
+        {
+            name: t('nav.about'),
+            to: '/about',
+            children: [
+                { name: t('nav.mission'), to: '/about/mission' },
+                { name: t('nav.team'), to: '/about/team' },
+                { name: t('nav.partners'), to: '/about/partners' },
+            ],
+        },
+        {
+            name: t('nav.services'),
+            to: '/Services',
+            children: [
+                { name: t('nav.agriculture'), to: '/Services/agriculture' },
+                { name: t('nav.reboisement'), to: '/Services/reboisement' },
+                { name: t('nav.biodiversity'), to: '/Services/biodiversite' },
+                { name: t('nav.community'), to: '/Services/communautaire' },
+            ],
+        },
+        {
+            name: t('nav.offers'),
+            to: '/Offres',
+            children: [
+                { name: t('nav.offers_agriculture'), to: '/Offres/agriculture' },
+                { name: t('nav.apiculture'), to: '/Offres/apiculture' },
+                { name: t('nav.bancal'), to: '/Offres/bancal' },
+                { name: t('nav.climate'), to: '/Offres/Changement' },
+            ],
+        },
+        {
+            name: t('nav.projects'),
+            to: '/projets',
+            children: [
+                {
+                    name: t('nav.ongoing'),
+                    to: '/projets/en-cours',
+                    children: [
+                        { name: t('nav.phase1'), to: '/projets/en-cours/phase1' },
+                        { name: t('nav.phase2'), to: '/projets/en-cours/phase2' }
+                    ]
+                },
+                { name: t('nav.completed'), to: '/projets/realises' },
+            ],
+        },
+        {
+            name: t('nav.media'),
+            to: '/blog',
+            children: [
+                { name: t('nav.news'), to: '/blog/news' },
+                { name: t('nav.gallery'), to: '/blog/gallery' },
+            ],
+        },
+        { name: t('nav.contact'), to: '/contact' },
+    ]
 
     useEffect(() => {
         const handleScroll = () => {
@@ -273,7 +349,7 @@ export function Shell({ children }) {
             >
                 <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-1.5 text-xs text-white lg:py-2 lg:text-sm">
                     <div className="flex flex-wrap items-center gap-3">
-                        <span className="font-semibold hidden sm:inline">Joli Parc, C/Ngaliema</span>
+                        <span className="font-semibold hidden sm:inline">{t('footer.location')}</span>
                         <span className="hidden h-3 w-px bg-white/50 sm:block" />
                         <span className="font-semibold">info@betterlife-ong.org</span>
                     </div>
@@ -293,7 +369,8 @@ export function Shell({ children }) {
                         ))}
                     </div>
 
-                    <div className="text-white/90 hidden lg:block">Engagés pour un avenir durable</div>
+                    <div className="text-white/90 hidden lg:block italic font-semibold">{t('footer.tagline')}
+                    </div>
                 </div>
             </div>
 
@@ -315,7 +392,20 @@ export function Shell({ children }) {
                     </nav>
 
                     {/* Action / Mobile Toggle */}
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2">
+                        {/* Search Button */}
+                        <button
+                            onClick={() => setSearchOpen(true)}
+                            className={`p-2.5 rounded-md transition ${isScrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'
+                                }`}
+                            aria-label={t('common.search')}
+                        >
+                            <FaSearch className="text-lg" />
+                        </button>
+
+                        {/* Language Selector */}
+                        <LanguageSelector isScrolled={isScrolled} />
+
                         <Link
                             to="/contact"
                             className={`hidden rounded-md px-5 py-2.5 text-sm font-semibold shadow-sm transition hover:brightness-110 lg:block ${isScrolled
@@ -323,7 +413,7 @@ export function Shell({ children }) {
                                 : 'bg-white text-[#63b32e] hover:bg-slate-100'
                                 }`}
                         >
-                            Faire un don
+                            {t('common.donate')}
                         </Link>
 
                         <button
@@ -355,14 +445,24 @@ export function Shell({ children }) {
                                 onClick={() => setMobileOpen(false)}
                                 className="flex w-full items-center justify-center rounded-lg bg-[#63b32e] py-3 text-center font-bold text-white shadow-sm"
                             >
-                                Faire un don
+                                {t('common.donate')}
                             </Link>
                         </div>
                     </div>
                 </div>
             </header>
 
-            <main className={`flex-grow ${isHome ? '' : 'pt-24 lg:pt-28'}`}>
+            {/* Search Overlay */}
+            <SearchOverlay isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
+
+            {/* Breadcrumb - Only for submenus (depth > 1) */}
+            {location.pathname.split('/').filter(x => x).length > 1 && (
+                <div className="pt-[40px] lg:pt-[110px]">
+                    <Breadcrumb />
+                </div>
+            )}
+
+            <main className={`flex-grow ${isHome ? 'pt-0' : (location.pathname.split('/').filter(x => x).length > 1 ? '' : 'pt-24 lg:pt-28')}`}>
                 {children}
             </main>
 
@@ -374,7 +474,7 @@ export function Shell({ children }) {
                             <img src={logoWhite} alt="Better Life" className="h-16 w-auto" />
                         </div>
                         <p className="text-white/80 leading-relaxed max-w-xs">
-                            Protection de l'Environnement, Biodiversité, et Développement Durable en République Démocratique du Congo.
+                            {t('footer.description')}
                         </p>
                         <div className="flex flex-wrap gap-2 text-white">
                             {socialLinks.map((social, index) => (
@@ -383,7 +483,7 @@ export function Shell({ children }) {
                                     href={social.href}
                                     target="_blank"
                                     rel="noreferrer"
-                                    className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition"
+                                    className="bg-white/10 p-2 rounded-full hover:text-[#63b32e]  /20 transition"
                                 >
                                     <social.icon className="h-4 w-4" />
                                 </a>
@@ -391,46 +491,47 @@ export function Shell({ children }) {
                         </div>
                     </div>
                     <div>
-                        <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-white/60">Navigation</h3>
+                        <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-[#63b32e]">{t('footer.nav_title')}</h3>
                         <ul className="space-y-3">
-                            <li><Link to="/" className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4">Accueil</Link></li>
-                            <li><Link to="/about" className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4">À Propos</Link></li>
-                            <li><Link to="/Services" className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4">Nos Services</Link></li>
-                            <li><Link to="/projets" className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4">Projets</Link></li>
-                            <li><Link to="/contact" className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4">Contact</Link></li>
+                            <li><Link to="/" className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4">{t('nav.home')}</Link></li>
+                            <li><Link to="/about" className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4">{t('nav.about')}</Link></li>
+                            <li><Link to="/Services" className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4">{t('nav.services')}</Link></li>
+                            <li><Link to="/Offres" className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4">{t('nav.offers')}</Link></li>
+                            <li><Link to="/projets" className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4">{t('nav.projects')}</Link></li>
+                            <li><Link to="/contact" className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4">{t('nav.contact')}</Link></li>
                         </ul>
                     </div>
                     <div>
-                        <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-white/60">Activités</h3>
+                        <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-[#63b32e]">{t('footer.activities_title')}</h3>
                         <ul className="space-y-3">
-                            <li><Link to="/Services/agriculture" className="hover:text-white/80">Agriculture Durable</Link></li>
-                            <li><Link to="/Services/reboisement" className="hover:text-white/80">Reboisement & Climat</Link></li>
-                            <li><Link to="/Services/biodiversite" className="hover:text-white/80">Biodiversité</Link></li>
-                            <li><Link to="/Services/communautaire" className="hover:text-white/80">Projets Communautaires</Link></li>
-                            <li><Link to="/Services/elevage" className="hover:text-white/80">Élevage Responsable</Link></li>
+                            <li><Link to="/Services/agriculture" className="hover:text-white/80">{t('nav.agriculture')}</Link></li>
+                            <li><Link to="/Services/reboisement" className="hover:text-white/80">{t('nav.reboisement')}</Link></li>
+                            <li><Link to="/Services/biodiversite" className="hover:text-white/80">{t('nav.biodiversity')}</Link></li>
+                            <li><Link to="/Services/communautaire" className="hover:text-white/80">{t('nav.community')}</Link></li>
+                            <li><Link to="/Services/elevage" className="hover:text-white/80">{t('nav.breeding')}</Link></li>
                         </ul>
                     </div>
                     <div>
-                        <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-white/60">Nous Contacter</h3>
+                        <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-[#63b32e]">{t('footer.contact_title')}</h3>
                         <ul className="space-y-3 text-white/80 w-full">
                             <li className="flex flex-row item-center gap-3 w-full">
-                                <span className="ffont-semibold text-[#0f70b7] text-[12px] bg-[#fafafa] w-50 h-50 rounded-full flex item-center p-2 absolute mt-2"><FaLocationDot className=''></FaLocationDot> </span>
+                                <span className="ffont-semibold text-[#0f70b7] text-[12px] bg-white/70 w-50 h-50 rounded-full flex item-center p-2 absolute mt-2"><FaLocationDot className=''></FaLocationDot> </span>
                                 <span className='ml-11'>N°5 Av. Des Etangs , Q/ Joli Parc,<br /> C/ Ngaliema, Kinshasa - RDC</span>
                             </li>
-                            <li className="flex gap-3 pb-3">
-                                <span className="font-semibold text-[12px]  text-[#0f70b7] bg-[#fafafa] w-50 h-50 rounded-full flex item-center p-2"><FaEnvelope></FaEnvelope></span>
-                                <span>info@betterlife-ong.org</span>
+                            <li className="flex gap-3 pb-2">
+                                <span className="font-semibold text-[12px]  text-[#0f70b7] bg-white/70 w-50 h-50 rounded-full flex item-center p-2"><FaEnvelope></FaEnvelope></span>
+                                <span className='pt-1'>info@betterlife-ong.org</span>
                             </li>
                             <li className="flex gap-3">
-                                <span className="font-semibold text-[12px] text-[#0f70b7] bg-[#fafafa]  w-50 h-50 rounded-full flex item-center p-2"><FaPhone></FaPhone></span>
-                                <span>+243 82 9495 919</span>
+                                <span className="font-semibold text-[12px] text-[#0f70b7] bg-white/70  w-50 h-50 rounded-full flex item-center p-2"><FaPhone></FaPhone></span>
+                                <span className='pt-1'>+243 82 9495 919</span>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div className="mt-12 border-t border-white/10 bg-black/10">
-                    <div className="mx-auto max-w-7xl px-6 py-6 text-center text-xs text-white/60">
-                        <p>© {new Date().getFullYear()} Better Life ONG. Tous droits réservés.</p>
+                    <div className="mx-auto max-w-7xl px-6 py-6 text-center text-white/60">
+                        <p className='text-[11px]'>© {new Date().getFullYear()} Better Life ONG. {t('footer.rights')}</p>
                     </div>
                 </div>
             </footer>
