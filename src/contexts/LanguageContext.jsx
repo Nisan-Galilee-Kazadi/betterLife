@@ -8,6 +8,7 @@ import React, {
 import { fr } from "../translations/fr";
 import { en } from "../translations/en";
 import { es } from "../translations/es";
+import { sw } from "../translations/sw";
 
 const LanguageContext = createContext();
 
@@ -15,6 +16,7 @@ const translations = {
   fr,
   en,
   es,
+  sw,
 };
 
 export function LanguageProvider({ children }) {

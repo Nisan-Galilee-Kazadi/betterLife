@@ -132,10 +132,9 @@ function NavItem({ item, depth = 0, isScrolled }) {
       {hasChildren && isOpen && (
         <div
           className={`absolute z-50 min-w-[220px] border border-slate-100 bg-white py-2 shadow-xl ring-1 ring-black/5 rounded-lg
-            ${
-              depth === 0
-                ? "left-0 top-full mt-0 origin-top-left"
-                : "left-full top-0 ml-1 origin-top-left"
+            ${depth === 0
+              ? "left-0 top-full mt-0 origin-top-left"
+              : "left-full top-0 ml-1 origin-top-left"
             }`}
         >
           {item.children.map((child) => (
@@ -175,9 +174,8 @@ function MobileNavItem({
       >
         <Link
           to={item.to}
-          className={`text-base font-semibold ${
-            isActive ? "text-[#63b32e]" : "text-slate-800"
-          }`}
+          className={`text-base font-semibold ${isActive ? "text-[#63b32e]" : "text-slate-800"
+            }`}
           onClick={() => {
             if (!hasChildren) {
               setMobileOpen(false);
@@ -207,9 +205,8 @@ function MobileNavItem({
                 return next;
               });
             }}
-            className={`p-2 text-slate-400 transition-transform duration-200 ${
-              isOpen ? "rotate-90 text-[#63b32e]" : "text-slate-400"
-            }`}
+            className={`p-2 text-slate-400 transition-transform duration-200 ${isOpen ? "rotate-90 text-[#63b32e]" : "text-slate-400"
+              }`}
             aria-expanded={isOpen}
             aria-controls={`submenu-${id}`}
           >
@@ -220,11 +217,10 @@ function MobileNavItem({
       {hasChildren && (
         <div
           id={`submenu-${id}`}
-          className={`bg-slate-50 overflow-hidden transition-all duration-300 ease-in-out ${
-            isOpen
-              ? "max-h-[2000px] opacity-100 py-2"
-              : "max-h-0 opacity-0 py-0"
-          }`}
+          className={`bg-slate-50 overflow-hidden transition-all duration-300 ease-in-out ${isOpen
+            ? "max-h-[2000px] opacity-100 py-2"
+            : "max-h-0 opacity-0 py-0"
+            }`}
           aria-hidden={!isOpen}
         >
           {item.children.map((child) => (
@@ -253,6 +249,7 @@ function LanguageSelector({ isScrolled }) {
     { code: "fr", name: "Français", flag: "🇫🇷" },
     { code: "en", name: "English", flag: "🇬🇧" },
     { code: "es", name: "Español", flag: "🇪🇸" },
+    { code: "sw", name: "Kiswahili", flag: "🇹🇿" },
   ];
 
   useEffect(() => {
@@ -278,11 +275,10 @@ function LanguageSelector({ isScrolled }) {
     <div className="relative" ref={ref}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`flex items-center gap-2 px-3 py-2 rounded-md transition ${
-          isScrolled
-            ? "text-slate-700 hover:bg-slate-100"
-            : "text-white hover:bg-white/10"
-        }`}
+        className={`flex items-center gap-2 px-3 py-2 rounded-md transition ${isScrolled
+          ? "text-slate-700 hover:bg-slate-100"
+          : "text-white hover:bg-white/10"
+          }`}
       >
         <span className="text-xl">{currentLang.flag}</span>
         <FaGlobe className="text-sm" />
@@ -294,11 +290,10 @@ function LanguageSelector({ isScrolled }) {
             <button
               key={lang.code}
               onClick={() => handleLanguageChange(lang.code)}
-              className={`w-full flex items-center gap-3 px-4 py-2 hover:bg-slate-50 transition ${
-                language === lang.code
-                  ? "bg-green-50 text-[#63b32e]"
-                  : "text-slate-700"
-              }`}
+              className={`w-full flex items-center gap-3 px-4 py-2 hover:bg-slate-50 transition ${language === lang.code
+                ? "bg-green-50 text-[#63b32e]"
+                : "text-slate-700"
+                }`}
             >
               <span className="text-2xl">{lang.flag}</span>
               <span className="font-medium">{lang.name}</span>
@@ -328,7 +323,6 @@ export function Shell({ children }) {
       name: t("nav.about"),
       to: "/about",
       children: [
-        { name: t("nav.mission"), to: "/about/mission" },
         { name: t("nav.team"), to: "/about/team" },
         { name: t("nav.partners"), to: "/about/partners" },
       ],
@@ -337,35 +331,96 @@ export function Shell({ children }) {
       name: t("nav.services"),
       to: "/Services",
       children: [
-        { name: t("nav.agriculture"), to: "/Services/agriculture" },
-        { name: t("nav.reboisement"), to: "/Services/reboisement" },
-        { name: t("nav.biodiversity"), to: "/Services/biodiversite" },
-        { name: t("nav.community"), to: "/Services/communautaire" },
-      ],
-    },
-    {
-      name: t("nav.offers"),
-      to: "/Offres",
-      children: [
-        { name: t("nav.offers_agriculture"), to: "/Offres/agriculture" },
-        { name: t("nav.apiculture"), to: "/Offres/apiculture" },
-        { name: t("nav.bancal"), to: "/Offres/bancal" },
-        { name: t("nav.climate"), to: "/Offres/Changement" },
-      ],
-    },
-    {
-      name: t("nav.projects"),
-      to: "/projets",
-      children: [
         {
-          name: t("nav.ongoing"),
-          to: "/projets/en-cours",
+          name: t("nav.agriculture"),
+          to: "/Services/agriculture",
           children: [
-            { name: t("nav.phase1"), to: "/projets/en-cours/phase1" },
-            { name: t("nav.phase2"), to: "/projets/en-cours/phase2" },
+            { name: t("nav.cacao"), to: "/Services/agriculture#cacao" },
+            { name: t("nav.cafe"), to: "/Services/agriculture#cafe" },
+            { name: t("nav.the"), to: "/Services/agriculture#the" },
+            {
+              name: t("nav.coton_caoutchouc"),
+              to: "/Services/agriculture#coton-caoutchouc",
+            },
+            {
+              name: t("nav.arboriculture"),
+              to: "/Services/agriculture#arboriculture",
+            },
+            {
+              name: t("nav.plantes_medicinales"),
+              to: "/Services/agriculture#plantes-medicinales",
+            },
           ],
         },
-        { name: t("nav.completed"), to: "/projets/realises" },
+        {
+          name: t("nav.breeding"),
+          to: "/Services/elevage",
+          children: [
+            {
+              name: t("nav.elevage_gros_betail"),
+              to: "/Services/elevage#gros-betail",
+            },
+            { name: t("nav.apiculture"), to: "/Services/elevage#apiculture" },
+            {
+              name: t("nav.pisciculture"),
+              to: "/Services/elevage#pisciculture",
+            },
+            { name: t("nav.elevage_chiens"), to: "/Services/elevage#chiens" },
+            {
+              name: t("nav.elevage_serpents"),
+              to: "/Services/elevage#serpents",
+            },
+          ],
+        },
+        {
+          name: t("nav.projet_communautaire"),
+          to: "/Services/communautaire",
+          children: [
+            { name: t("nav.sante"), to: "/Services/communautaire#sante" },
+            { name: t("nav.energie"), to: "/Services/communautaire#energie" },
+            {
+              name: t("nav.education"),
+              to: "/Services/communautaire#education",
+            },
+            {
+              name: t("nav.route_desserte_agricole"),
+              to: "/Services/communautaire#routes-desserte",
+            },
+            {
+              name: t("nav.habitation"),
+              to: "/Services/communautaire#habitation",
+            },
+          ],
+        },
+        {
+          name: t("nav.mecanisation"),
+          to: "/Services/mecanisation",
+          children: [
+            { name: t("nav.tracteur"), to: "/Services/mecanisation#tracteur" },
+            {
+              name: t("nav.accessoires"),
+              to: "/Services/mecanisation#accessoires",
+            },
+          ],
+        },
+        {
+          name: t("nav.environnement"),
+          to: "/Services/environnement",
+          children: [
+            {
+              name: t("nav.protection_foret"),
+              to: "/Services/environnement#protection-foret",
+            },
+            {
+              name: t("nav.credit_carbone"),
+              to: "/Services/environnement#credit-carbone",
+            },
+            {
+              name: t("nav.eco_kelasi"),
+              to: "/Services/environnement#eco-kelasi",
+            },
+          ],
+        },
       ],
     },
     {
@@ -376,6 +431,8 @@ export function Shell({ children }) {
         { name: t("nav.gallery"), to: "/blog/gallery" },
       ],
     },
+    { name: t("nav.emplois_stage"), to: "/rejoindre" },
+    { name: t("nav.donation"), to: "/donation" },
     { name: t("nav.contact"), to: "/contact" },
   ];
 
@@ -435,9 +492,8 @@ export function Shell({ children }) {
     <div className="flex min-h-screen flex-col font-sans">
       {/* Top Bar */}
       <div
-        className={`fixed top-0 z-40 w-full transition-transform duration-300 ${
-          showTopBar ? "translate-y-0" : "-translate-y-full"
-        }`}
+        className={`fixed top-0 z-40 w-full transition-transform duration-300 ${showTopBar ? "translate-y-0" : "-translate-y-full"
+          }`}
         style={{ backgroundColor: "#63b32e" }}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-1.5 text-xs text-white lg:py-2 lg:text-sm">
@@ -496,11 +552,10 @@ export function Shell({ children }) {
             {/* Search Button */}
             <button
               onClick={() => setSearchOpen(true)}
-              className={`p-2.5 rounded-md transition ${
-                isScrolled
-                  ? "text-slate-700 hover:bg-slate-100"
-                  : "text-white hover:bg-white/10"
-              }`}
+              className={`p-2.5 rounded-md transition ${isScrolled
+                ? "text-slate-700 hover:bg-slate-100"
+                : "text-white hover:bg-white/10"
+                }`}
               aria-label={t("common.search")}
             >
               <FaSearch className="text-lg" />
@@ -510,20 +565,18 @@ export function Shell({ children }) {
             <LanguageSelector isScrolled={isScrolled} />
 
             <Link
-              to="/contact"
-              className={`hidden rounded-md px-5 py-2.5 text-sm font-semibold shadow-sm transition hover:brightness-110 lg:block ${
-                isScrolled
-                  ? "bg-[#63b32e] text-white"
-                  : "bg-white text-[#63b32e] hover:bg-slate-100"
-              }`}
+              to="/rejoindre"
+              className={`hidden rounded-md px-5 py-2.5 text-sm font-semibold shadow-sm transition hover:brightness-110 lg:block ${isScrolled
+                ? "bg-[#63b32e] text-white"
+                : "bg-white text-[#63b32e] hover:bg-slate-100"
+                }`}
             >
-              {t("common.donate")}
+              {t("common.join")}
             </Link>
 
             <button
-              className={`lg:hidden ${
-                isScrolled ? "text-slate-800" : "text-white"
-              }`}
+              className={`lg:hidden ${isScrolled ? "text-slate-800" : "text-white"
+                }`}
               onClick={() =>
                 setMobileOpen((prev) => {
                   const next = !prev;
@@ -540,19 +593,16 @@ export function Shell({ children }) {
               </span>
               <div className="relative h-5 w-6 gap-5">
                 <span
-                  className={`absolute left-0 block h-0.5 w-7 transition-all duration-300 ${
-                    mobileOpen ? "top-1/2 rotate-45" : "top-0 rotate-0"
-                  } ${isScrolled ? "bg-[#0f70b7]" : "bg-white"}`}
+                  className={`absolute left-0 block h-0.5 w-7 transition-all duration-300 ${mobileOpen ? "top-1/2 rotate-45" : "top-0 rotate-0"
+                    } ${isScrolled ? "bg-[#0f70b7]" : "bg-white"}`}
                 />
                 <span
-                  className={`absolute top-1/2 left-0 block h-0.5 w-5 transition-all duration-300 ${
-                    mobileOpen ? "opacity-0" : "opacity-100"
-                  } ${isScrolled ? "bg-[#63b32e]" : "bg-white"}`}
+                  className={`absolute top-1/2 left-0 block h-0.5 w-5 transition-all duration-300 ${mobileOpen ? "opacity-0" : "opacity-100"
+                    } ${isScrolled ? "bg-[#63b32e]" : "bg-white"}`}
                 />
                 <span
-                  className={`absolute left-0 block h-0.5 w-7 transition-all duration-300 ${
-                    mobileOpen ? "top-1/2 -rotate-45" : "top-full rotate-0"
-                  } ${isScrolled ? "bg-[#0f70b7]" : "bg-white"}`}
+                  className={`absolute left-0 block h-0.5 w-7 transition-all duration-300 ${mobileOpen ? "top-1/2 -rotate-45" : "top-full rotate-0"
+                    } ${isScrolled ? "bg-[#0f70b7]" : "bg-white"}`}
                 />
               </div>
             </button>
@@ -561,17 +611,15 @@ export function Shell({ children }) {
 
         {/* Mobile Menu */}
         <div
-          className={`absolute left-0 top-full w-full overflow-hidden shadow-xl transition-all duration-300 lg:hidden ${
-            mobileOpen
-              ? "max-h-[85vh] opacity-100 overflow-y-auto"
-              : "max-h-0 opacity-0"
-          } ${isScrolled ? "bg-white" : "bg-white/10 backdrop-blur-md"}
+          className={`absolute left-0 top-full w-full overflow-hidden shadow-xl transition-all duration-300 lg:hidden ${mobileOpen
+            ? "max-h-[85vh] opacity-100 overflow-y-auto"
+            : "max-h-0 opacity-0"
+            } ${isScrolled ? "bg-white" : "bg-white/10 backdrop-blur-md"}
                         }`}
         >
           <div
-            className={`flex flex-col ${
-              isScrolled ? "text-slate-800" : "text-white"
-            }`}
+            className={`flex flex-col ${isScrolled ? "text-slate-800" : "text-white"
+              }`}
           >
             {navigation.map((item) => (
               <MobileNavItem
@@ -584,11 +632,11 @@ export function Shell({ children }) {
             ))}
             <div className="p-4">
               <Link
-                to="/contact"
+                to="/rejoindre"
                 onClick={() => setMobileOpen(false)}
                 className="flex w-full items-center justify-center rounded-lg bg-[#63b32e] py-3 text-center font-bold text-white shadow-sm"
               >
-                {t("common.donate")}
+                {t("common.join")}
               </Link>
             </div>
           </div>
@@ -606,13 +654,12 @@ export function Shell({ children }) {
       )}
 
       <main
-        className={`flex-grow ${
-          isHome
-            ? "pt-0"
-            : location.pathname.split("/").filter((x) => x).length > 1
+        className={`flex-grow ${isHome
+          ? "pt-0"
+          : location.pathname.split("/").filter((x) => x).length > 1
             ? ""
             : "pt-24 lg:pt-28"
-        }`}
+          }`}
       >
         {children}
       </main>
@@ -672,18 +719,19 @@ export function Shell({ children }) {
               </li>
               <li>
                 <Link
-                  to="/Offres"
+                  to="/rejoindre"
                   className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4"
                 >
-                  {t("nav.offers")}
+                  {t("nav.emplois_stage")}
                 </Link>
               </li>
+              {/* projets removed */}
               <li>
                 <Link
-                  to="/projets"
+                  to="/donation"
                   className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4"
                 >
-                  {t("nav.projects")}
+                  {t("nav.donation")}
                 </Link>
               </li>
               <li>

@@ -215,10 +215,10 @@ export function ServiceElevage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/Offres"
+              to="/contact"
               className="rounded-md bg-white px-8 py-3.5 text-base font-semibold text-[#63b32e] shadow-lg transition hover:bg-slate-50"
             >
-              {t("services.elevage.cta.btn_offers")}
+              {t("services.elevage.cta.btn_contact")}
             </Link>
             <Link
               to="/contact"

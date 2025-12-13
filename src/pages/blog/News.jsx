@@ -2,66 +2,77 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { SectionTitle } from '../../components/SectionTitle'
 import { FaTree, FaHandshake, FaGraduationCap, FaCheckCircle, FaHammer, FaTrophy, FaCalendar, FaUser } from 'react-icons/fa'
+import { useLanguage } from '../../contexts/LanguageContext'
 
 export function BlogNews() {
+    const { t } = useLanguage()
+    
     const news = [
         {
-            title: 'Lancement du Programme de Reboisement 2025',
+            title: t('blog.news.articles.reforestation2025.title'),
             date: '5 Décembre 2024',
-            category: 'Annonce',
+            category: t('blog.news.categories.announcement'),
             icon: FaTree,
-            excerpt: 'Better Life annonce le lancement de son ambitieux programme de plantation de 1 million d\'arbres pour l\'année 2025.',
+            excerpt: t('blog.news.articles.reforestation2025.excerpt'),
             content: 'Dans le cadre de notre engagement pour la lutte contre le changement climatique, nous lançons notre plus grand programme de reboisement à ce jour...',
             author: 'Équipe Better Life'
         },
         {
-            title: 'Partenariat Stratégique avec le PNUE',
+            title: t('blog.news.articles.unepPartnership.title'),
             date: '28 Novembre 2024',
-            category: 'Partenariat',
+            category: t('blog.news.categories.partnership'),
             icon: FaHandshake,
-            excerpt: 'Signature d\'un accord de partenariat avec le Programme des Nations Unies pour l\'Environnement pour renforcer nos actions.',
+            excerpt: t('blog.news.articles.unepPartnership.excerpt'),
             content: 'Ce partenariat stratégique permettra de décupler notre impact en matière de conservation de la biodiversité...',
             author: 'Direction Générale'
         },
         {
-            title: 'Formation de 500 Agriculteurs à Kikwit',
+            title: t('blog.news.articles.farmersTraining.title'),
             date: '15 Novembre 2024',
-            category: 'Formation',
+            category: t('blog.news.categories.training'),
             icon: FaGraduationCap,
-            excerpt: 'Succès de notre programme de formation en agriculture climato-intelligente avec 500 agriculteurs formés.',
+            excerpt: t('blog.news.articles.farmersTraining.excerpt'),
             content: 'Durant trois semaines intensives, nos experts ont formé 500 agriculteurs aux techniques modernes d\'agriculture durable...',
             author: 'Département Agriculture'
         },
         {
-            title: 'Certification Bio pour 150 Producteurs',
+            title: t('blog.news.articles.bioCertification.title'),
             date: '2 Novembre 2024',
-            category: 'Réussite',
+            category: t('blog.news.categories.success'),
             icon: FaCheckCircle,
-            excerpt: '150 producteurs accompagnés par Better Life obtiennent leur certification agriculture biologique.',
+            excerpt: t('blog.news.articles.bioCertification.excerpt'),
             content: 'C\'est une grande fierté pour nous de voir ces producteurs obtenir leur certification bio après 2 ans d\'accompagnement...',
             author: 'Équipe Certification'
         },
         {
-            title: 'Nouvelle Pépinière à Mbandaka',
+            title: t('blog.news.articles.nurseryMbandaka.title'),
             date: '20 Octobre 2024',
-            category: 'Infrastructure',
+            category: t('blog.news.categories.infrastructure'),
             icon: FaHammer,
-            excerpt: 'Inauguration de notre nouvelle pépinière capable de produire 600,000 plants par an.',
+            excerpt: t('blog.news.articles.nurseryMbandaka.excerpt'),
             content: 'Cette nouvelle infrastructure renforce notre capacité de production et nous rapproche de notre objectif de 1.5 million d\'arbres...',
             author: 'Département Reboisement'
         },
         {
-            title: 'Prix d\'Excellence Environnementale 2024',
+            title: t('blog.news.articles.excellenceAward.title'),
             date: '10 Octobre 2024',
-            category: 'Reconnaissance',
+            category: t('blog.news.categories.recognition'),
             icon: FaTrophy,
-            excerpt: 'Better Life reçoit le Prix d\'Excellence Environnementale décerné par le Ministère de l\'Environnement.',
+            excerpt: t('blog.news.articles.excellenceAward.excerpt'),
             content: 'Cette reconnaissance récompense nos efforts constants pour la protection de l\'environnement et le développement durable...',
             author: 'Communication'
         }
     ]
 
-    const categories = ['Tous', 'Annonce', 'Partenariat', 'Formation', 'Réussite', 'Infrastructure', 'Reconnaissance']
+    const categories = [
+        t('blog.news.categories.all'),
+        t('blog.news.categories.announcement'),
+        t('blog.news.categories.partnership'),
+        t('blog.news.categories.training'),
+        t('blog.news.categories.success'),
+        t('blog.news.categories.infrastructure'),
+        t('blog.news.categories.recognition')
+    ]
 
     return (
         <div className="bg-white">
@@ -70,10 +81,10 @@ export function BlogNews() {
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="mx-auto max-w-2xl text-center">
                         <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-                            Actualités
+                            {t('blog.news.hero.title')}
                         </h1>
                         <p className="mt-6 text-lg leading-8 text-white/90">
-                            Restez informés de nos dernières actions et réalisations
+                            {t('blog.news.hero.subtitle')}
                         </p>
                     </div>
                 </div>
@@ -102,7 +113,7 @@ export function BlogNews() {
                                 <div className="grid gap-8 lg:grid-cols-2 items-center">
                                     <div>
                                         <span className="px-3 py-1 bg-white/20 rounded-full text-sm font-semibold">
-                                            À la Une
+                                            {t('blog.news.featured.label')}
                                         </span>
                                         <h2 className="text-3xl font-bold mt-4 mb-4">{news[0].title}</h2>
                                         <p className="text-white/90 mb-6">{news[0].excerpt}</p>
@@ -160,7 +171,7 @@ export function BlogNews() {
                                 </div>
 
                                 <button className="w-full rounded-lg bg-[#0f70b7] text-white py-2 font-semibold hover:bg-[#0d5a94] transition">
-                                    Lire la suite →
+                                    {t('blog.news.readMore')}
                                 </button>
                             </div>
                         );
@@ -170,19 +181,19 @@ export function BlogNews() {
                 {/* Newsletter Subscription */}
                 <div className="mt-20 rounded-3xl bg-gradient-to-r from-[#0f70b7] to-[#63b32e] p-12 text-center">
                     <h2 className="text-3xl font-bold text-white mb-4">
-                        Restez Informés
+                        {t('blog.news.newsletter.title')}
                     </h2>
                     <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                        Inscrivez-vous à notre newsletter pour recevoir nos actualités directement dans votre boîte mail
+                        {t('blog.news.newsletter.text')}
                     </p>
                     <div className="max-w-md mx-auto flex gap-4">
                         <input
                             type="email"
-                            placeholder="Votre adresse email"
+                            placeholder={t('blog.news.newsletter.placeholder')}
                             className="flex-1 rounded-lg px-4 py-3 text-slate-900"
                         />
                         <button className="rounded-lg bg-white px-6 py-3 font-semibold text-[#63b32e] hover:bg-slate-50 transition">
-                            S'inscrire
+                            {t('blog.news.newsletter.subscribe')}
                         </button>
                     </div>
                 </div>
