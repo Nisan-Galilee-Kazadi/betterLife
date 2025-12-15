@@ -26,6 +26,22 @@ export function Services() {
       icon: FaSeedling,
     },
     {
+      id: "elevage",
+      title: t("nav.breeding") || "Élevage Responsable",
+      desc:
+        t("services.index.cards.elevage.desc") ||
+        "Systèmes d’approvisionnement alimentaire intelligents réduisant les émissions de gaz à effet de serre.",
+      icon: FaCow,
+    },
+    {
+      id: "communautaire",
+      title: t("nav.community") || "Projets Communautaires",
+      desc:
+        t("services.index.cards.communautaire.desc") ||
+        "Promotion du bien-être de la population, santé, éducation et développement rural participatif.",
+      icon: FaPeopleGroup,
+    },
+    {
       id: "reboisement",
       title: t("nav.reboisement") || "Reboisement & Climat",
       desc:
@@ -40,22 +56,6 @@ export function Services() {
         t("services.index.cards.biodiversite.desc") ||
         "Protection des écosystèmes, éducation sur l’impact des comportements humains et conservation de la nature.",
       icon: FaCloud,
-    },
-    {
-      id: "communautaire",
-      title: t("nav.community") || "Projets Communautaires",
-      desc:
-        t("services.index.cards.communautaire.desc") ||
-        "Promotion du bien-être de la population, santé, éducation et développement rural participatif.",
-      icon: FaPeopleGroup,
-    },
-    {
-      id: "elevage",
-      title: t("nav.breeding") || "Élevage Responsable",
-      desc:
-        t("services.index.cards.elevage.desc") ||
-        "Systèmes d’approvisionnement alimentaire intelligents réduisant les émissions de gaz à effet de serre.",
-      icon: FaCow,
     },
     {
       id: "equipements",

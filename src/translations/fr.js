@@ -360,6 +360,7 @@ export const fr = {
         value: "Lundi - Vendredi : 8h00 - 17h00",
       },
     },
+
     form: {
       title: "Envoyez-nous un message",
       name: "Nom complet",
