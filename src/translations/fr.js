@@ -35,7 +35,7 @@ export const fr = {
     mission: "Notre Mission",
     team: "Notre Équipe",
     partners: "Nos Partenaires",
-    services: "Nos Actions",
+    Actions: "Nos Actions",
     agriculture: "Agriculture ",
     cacao: "Cacaoyer (Criollo)",
     cafe: "Café Arabica",
@@ -45,7 +45,7 @@ export const fr = {
     plantes_medicinales: "Plantes médicinales",
     reboisement: "Reboisement",
     biodiversity: "Biodiversité",
-    community: "Dév. Communautaire",
+    community: "Projet Communautaire",
     breeding: "Élevage",
     elevage_gros_betail: "Gros Bétail",
     pisciculture: "Pisciculture",
@@ -73,7 +73,7 @@ export const fr = {
     phase2: "Phase 2",
     completed: "Réalisés",
     media: "Média",
-    news: "Actualités",
+    news: "Articles",
     gallery: "Galerie",
     emplois_stage: "Emploi & Stage",
     donation: "Donation",
@@ -506,7 +506,8 @@ export const fr = {
       },
     },
   },
-  services: {
+
+  Actions: {
     agriculture: {
       hero: {
         title: "Agriculture Durable",
@@ -531,14 +532,79 @@ export const fr = {
       programs: {
         kicker: "Nos Programmes",
         title: "Initiatives Agricoles",
-        items: []
+        items: [
+          {
+            title: "Agroforesterie",
+            desc: "Intégration d'arbres dans les cultures pour restaurer les sols et diversifier les revenus.",
+            benefits: ["Protection des sols", "Diversification", "Biodiversité"]
+          },
+          {
+            title: "Cultures Pérennes",
+            desc: "Développement de cultures durables comme le cacao et le café sous ombrage.",
+            benefits: ["Revenus stables", "Ombrage naturel", "Qualité supérieure"]
+          },
+          {
+            title: "Gestion de l'Eau",
+            desc: "Techniques d'irrigation efficientes et conservation de l'eau.",
+            benefits: ["Économie", "Résilience", "Production toute l'année"]
+          },
+          {
+            title: "Semences Améliorées",
+            desc: "Distribution de semences résilientes et adaptées au changement climatique.",
+            benefits: ["Meilleurs rendements", "Résistance maladies", "Adaptation"]
+          },
+          {
+            title: "Recyclage & Compost",
+            desc: "Transformation des déchets agricoles en engrais naturel de haute qualité.",
+            benefits: ["Fertilité naturelle", "Zéro déchet", "Économie intrants"]
+          },
+          {
+            title: "Conservation des Sols",
+            desc: "Pratiques anti-érosives et amélioration de la structure du sol.",
+            benefits: ["Durabilité", "Rétention eau", "Vie du sol"]
+          }
+        ]
+      },
+      training: {
+        title: "Formation et Accompagnement",
+        items: [
+          {
+            title: "Techniques Culturales",
+            desc: "Apprentissage des méthodes de culture biologique et durable."
+          },
+          {
+            title: "Gestion des Ravageurs",
+            desc: "Lutte biologique intégrée contre les maladies et insectes nuisibles."
+          },
+          {
+            title: "Transformation",
+            desc: "Valorisation des produits agricoles pour augementer les revenus."
+          },
+          {
+            title: "Gestion Simplifiée",
+            desc: "Formation à la gestion de base d'une exploitation agricole."
+          }
+        ],
+        impact: {
+          title: "Notre Impact",
+          stats: [
+            { number: "1200+", label: "Agriculteurs formés" },
+            { number: "+40%", label: "Rendement moyen" },
+            { number: "15", label: "Coopératives" },
+            { number: "-85%", label: "Pesticides" }
+          ]
+        },
+        testimonial: {
+          text: "Grâce à la formation en agroforesterie, j'ai non seulement augmenté ma production de cacao, mais j'ai aussi sécurisé mes terres pour mes enfants.",
+          author: "Jean K., Agriculteur partenaire"
+        }
       },
       cta: {
         title: "Rejoignez le mouvement",
         text: "Agriculteurs ou passionnés, nous avons besoin de vous",
         btn_train: "Formation",
         btn_more: "Savoir Plus"
-      }
+      },
     },
     reboisement: {
       hero: {
@@ -554,37 +620,278 @@ export const fr = {
           survival: { number: "85%", label: "Survie" }
         }
       },
-      nurseries: { kicker: "Pépinières", title: "Production", items: [] },
-      process: { kicker: "Méthode", title: "Processus", items: [] },
-      benefits: { env: { title: "Environnement", items: [] }, socio: { title: "Social", items: [] } },
+      nurseries: {
+        kicker: "Pépinières",
+        title: "Production",
+        items: [
+          { name: "Pépinière Centrale", capacity: "100k plants", species: "Acacia, Maesopsis", details: ["Irrigation solaire", "Compostage sur site"] },
+          { name: "Pépinière Scolaire", capacity: "20k plants", species: "Fruitiers", details: ["Éducation", "Participation élèves"] }
+        ]
+      },
+      process: {
+        kicker: "Méthode",
+        title: "Processus",
+        items: [
+          { step: "01", title: "Sélection", desc: "Choix des semences adaptées" },
+          { step: "02", title: "Germination", desc: "Suivi en pépinière" },
+          { step: "03", title: "Plantation", desc: "Mise en terre avec les communautés" },
+          { step: "04", title: "Suivi", desc: "Monitoring sur 5 ans" }
+        ]
+      },
+      benefits: {
+        env: {
+          title: "Environnement",
+          items: ["Captation carbone", "Protection sols", "Cycle de l'eau"]
+        },
+        socio: {
+          title: "Social",
+          items: ["Emplois verts", "Produits forestiers", "Éducation"]
+        }
+      },
       cta: { title: "Participez", text: "Plantez un arbre", btn_join: "Rejoindre", btn_sponsor: "Parrainer" }
+    },
+    environnement: {
+      hero: { title: "Environnement", subtitle: "Protéger notre cadre de vie et nos ressources naturelles" },
+      intro: {
+        kicker: "Protection",
+        title: "Actions pour l'Environnement",
+        text: "Des initiatives concrètes pour préserver la nature et promouvoir un mode de vie durable.",
+        stats: { planted: { number: "450k", label: "Arbres" }, survival: { number: "85%", label: "Taux de survie" } }
+      },
+      programs: {
+        kicker: "Programmes",
+        title: "Nos Initiatives Vertes",
+        items: [
+          { title: "Gestion des Déchets", desc: "Recyclage et valorisation.", benefits: ["Propreté", "Économie circulaire"] },
+          { title: "Énergie Propre", desc: "Promotion des foyers améliorés.", benefits: ["Moins de CO2", "Santé"] },
+          { title: "Éducation", desc: "Sensibilisation dans les écoles.", benefits: ["Génération future", "Conscience"] }
+        ]
+      },
+      impact: {
+        title: "Notre Impact Environnemental",
+        stats: [
+          { number: "-30%", label: "Émissions CO2" },
+          { number: "50T", label: "Déchets recyclés" },
+          { number: "10k", label: "Enfants sensibilisés" }
+        ]
+      },
+      cta: { title: "Agir", text: "Rejoignez le mouvement vert", btn_join: "Devenir membre", btn_sponsor: "Parrainer un arbre" },
+      // Sub-pages
+      protection_foret: {
+        hero: { title: "Protection des Forêts", subtitle: "Poumon de la planète" },
+        intro: { title: "Conservation", text: "Lutte contre la déforestation et braconnage." },
+        features: ["Patrouilles éco-gardes", "Cartographie participative", "Restauration", "Zones protégées"]
+      },
+      credit_carbone: {
+        hero: { title: "Crédit Carbone", subtitle: "Valoriser la séquestration" },
+        intro: { title: "Finance Climat", text: "Générer des revenus par la conservation." },
+        features: ["Certification", "Vente de crédits", "Revenus communautaires", "Monitoring carbone"]
+      },
+      eco_kelasi: {
+        hero: { title: "Eco-Kelasi", subtitle: "L'école écologique" },
+        intro: { title: "Éducation Environnementale", text: "Apprendre à aimer et protéger la nature dès le plus jeune âge." },
+        features: ["Jardins scolaires", "Clubs nature", "Tri des déchets", "Sorties pédagogiques"]
+      }
     },
     biodiversite: {
       hero: { title: "Biodiversité", subtitle: "Préserver la richesse naturelle" },
       intro: { kicker: "Mission", title: "Gardiens de la nature", text: "Protection de la faune et flore." },
-      species: { kicker: "Espèces", title: "Priorités", items: [] },
-      programs: { kicker: "Actions", title: "Programmes", items: [] },
-      ecosystems: { kicker: "Habitats", title: "Ecosystèmes", items: [] },
+      species: {
+        kicker: "Espèces",
+        title: "Priorités de Conservation",
+        items: [
+          { name: "Gorilles", pop: "En danger", status: "Critique" },
+          { name: "Bonobos", pop: "Menacé", status: "Endémique" },
+          { name: "Okapis", pop: "Vulnérable", status: "Protégé" },
+          { name: "Éléphants", pop: "En baisse", status: "Menacé" }
+        ]
+      },
+      programs: {
+        kicker: "Actions",
+        title: "Programmes de Protection",
+        items: [
+          { title: "Lutte Anti-Braconnage", desc: "Patrouilles et surveillance.", actions: ["Surveillance", "Technologie"] },
+          { title: "Suivi Scientifique", desc: "Monitoring des populations.", actions: ["Caméras pièges", "Recensement"] }
+        ]
+      },
+      ecosystems: {
+        kicker: "Habitats",
+        title: "Écosystèmes Clés",
+        items: [
+          { name: "Forêt Tropicale", area: "Haute", species: "Diverses", features: ["Carbone", "Habitat"] },
+          { name: "Zones Humides", area: "Moyenne", species: "Aquatiques", features: ["Eau", "Oiseaux"] }
+        ],
+        stats: [
+          { number: "3", label: "Parcs soutenus" },
+          { number: "50", label: "Rangers" }
+        ]
+      },
       impact: { title: "Impact", stats: [] },
       cta: { title: "Protéger", text: "Chaque espèce compte", btn_volunteer: "Bénévole", btn_support: "Soutenir" }
     },
+    mecanisation: {
+      hero: { title: "Mécanisation Agricole", subtitle: "Moderniser l'agriculture pour plus de rendement" },
+      intro: { kicker: "Technologie", title: "Modernisation des Outils", text: "Introduction raisonnée de la mécanisation pour alléger le travail." },
+      programs: {
+        kicker: "Équipements",
+        title: "Nos Solutions",
+        items: [
+          { title: "Tracteurs", desc: "Labour et préparation efficace des sols.", impact: "50ha/jour" },
+          { title: "Unités de Transformation", desc: "Valorisation locale des produits.", impact: "+40% valeur" },
+          { title: "Maintenance", desc: "Ateliers de réparation locaux.", impact: "Durabilité" },
+          { title: "Formation", desc: "Techniciens qualifiés.", impact: "Compétence" }
+        ]
+      },
+      benefits: { title: "Avantages", items: ["Productivité accrue", "Réduction pénibilité", "Attractivité jeunesse", "Précision"] },
+      cta: { title: "Moderniser", text: "Accédez aux équipements", btn_contact: "Nous contacter", btn_more: "Détails" },
+      // Sub-pages
+      tracteur: {
+        hero: { title: "Nos Tracteurs", subtitle: "Puissance et fiabilité au service des champs" },
+        intro: { title: "Flotte Moderne", text: "Des équipements adaptés à nos terroirs." },
+        features: ["Tracteurs Tout-Terrain", "Faible Consommation", "Pièces disponibles", "GPS intégré"]
+      },
+      accessoires: {
+        hero: { title: "Accessoires Agricoles", subtitle: "L'outil juste pour chaque tâche" },
+        intro: { title: "Équipements", text: "Semoirs, charrues, et remorques pour optimiser chaque étape." },
+        features: ["Charrues à disques", "Semoirs de précision", "Remorques 5T", "Systèmes d'irrigation"]
+      },
+      autres: {
+        hero: { title: "Autres Équipements", subtitle: "Innovation continue" },
+        intro: { title: "Diversification", text: "Drones, capteurs et petits outils motorisés." },
+        features: ["Drones de surveillance", "Capteurs d'humidité", "Motoculteurs", "Broyeurs"]
+      }
+    },
     communautaire: {
-      hero: { title: "Dév. Communautaire", subtitle: "Autonomiser les communautés" },
-      intro: { kicker: "Approche", title: "Au coeur des communautés", text: "Développement inclusif." },
-      programs: { kicker: "Programmes", title: "Initiatives", items: [] },
-      women: { title: "Femmes", text: "Autonomisation", items: [], stats: [], testimonial: { text: "", author: "" } },
-      stories: { kicker: "Succès", title: "Histoires", items: [] },
-      cta: { title: "Soutenir", text: "Transformez des vies", btn_volunteer: "Volontaire", btn_donate: "Donner" }
+      hero: { title: "Développement Communautaire", subtitle: "Autonomiser les communautés" },
+      intro: { kicker: "Approche", title: "Au coeur des communautés", text: "Développement inclusif pour un impact durable." },
+      programs: {
+        kicker: "Programmes",
+        title: "Initiatives Locales",
+        items: [
+          { title: "Micro-crédit", desc: "Soutien aux petites entreprises locales.", impact: "500 familles" },
+          { title: "Écoles", desc: "Construction et équipement de classes.", impact: "2000 élèves" },
+          { title: "Santé", desc: "Cliniques mobiles et prévention.", impact: "10k patients" },
+          { title: "Eau Potable", desc: "Forages et bornes fontaines.", impact: "3 villages" }
+        ]
+      },
+      women: { title: "Leadership Féminin", text: "Programmes dédiés à l'autonomisation des femmes rurales." },
+      stories: [{ title: "L'école de la chance", text: "Reconstruction complète de l'école primaire de Kibumba." }],
+      cta: { title: "Participer", text: "Aidez-nous à bâtir", btn_donate: "Faire un don", btn_volunteer: "Bénévolat" },
+      // Sub-pages
+      sante: {
+        hero: { title: "Santé Communautaire", subtitle: "L'accès aux soins pour tous" },
+        intro: { title: "Soins de Proximité", text: "Lutte contre les maladies endémiques et soins maternels." },
+        features: ["Campagnes de vaccination", "Cliniques mobiles", "Santé maternelle", "Lutte contre la malnutrition"]
+      },
+      energie: {
+        hero: { title: "Énergies Renouvelables", subtitle: "Lumière et Force" },
+        intro: { title: "Électrification Rurale", text: "Micro-barrages et panneaux solaires." },
+        features: ["Solaire domestique", "Micro-hydroélectricité", "Biogaz", "Maintenance locale"]
+      },
+      education: {
+        hero: { title: "Éducation", subtitle: "L'avenir de nos enfants" },
+        intro: { title: "Savoir pour Tous", text: "Construction d'écoles et bourses d'études." },
+        features: ["Infrastructures scolaires", "Fournitures", "Formation des maîtres", "Alphabétisation"]
+      },
+      routes_desserte: { // mapped to routes-desserte
+        hero: { title: "Routes de Desserte", subtitle: "Désenclaver les campagnes" },
+        intro: { title: "Infrastructures", text: "Réhabilitation des pistes pour l'écoulement des produits." },
+        features: ["Cantonage manuel", "Ponts et buses", "Entretien durable", "Accès aux marchés"]
+      },
+      habitation: {
+        hero: { title: "Habitat Social", subtitle: "Un toit décent" },
+        intro: { title: "Logements Durables", text: "Construction de maisons en matériaux locaux améliorés." },
+        features: ["Briques stabilisées", "Toitures durables", "Assainissement", "Plans d'urbanisme"]
+      }
+    },
+    agricultures: {
+      cacao: {
+        hero: { title: "Cacao (Criollo)", subtitle: "L'Or Brun de la RDC" },
+        intro: { kicker: "Origine", title: "Le Cacao Criollo", text: "Une variété rare et prisée pour ses arômes fins et délicats." },
+        features: { kicker: "Caractéristiques", title: "Pourquoi le Criollo ?", items: ["Arômes fruités", "Fèves blanches", "Fermentation courte", "Grande valeur"] },
+        technique: { title: "Technique Culturale", items: ["Sous ombrage forestier", "Association avec bananiers", "Récolte manuelle sélective"] },
+        impact: { title: "Impact", stats: [{ value: "500T", label: "Production" }, { value: "1200", label: "Producteurs" }] }
+      },
+      cafe: {
+        hero: { title: "Café Arabica", subtitle: "L'excellence des hautes terres" },
+        intro: { kicker: "Terroir", title: "Café de Montagne", text: "Cultivé en altitude pour une complexité aromatique unique." },
+        features: { kicker: "Qualité", title: "Notre Café", items: ["Altitude > 1200m", "Traitement lavé", "Séchage sur lits africains", "Score SCA 85+"] },
+        technique: { title: "Processus", items: ["Cueillette fine", "Dépulpage le jour même", "Fermentation contrôlée"] },
+        impact: { title: "Impact", stats: [{ value: "300T", label: "Export" }, { value: "800", label: "Familles" }] }
+      },
+      the: {
+        hero: { title: "Théier", subtitle: "La culture du bien-être" },
+        intro: { kicker: "Tradition", title: "Thé des Virunga", text: "Des plantateurs passionnés pour un thé au caractère affirmé." },
+        features: { kicker: "Produit", title: "Types de Thé", items: ["Thé noir orthodoxe", "Thé vert", "Thé blanc (bourgeons)", "Bio certifié"] },
+        technique: { title: "Savoir-faire", items: ["Cueillette impériale (un bourgeon, deux feuilles)", "Flétrissage naturel", "Roulage artisanal"] },
+        impact: { title: "Impact", stats: [{ value: "150T", label: "Production" }, { value: "450", label: "Femmes employées" }] }
+      },
+      coton_caoutchouc: {
+        hero: { title: "Coton & Caoutchouc", subtitle: "Cultures de rente industrielles" },
+        intro: { kicker: "Industrie", title: "Filières Stratégiques", text: "Relance des cultures industrielles pour l'économie locale." },
+        features: { kicker: "Filières", title: "Double Impact", items: ["Coton fibre longue", "Hévéa clonal", "Transformation locale", "Textile & Industrie"] },
+        technique: { title: "Agro-industrie", items: ["Plantations durables", "Encadrement technique", "Mécanisation adaptée"] },
+        impact: { title: "Impact", stats: [{ value: "1000ha", label: "Surfaces" }, { value: "2000", label: "Emplois directs" }] }
+      },
+      arboriculture: {
+        hero: { title: "Arboriculture", subtitle: "Vergers fruitiers diversifiés" },
+        intro: { kicker: "Diversité", title: "Fruits Tropicaux", text: "Une abondance de saveurs pour la consommation locale et l'export." },
+        features: { kicker: "Variétés", title: "Nos Fruits", items: ["Mangues greffées", "Avocats Hass", "Agrumes", "Fruits de la passion"] },
+        technique: { title: "Pratiques", items: ["Greffage", "Taille de formation", "Lutte intégrée", "Irrigation goutte-à-goutte"] },
+        impact: { title: "Impact", stats: [{ value: "50k", label: "Arbres" }, { value: "Vitamine", label: "Nutrition" }] }
+      },
+      plantes_medicinales: {
+        hero: { title: "Plantes Médicinales", subtitle: "La pharmacopée naturelle" },
+        intro: { kicker: "Santé", title: "Savoir Ancestral & Science", text: "Valorisation des plantes médicinales locales pour la santé communautaire." },
+        features: { kicker: "Espèces", title: "Plantes Clés", items: ["Artemisia (Paludisme)", "Moringa (Nutrition)", "Prunus Africana", "Citronnelle"] },
+        technique: { title: "Transformation", items: ["Séchage solaire", "Exctraction huiles essentielles", "Conditionnement hygiénique"] },
+        impact: { title: "Impact", stats: [{ value: "20", label: "Jardins de santé" }, { value: "10k", label: "Patients aidés" }] }
+      }
     },
     elevage: {
-      hero: { title: "Élevage Durable", subtitle: "Pratiques respectueuses" },
-      intro: { kicker: "Approche", title: "Élevage Moderne", text: "Productivité et bien-être." },
-      types: { kicker: "Secteurs", title: "Types d'élevage", items: [] },
-      services: { kicker: "Actions", title: "Accompagnement", items: [] },
-      success: { label: "Succès", title: "Réussite", text: "", items: [], stats: [] },
-      impact: { title: "Impact", stats: [] },
-      cta: { title: "Lancer", text: "Créez votre activité", btn_offers: "Offres", btn_contact: "Contact" }
+      hero: { title: "Élevage Durable", subtitle: "Pratiques respectueuses et rentables" },
+      intro: { kicker: "Approche", title: "Élevage Moderne", text: "Allier productivité et bien-être animal pour la sécurité alimentaire." },
+      types: {
+        kicker: "Secteurs",
+        title: "Types d'élevage soutenus",
+        items: [
+          { title: "Aviculture", desc: "Poules pondeuses et chairs.", production: "Viande/Œufs" },
+          { title: "Gros Bétail", desc: "Bovins de race améliorée.", production: "Lait/Viande" },
+          { title: "Pisciculture", desc: "Tilapias et Clarias.", production: "Poisson frais" },
+          { title: "Apiculture", desc: "Miel pur et cire.", production: "Miel" }
+        ]
+      },
+      Actions: { title: "Nos Actions", items: ["Vaccination", "Accès aux intrants", "Formation vétérinaire", "Marché"] },
+      story: { title: "Succès", text: "La coopérative laitière de Masisi a doublé sa production en 2 ans." },
+      stats: [{ value: "5000+", label: "Têtes de bétail" }, { value: "3", label: "Centres vétérinaires" }],
+      cta: { title: "Investir", text: "Rejoignez le programme", btn_join: "Devenir éleveur", btn_partner: "Partenariat" },
+      // Sub-pages
+      gros_betail: {
+        hero: { title: "Gros Bétail", subtitle: "Filière Bovine" },
+        intro: { title: "Élevage Bovin", text: "Amélioration génétique et pâturages gérés." },
+        features: ["Insémination artificielle", "Suivi sanitaire", "Alimentation enrichie", "Traçabilité"]
+      },
+      apiculture: {
+        hero: { title: "Apiculture", subtitle: "L'or liquide de nos forêts" },
+        intro: { title: "Miel Durable", text: "Protection des abeilles et revenus pour les familles." },
+        features: ["Ruches modernes", "Miel bio", "Cire d'abeille", "Pollinisation"]
+      },
+      pisciculture: {
+        hero: { title: "Pisciculture", subtitle: "Aquaculture responsable" },
+        intro: { title: "Poisson Frais", text: "Étangs aménagés pour Tilapias et Clarias." },
+        features: ["Alevins de qualité", "Aliment flottant", "Gestion de l'eau", "Formation aquacole"]
+      },
+      chiens: {
+        hero: { title: "Élevage Canin", subtitle: "Sécurité et Compagnie" },
+        intro: { title: "Races Pures", text: "Bergers Allemands et Chiens de garde." },
+        features: ["Dressage", "Pedigree certificat", "Soins vétérinaires", "Nutrition spécialisée"]
+      },
+      serpents: {
+        hero: { title: "Serpents & Venins", subtitle: "Recherche et Antivenins" },
+        intro: { title: "Ferme Spécialisée", text: "Production de sérums et recherche scientifique." },
+        features: ["Extraction sécurisée", "Laboratoire", "Conservation", "Éducation"]
+      }
     }
-  },
+  }
 };
 

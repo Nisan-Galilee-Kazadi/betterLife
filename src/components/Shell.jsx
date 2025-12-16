@@ -328,96 +328,100 @@ export function Shell({ children }) {
       ],
     },
     {
-      name: t("nav.services"),
-      to: "/Services",
+      name: t("nav.Actions"),
+      to: "/Actions",
       children: [
         {
           name: t("nav.agriculture"),
-          to: "/Services/agriculture",
+          to: "/Actions/agriculture",
           children: [
-            { name: t("nav.cacao"), to: "/Services/agriculture#cacao" },
-            { name: t("nav.cafe"), to: "/Services/agriculture#cafe" },
-            { name: t("nav.the"), to: "/Services/agriculture#the" },
+            { name: t("nav.cacao"), to: "/Actions/agricultures/cacao" },
+            { name: t("nav.cafe"), to: "/Actions/agricultures/cafe" },
+            { name: t("nav.the"), to: "/Actions/agricultures/theier" },
             {
               name: t("nav.coton_caoutchouc"),
-              to: "/Services/agriculture#coton-caoutchouc",
+              to: "/Actions/agricultures/coton-caoutchouc",
             },
             {
               name: t("nav.arboriculture"),
-              to: "/Services/agriculture#arboriculture",
+              to: "/Actions/agricultures/arboriculture",
             },
             {
               name: t("nav.plantes_medicinales"),
-              to: "/Services/agriculture#plantes-medicinales",
+              to: "/Actions/agricultures/plantes-medicinales",
             },
           ],
         },
         {
           name: t("nav.breeding"),
-          to: "/Services/elevage",
+          to: "/Actions/elevage",
           children: [
             {
               name: t("nav.elevage_gros_betail"),
-              to: "/Services/elevage#gros-betail",
+              to: "/Actions/elevage/gros-betail",
             },
-            { name: t("nav.apiculture"), to: "/Services/elevage#apiculture" },
+            { name: t("nav.apiculture"), to: "/Actions/elevage/apiculture" },
             {
               name: t("nav.pisciculture"),
-              to: "/Services/elevage#pisciculture",
+              to: "/Actions/elevage/pisciculture",
             },
-            { name: t("nav.elevage_chiens"), to: "/Services/elevage#chiens" },
+            { name: t("nav.elevage_chiens"), to: "/Actions/elevage/chiens" },
             {
               name: t("nav.elevage_serpents"),
-              to: "/Services/elevage#serpents",
+              to: "/Actions/elevage/serpents",
             },
           ],
         },
         {
           name: t("nav.projet_communautaire"),
-          to: "/Services/communautaire",
+          to: "/Actions/communautaire",
           children: [
-            { name: t("nav.sante"), to: "/Services/communautaire#sante" },
-            { name: t("nav.energie"), to: "/Services/communautaire#energie" },
+            { name: t("nav.sante"), to: "/Actions/communautaire/sante" },
+            { name: t("nav.energie"), to: "/Actions/communautaire/energie" },
             {
               name: t("nav.education"),
-              to: "/Services/communautaire#education",
+              to: "/Actions/communautaire/education",
             },
             {
               name: t("nav.route_desserte_agricole"),
-              to: "/Services/communautaire#routes-desserte",
+              to: "/Actions/communautaire/routes-desserte",
             },
             {
               name: t("nav.habitation"),
-              to: "/Services/communautaire#habitation",
+              to: "/Actions/communautaire/habitation",
             },
           ],
         },
         {
           name: t("nav.mecanisation"),
-          to: "/Services/mecanisation",
+          to: "/Actions/mecanisation",
           children: [
-            { name: t("nav.tracteur"), to: "/Services/mecanisation#tracteur" },
+            { name: t("nav.tracteur"), to: "/Actions/mecanisation/tracteur" },
             {
               name: t("nav.accessoires"),
-              to: "/Services/mecanisation#accessoires",
+              to: "/Actions/mecanisation/accessoires",
+            },
+            {
+              name: t("nav.autres"),
+              to: "/Actions/mecanisation/autres",
             },
           ],
         },
         {
           name: t("nav.environnement"),
-          to: "/Services/environnement",
+          to: "/Actions/environnement",
           children: [
             {
               name: t("nav.protection_foret"),
-              to: "/Services/environnement#protection-foret",
+              to: "/Actions/environnement/protection-foret",
             },
             {
               name: t("nav.credit_carbone"),
-              to: "/Services/environnement#credit-carbone",
+              to: "/Actions/environnement/credit-carbone",
             },
             {
               name: t("nav.eco_kelasi"),
-              to: "/Services/environnement#eco-kelasi",
+              to: "/Actions/environnement/eco-kelasi",
             },
           ],
         },
@@ -648,7 +652,7 @@ export function Shell({ children }) {
 
       {/* Breadcrumb - Only for submenus (depth > 1) */}
       {location.pathname.split("/").filter((x) => x).length > 1 && (
-        <div className="pt-[40px] lg:pt-[110px]">
+        <div className="hidden lg:block pt-[40px] lg:pt-[110px]">
           <Breadcrumb />
         </div>
       )}
@@ -657,7 +661,7 @@ export function Shell({ children }) {
         className={`flex-grow ${isHome
           ? "pt-0"
           : location.pathname.split("/").filter((x) => x).length > 1
-            ? ""
+            ? "pt-28 lg:pt-0"
             : "pt-24 lg:pt-28"
           }`}
       >
@@ -711,10 +715,10 @@ export function Shell({ children }) {
               </li>
               <li>
                 <Link
-                  to="/Services"
+                  to="/Actions"
                   className="hover:text-white/80 hover:underline decoration-[#63b32e] underline-offset-4"
                 >
-                  {t("nav.services")}
+                  {t("nav.Actions")}
                 </Link>
               </li>
               <li>
@@ -751,7 +755,7 @@ export function Shell({ children }) {
             <ul className="space-y-3">
               <li>
                 <Link
-                  to="/Services/agriculture"
+                  to="/Actions/agriculture"
                   className="hover:text-white/80"
                 >
                   {t("nav.agriculture")}
@@ -759,7 +763,7 @@ export function Shell({ children }) {
               </li>
               <li>
                 <Link
-                  to="/Services/reboisement"
+                  to="/Actions/reboisement"
                   className="hover:text-white/80"
                 >
                   {t("nav.reboisement")}
@@ -767,7 +771,7 @@ export function Shell({ children }) {
               </li>
               <li>
                 <Link
-                  to="/Services/biodiversite"
+                  to="/Actions/biodiversite"
                   className="hover:text-white/80"
                 >
                   {t("nav.biodiversity")}
@@ -775,14 +779,14 @@ export function Shell({ children }) {
               </li>
               <li>
                 <Link
-                  to="/Services/communautaire"
+                  to="/Actions/communautaire"
                   className="hover:text-white/80"
                 >
                   {t("nav.community")}
                 </Link>
               </li>
               <li>
-                <Link to="/Services/elevage" className="hover:text-white/80">
+                <Link to="/Actions/elevage" className="hover:text-white/80">
                   {t("nav.breeding")}
                 </Link>
               </li>

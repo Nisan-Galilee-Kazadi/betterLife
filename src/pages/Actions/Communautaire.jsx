@@ -19,7 +19,7 @@ import {
 import { MdEmojiPeople, MdVolunteerActivism } from "react-icons/md";
 import { useLanguage } from "../../contexts/LanguageContext";
 
-export function ServiceCommunautaire() {
+export function ActionsCommunautaire() {
   const { t } = useLanguage();
 
   const programIcons = [
@@ -39,10 +39,10 @@ export function ServiceCommunautaire() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              {t("services.communautaire.hero.title")}
+              {t("Actions.communautaire.hero.title")}
             </h1>
             <p className="mt-6 text-lg leading-8 text-white/90">
-              {t("services.communautaire.hero.subtitle")}
+              {t("Actions.communautaire.hero.subtitle")}
             </p>
           </div>
         </div>
@@ -53,10 +53,10 @@ export function ServiceCommunautaire() {
         {/* Introduction */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <SectionTitle
-            kicker={t("services.communautaire.intro.kicker")}
-            title={t("services.communautaire.intro.title")}
+            kicker={t("Actions.communautaire.intro.kicker")}
+            title={t("Actions.communautaire.intro.title")}
           >
-            {t("services.communautaire.intro.text")}
+            {t("Actions.communautaire.intro.text")}
           </SectionTitle>
         </div>
 
@@ -64,12 +64,12 @@ export function ServiceCommunautaire() {
         <div className="mb-20">
           <div className="text-center mb-12">
             <SectionTitle
-              kicker={t("services.communautaire.programs.kicker")}
-              title={t("services.communautaire.programs.title")}
+              kicker={t("Actions.communautaire.programs.kicker")}
+              title={t("Actions.communautaire.programs.title")}
             />
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {t("services.communautaire.programs.items").map(
+            {t("Actions.communautaire.programs.items").map(
               (program, index) => {
                 const Icon = programIcons[index] || GiReceiveMoney;
                 return (
@@ -110,13 +110,13 @@ export function ServiceCommunautaire() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold mb-6">
-                  {t("services.communautaire.women.title")}
+                  {t("Actions.communautaire.women.title")}
                 </h2>
                 <p className="text-lg text-white/90 mb-8">
-                  {t("services.communautaire.women.text")}
+                  {t("Actions.communautaire.women.text")}
                 </p>
                 <ul className="space-y-4 mb-8">
-                  {t("services.communautaire.women.items").map(
+                  {t("Actions.communautaire.women.items").map(
                     (item, index) => (
                       <li key={index} className="flex items-center gap-3">
                         <div className="w-2 h-2 rounded-full bg-white" />
@@ -126,14 +126,14 @@ export function ServiceCommunautaire() {
                   )}
                 </ul>
                 <blockquote className="border-l-4 border-white pl-6 italic">
-                  {t("services.communautaire.women.testimonial.text")}
+                  {t("Actions.communautaire.women.testimonial.text")}
                   <footer className="mt-2 text-sm font-bold">
-                    {t("services.communautaire.women.testimonial.author")}
+                    {t("Actions.communautaire.women.testimonial.author")}
                   </footer>
                 </blockquote>
               </div>
               <div className="grid grid-cols-2 gap-6">
-                {t("services.communautaire.women.stats").map((stat, index) => {
+                {t("Actions.communautaire.women.stats").map((stat, index) => {
                   const Icon = womenStatsIcons[index] || FaFemale;
                   return (
                     <div
@@ -155,12 +155,12 @@ export function ServiceCommunautaire() {
         <div className="mb-20">
           <div className="text-center mb-12">
             <SectionTitle
-              kicker={t("services.communautaire.stories.kicker")}
-              title={t("services.communautaire.stories.title")}
+              kicker={t("Actions.communautaire.stories.kicker")}
+              title={t("Actions.communautaire.stories.title")}
             />
           </div>
           <div className="grid gap-8 md:grid-cols-2">
-            {t("services.communautaire.stories.items").map((story, index) => (
+            {t("Actions.communautaire.stories.items").map((story, index) => (
               <div
                 key={index}
                 className="rounded-2xl border-2 border-slate-100 p-8 shadow-sm hover:border-[#63b32e]/30 transition"
@@ -185,23 +185,23 @@ export function ServiceCommunautaire() {
         <div className="rounded-3xl bg-gradient-to-r from-[#0f70b7] to-[#63b32e] p-12 text-center">
           <FaHandHoldingHeart className="text-7xl text-white mx-auto mb-6" />
           <h2 className="text-3xl font-bold text-white mb-4">
-            {t("services.communautaire.cta.title")}
+            {t("Actions.communautaire.cta.title")}
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            {t("services.communautaire.cta.text")}
+            {t("Actions.communautaire.cta.text")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/rejoindre"
               className="rounded-md bg-white px-8 py-3.5 text-base font-semibold text-[#63b32e] shadow-lg transition hover:bg-slate-50"
             >
-              {t("services.communautaire.cta.btn_volunteer")}
+              {t("Actions.communautaire.cta.btn_volunteer")}
             </Link>
             <Link
               to="/contact"
               className="rounded-md bg-white/10 backdrop-blur-sm px-8 py-3.5 text-base font-semibold text-white transition hover:bg-white/20"
             >
-              {t("services.communautaire.cta.btn_donate")}
+              {t("Actions.communautaire.cta.btn_donate")}
             </Link>
           </div>
         </div>

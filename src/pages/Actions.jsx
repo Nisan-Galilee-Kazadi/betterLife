@@ -12,16 +12,16 @@ import {
 // FaHandsHelping is removed as it is not exported by the module
 import { useLanguage } from "../contexts/LanguageContext";
 
-// Build services array using translation keys (with fallbacks)
-export function Services() {
+// Build Actions array using translation keys (with fallbacks)
+export function Actions() {
   const { t } = useLanguage();
 
-  const services = [
+  const Actions = [
     {
       id: "agriculture",
       title: t("nav.agriculture") || "Agriculture ",
       desc:
-        t("services.index.cards.agriculture.desc") ||
+        t("Actions.index.cards.agriculture.desc") ||
         "Transformation de l’agriculture et adoption de pratiques intelligentes face au climat pour la sécurité alimentaire.",
       icon: FaSeedling,
     },
@@ -29,7 +29,7 @@ export function Services() {
       id: "elevage",
       title: t("nav.breeding") || "Élevage Responsable",
       desc:
-        t("services.index.cards.elevage.desc") ||
+        t("Actions.index.cards.elevage.desc") ||
         "Systèmes d’approvisionnement alimentaire intelligents réduisant les émissions de gaz à effet de serre.",
       icon: FaCow,
     },
@@ -37,46 +37,39 @@ export function Services() {
       id: "communautaire",
       title: t("nav.community") || "Projets Communautaires",
       desc:
-        t("services.index.cards.communautaire.desc") ||
+        t("Actions.index.cards.communautaire.desc") ||
         "Promotion du bien-être de la population, santé, éducation et développement rural participatif.",
       icon: FaPeopleGroup,
     },
+
     {
-      id: "reboisement",
-      title: t("nav.reboisement") || "Reboisement & Climat",
-      desc:
-        t("services.index.cards.reboisement.desc") ||
-        "Pépinières scolaires, reboisement et lutte contre le réchauffement climatique via des essences forestières et fruitières.",
-      icon: FaTree,
-    },
-    {
-      id: "biodiversite",
-      title: t("nav.biodiversity") || "Biodiversité",
-      desc:
-        t("services.index.cards.biodiversite.desc") ||
-        "Protection des écosystèmes, éducation sur l’impact des comportements humains et conservation de la nature.",
-      icon: FaCloud,
-    },
-    {
-      id: "equipements",
+      id: "Mecanisation Agricole",
       title:
-        t("services.index.cards.equipements.title") ||
+        t("Actions.index.cards.equipements.title") ||
         "Équipements & Formation",
       desc:
-        t("services.index.cards.equipements.desc") ||
+        t("Actions.index.cards.equipements.desc") ||
         "Accompagnement technique et matériel pour les producteurs locaux.",
       icon: FaTractor,
+    },
+    {
+      id: "Environement",
+      title: t("Actions.Environement") || "Reboisement & Climat",
+      desc:
+        t("Actions.index.cards.Environement.desc") ||
+        "Pépinières scolaires, reboisement et lutte contre le réchauffement climatique via des essences forestières et fruitières.",
+      icon: FaTree,
     },
   ];
 
   return (
     <div className="mx-auto max-w-6xl px-6 py-10 sm:py-14">
       <SectionTitle
-        kicker={t("services.index.kicker") || "Nos Actions"}
-        title={t("services.index.title") || "Leviers d'Impact Durable"}
+        kicker={t("Actions.index.kicker") || "Nos Actions"}
+        title={t("Actions.index.title") || "Leviers d'Impact Durable"}
       />
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {services.map((item) => (
+        {Actions.map((item) => (
           <div
             key={item.title}
             className="h-full rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
@@ -92,7 +85,7 @@ export function Services() {
       <div className="mt-12 grid gap-6 lg:grid-cols-[1.1fr,0.9fr]">
         <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
           <p className="text-sm font-semibold text-slate-800">
-            {t("services.index.approach.kicker") || "Approche Intégrée"}
+            {t("Actions.index.approach.kicker") || "Approche Intégrée"}
           </p>
           <ul className="mt-3 space-y-2 text-sm text-slate-600">
             <li className="flex flex-row item-center gap-2">
@@ -111,7 +104,7 @@ export function Services() {
         </div>
         <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
           <p className="text-sm font-semibold text-slate-800">
-            {t("services.index.objectives.kicker") || "Objectifs Clés"}
+            {t("Actions.index.objectives.kicker") || "Objectifs Clés"}
           </p>
           <ul className="mt-3 space-y-2 text-sm text-slate-600">
             <li className="flex flex-row item-center gap-2">

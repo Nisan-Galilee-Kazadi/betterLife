@@ -14,7 +14,7 @@ export function Breadcrumb() {
     mission: t("nav.mission"),
     team: t("nav.team"),
     partners: t("nav.partners"),
-    Services: t("nav.services"),
+    Actions: t("nav.Actions"),
     agriculture: t("nav.agriculture"),
     reboisement: t("nav.reboisement"),
     biodiversite: t("nav.biodiversity"),

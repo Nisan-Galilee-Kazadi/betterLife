@@ -1,7 +1,7 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { Shell } from "./components/Shell";
 import { Home } from "./pages/Home";
-import { Services } from "./pages/Services";
+import { Actions } from "./pages/Actions";
 import { Rejoindre } from "./pages/Rejoindre";
 import { Blog } from "./pages/Blog";
 import { Contact } from "./pages/Contact";
@@ -14,14 +14,45 @@ import { Mission } from "./pages/about/Mission";
 import { Team } from "./pages/about/Team";
 import { Partners } from "./pages/about/Partners";
 
-// Services Pages
-import { ServiceAgriculture } from "./pages/services/Agriculture";
-import { ServiceReboisement } from "./pages/services/Reboisement";
-import { ServiceBiodiversite } from "./pages/services/Biodiversite";
-import { ServiceCommunautaire } from "./pages/services/Communautaire";
-import { ServiceElevage } from "./pages/services/Elevage";
+// Actions Pages
+import { ActionsAgriculture } from "./pages/Actions/Agriculture";
+import { ActionsEnvironement } from "./pages/Actions/Enviroment";
+import { ActionsMecanisation } from "./pages/Actions/Mecanisation";
+import { ActionsCommunautaire } from "./pages/Actions/Communautaire";
+import { ActionsElevage } from "./pages/Actions/Elevage";
 
-// Offres and Projets removed
+// Agriculture Sub-pages
+import Cacao from "./pages/Actions/agricultures/cacao";
+import Cafe from "./pages/Actions/agricultures/cafe";
+import Theier from "./pages/Actions/agricultures/theier";
+import CotonCaoutchouc from "./pages/Actions/agricultures/coton-caoutchouc";
+import Arboriculture from "./pages/Actions/agricultures/arboriculture";
+import PlantesMedicinales from "./pages/Actions/agricultures/plantes-medecinales";
+
+// Mecanisation Sub-pages
+import Tracteur from "./pages/Actions/Mecanisation/tracteur";
+import Accessoires from "./pages/Actions/Mecanisation/accessoires";
+import AutresMecanisation from "./pages/Actions/Mecanisation/autres";
+
+// Elevage Sub-pages
+import GrosBetail from "./pages/Actions/elevages/gros-betail";
+import Apiculture from "./pages/Actions/elevages/apiculture";
+import Pisciculture from "./pages/Actions/elevages/pisciculture";
+import Chiens from "./pages/Actions/elevages/chiens";
+import Serpents from "./pages/Actions/elevages/serpents";
+
+// Communautaire Sub-pages
+import Sante from "./pages/Actions/Communautaire/sante";
+import Energie from "./pages/Actions/Communautaire/energie";
+import Education from "./pages/Actions/Communautaire/education";
+import RoutesDesserte from "./pages/Actions/Communautaire/routes-desserte";
+import Habitation from "./pages/Actions/Communautaire/habitation";
+
+// Environnement Sub-pages
+import ProtectionForet from "./pages/Actions/Environement/protection-foret";
+import CreditCarbone from "./pages/Actions/Environement/credit-carbone";
+import EcoKelasi from "./pages/Actions/Environement/eco-kelasi";
+
 
 // Blog Pages
 import { BlogNews } from "./pages/blog/News";
@@ -42,27 +73,51 @@ function App() {
           <Route path="/about/team" element={<Team />} />
           <Route path="/about/partners" element={<Partners />} />
 
-          {/* Services Submenus */}
-          <Route path="/Services" element={<Services />} />
-          <Route
-            path="/Services/agriculture"
-            element={<ServiceAgriculture />}
-          />
-          <Route
-            path="/Services/reboisement"
-            element={<ServiceReboisement />}
-          />
-          <Route
-            path="/Services/biodiversite"
-            element={<ServiceBiodiversite />}
-          />
-          <Route
-            path="/Services/communautaire"
-            element={<ServiceCommunautaire />}
-          />
-          <Route path="/Services/elevage" element={<ServiceElevage />} />
+          {/* Actions Submenus */}
+          <Route path="/Actions" element={<Actions />} />
+          <Route path="/Actions/agriculture" element={<ActionsAgriculture />} />
 
-          {/* Offres and Projets removed */}
+          {/* Agriculture Sub-pages */}
+          <Route path="/Actions/agriculture/cacao" element={<Cacao />} />
+          <Route path="/Actions/agriculture/cafe" element={<Cafe />} />
+          <Route path="/Actions/agriculture/the" element={<Theier />} />
+          <Route path="/Actions/agriculture/coton-caoutchouc" element={<CotonCaoutchouc />} />
+          <Route path="/Actions/agriculture/arboriculture" element={<Arboriculture />} />
+          <Route path="/Actions/agriculture/plantes-medicinales" element={<PlantesMedicinales />} />
+
+          <Route
+            path="/Actions/Enviroment"
+            element={<ActionsEnvironement />}
+          />
+          <Route path="/Actions/environnement/protection-foret" element={<ProtectionForet />} />
+          <Route path="/Actions/environnement/credit-carbone" element={<CreditCarbone />} />
+          <Route path="/Actions/environnement/eco-kelasi" element={<EcoKelasi />} />
+
+          <Route
+            path="/Actions/Mecanisation"
+            element={<ActionsMecanisation />}
+          />
+          <Route path="/Actions/mecanisation/tracteur" element={<Tracteur />} />
+          <Route path="/Actions/mecanisation/accessoires" element={<Accessoires />} />
+          <Route path="/Actions/mecanisation/autres" element={<AutresMecanisation />} />
+
+          <Route
+            path="/Actions/communautaire"
+            element={<ActionsCommunautaire />}
+          />
+          <Route path="/Actions/communautaire/sante" element={<Sante />} />
+          <Route path="/Actions/communautaire/energie" element={<Energie />} />
+          <Route path="/Actions/communautaire/education" element={<Education />} />
+          <Route path="/Actions/communautaire/routes-desserte" element={<RoutesDesserte />} />
+          <Route path="/Actions/communautaire/habitation" element={<Habitation />} />
+
+          <Route path="/Actions/elevage" element={<ActionsElevage />} />
+          <Route path="/Actions/elevage/gros-betail" element={<GrosBetail />} />
+          <Route path="/Actions/elevage/apiculture" element={<Apiculture />} />
+          <Route path="/Actions/elevage/pisciculture" element={<Pisciculture />} />
+          <Route path="/Actions/elevage/chiens" element={<Chiens />} />
+          <Route path="/Actions/elevage/serpents" element={<Serpents />} />
+
 
           {/* Media/Blog Submenus */}
           <Route path="/blog" element={<Blog />} />

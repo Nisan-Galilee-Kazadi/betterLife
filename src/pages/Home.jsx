@@ -112,9 +112,8 @@ function FadeIn({ children, delay = 0 }) {
   return (
     <div
       ref={ref}
-      className={`transition-all duration-1000 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-      }`}
+      className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
     >
       {children}
     </div>
@@ -158,9 +157,8 @@ export function Home() {
             key={index}
             src={image.src}
             alt={image.alt}
-            className={`absolute inset-0 -z-10 h-full w-full object-cover brightness-[0.6] transition-opacity duration-1000 ${
-              index === currentSlide ? "opacity-100" : "opacity-0"
-            }`}
+            className={`absolute inset-0 -z-10 h-full w-full object-cover brightness-[0.6] transition-opacity duration-1000 ${index === currentSlide ? "opacity-100" : "opacity-0"
+              }`}
           />
         ))}
 
@@ -212,9 +210,8 @@ export function Home() {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`h-2 rounded-full transition-all ${
-                index === currentSlide ? "w-8 bg-white" : "w-2 bg-white/50"
-              }`}
+              className={`h-2 rounded-full transition-all ${index === currentSlide ? "w-8 bg-white" : "w-2 bg-white/50"
+                }`}
               aria-label={`${t("common.goToImage")} ${index + 1}`}
             />
           ))}
@@ -229,7 +226,7 @@ export function Home() {
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6">
             <Link
-              to="/Services"
+              to="/Actions"
               className="rounded-md bg-[#63b32e] px-8 py-3.5 text-base font-semibold text-white shadow-lg transition hover:bg-[#529624] hover:brightness-110"
             >
               {t("home.hero.cta1")}
@@ -290,25 +287,22 @@ export function Home() {
             ].map((stat, index) => (
               <FadeIn key={stat.label} delay={index * 100}>
                 <div
-                  className={`rounded-2xl border-2 ${
-                    stat.color === "green"
+                  className={`rounded-2xl border-2 ${stat.color === "green"
                       ? "border-green-200 bg-white"
                       : "border-blue-200 bg-white"
-                  } p-8 text-center shadow-lg transition hover:scale-105 hover:shadow-2xl`}
+                    } p-8 text-center shadow-lg transition hover:scale-105 hover:shadow-2xl`}
                 >
                   <stat.icon
-                    className={`text-6xl mb-4 mx-auto ${
-                      stat.color === "green"
+                    className={`text-6xl mb-4 mx-auto ${stat.color === "green"
                         ? "text-[#63b32e]"
                         : "text-[#0f70b7]"
-                    }`}
+                      }`}
                   />
                   <p
-                    className={`text-4xl font-bold mb-2 ${
-                      stat.color === "green"
+                    className={`text-4xl font-bold mb-2 ${stat.color === "green"
                         ? "text-[#63b32e]"
                         : "text-[#0f70b7]"
-                    }`}
+                      }`}
                   >
                     <AnimatedCounter end={stat.number} suffix={stat.suffix} />
                   </p>
@@ -359,25 +353,25 @@ export function Home() {
                   title: t("home.mission.cards.biodiversity.title"),
                   desc: t("home.mission.cards.biodiversity.desc"),
                   icon: GiForest,
-                  link: "/Services/biodiversite",
+                  link: "/Actions/biodiversite",
                 },
                 {
                   title: t("home.mission.cards.agriculture.title"),
                   desc: t("home.mission.cards.agriculture.desc"),
                   icon: MdAgriculture,
-                  link: "/Services/agriculture",
+                  link: "/Actions/agriculture",
                 },
                 {
                   title: t("home.mission.cards.reforestation.title"),
                   desc: t("home.mission.cards.reforestation.desc"),
                   icon: FaSeedling,
-                  link: "/Services/reboisement",
+                  link: "/Actions/reboisement",
                 },
                 {
                   title: t("home.mission.cards.community.title"),
                   desc: t("home.mission.cards.community.desc"),
                   icon: FaHandsHelping,
-                  link: "/Services/communautaire",
+                  link: "/Actions/communautaire",
                 },
               ].map((card) => (
                 <Link

@@ -14,7 +14,7 @@ import {
 import { MdHealthAndSafety, MdScience } from "react-icons/md";
 import { useLanguage } from "../../contexts/LanguageContext";
 
-export function ServiceElevage() {
+export function ActionsElevage() {
   const { t } = useLanguage();
 
   const livestockIcons = [
@@ -34,10 +34,10 @@ export function ServiceElevage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              {t("services.elevage.hero.title")}
+              {t("Actions.elevage.hero.title")}
             </h1>
             <p className="mt-6 text-lg leading-8 text-white/90">
-              {t("services.elevage.hero.subtitle")}
+              {t("Actions.elevage.hero.subtitle")}
             </p>
           </div>
         </div>
@@ -48,10 +48,10 @@ export function ServiceElevage() {
         {/* Introduction */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <SectionTitle
-            kicker={t("services.elevage.intro.kicker")}
-            title={t("services.elevage.intro.title")}
+            kicker={t("Actions.elevage.intro.kicker")}
+            title={t("Actions.elevage.intro.title")}
           >
-            {t("services.elevage.intro.text")}
+            {t("Actions.elevage.intro.text")}
           </SectionTitle>
         </div>
 
@@ -59,12 +59,12 @@ export function ServiceElevage() {
         <div className="mb-20">
           <div className="text-center mb-12">
             <SectionTitle
-              kicker={t("services.elevage.types.kicker")}
-              title={t("services.elevage.types.title")}
+              kicker={t("Actions.elevage.types.kicker")}
+              title={t("Actions.elevage.types.title")}
             />
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {t("services.elevage.types.items").map((type, index) => {
+            {t("Actions.elevage.types.items").map((type, index) => {
               const Icon = livestockIcons[index] || GiChicken;
               return (
                 <div
@@ -85,16 +85,16 @@ export function ServiceElevage() {
           </div>
         </div>
 
-        {/* Services */}
+        {/* Actions */}
         <div className="mb-20">
           <div className="text-center mb-12">
             <SectionTitle
-              kicker={t("services.elevage.services.kicker")}
-              title={t("services.elevage.services.title")}
+              kicker={t("Actions.elevage.Actions.kicker")}
+              title={t("Actions.elevage.Actions.title")}
             />
           </div>
           <div className="grid gap-8 md:grid-cols-2">
-            {t("services.elevage.services.items").map((service, index) => {
+            {t("Actions.elevage.Actions.items").map((service, index) => {
               const Icon = serviceIcons[index] || MdHealthAndSafety;
               return (
                 <div
@@ -135,16 +135,16 @@ export function ServiceElevage() {
             <div className="grid gap-12 lg:grid-cols-2 items-center">
               <div>
                 <span className="px-4 py-2 bg-[#63b32e] text-white rounded-full text-sm font-semibold">
-                  {t("services.elevage.story.tag")}
+                  {t("Actions.elevage.story.tag")}
                 </span>
                 <h2 className="text-3xl font-bold text-slate-900 mt-6 mb-6">
-                  {t("services.elevage.story.title")}
+                  {t("Actions.elevage.story.title")}
                 </h2>
                 <p className="text-lg text-slate-700 mb-6">
-                  {t("services.elevage.story.text")}
+                  {t("Actions.elevage.story.text")}
                 </p>
                 <div className="space-y-4">
-                  {t("services.elevage.story.benefits").map((item, index) => (
+                  {t("Actions.elevage.story.benefits").map((item, index) => (
                     <div key={index} className="flex items-center gap-3">
                       <svg
                         className="w-6 h-6 text-[#63b32e]"
@@ -163,22 +163,20 @@ export function ServiceElevage() {
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-6">
-                {t("services.elevage.story.stats").map((stat, index) => (
+                {t("Actions.elevage.story.stats").map((stat, index) => (
                   <div
                     key={index}
-                    className={`rounded-xl border-2 ${
-                      stat.color === "green"
-                        ? "border-green-200 bg-green-50"
-                        : "border-blue-200 bg-blue-50"
-                    } p-6 text-center`}
+                    className={`rounded-xl border-2 ${stat.color === "green"
+                      ? "border-green-200 bg-green-50"
+                      : "border-blue-200 bg-blue-50"
+                      } p-6 text-center`}
                   >
                     <p className="text-sm text-slate-600 mb-2">{stat.label}</p>
                     <p
-                      className={`text-3xl font-bold ${
-                        stat.color === "green"
-                          ? "text-[#63b32e]"
-                          : "text-[#0f70b7]"
-                      }`}
+                      className={`text-3xl font-bold ${stat.color === "green"
+                        ? "text-[#63b32e]"
+                        : "text-[#0f70b7]"
+                        }`}
                     >
                       {stat.value}
                     </p>
@@ -192,10 +190,10 @@ export function ServiceElevage() {
         {/* Impact Stats */}
         <div className="mb-20 rounded-2xl bg-gradient-to-br from-[#63b32e] to-[#0f70b7] p-12 text-white">
           <h2 className="text-3xl font-bold text-center mb-12">
-            {t("services.elevage.stats.title")}
+            {t("Actions.elevage.stats.title")}
           </h2>
           <div className="grid gap-8 md:grid-cols-4">
-            {t("services.elevage.stats.items").map((stat, index) => (
+            {t("Actions.elevage.stats.items").map((stat, index) => (
               <div key={index} className="text-center">
                 <p className="text-4xl font-bold mb-2">{stat.number}</p>
                 <p className="text-white/90">{stat.label}</p>
@@ -208,23 +206,23 @@ export function ServiceElevage() {
         <div className="rounded-3xl bg-gradient-to-r from-[#0f70b7] to-[#63b32e] p-12 text-center">
           <FaHeart className="text-7xl text-white mx-auto mb-6" />
           <h2 className="text-3xl font-bold text-white mb-4">
-            {t("services.elevage.cta.title")}
+            {t("Actions.elevage.cta.title")}
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            {t("services.elevage.cta.text")}
+            {t("Actions.elevage.cta.text")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="rounded-md bg-white px-8 py-3.5 text-base font-semibold text-[#63b32e] shadow-lg transition hover:bg-slate-50"
             >
-              {t("services.elevage.cta.btn_contact")}
+              {t("Actions.elevage.cta.btn_contact")}
             </Link>
             <Link
               to="/contact"
               className="rounded-md bg-white/10 backdrop-blur-sm px-8 py-3.5 text-base font-semibold text-white transition hover:bg-white/20"
             >
-              {t("services.elevage.cta.btn_contact")}
+              {t("Actions.elevage.cta.btn_contact")}
             </Link>
           </div>
         </div>

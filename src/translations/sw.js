@@ -225,7 +225,7 @@ export const sw = {
       },
     },
   },
-  services: {
+  Actions: {
     agriculture: {
       hero: {
         title: "Kilimo Endelevu",
@@ -667,7 +667,7 @@ export const sw = {
           },
         ],
       },
-      services: {
+      Actions: {
         kicker: "Vitendo Vyetu",
         title: "Msaada Kamili",
         items: [
@@ -744,7 +744,7 @@ export const sw = {
     },
   },
 
-  services: {
+  Actions: {
     index: {
       hero: {
         tag: "Vitendo Vyetu",

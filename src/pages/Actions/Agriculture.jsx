@@ -12,7 +12,7 @@ import {
 import { GiFarmer, GiPlantRoots } from "react-icons/gi";
 import { useLanguage } from "../../contexts/LanguageContext";
 
-export function ServiceAgriculture() {
+export function ActionsAgriculture() {
   const { t } = useLanguage();
   const programIcons = [
     FaTree,
@@ -30,10 +30,10 @@ export function ServiceAgriculture() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              {t("services.agriculture.hero.title")}
+              {t("Actions.agriculture.hero.title")}
             </h1>
             <p className="mt-6 text-lg leading-8 text-white/90">
-              {t("services.agriculture.hero.subtitle")}
+              {t("Actions.agriculture.hero.subtitle")}
             </p>
           </div>
         </div>
@@ -45,21 +45,21 @@ export function ServiceAgriculture() {
         <div className="grid gap-12 lg:grid-cols-2 mb-20">
           <div className="space-y-6">
             <SectionTitle
-              kicker={t("services.agriculture.intro.kicker")}
-              title={t("services.agriculture.intro.title")}
+              kicker={t("Actions.agriculture.intro.kicker")}
+              title={t("Actions.agriculture.intro.title")}
             >
-              {t("services.agriculture.intro.text")}
+              {t("Actions.agriculture.intro.text")}
             </SectionTitle>
             <p className="text-lg text-slate-600">
-              {t("services.agriculture.intro.subtext")}
+              {t("Actions.agriculture.intro.subtext")}
             </p>
           </div>
           <div className="rounded-2xl bg-green-50 p-8 border-2 border-green-200">
             <h3 className="text-xl font-bold text-slate-900 mb-6">
-              {t("services.agriculture.intro.objectives.title")}
+              {t("Actions.agriculture.intro.objectives.title")}
             </h3>
             <ul className="space-y-4">
-              {t("services.agriculture.intro.objectives.items").map(
+              {t("Actions.agriculture.intro.objectives.items").map(
                 (goal, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <svg
@@ -85,12 +85,12 @@ export function ServiceAgriculture() {
         <div className="mb-20">
           <div className="text-center mb-12">
             <SectionTitle
-              kicker={t("services.agriculture.programs.kicker")}
-              title={t("services.agriculture.programs.title")}
+              kicker={t("Actions.agriculture.programs.kicker")}
+              title={t("Actions.agriculture.programs.title")}
             />
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {t("services.agriculture.programs.items").map((program, index) => {
+            {t("Actions.agriculture.programs.items").map((program, index) => {
               const Icon = programIcons[index] || FaTree;
               return (
                 <div
@@ -123,10 +123,10 @@ export function ServiceAgriculture() {
           <div className="grid gap-12 lg:grid-cols-2">
             <div className="rounded-2xl bg-gradient-to-br from-[#63b32e] to-[#0f70b7] p-10 text-white">
               <h2 className="text-3xl font-bold mb-6">
-                {t("services.agriculture.training.title")}
+                {t("Actions.agriculture.training.title")}
               </h2>
               <div className="space-y-6">
-                {t("services.agriculture.training.items").map((item, index) => (
+                {t("Actions.agriculture.training.items").map((item, index) => (
                   <div key={index} className="border-l-4 border-white/30 pl-4">
                     <h3 className="font-bold mb-1">{item.title}</h3>
                     <p className="text-white/90 text-sm">{item.desc}</p>
@@ -137,10 +137,10 @@ export function ServiceAgriculture() {
 
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-slate-900">
-                {t("services.agriculture.training.impact.title")}
+                {t("Actions.agriculture.training.impact.title")}
               </h2>
               <div className="grid grid-cols-2 gap-6">
-                {t("services.agriculture.training.impact.stats").map(
+                {t("Actions.agriculture.training.impact.stats").map(
                   (stat, index) => (
                     <div
                       key={index}
@@ -157,10 +157,10 @@ export function ServiceAgriculture() {
               <div className="rounded-xl bg-blue-50 border-2 border-blue-100 p-6">
                 <h3 className="font-bold text-slate-900 mb-3">Témoignage</h3>
                 <p className="text-slate-700 italic mb-3">
-                  {t("services.agriculture.training.testimonial.text")}
+                  {t("Actions.agriculture.training.testimonial.text")}
                 </p>
                 <p className="text-sm font-semibold text-[#0f70b7]">
-                  {t("services.agriculture.training.testimonial.author")}
+                  {t("Actions.agriculture.training.testimonial.author")}
                 </p>
               </div>
             </div>
@@ -170,23 +170,23 @@ export function ServiceAgriculture() {
         {/* Call to Action */}
         <div className="rounded-3xl bg-gradient-to-r from-[#0f70b7] to-[#63b32e] p-12 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            {t("services.agriculture.cta.title")}
+            {t("Actions.agriculture.cta.title")}
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            {t("services.agriculture.cta.text")}
+            {t("Actions.agriculture.cta.text")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/rejoindre"
               className="rounded-md bg-white px-8 py-3.5 text-base font-semibold text-[#63b32e] shadow-lg transition hover:bg-slate-50"
             >
-              {t("services.agriculture.cta.btn_train")}
+              {t("Actions.agriculture.cta.btn_train")}
             </Link>
             <Link
               to="/contact"
               className="rounded-md bg-white/10 backdrop-blur-sm px-8 py-3.5 text-base font-semibold text-white transition hover:bg-white/20"
             >
-              {t("services.agriculture.cta.btn_more")}
+              {t("Actions.agriculture.cta.btn_more")}
             </Link>
           </div>
         </div>

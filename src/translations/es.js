@@ -35,7 +35,7 @@ export const es = {
     mission: "Nuestra Misión",
     team: "Nuestro Equipo",
     partners: "Socios",
-    services: "Nuestros Servicios",
+    Actions: "Nuestros Servicios",
     agriculture: "Agricultura",
     cacao: "Cacao (Criollo)",
     cafe: "Café Arábica",
@@ -71,7 +71,7 @@ export const es = {
     phase2: "Fase 2",
     completed: "Completados",
     media: "Medios",
-    news: "Noticias",
+    news: "Artículos",
     gallery: "Galería",
     emplois_stage: "Empleo y Prácticas",
     donation: "Donación",
@@ -545,7 +545,7 @@ export const es = {
       btn: "Contáctanos",
     },
   },
-  services: {
+  Actions: {
     agriculture: {
       hero: {
         title: "Agricultura Sostenible",
@@ -997,7 +997,7 @@ export const es = {
           },
         ],
       },
-      services: {
+      Actions: {
         kicker: "Nuestras Acciones",
         title: "Acompañamiento Completo",
         items: [
