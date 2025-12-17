@@ -408,20 +408,20 @@ export function Shell({ children }) {
           ],
         },
         {
-          name: t("nav.environnement"),
-          to: "/Actions/environnement",
+          name: t("nav.environement"),
+          to: "/Actions/environement",
           children: [
             {
               name: t("nav.protection_foret"),
-              to: "/Actions/environnement/protection-foret",
+              to: "/Actions/environement/protection-foret",
             },
             {
               name: t("nav.credit_carbone"),
-              to: "/Actions/environnement/credit-carbone",
+              to: "/Actions/environement/credit-carbone",
             },
             {
               name: t("nav.eco_kelasi"),
-              to: "/Actions/environnement/eco-kelasi",
+              to: "/Actions/environement/eco-kelasi",
             },
           ],
         },
@@ -693,7 +693,7 @@ export function Shell({ children }) {
             </div>
           </div>
           <div>
-            <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-[#63b32e]">
+            <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-white">
               {t("footer.nav_title")}
             </h3>
             <ul className="space-y-3">
@@ -749,7 +749,7 @@ export function Shell({ children }) {
             </ul>
           </div>
           <div>
-            <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-[#63b32e]">
+            <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-[#fafafa]">
               {t("footer.activities_title")}
             </h3>
             <ul className="space-y-3">
@@ -793,7 +793,7 @@ export function Shell({ children }) {
             </ul>
           </div>
           <div>
-            <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-[#63b32e]">
+            <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-[#fafafa]">
               {t("footer.contact_title")}
             </h3>
             <ul className="space-y-3 text-white/80 w-full">

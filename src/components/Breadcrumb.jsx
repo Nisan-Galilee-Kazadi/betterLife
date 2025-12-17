@@ -21,7 +21,6 @@ export function Breadcrumb() {
     communautaire: t("nav.community"),
     elevage: t("nav.breeding"),
     apiculture: t("nav.apiculture"),
-    bancal: t("nav.bancal"),
     Changement: t("nav.climate"),
     blog: t("nav.media"),
     news: t("nav.news"),

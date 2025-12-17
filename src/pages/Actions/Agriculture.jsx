@@ -12,6 +12,13 @@ import {
 import { GiFarmer, GiPlantRoots } from "react-icons/gi";
 import { useLanguage } from "../../contexts/LanguageContext";
 
+import imgCacao from "./agricultures/images/hero_cacao.png";
+import imgCafe from "./agricultures/images/hero_cafe.png";
+import imgThe from "./agricultures/images/hero_the.png";
+import imgCoton from "./agricultures/images/hero_coton_hevea.png";
+import imgArbo from "./agricultures/images/hero_arboriculture.png";
+import imgPlantes from "./agricultures/images/hero_plantes_medicinales.png";
+
 export function ActionsAgriculture() {
   const { t } = useLanguage();
   const programIcons = [
@@ -89,32 +96,50 @@ export function ActionsAgriculture() {
               title={t("Actions.agriculture.programs.title")}
             />
           </div>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {t("Actions.agriculture.programs.items").map((program, index) => {
-              const Icon = programIcons[index] || FaTree;
-              return (
-                <div
-                  key={index}
-                  className="rounded-2xl bg-white p-8 shadow-lg ring-1 ring-slate-900/5 transition hover:shadow-xl hover:ring-[#63b32e]/20"
-                >
-                  <Icon className="text-5xl mb-4 text-[#63b32e]" />
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">
-                    {program.title}
-                  </h3>
-                  <p className="text-slate-600 mb-6">{program.desc}</p>
-                  <div className="space-y-2">
-                    {program.benefits.map((benefit, i) => (
-                      <div key={i} className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#63b32e]" />
-                        <span className="text-sm text-slate-700">
-                          {benefit}
-                        </span>
+          <div className="grid gap-8 lg:grid-cols-3">
+            <div className="grid gap-8 md:w-[1060px] md:grid-cols-2 lg:grid-cols-3">
+              {t("Actions.agriculture.programs.items").map((program, index) => {
+                const images = [imgCacao, imgCafe, imgThe, imgCoton, imgArbo, imgPlantes];
+                const links = [
+                  "/Actions/agricultures/cacao",
+                  "/Actions/agricultures/cafe",
+                  "/Actions/agricultures/theier",
+                  "/Actions/agricultures/coton-caoutchouc",
+                  "/Actions/agricultures/arboriculture",
+                  "/Actions/agricultures/plantes-medicinales"
+                ];
+                const img = images[index] || imgCacao;
+                const link = links[index] || "#";
+
+                return (
+                  <Link
+                    to={link}
+                    key={index}
+                    className="group relative flex flex-col overflow-hidden rounded-2xl  bg-white shadow-lg ring-1 ring-slate-900/5 transition hover:shadow-2xl hover:scale-[1.02]"
+                  >
+                    <div className="h-48 w-full overflow-hidden">
+                      <img src={img} alt={program.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-110" />
+                    </div>
+                    <div className="p-8 flex-1 flex flex-col">
+                      <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#63b32e] transition">
+                        {program.title}
+                      </h3>
+                      <p className="text-slate-600 mb-6 flex-1">{program.desc}</p>
+                      <div className="space-y-2">
+                        {program.benefits.map((benefit, i) => (
+                          <div key={i} className="flex items-center gap-2">
+                            <div className="w-1.5 h-1.5 rounded-full bg-[#63b32e]" />
+                            <span className="text-sm text-slate-700">
+                              {benefit}
+                            </span>
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
           </div>
         </div>
 

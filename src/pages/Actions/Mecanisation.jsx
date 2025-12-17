@@ -50,10 +50,24 @@ export function ActionsMecanisation() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {t("Actions.mecanisation.programs.items").map((program, index) => {
               const Icon = programIcons[index] || FaTractor;
+              const links = [
+                "/Actions/mecanisation/tracteur",
+                "/Actions/mecanisation/accessoires", // Assuming "Unités de Transformation" maps largely to Accessories or a new page? Actually Accessoires matches "Accessoires" in nav. Let's map loosely to subpages for now.
+                "/Actions/mecanisation/autres",
+                "/Actions/mecanisation/autres" // Mapping Formation to Autres or keep static if no page exists.
+              ];
+              // Better mapping based on titles if possible, but index is safer with fixed list
+              // 0: Tracteurs -> tracteur
+              // 1: Unités -> accessoires (or generic)
+              // 2: Maintenance -> autres
+              // 3: Formation -> autres
+              const link = links[index] || "/Actions/mecanisation/autres";
+
               return (
-                <div
+                <Link
+                  to={link}
                   key={index}
-                  className="rounded-2xl bg-white p-8 shadow-lg ring-1 ring-slate-900/5 transition hover:shadow-xl hover:translate-y-[-4px]"
+                  className="block rounded-2xl bg-white p-8 shadow-lg ring-1 ring-slate-900/5 transition hover:shadow-xl hover:translate-y-[-4px] hover:ring-[#63b32e]/20"
                 >
                   <Icon className="text-5xl mb-4 text-[#63b32e]" />
                   <h3 className="text-xl font-bold text-slate-900 mb-3">
@@ -64,7 +78,7 @@ export function ActionsMecanisation() {
                     <FaIndustry />
                     <span>Impact: {program.impact}</span>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>

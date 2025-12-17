@@ -4,12 +4,20 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { GiSnake } from "react-icons/gi";
 import { useLanguage } from "../../../contexts/LanguageContext";
 
+// Image: Snake/Nature - Unsplash
+const imgHero = "https://images.unsplash.com/photo-1579737190538-2c2533036814?auto=format&fit=crop&q=80&w=2070";
+
 export default function Serpents() {
     const { t } = useLanguage();
 
     return (
         <div className="bg-white">
-            <div className="relative isolate overflow-hidden bg-gradient-to-br from-emerald-800 to-teal-900 py-24 sm:py-32">
+            <div className="relative isolate overflow-hidden bg-slate-900 py-24 sm:py-32">
+                <img
+                    src={imgHero}
+                    alt="Elevage de serpents"
+                    className="absolute inset-0 -z-10 h-full w-full object-cover brightness-[0.4]"
+                />
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="mx-auto max-w-2xl text-center">
                         <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">

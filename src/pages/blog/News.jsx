@@ -6,7 +6,7 @@ import { useLanguage } from '../../contexts/LanguageContext'
 
 export function BlogNews() {
     const { t } = useLanguage()
-    
+
     const news = [
         {
             title: t('blog.news.articles.reforestation2025.title'),
@@ -59,7 +59,7 @@ export function BlogNews() {
             category: t('blog.news.categories.recognition'),
             icon: FaTrophy,
             excerpt: t('blog.news.articles.excellenceAward.excerpt'),
-            content: 'Cette reconnaissance récompense nos efforts constants pour la protection de l\'environnement et le développement durable...',
+            content: 'Cette reconnaissance récompense nos efforts constants pour la protection de l\'environement et le développement durable...',
             author: 'Communication'
         }
     ]

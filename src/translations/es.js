@@ -1,3 +1,5 @@
+import Autres from "../pages/Actions/Mecanisation/autres";
+
 export const es = {
   common: {
     readMore: "Leer más",
@@ -60,7 +62,8 @@ export const es = {
     mecanisation: "Mecanización Agrícola",
     tracteur: "Tractor",
     accessoires: "Accesorios",
-    environnement: "Medio Ambiente",
+    Autres: "otros",
+    environement: "Medio Ambiente",
     protection_foret: "Protección Forestal",
     credit_carbone: "Crédito de Carbono",
     eco_kelasi: "Eco Kelasi",

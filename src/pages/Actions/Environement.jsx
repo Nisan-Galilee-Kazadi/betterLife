@@ -22,10 +22,10 @@ export function ActionsEnvironement() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              {t("Actions.environnement.hero.title")}
+              {t("Actions.environement.hero.title")}
             </h1>
             <p className="mt-6 text-lg leading-8 text-white/90">
-              {t("Actions.environnement.hero.subtitle")}
+              {t("Actions.environement.hero.subtitle")}
             </p>
           </div>
         </div>
@@ -36,28 +36,28 @@ export function ActionsEnvironement() {
         {/* Introduction */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <SectionTitle
-            kicker={t("Actions.environnement.intro.kicker")}
-            title={t("Actions.environnement.intro.title")}
+            kicker={t("Actions.environement.intro.kicker")}
+            title={t("Actions.environement.intro.title")}
           >
-            {t("Actions.environnement.intro.text")}
+            {t("Actions.environement.intro.text")}
           </SectionTitle>
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             <div className="rounded-xl border-2 border-green-200 bg-green-50 p-6">
               <GiEarthAmerica className="text-5xl text-[#63b32e] mx-auto mb-3" />
               <p className="text-3xl font-bold text-[#63b32e] mb-1">
-                {t("Actions.environnement.intro.stats.planted.number")}
+                {t("Actions.environement.intro.stats.planted.number")}
               </p>
               <p className="text-sm text-slate-700">
-                {t("Actions.environnement.intro.stats.planted.label")}
+                {t("Actions.environement.intro.stats.planted.label")}
               </p>
             </div>
             <div className="rounded-xl border-2 border-blue-200 bg-blue-50 p-6">
               <MdNaturePeople className="text-5xl text-[#0f70b7] mx-auto mb-3" />
               <p className="text-3xl font-bold text-[#0f70b7] mb-1">
-                {t("Actions.environnement.intro.stats.survival.number")}
+                {t("Actions.environement.intro.stats.survival.number")}
               </p>
               <p className="text-sm text-slate-700">
-                {t("Actions.environnement.intro.stats.survival.label")}
+                {t("Actions.environement.intro.stats.survival.label")}
               </p>
             </div>
           </div>
@@ -67,12 +67,12 @@ export function ActionsEnvironement() {
         <div className="mb-20">
           <div className="text-center mb-12">
             <SectionTitle
-              kicker={t("Actions.environnement.programs.kicker")}
-              title={t("Actions.environnement.programs.title")}
+              kicker={t("Actions.environement.programs.kicker")}
+              title={t("Actions.environement.programs.title")}
             />
           </div>
           <div className="grid gap-8 lg:grid-cols-3">
-            {t("Actions.environnement.programs.items").map((program, index) => {
+            {t("Actions.environement.programs.items").map((program, index) => {
               const Icon = programIcons[index] || FaRecycle;
               return (
                 <div
@@ -102,11 +102,11 @@ export function ActionsEnvironement() {
         <div className="mb-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900">
-              {t("Actions.environnement.impact.title")}
+              {t("Actions.environement.impact.title")}
             </h2>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
-            {t("Actions.environnement.impact.stats").map((stat, index) => {
+            {t("Actions.environement.impact.stats").map((stat, index) => {
               return (
                 <div key={index} className="text-center p-6 bg-slate-50 rounded-xl">
                   <p className="text-4xl font-bold text-[#0f70b7] mb-2">
@@ -123,23 +123,23 @@ export function ActionsEnvironement() {
         <div className="rounded-3xl bg-gradient-to-r from-[#0f70b7] to-[#63b32e] p-12 text-center">
           <FaLightbulb className="text-7xl text-white mx-auto mb-6" />
           <h2 className="text-3xl font-bold text-white mb-4">
-            {t("Actions.environnement.cta.title")}
+            {t("Actions.environement.cta.title")}
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            {t("Actions.environnement.cta.text")}
+            {t("Actions.environement.cta.text")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/rejoindre"
               className="rounded-md bg-white px-8 py-3.5 text-base font-semibold text-[#63b32e] shadow-lg transition hover:bg-slate-50"
             >
-              {t("Actions.environnement.cta.btn_join")}
+              {t("Actions.environement.cta.btn_join")}
             </Link>
             <Link
               to="/contact"
               className="rounded-md bg-white/10 backdrop-blur-sm px-8 py-3.5 text-base font-semibold text-white transition hover:bg-white/20"
             >
-              {t("Actions.environnement.cta.btn_sponsor")}
+              {t("Actions.environement.cta.btn_sponsor")}
             </Link>
           </div>
         </div>

@@ -375,5 +375,8 @@ export const en = {
       text: "Share our vision? Let's collaborate to create positive and lasting impact",
       btn: "Contact Us",
     },
+
+
+
   },
 };    

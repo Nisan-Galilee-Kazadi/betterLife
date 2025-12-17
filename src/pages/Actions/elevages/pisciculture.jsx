@@ -4,12 +4,20 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { FaFish } from "react-icons/fa";
 import { useLanguage } from "../../../contexts/LanguageContext";
 
+// Image: Fish farming/Water - Unsplash
+const imgHero = "https://images.unsplash.com/photo-1549419137-ed002b859341?auto=format&fit=crop&q=80&w=2070";
+
 export default function Pisciculture() {
     const { t } = useLanguage();
 
     return (
         <div className="bg-white">
-            <div className="relative isolate overflow-hidden bg-gradient-to-br from-cyan-600 to-blue-600 py-24 sm:py-32">
+            <div className="relative isolate overflow-hidden bg-blue-900 py-24 sm:py-32">
+                <img
+                    src={imgHero}
+                    alt="Pisciculture"
+                    className="absolute inset-0 -z-10 h-full w-full object-cover brightness-[0.4]"
+                />
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="mx-auto max-w-2xl text-center">
                         <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">

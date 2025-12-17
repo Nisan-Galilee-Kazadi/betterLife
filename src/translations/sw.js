@@ -8,7 +8,7 @@ const swCommon = {
   phase2: "Awamu ya 2",
   completed: "Iliyokamilika",
   media: "Vyombo vya habari",
-  news: "Habari",
+  news: "Makala",
   gallery: "Matunzio",
   emplois_stage: "Kazi & Mafunzo",
   donation: "Michango",

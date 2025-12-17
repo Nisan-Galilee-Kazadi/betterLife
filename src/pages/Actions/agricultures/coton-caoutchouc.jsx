@@ -5,13 +5,20 @@ import { FaIndustry, FaTshirt, FaCar, FaFlask, FaCloud, FaTree } from "react-ico
 // import { GiCottonFlower, GiRubberBoot } from "react-icons/gi"; // Removing likely invalid icons
 import { useLanguage } from "../../../contexts/LanguageContext";
 
+import imgHero from "./images/hero_coton_hevea.png";
+
 export default function CotonCaoutchouc() {
     const { t } = useLanguage();
 
     return (
         <div className="bg-white">
             {/* Hero Section */}
-            <div className="relative isolate overflow-hidden bg-gradient-to-br from-[#455a64] to-[#90a4ae] py-24 sm:py-32">
+            <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+                <img
+                    src={imgHero}
+                    alt="Coton et Hévéa"
+                    className="absolute inset-0 -z-10 h-full w-full object-cover brightness-[0.4]"
+                />
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="mx-auto max-w-2xl text-center">
                         <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">

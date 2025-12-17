@@ -16,7 +16,7 @@ import { Partners } from "./pages/about/Partners";
 
 // Actions Pages
 import { ActionsAgriculture } from "./pages/Actions/Agriculture";
-import { ActionsEnvironement } from "./pages/Actions/Enviroment";
+import { ActionsEnvironement } from "./pages/Actions/Environement";
 import { ActionsMecanisation } from "./pages/Actions/Mecanisation";
 import { ActionsCommunautaire } from "./pages/Actions/Communautaire";
 import { ActionsElevage } from "./pages/Actions/Elevage";
@@ -48,7 +48,7 @@ import Education from "./pages/Actions/Communautaire/education";
 import RoutesDesserte from "./pages/Actions/Communautaire/routes-desserte";
 import Habitation from "./pages/Actions/Communautaire/habitation";
 
-// Environnement Sub-pages
+// environement Sub-pages
 import ProtectionForet from "./pages/Actions/Environement/protection-foret";
 import CreditCarbone from "./pages/Actions/Environement/credit-carbone";
 import EcoKelasi from "./pages/Actions/Environement/eco-kelasi";
@@ -78,20 +78,20 @@ function App() {
           <Route path="/Actions/agriculture" element={<ActionsAgriculture />} />
 
           {/* Agriculture Sub-pages */}
-          <Route path="/Actions/agriculture/cacao" element={<Cacao />} />
-          <Route path="/Actions/agriculture/cafe" element={<Cafe />} />
-          <Route path="/Actions/agriculture/the" element={<Theier />} />
-          <Route path="/Actions/agriculture/coton-caoutchouc" element={<CotonCaoutchouc />} />
-          <Route path="/Actions/agriculture/arboriculture" element={<Arboriculture />} />
-          <Route path="/Actions/agriculture/plantes-medicinales" element={<PlantesMedicinales />} />
+          <Route path="/Actions/agricultures/cacao" element={<Cacao />} />
+          <Route path="/Actions/agricultures/cafe" element={<Cafe />} />
+          <Route path="/Actions/agricultures/theier" element={<Theier />} />
+          <Route path="/Actions/agricultures/coton-caoutchouc" element={<CotonCaoutchouc />} />
+          <Route path="/Actions/agricultures/arboriculture" element={<Arboriculture />} />
+          <Route path="/Actions/agricultures/plantes-medicinales" element={<PlantesMedicinales />} />
 
           <Route
-            path="/Actions/Enviroment"
+            path="/Actions/Environement"
             element={<ActionsEnvironement />}
           />
-          <Route path="/Actions/environnement/protection-foret" element={<ProtectionForet />} />
-          <Route path="/Actions/environnement/credit-carbone" element={<CreditCarbone />} />
-          <Route path="/Actions/environnement/eco-kelasi" element={<EcoKelasi />} />
+          <Route path="/Actions/environement/protection-foret" element={<ProtectionForet />} />
+          <Route path="/Actions/environement/credit-carbone" element={<CreditCarbone />} />
+          <Route path="/Actions/environement/eco-kelasi" element={<EcoKelasi />} />
 
           <Route
             path="/Actions/Mecanisation"

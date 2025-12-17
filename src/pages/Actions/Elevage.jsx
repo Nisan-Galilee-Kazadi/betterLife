@@ -64,7 +64,8 @@ export function ActionsElevage() {
             />
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {t("Actions.elevage.types.items").map((type, index) => {
+            {(t("Actions.elevage.types.items", { returnObjects: true }) || []).map((type, index) => {
+              if (!type) return null;
               const Icon = livestockIcons[index] || GiChicken;
               return (
                 <div
@@ -94,7 +95,10 @@ export function ActionsElevage() {
             />
           </div>
           <div className="grid gap-8 md:grid-cols-2">
-            {t("Actions.elevage.Actions.items").map((service, index) => {
+            {(t("Actions.elevage.Actions.items", { returnObjects: true }) || []).map((service, index) => {
+              // Safety check if service is not an object or features is missing
+              if (!service || !service.features) return null;
+
               const Icon = serviceIcons[index] || MdHealthAndSafety;
               return (
                 <div
@@ -163,7 +167,7 @@ export function ActionsElevage() {
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-6">
-                {t("Actions.elevage.story.stats").map((stat, index) => (
+                {(t("Actions.elevage.story.stats", { returnObjects: true }) || []).map((stat, index) => (
                   <div
                     key={index}
                     className={`rounded-xl border-2 ${stat.color === "green"
@@ -193,7 +197,7 @@ export function ActionsElevage() {
             {t("Actions.elevage.stats.title")}
           </h2>
           <div className="grid gap-8 md:grid-cols-4">
-            {t("Actions.elevage.stats.items").map((stat, index) => (
+            {(t("Actions.elevage.stats.items", { returnObjects: true }) || []).map((stat, index) => (
               <div key={index} className="text-center">
                 <p className="text-4xl font-bold mb-2">{stat.number}</p>
                 <p className="text-white/90">{stat.label}</p>

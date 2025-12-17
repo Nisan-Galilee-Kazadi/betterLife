@@ -5,13 +5,20 @@ import { FaLeaf, FaSpa, FaMugHot } from "react-icons/fa";
 import { GiPlantRoots } from "react-icons/gi";
 import { useLanguage } from "../../../contexts/LanguageContext";
 
+import imgHero from "./images/hero_the.png";
+
 export default function Theier() {
     const { t } = useLanguage();
 
     return (
         <div className="bg-white">
             {/* Hero Section */}
-            <div className="relative isolate overflow-hidden bg-gradient-to-br from-[#2e7d32] to-[#81c784] py-24 sm:py-32">
+            <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+                <img
+                    src={imgHero}
+                    alt="Plantation de Thé"
+                    className="absolute inset-0 -z-10 h-full w-full object-cover brightness-[0.4]"
+                />
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="mx-auto max-w-2xl text-center">
                         <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
