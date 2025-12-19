@@ -66,6 +66,7 @@ export const fr = {
     autres: "Autres Équipements",
     environement: "environement",
     protection_foret: "Protection de la Forêt",
+    reboisement: "Reboisement",
     credit_carbone: "Crédit Carbone",
     eco_kelasi: "Eco Kelasi",
     // offers removed
@@ -334,6 +335,62 @@ export const fr = {
             focus: ["Financement", "Agriculture", "Infrastructure"],
           },
         ],
+      },
+      technical: {
+        title: "Partenaires Techniques",
+        items: [
+          {
+            name: "Universités & Centres de recherche",
+            desc: "Appui scientifique, études d'impact et innovation pour renforcer nos projets.",
+          },
+          {
+            name: "Experts & Consultants",
+            desc: "Expertise terrain (agroforesterie, biodiversité, climat) et accompagnement des communautés.",
+          },
+          {
+            name: "Organisations techniques",
+            desc: "Transfert de compétences, formation et mise en œuvre de solutions durables.",
+          },
+        ],
+      },
+      private: {
+        title: "Partenaires du Secteur Privé",
+        text: "Les entreprises engagées jouent un rôle clé dans le financement, l'innovation et la création de chaînes de valeur durables.",
+        items: [
+          "Agro-industries",
+          "PME locales",
+          "Startups & innovation",
+          "Institutions financières",
+          "Entreprises à impact",
+          "Marques responsables",
+        ],
+      },
+      benefits: {
+        kicker: "Avantages",
+        title: "Pourquoi devenir partenaire ?",
+        items: [
+          {
+            title: "Impact mesurable",
+            desc: "Contribuez à des résultats concrets sur le terrain (reboisement, agriculture durable, communautés).",
+          },
+          {
+            title: "Visibilité & crédibilité",
+            desc: "Valorisez votre engagement RSE auprès de vos parties prenantes.",
+          },
+          {
+            title: "Co-création",
+            desc: "Développons ensemble des solutions adaptées aux besoins locaux.",
+          },
+          {
+            title: "Réseau",
+            desc: "Accédez à un réseau d'acteurs institutionnels, techniques et communautaires.",
+          },
+        ],
+      },
+      cta: {
+        title: "Devenez partenaire",
+        text: "Contactez-nous pour construire un partenariat adapté à vos objectifs et à notre mission.",
+        btn: "Nous contacter",
       },
     },
     cta: {
