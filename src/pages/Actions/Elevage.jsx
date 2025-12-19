@@ -7,9 +7,10 @@ import {
   GiChicken,
   GiCow,
   GiPig,
-  GiGoat,
   GiBeehive,
   GiFishEggs,
+  GiSnake,
+  GiDogBowl
 } from "react-icons/gi";
 import { MdHealthAndSafety, MdScience } from "react-icons/md";
 import { useLanguage } from "../../contexts/LanguageContext";
@@ -18,12 +19,11 @@ export function ActionsElevage() {
   const { t } = useLanguage();
 
   const livestockIcons = [
-    GiChicken,
-    GiGoat,
-    GiPig,
-    GiCow,
-    GiBeehive,
-    GiFishEggs,
+    GiDogBowl,    // Pour l'élevage de chiens
+    GiSnake,      // Pour l'élevage de serpents
+    GiCow,        // Gros bétail
+    GiBeehive,    // Apiculture
+    GiFishEggs,    // Pisciculture
   ];
   const serviceIcons = [MdHealthAndSafety, MdScience, GiFarmer, FaShieldAlt];
 

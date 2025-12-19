@@ -12,12 +12,12 @@ import {
 import { GiFarmer, GiPlantRoots } from "react-icons/gi";
 import { useLanguage } from "../../contexts/LanguageContext";
 
-import imgCacao from "./agricultures/images/hero_cacao.png";
-import imgCafe from "./agricultures/images/hero_cafe.png";
-import imgThe from "./agricultures/images/hero_the.png";
-import imgCoton from "./agricultures/images/hero_coton_hevea.png";
-import imgArbo from "./agricultures/images/hero_arboriculture.png";
-import imgPlantes from "./agricultures/images/hero_plantes_medicinales.png";
+import imgCacao from "./agriculture/images/hero_cacao.png";
+import imgCafe from "./agriculture/images/hero_cafe.png";
+import imgThe from "./agriculture/images/hero_the.png";
+import imgCoton from "./agriculture/images/hero_coton_hevea.png";
+import imgArbo from "./agriculture/images/hero_arboriculture.png";
+import imgPlantes from "./agriculture/images/hero_plantes_medicinales.png";
 
 export function ActionsAgriculture() {
   const { t } = useLanguage();
@@ -101,12 +101,12 @@ export function ActionsAgriculture() {
               {t("Actions.agriculture.programs.items").map((program, index) => {
                 const images = [imgCacao, imgCafe, imgThe, imgCoton, imgArbo, imgPlantes];
                 const links = [
-                  "/Actions/agricultures/cacao",
-                  "/Actions/agricultures/cafe",
-                  "/Actions/agricultures/theier",
-                  "/Actions/agricultures/coton-caoutchouc",
-                  "/Actions/agricultures/arboriculture",
-                  "/Actions/agricultures/plantes-medicinales"
+                  "/Actions/agriculture/cacao",
+                  "/Actions/agriculture/cafe",
+                  "/Actions/agriculture/theier",
+                  "/Actions/agriculture/coton-caoutchouc",
+                  "/Actions/agriculture/arboriculture",
+                  "/Actions/agriculture/plantes-medicinales"
                 ];
                 const img = images[index] || imgCacao;
                 const link = links[index] || "#";

@@ -51,6 +51,7 @@ export default function Cacao() {
                         <h3 className="text-2xl font-bold text-[#3e2723] mb-6">
                             {t("Actions.agricultures.cacao.features.title")}
                         </h3>
+                        <p className="text-slate-700 mb-4">{t("Actions.agricultures.cacao.features.kicker")}</p>
                         <ul className="space-y-4">
                             {t("Actions.agricultures.cacao.features.items").map((item, index) => (
                                 <li key={index} className="flex items-center gap-3">

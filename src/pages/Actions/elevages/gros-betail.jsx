@@ -1,15 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { SectionTitle } from "../../../components/SectionTitle";
-import { FaStethoscope } from "react-icons/fa";
-import { GiCow } from "react-icons/gi";
+import { FaStethoscope, FaSeedling, FaClipboardCheck, FaDna } from "react-icons/fa";
+import { GiCow, GiSpermWhale, GiHealthNormal, GiGrain } from "react-icons/gi";
 import { useLanguage } from "../../../contexts/LanguageContext";
 
 // Image: Cattle in field - Unsplash
 const imgHero = "https://images.unsplash.com/photo-1541625602330-2277db6e788d?auto=format&fit=crop&q=80&w=2070";
 
+const featureIcons = [
+  <FaDna className="text-4xl text-green-600 mb-4 mx-auto" />,
+  <FaStethoscope className="text-4xl text-blue-600 mb-4 mx-auto" />,
+  <GiGrain className="text-4xl text-yellow-600 mb-4 mx-auto" />,
+  <FaClipboardCheck className="text-4xl text-purple-600 mb-4 mx-auto" />
+];
+
 export default function GrosBetail() {
     const { t } = useLanguage();
+    const features = t("Actions.elevage.gros_betail.features");
 
     return (
         <div className="bg-white">
@@ -34,7 +42,7 @@ export default function GrosBetail() {
             <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24">
                 <div className="text-center mb-16 max-w-3xl mx-auto">
                     <SectionTitle
-                        kicker="Bovin"
+                        kicker={t("Actions.elevage.gros_betail.intro.kicker")}
                         title={t("Actions.elevage.gros_betail.intro.title")}
                     >
                         {t("Actions.elevage.gros_betail.intro.text")}
@@ -42,10 +50,11 @@ export default function GrosBetail() {
                 </div>
 
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-                    {t("Actions.elevage.gros_betail.features").map((item, idx) => (
-                        <div key={idx} className="p-6 bg-stone-50 rounded-xl border border-stone-200 hover:shadow-md transition">
-                            <GiCow className="text-4xl text-stone-600 mb-4 mx-auto" />
-                            <p className="font-semibold text-stone-800 text-center">{item}</p>
+                    {Array.isArray(features) && features.map((item, idx) => (
+                        <div key={idx} className="p-6 bg-white rounded-xl border border-stone-200 hover:shadow-md transition hover:border-green-200">
+                            {featureIcons[idx % featureIcons.length]}
+                            <h3 className="text-lg font-semibold text-stone-800 text-center mb-2">{item.title}</h3>
+                            <p className="text-stone-600 text-center text-sm">{item.desc}</p>
                         </div>
                     ))}
                 </div>

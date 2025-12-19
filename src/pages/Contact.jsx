@@ -159,7 +159,7 @@ export function Contact() {
                     </div>
                 </div>
 
-                {/* Google Maps */}
+                {/* Google Maps
                 <div className="mt-16">
                     <div className="text-center mb-8">
                         <h2 className="text-3xl font-bold text-slate-900 mb-3">{t('contact.map.title')}</h2>
@@ -177,7 +177,7 @@ export function Contact() {
                             title="Better Life ONG Location"
                         />
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )

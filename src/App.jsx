@@ -22,12 +22,12 @@ import { ActionsCommunautaire } from "./pages/Actions/Communautaire";
 import { ActionsElevage } from "./pages/Actions/Elevage";
 
 // Agriculture Sub-pages
-import Cacao from "./pages/Actions/agricultures/cacao";
-import Cafe from "./pages/Actions/agricultures/cafe";
-import Theier from "./pages/Actions/agricultures/theier";
-import CotonCaoutchouc from "./pages/Actions/agricultures/coton-caoutchouc";
-import Arboriculture from "./pages/Actions/agricultures/arboriculture";
-import PlantesMedicinales from "./pages/Actions/agricultures/plantes-medecinales";
+import Cacao from "./pages/Actions/agriculture/cacao";
+import Cafe from "./pages/Actions/agriculture/cafe";
+import Theier from "./pages/Actions/agriculture/theier";
+import CotonCaoutchouc from "./pages/Actions/agriculture/coton-caoutchouc";
+import Arboriculture from "./pages/Actions/agriculture/arboriculture";
+import PlantesMedicinales from "./pages/Actions/agriculture/plantes-medecinales";
 
 // Mecanisation Sub-pages
 import Tracteur from "./pages/Actions/Mecanisation/tracteur";
@@ -78,12 +78,12 @@ function App() {
           <Route path="/Actions/agriculture" element={<ActionsAgriculture />} />
 
           {/* Agriculture Sub-pages */}
-          <Route path="/Actions/agricultures/cacao" element={<Cacao />} />
-          <Route path="/Actions/agricultures/cafe" element={<Cafe />} />
-          <Route path="/Actions/agricultures/theier" element={<Theier />} />
-          <Route path="/Actions/agricultures/coton-caoutchouc" element={<CotonCaoutchouc />} />
-          <Route path="/Actions/agricultures/arboriculture" element={<Arboriculture />} />
-          <Route path="/Actions/agricultures/plantes-medicinales" element={<PlantesMedicinales />} />
+          <Route path="/Actions/agriculture/cacao" element={<Cacao />} />
+          <Route path="/Actions/agriculture/cafe" element={<Cafe />} />
+          <Route path="/Actions/agriculture/theier" element={<Theier />} />
+          <Route path="/Actions/agriculture/coton-caoutchouc" element={<CotonCaoutchouc />} />
+          <Route path="/Actions/agriculture/arboriculture" element={<Arboriculture />} />
+          <Route path="/Actions/agriculture/plantes-medicinales" element={<PlantesMedicinales />} />
 
           <Route
             path="/Actions/Environement"

@@ -226,7 +226,7 @@ export const sw = {
     },
   },
   Actions: {
-    agriculture: {
+    agricultures: {
       hero: {
         title: "Kilimo Endelevu",
         subtitle: "Kukuza mbinu rafiki kwa mazingira na zenye tija kiuchumi",
@@ -422,114 +422,8 @@ export const sw = {
         btn_sponsor: "Tengeneza Miti",
       },
     },
-    biodiversite: {
-      hero: {
-        title: "Ulinzi wa Bioanuai",
-        subtitle:
-          "Kuhifadhi urithi wa asili wa Bonde la Kongo kwa vizazi vijavyo",
-      },
-      intro: {
-        kicker: "Dhamira Yetu",
-        title: "Walindi wa Bioanuai",
-        text: "Bonde la Kongo lina bioanuai ya pekee. Tunafanya kazi kwa ulinzi wake kupitia mipango ya uhifadhi, utafiti na uhamasishaji.",
-      },
-      species: {
-        kicker: "Spishi Mkuu",
-        title: "Kipaumbele Chetu cha Uhifadhi",
-        items: [
-          { name: "Sokwe", pop: "~5,000", status: "Hatari kubwa" },
-          { name: "Bonobo", pop: "~15,000", status: "Hatari" },
-          { name: "Okapi", pop: "~10,000", status: "Hatari" },
-          { name: "Tembo", pop: "~8,000", status: "Hatari kidogo" },
-        ],
-      },
-      programs: {
-        kicker: "Vitendo Vyetu",
-        title: "Mipango ya Uhifadhi",
-        items: [
-          {
-            title: "Ulinzi na Ufuatiliaji",
-            desc: "Matumizi ya kamera za mtego na ulinzi wa mara kwa mara kufuatilia idadi ya wanyama.",
-            actions: [
-              "Kamera 100 za mtego zimewekwa",
-              "Walindi 50 wa mazingira wamefunzwa na kujazana",
-              "Ufuatiliaji wa kila mwezi wa idadi",
-            ],
-          },
-          {
-            title: "Njia za Ikolojia",
-            desc: "Kuunda njia salama za uhamaji wa spishi kati ya maeneo yaliyolindwa.",
-            actions: [
-              "Njia 3 zimeanzishwa (km 120)",
-              "Kurejesha hekta 500",
-              "Kuunganisha maeneo 5 yaliyolindwa",
-            ],
-          },
-          {
-            title: "Kupambana na Uwindaji Haramu",
-            desc: "Kuimarisha usalama katika maeneo yaliyolindwa na uhamasishaji wa jamii.",
-            actions: [
-              "Ulinzi 24/7",
-              "Mafunzo kwa vikosi vya sheria",
-              "Kupungua kwa 65% kwa uwindaji haramu",
-            ],
-          },
-          {
-            title: "Utafiti wa Kisayansi",
-            desc: "Masomo juu ya tabia, makazi na vitisho kwa spishi.",
-            actions: [
-              "Masomo 15 yanaendelea",
-              "Ushirikiano na vyuo 8",
-              "Machapisho ya kisayansi",
-            ],
-          },
-        ],
-      },
-      ecosystems: {
-        kicker: "Mifumo ya Ikolojia",
-        title: "Makazi Yaliyolindwa",
-        items: [
-          {
-            name: "Misitu ya Mvua",
-            area: "Hekta 15,000",
-            species: "2,500+",
-            features: ["Kivuli kikubwa", "Bioanuai tajiri", "Kifua cha kaboni"],
-          },
-          {
-            name: "Maeneo Yenye Maji",
-            area: "Hekta 4,500",
-            species: "800+",
-            features: ["Mabwawa", "Makazi ya majini", "Ndege wanaohama"],
-          },
-          {
-            name: "Savana",
-            area: "Hekta 2,000",
-            species: "600+",
-            features: [
-              "Nyasi",
-              "Mamalia wakubwa",
-              "Mfumo wa ikolojia wa pekee",
-            ],
-          },
-        ],
-      },
-      impact: {
-        title: "Athari Yetu",
-        stats: [
-          { number: "21,500 ha", label: "Maeneo yaliyolindwa" },
-          { number: "450+", label: "Spishi zinafuatiliwa" },
-          { number: "65%", label: "Kupungua kwa uwindaji haramu" },
-          { number: "15", label: "Jamii washirika" },
-        ],
-      },
-      cta: {
-        title: "Linda Bioanuai",
-        text: "Kila spishi ni muhimu. Jiunge nasi katika dhamira yetu ya uhifadhi",
-        btn_volunteer: "Kuwa Mjumbe wa Mazingira",
-        btn_support: "Tegemea Mpango",
-      },
-    },
-    communautaire: {
+
+    communautaires: {
       hero: {
         title: "Maendeleo ya Jamii",
         subtitle: "Kuwezesha jamii kwa maendeleo jumuishi na endelevu",
@@ -620,7 +514,7 @@ export const sw = {
         btn_donate: "Changia",
       },
     },
-    elevage: {
+    elevages: {
       hero: {
         title: "Ufugaji Endelevu",
         subtitle:
@@ -989,68 +883,5 @@ export const sw = {
       },
     },
   },
-  projets: {
-    index: {
-      hero: {
-        title: "Miradi Yetu",
-        subtitle: "Gundua miradi yetu inayoendelea na iliyokamilika DRC nzima",
-      },
-    },
-    en_cours: {
-      hero: {
-        title: "Miradi Inayoendelea",
-        subtitle: "Jifunze kuhusu mipango yetu ya sasa ya maendeleo endelevu",
-      },
-    },
-    phase1: {
-      label: "Mradi Unaendelea",
-      hero: {
-        status: "Mradi Unaendelea",
-        title: "Awamu ya 1: Mwanzo na Uhamasishaji",
-        subtitle: "Awamu ya kwanza ya miradi yetu - Kuanzisha misingi",
-      },
-      stats: {
-        duration: {
-          title: "Muda wa Kati",
-          label: "Muda wa Kati",
-          value: "3-6 miezi",
-        },
-        budget: {
-          title: "Bajeti ya Awamu",
-          value: "20-30%",
-          label: "ya bajeti yote",
-          subtext: "ya bajeti yote",
-        },
-      },
-      navigation: { back: "Rudi", next: "Ifuatayo" },
-    },
-    realises: {
-      hero: {
-        title: "Miradi Iliyokamilika",
-        subtitle: "Matokeo halisi yanayobadilisha maisha na kulinda mazingira",
-      },
-    },
-    phase2: {
-      label: "Mradi Unaendelea",
-      hero: {
-        status: "Mradi Unaendelea",
-        title: "Awamu ya 2: Utekelezaji na Usambazaji",
-        subtitle: "Awamu ya utekelezaji wa kina - Kufanikisha shughuli kuu",
-      },
-      stats: {
-        duration: {
-          title: "Muda wa Kati",
-          label: "Muda wa Kati",
-          value: "12-18 miezi",
-        },
-        budget: {
-          title: "Bajeti ya Awamu",
-          value: "60-70%",
-          label: "ya bajeti yote",
-          subtext: "ya bajeti yote",
-        },
-      },
-      navigation: { back: "Rudi", next: "Ifuatayo", return: "Rudi" },
-    },
-  },
+
 };

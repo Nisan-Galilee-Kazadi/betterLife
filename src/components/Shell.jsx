@@ -158,6 +158,7 @@ function MobileNavItem({
   setMobileOpen,
   openMobileItem,
   setOpenMobileItem,
+  isScrolled,
 }) {
   // Controlled by parent using per-level open state
   const id = `${item.to || item.name}-${level}`;
@@ -167,15 +168,22 @@ function MobileNavItem({
   const isActive = location.pathname.startsWith(item.to);
 
   return (
-    <div className="border-b border-gray-50 last:border-0">
+    <div
+      className={`border-b last:border-0 ${isScrolled ? "border-gray-50" : "border-white/10"}`}
+    >
       <div
         className="flex items-center justify-between py-3 pr-4"
         style={{ paddingLeft: `${level * 16 + 16}px` }}
       >
         <Link
           to={item.to}
-          className={`text-base font-semibold ${isActive ? "text-[#63b32e]" : "text-slate-800"
-            }`}
+          className={`text-base font-semibold ${
+            isScrolled
+              ? isActive
+                ? "text-[#63b32e]"
+                : "text-slate-800"
+              : "text-white"
+          }`}
           onClick={() => {
             if (!hasChildren) {
               setMobileOpen(false);
@@ -205,8 +213,11 @@ function MobileNavItem({
                 return next;
               });
             }}
-            className={`p-2 text-slate-400 transition-transform duration-200 ${isOpen ? "rotate-90 text-[#63b32e]" : "text-slate-400"
-              }`}
+            className={`p-2 transition-transform duration-200 ${
+              isOpen ? "rotate-90" : ""
+            } ${
+              isScrolled ? (isOpen ? "text-[#63b32e]" : "text-slate-400") : "text-white"
+            }`}
             aria-expanded={isOpen}
             aria-controls={`submenu-${id}`}
           >
@@ -217,10 +228,11 @@ function MobileNavItem({
       {hasChildren && (
         <div
           id={`submenu-${id}`}
-          className={`bg-slate-50 overflow-hidden transition-all duration-300 ease-in-out ${isOpen
-            ? "max-h-[2000px] opacity-100 py-2"
-            : "max-h-0 opacity-0 py-0"
-            }`}
+          className={`${
+            isScrolled ? "bg-slate-50" : "bg-white/10 backdrop-blur-md"
+          } overflow-hidden transition-all duration-300 ease-in-out ${
+            isOpen ? "max-h-[2000px] opacity-100 py-2" : "max-h-0 opacity-0 py-0"
+          }`}
           aria-hidden={!isOpen}
         >
           {item.children.map((child) => (
@@ -231,6 +243,7 @@ function MobileNavItem({
               setMobileOpen={setMobileOpen}
               openMobileItem={openMobileItem}
               setOpenMobileItem={setOpenMobileItem}
+              isScrolled={isScrolled}
             />
           ))}
         </div>
@@ -335,20 +348,20 @@ export function Shell({ children }) {
           name: t("nav.agriculture"),
           to: "/Actions/agriculture",
           children: [
-            { name: t("nav.cacao"), to: "/Actions/agricultures/cacao" },
-            { name: t("nav.cafe"), to: "/Actions/agricultures/cafe" },
-            { name: t("nav.the"), to: "/Actions/agricultures/theier" },
+            { name: t("nav.cacao"), to: "/Actions/agriculture/cacao" },
+            { name: t("nav.cafe"), to: "/Actions/agriculture/cafe" },
+            { name: t("nav.the"), to: "/Actions/agriculture/theier" },
             {
               name: t("nav.coton_caoutchouc"),
-              to: "/Actions/agricultures/coton-caoutchouc",
+              to: "/Actions/agriculture/coton-caoutchouc",
             },
             {
               name: t("nav.arboriculture"),
-              to: "/Actions/agricultures/arboriculture",
+              to: "/Actions/agriculture/arboriculture",
             },
             {
               name: t("nav.plantes_medicinales"),
-              to: "/Actions/agricultures/plantes-medicinales",
+              to: "/Actions/agriculture/plantes-medicinales",
             },
           ],
         },
@@ -496,7 +509,7 @@ export function Shell({ children }) {
     <div className="flex min-h-screen flex-col font-sans">
       {/* Top Bar */}
       <div
-        className={`fixed top-0 z-40 w-full transition-transform duration-300 ${showTopBar ? "translate-y-0" : "-translate-y-full"
+        className={`fixed top-0 z-40 w-full transition-transform duration-300 pb-[3px]  ${showTopBar ? "translate-y-0" : "-translate-y-full"
           }`}
         style={{ backgroundColor: "#63b32e" }}
       >
@@ -619,6 +632,7 @@ export function Shell({ children }) {
             ? "max-h-[85vh] opacity-100 overflow-y-auto"
             : "max-h-0 opacity-0"
             } ${isScrolled ? "bg-white" : "bg-white/10 backdrop-blur-md"}
+            ${isScrolled ? "text-slate-800" : "text-white"}
                         }`}
         >
           <div
@@ -632,6 +646,7 @@ export function Shell({ children }) {
                 setMobileOpen={setMobileOpen}
                 openMobileItem={openMobileItem}
                 setOpenMobileItem={setOpenMobileItem}
+                isScrolled={isScrolled}
               />
             ))}
             <div className="p-4">
@@ -748,83 +763,87 @@ export function Shell({ children }) {
               </li>
             </ul>
           </div>
-          <div>
-            <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-[#fafafa]">
-              {t("footer.activities_title")}
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  to="/Actions/agriculture"
-                  className="hover:text-white/80"
-                >
-                  {t("nav.agriculture")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/Actions/reboisement"
-                  className="hover:text-white/80"
-                >
-                  {t("nav.reboisement")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/Actions/biodiversite"
-                  className="hover:text-white/80"
-                >
-                  {t("nav.biodiversity")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/Actions/communautaire"
-                  className="hover:text-white/80"
-                >
-                  {t("nav.community")}
-                </Link>
-              </li>
-              <li>
-                <Link to="/Actions/elevage" className="hover:text-white/80">
-                  {t("nav.breeding")}
-                </Link>
-              </li>
-            </ul>
-          </div>
+          {/* Colonne Contact */}
           <div>
             <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-[#fafafa]">
               {t("footer.contact_title")}
             </h3>
             <ul className="space-y-3 text-white/80 w-full">
               <li className="flex flex-row item-center gap-3 w-full">
-                <span className="ffont-semibold text-[#0f70b7] text-[12px] bg-white/70 w-50 h-50 rounded-full flex item-center p-2 absolute mt-2">
-                  <FaLocationDot className=""></FaLocationDot>{" "}
+                <span className="font-semibold text-[12px] text-[#0f70b7] bg-white/70 w-50 h-50 rounded-full flex item-center p-2 absolute mt-2">
+                  <FaLocationDot></FaLocationDot>
                 </span>
-                <span className="ml-11">
-                  N°5 Av. Des Etangs , Q/ Joli Parc,
-                  <br /> C/ Ngaliema, Kinshasa - RDC
+                <span className="ml-10">
+                  N°5 Av. Des Etangs, Q/ Joli Parc,
+                  <br />C/ Ngaliema, Kinshasa - RDC
                 </span>
               </li>
-              <li className="flex gap-3 pb-2">
-                <span className="font-semibold text-[12px]  text-[#0f70b7] bg-white/70 w-50 h-50 rounded-full flex item-center p-2">
+              <li className="flex gap-3 py-2">
+                <span className="font-semibold text-[12px] text-[#0f70b7] bg-white/70 w-50 h-50 rounded-full flex item-center p-2">
                   <FaEnvelope></FaEnvelope>
                 </span>
                 <span className="pt-1">info@betterlife-ong.org</span>
               </li>
               <li className="flex gap-3">
-                <span className="font-semibold text-[12px] text-[#0f70b7] bg-white/70  w-50 h-50 rounded-full flex item-center p-2">
+                <span className="font-semibold text-[12px] text-[#0f70b7] bg-white/70 w-50 h-50 rounded-full flex item-center p-2">
                   <FaPhone></FaPhone>
                 </span>
                 <span className="pt-1">+243 82 9495 919</span>
               </li>
             </ul>
           </div>
+          
+          {/* Colonne Newsletter */}
+          <div className="space-y-6">
+            <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-[#fafafa]">
+              Newsletter
+            </h3>
+            <p className="text-white/80 text-sm">
+              Restez informé de nos dernières actualités
+            </p>
+            <form className="flex flex-col space-y-3">
+              <input
+                type="email"
+                placeholder="Votre adresse email"
+                className="w-full px-4 py-2 h-12 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent"
+                required
+              />
+              <button
+                type="submit"
+                className="w-full bg-white text-[#0f70b7] h-12 font-semibold py-2 px-4 rounded-lg hover:bg-opacity-90 transition duration-200"
+              >
+                S'abonner
+              </button>
+            </form>
+          </div>
+        </div>
+         {/* Google Maps */}
+        <div className="w-full px-4 md:px-6 lg:px-8 xl:px-12 2xl:px-16">
+          <div className="max-w-7xl mx-auto mt-16">
+            <div className="text-center mb-8">
+              <h2 className="text-xl font-semibold text-white uppercase mb-3">
+                {t('contact.map.title')}
+              </h2>
+            </div>
+            <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-200 w-full">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.4892345678!2d15.2666667!3d-4.3666667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwMjInMDAuMCJTIDE1wrAxNicwMC4wIkU!5e0!3m2!1sfr!2scd!4v1234567890"
+                width="100%"
+                height="400"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Better Life ONG Location"
+                className="w-full"
+              />
+            </div>
+          </div>
         </div>
         <div className="mt-12 border-t border-white/10 bg-black/10">
           <div className="mx-auto max-w-7xl px-6 py-6 text-center text-white/60">
             <p className="text-[11px]">
-              © {new Date().getFullYear()} Better Life ONG. {t("footer.rights")}
+              {new Date().getFullYear()} Better Life ONG. {t("footer.rights")}
             </p>
           </div>
         </div>
