@@ -26,8 +26,58 @@ export const en = {
     prevImage: "Previous image",
     nextImage: "Next image",
     goToImage: "Go to image",
-
     text: "Our projects cover several provinces of the DRC, from Kinshasa to Salonga National Park",
+  },
+  nav: {
+    home: "Home",
+    about: "About",
+    mission: "Our Mission",
+    team: "Our Team",
+    partners: "Our Partners",
+    Actions: "Our Actions",
+    agriculture: "Agriculture",
+    cacao: "Cocoa (Criollo)",
+    cafe: "Arabica Coffee",
+    the: "Tea",
+    coton_caoutchouc: "Cotton & Rubber",
+    arboriculture: "Arboriculture",
+    plantes_medicinales: "Medicinal Plants",
+    Environement: "Environment & Climate",
+    biodiversity: "Biodiversity",
+    community: "Community Project",
+    breeding: "Livestock",
+    elevage_gros_betail: "Large Livestock",
+    pisciculture: "Fish Farming",
+    elevage_chiens: "Dog Breeding",
+    elevage_serpents: "Snake Breeding",
+    apiculture: "Beekeeping",
+    projet_communautaire: "Community Project",
+    sante: "Health",
+    energie: "Energy",
+    education: "Education",
+    route_desserte_agricole: "Agricultural Feeder Road",
+    habitation: "Housing",
+    mecanisation: "Agricultural Mechanization",
+    tracteur: "Tractor",
+    accessoires: "Accessories",
+    autres: "Other Equipment",
+    environement: "Environment",
+    protection_foret: "Forest Protection",
+    reboisement: "Reforestation",
+    credit_carbone: "Carbon Credit",
+    eco_kelasi: "Eco Kelasi",
+    climate: "Climate Change",
+    projects: "Projects",
+    ongoing: "Ongoing",
+    phase1: "Phase 1",
+    phase2: "Phase 2",
+    completed: "Completed",
+    media: "Media",
+    news: "Articles",
+    gallery: "Gallery",
+    emplois_stage: "Jobs & Internships",
+    donation: "Donation",
+    contact: "Contact",
   },
   quickLinks: {
     ongoing: {
@@ -375,8 +425,121 @@ export const en = {
       text: "Share our vision? Let's collaborate to create positive and lasting impact",
       btn: "Contact Us",
     },
-
-
-
   },
-};    
+  home: {
+    hero: {
+      title: "Choose a Healthy Environment,\nHealthy Food",
+      subtitle:
+        "Our mission is to protect the environment, biodiversity, fight for nature conservation, the well-being of the population and promote food security.",
+      cta1: "Discover our actions",
+      cta2: "Contact us",
+      slides: [
+        {
+          title: "Environmental Protection and Biodiversity",
+          description: "Fighting deforestation and preserving the DRC's unique ecosystems for a sustainable future."
+        },
+        {
+          title: "Food Security",
+          description: "Improving agricultural production and local value chains to sustainably feed our populations."
+        },
+        {
+          title: "Agricultural Mechanization",
+          description: "Modernizing practices and providing adapted equipment for high-performance agriculture."
+        },
+        {
+          title: "Community Projects",
+          description: "Basic services and income-generating activities for the development of our villages."
+        },
+        {
+          title: "Large-Scale Livestock Farming",
+          description: "Modern systems (bovine, caprine, porcine, poultry) and animal health at the heart of our expertise."
+        },
+        {
+          title: "Agriculture",
+          description: "Promoting sustainable agriculture with a focus on Criollo cocoa, Arabica coffee, and tea."
+        }
+      ]
+    },
+    stats: {
+      title: "Our Impact in Numbers",
+      subtitle: "Concrete results that transform lives",
+    },
+    mission: {
+      kicker: "Our Mission",
+      title: "Acting for Climate and Biodiversity",
+      desc1:
+        "Better Life helps people easily understand why certain human behaviors have a negative impact on biodiversity and proposes concrete action paths.",
+      desc2:
+        "We have created school nurseries of one million five hundred thousand forest and fruit species trees to fight global warming.",
+      stat1_val: "3M+",
+      stat1_label: "Trees planted",
+      stat2_val: "2021",
+      stat2_label: "Creation year",
+      cards: {
+        biodiversity: {
+          title: "Biodiversity",
+          desc: "Protecting fragile ecosystems",
+        },
+        agriculture: {
+          title: "Agriculture",
+          desc: "Climate-smart practices",
+        },
+        reforestation: {
+          title: "Reforestation",
+          desc: "Fighting global warming",
+        },
+        community: {
+          title: "Community",
+          desc: "Local development projects",
+        },
+      },
+    },
+    projects: {
+      kicker: "Our Achievements",
+      title: "Recent Projects",
+      cards: {
+        p1: {
+          title: "Massive Reforestation Kinshasa",
+          location: "Kinshasa, DRC",
+          impact: "500,000 trees planted",
+          status: "In progress",
+        },
+        p2: {
+          title: "Sustainable Agriculture Bas-Congo",
+          location: "Kongo Central",
+          impact: "1,200 farmers trained",
+          status: "Completed",
+        },
+        p3: {
+          title: "Salonga Biodiversity Protection",
+          location: "National Park",
+          impact: "15 beneficiary communities",
+          status: "In progress",
+        },
+      },
+    },
+    testimonials: {
+      kicker: "Testimonials",
+      title: "What they say about us",
+      t1: {
+        quote:
+          "Thanks to Better Life, my income has tripled and my land is more fertile than before. The sustainable agriculture training really changed my life.",
+        author: "Marie Nkulu",
+        role: "Farmer, Kongo Central",
+      },
+      t2: {
+        quote:
+          "This project has transformed our school. The students are now environmental ambassadors and actively participate in the school nursery.",
+        author: "Primary School Director",
+        role: "Ngaliema, Kinshasa",
+      },
+    },
+    cta: {
+      title: "Join Our Mission",
+      subtitle:
+        "Together, we can create a sustainable future for the DRC and protect our environment",
+      btn1: "Make a Donation",
+      btn2: "Become a Partner",
+    },
+  }
+};

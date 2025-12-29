@@ -177,13 +177,12 @@ function MobileNavItem({
       >
         <Link
           to={item.to}
-          className={`text-base font-semibold ${
-            isScrolled
+          className={`text-base font-semibold ${isScrolled
               ? isActive
                 ? "text-[#63b32e]"
                 : "text-slate-800"
               : "text-white"
-          }`}
+            }`}
           onClick={() => {
             if (!hasChildren) {
               setMobileOpen(false);
@@ -213,11 +212,9 @@ function MobileNavItem({
                 return next;
               });
             }}
-            className={`p-2 transition-transform duration-200 ${
-              isOpen ? "rotate-90" : ""
-            } ${
-              isScrolled ? (isOpen ? "text-[#63b32e]" : "text-slate-400") : "text-white"
-            }`}
+            className={`p-2 transition-transform duration-200 ${isOpen ? "rotate-90" : ""
+              } ${isScrolled ? (isOpen ? "text-[#63b32e]" : "text-slate-400") : "text-white"
+              }`}
             aria-expanded={isOpen}
             aria-controls={`submenu-${id}`}
           >
@@ -228,11 +225,9 @@ function MobileNavItem({
       {hasChildren && (
         <div
           id={`submenu-${id}`}
-          className={`${
-            isScrolled ? "bg-slate-50" : "bg-white/10 backdrop-blur-md"
-          } overflow-hidden transition-all duration-300 ease-in-out ${
-            isOpen ? "max-h-[2000px] opacity-100 py-2" : "max-h-0 opacity-0 py-0"
-          }`}
+          className={`${isScrolled ? "bg-slate-50" : "bg-white/10 backdrop-blur-md"
+            } overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? "max-h-[2000px] opacity-100 py-2" : "max-h-0 opacity-0 py-0"
+            }`}
           aria-hidden={!isOpen}
         >
           {item.children.map((child) => (
@@ -519,7 +514,7 @@ export function Shell({ children }) {
               {t("footer.location")}
             </span>
             <span className="hidden h-3 w-px bg-white/50 sm:block" />
-            <span className="font-semibold">info@betterlife-ong.org</span>
+            <span className="font-semibold">infos@betterlife-ong.org</span>
           </div>
 
           {/* Social Icons (Reduced Size) */}
@@ -782,7 +777,7 @@ export function Shell({ children }) {
                 <span className="font-semibold text-[12px] text-[#0f70b7] bg-white/70 w-50 h-50 rounded-full flex item-center p-2">
                   <FaEnvelope></FaEnvelope>
                 </span>
-                <span className="pt-1">info@betterlife-ong.org</span>
+                <span className="pt-1">infos@betterlife-ong.org</span>
               </li>
               <li className="flex gap-3">
                 <span className="font-semibold text-[12px] text-[#0f70b7] bg-white/70 w-50 h-50 rounded-full flex item-center p-2">
@@ -792,7 +787,7 @@ export function Shell({ children }) {
               </li>
             </ul>
           </div>
-          
+
           {/* Colonne Newsletter */}
           <div className="space-y-6">
             <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-[#fafafa]">
@@ -817,7 +812,7 @@ export function Shell({ children }) {
             </form>
           </div>
         </div>
-         {/* Google Maps */}
+        {/* Google Maps */}
         <div className="w-full px-4 md:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <div className="max-w-7xl mx-auto mt-16">
             <div className="text-center mb-8">

@@ -415,7 +415,7 @@ export const fr = {
       },
       email: {
         title: "Email",
-        value: "info@betterlife-ong.org",
+        value: "infos@betterlife-ong.org",
       },
       phone: {
         title: "Téléphone",
@@ -453,20 +453,28 @@ export const fr = {
       cta2: "Nous contacter",
       slides: [
         {
-          title: "Agriculture Durable en RDC",
-          description: "Développons ensemble une agriculture respectueuse de l'environnement et économiquement viable pour les générations futures."
+          title: "La protection de l’environnement et de la biodiversité",
+          description: "Luttons contre la déforestation et préservons les écosystèmes uniques de la RDC pour un avenir durable."
         },
         {
-          title: "Protection de la Biodiversité",
-          description: "Préservons les écosystèmes uniques de la RDC pour maintenir l'équilibre naturel et la richesse de notre planète."
+          title: "La sécurité alimentaire",
+          description: "Amélioration de la production agricole et valorisation des chaînes locales pour nourrir nos populations."
         },
         {
-          title: "Autonomisation des Communautés",
-          description: "Renforçons les capacités locales pour un développement durable et inclusif en République Démocratique du Congo."
+          title: "Mécanisation agricole",
+          description: "Modernisation des pratiques et mise à disposition d'équipements adaptés pour une agriculture performante."
         },
         {
-          title: "Innovation et Technologie",
-          description: "Intégrons des solutions innovantes pour répondre aux défis environnementaux et sociaux de notre époque."
+          title: "Projets communautaires",
+          description: "Services de base et activités génératrices de revenus pour le développement harmonieux de nos villages."
+        },
+        {
+          title: "Élevage à grande échelle",
+          description: "Systèmes modernes (bovin, caprin, porcin, avicole) et santé animale au cœur de notre expertise."
+        },
+        {
+          title: "Agriculture",
+          description: "Promotion d'une agriculture durable avec focus sur le cacao Criollo, le café Arabica et le théier."
         }
       ]
     },
@@ -481,8 +489,8 @@ export const fr = {
         "Better Life aide à comprendre simplement pourquoi certains comportements humains ont un impact négatif sur la biodiversité et propose des pistes d'action concrètes.",
       desc2:
         "Nous avons créé des pépinières scolaires d'un million cinq cent mille arbres d'espèces forestières et fruitières pour lutter contre le réchauffement climatique.",
-      stat1_val: "1.5M",
-      stat1_label: "Arbres à planter",
+      stat1_val: "3M+",
+      stat1_label: "Arbres plantés",
       stat2_val: "2021",
       stat2_label: "Année de création",
       cards: {
@@ -539,7 +547,7 @@ export const fr = {
       },
       t2: {
         quote:
-          "Ce projet a transformé notre école. Les élèves sont maintenant des ambassadeurs de l'environement et participent activement à la pépinière scolaire.",
+          "Ce projet a transformé notre école. Les élèves sont maintenant des ambassadeurs de l'environnement et participent activement à la pépinière scolaire.",
         author: "Directeur École Primaire",
         role: "Ngaliema, Kinshasa",
       },
@@ -950,13 +958,13 @@ export const fr = {
       }
     },
     communautaire: {
-      hero: { 
-        title: "Développement Communautaire", 
-        subtitle: "Autonomiser les communautés pour un avenir durable" 
+      hero: {
+        title: "Développement Communautaire",
+        subtitle: "Autonomiser les communautés pour un avenir durable"
       },
-      intro: { 
-        kicker: "Notre Approche", 
-        title: "Au cœur des communautés locales", 
+      intro: {
+        kicker: "Notre Approche",
+        title: "Au cœur des communautés locales",
         text: "Nous travaillons main dans la main avec les communautés pour développer des solutions durables qui améliorent les conditions de vie tout en préservant l'environnement.",
         highlights: [
           "Approche participative",
@@ -975,40 +983,40 @@ export const fr = {
         kicker: "Nos Programmes",
         title: "Initiatives Locales",
         items: [
-          { 
-            title: "Micro-crédit et Entreprenariat", 
-            desc: "Accompagnement financier et technique pour le développement d'activités génératrices de revenus.", 
-            impact: "500+ micro-entreprises soutenues" 
+          {
+            title: "Micro-crédit et Entreprenariat",
+            desc: "Accompagnement financier et technique pour le développement d'activités génératrices de revenus.",
+            impact: "500+ micro-entreprises soutenues"
           },
-          { 
-            title: "Éducation et Formation", 
-            desc: "Construction d'écoles, formation des enseignants et bourses d'études pour les enfants défavorisés.", 
-            impact: "2000+ élèves bénéficiaires" 
+          {
+            title: "Éducation et Formation",
+            desc: "Construction d'écoles, formation des enseignants et bourses d'études pour les enfants défavorisés.",
+            impact: "2000+ élèves bénéficiaires"
           },
-          { 
-            title: "Santé Communautaire", 
-            desc: "Cliniques mobiles, campagnes de vaccination et sensibilisation à l'hygiène de base.", 
-            impact: "10 000+ patients soignés" 
+          {
+            title: "Santé Communautaire",
+            desc: "Cliniques mobiles, campagnes de vaccination et sensibilisation à l'hygiène de base.",
+            impact: "10 000+ patients soignés"
           },
-          { 
-            title: "Accès à l'Eau Potable", 
-            desc: "Forages, bornes fontaines et systèmes d'assainissement pour les communautés rurales.", 
-            impact: "15 000+ personnes desservies" 
+          {
+            title: "Accès à l'Eau Potable",
+            desc: "Forages, bornes fontaines et systèmes d'assainissement pour les communautés rurales.",
+            impact: "15 000+ personnes desservies"
           },
-          { 
-            title: "Sécurité Alimentaire", 
-            desc: "Programmes de nutrition et de diversification alimentaire pour lutter contre la malnutrition.", 
-            impact: "5000+ familles soutenues" 
+          {
+            title: "Sécurité Alimentaire",
+            desc: "Programmes de nutrition et de diversification alimentaire pour lutter contre la malnutrition.",
+            impact: "5000+ familles soutenues"
           },
-          { 
-            title: "Autonomisation des Femmes", 
-            desc: "Formation professionnelle et soutien aux initiatives entrepreneuriales féminines.", 
-            impact: "2000+ femmes formées" 
+          {
+            title: "Autonomisation des Femmes",
+            desc: "Formation professionnelle et soutien aux initiatives entrepreneuriales féminines.",
+            impact: "2000+ femmes formées"
           }
         ]
       },
-      women: { 
-        title: "Autonomisation des Femmes", 
+      women: {
+        title: "Autonomisation des Femmes",
         text: "Nous croyons que l'autonomisation des femmes est la clé du développement communautaire durable. Nos programmes visent à renforcer leur leadership, leurs compétences et leur indépendance économique.",
         items: [
           "Formation en gestion d'entreprise",
@@ -1030,18 +1038,18 @@ export const fr = {
       stories: {
         title: "Nos Réussites",
         items: [
-          { 
-            title: "L'école de l'espoir à Kibumba", 
+          {
+            title: "L'école de l'espoir à Kibumba",
             text: "Construction et équipement d'une école primaire pour 500 enfants dans un village reculé du Nord-Kivu.",
             impact: "500 enfants scolarisés, 15 enseignants formés, 1 bibliothèque équipée"
           },
-          { 
-            title: "L'eau, source de vie à Tshikapa", 
+          {
+            title: "L'eau, source de vie à Tshikapa",
             text: "Installation de 5 forages équipés de pompes à motricité humaine, desservant 3 000 personnes.",
             impact: "3 000 bénéficiaires, 5 points d'eau installés, 10 comités formés à la maintenance"
           },
-          { 
-            title: "Les femmes entrepreneures de Goma", 
+          {
+            title: "Les femmes entrepreneures de Goma",
             text: "Programme de formation et de microcrédit pour 200 femmes entrepreneures dans le secteur informel.",
             impact: "200 femmes formées, 150 micro-entreprises lancées, 80% de taux de remboursement"
           }
@@ -1120,13 +1128,13 @@ export const fr = {
       }
     },
     elevages: {
-      hero: { 
-        title: "Élevage Durable", 
-        subtitle: "Pratiques respectueuses et rentables" 
+      hero: {
+        title: "Élevage Durable",
+        subtitle: "Pratiques respectueuses et rentables"
       },
-      intro: { 
-        kicker: "Notre Approche", 
-        title: "Élevage Moderne et Responsable", 
+      intro: {
+        kicker: "Notre Approche",
+        title: "Élevage Moderne et Responsable",
         text: "Nous développons des méthodes d'élevage qui allient productivité, bien-être animal et respect de l'environnement pour une sécurité alimentaire durable.",
         stats: [
           { value: "5000+", label: "Têtes de bétail" },
@@ -1139,66 +1147,66 @@ export const fr = {
         kicker: "Nos Filières",
         title: "Types d'élevage soutenus",
         items: [
-          { 
-            title: "Élevage Canin", 
-            desc: "Élevage professionnel de chiens de race et de compagnie pour la sécurité et l'assistance.", 
-            production: "Animaux de compagnie & Sécurité" 
+          {
+            title: "Élevage Canin",
+            desc: "Élevage professionnel de chiens de race et de compagnie pour la sécurité et l'assistance.",
+            production: "Animaux de compagnie & Sécurité"
           },
-          { 
-            title: "Gros Bétail", 
-            desc: "Élevage bovin moderne axé sur la qualité de la viande et la production laitière.", 
-            production: "Lait & Viande" 
+          {
+            title: "Gros Bétail",
+            desc: "Élevage bovin moderne axé sur la qualité de la viande et la production laitière.",
+            production: "Lait & Viande"
           },
-          { 
-            title: "Pisciculture", 
-            desc: "Production durable de poissons d'eau douce dans des bassins aménagés.", 
-            production: "Poisson frais & Alevins" 
+          {
+            title: "Pisciculture",
+            desc: "Production durable de poissons d'eau douce dans des bassins aménagés.",
+            production: "Poisson frais & Alevins"
           },
-          { 
-            title: "Apiculture", 
-            desc: "Production de miel biologique et préservation des abeilles locales.", 
-            production: "Miel & Produits dérivés" 
+          {
+            title: "Apiculture",
+            desc: "Production de miel biologique et préservation des abeilles locales.",
+            production: "Miel & Produits dérivés"
           },
-          { 
-            title: "Élevage de Serpents", 
-            desc: "Programme de recherche et conservation des espèces de serpents locaux.", 
-            production: "Recherche & Conservation" 
+          {
+            title: "Élevage de Serpents",
+            desc: "Programme de recherche et conservation des espèces de serpents locaux.",
+            production: "Recherche & Conservation"
           }
         ]
       },
-      Actions: { 
-        title: "Nos Actions Clés", 
+      Actions: {
+        title: "Nos Actions Clés",
         items: [
-          "Programmes de vaccination", 
-          "Accès aux intrants de qualité", 
-          "Formation des éleveurs", 
+          "Programmes de vaccination",
+          "Accès aux intrants de qualité",
+          "Formation des éleveurs",
           "Accès aux marchés"
-        ] 
+        ]
       },
-      story: { 
-        title: "Nos Réussites", 
+      story: {
+        title: "Nos Réussites",
         text: "La coopérative laitière de Masisi a doublé sa production en 2 ans grâce à nos programmes de formation et d'accompagnement technique.",
         testimonial: {
           text: "Grâce aux formations reçues, j'ai pu améliorer la productivité de mon élevage et accéder à de nouveaux marchés.",
           author: "Jean K., Éleveur de bétail à Masisi"
         }
       },
-      cta: { 
-        title: "Rejoignez Notre Programme", 
-        text: "Développez votre activité d'élevage avec notre accompagnement personnalisé", 
-        btn_join: "Devenir éleveur partenaire", 
-        btn_partner: "Devenir partenaire" 
+      cta: {
+        title: "Rejoignez Notre Programme",
+        text: "Développez votre activité d'élevage avec notre accompagnement personnalisé",
+        btn_join: "Devenir éleveur partenaire",
+        btn_partner: "Devenir partenaire"
       },
-      
+
       // Pages spécifiques
       gros_betail: {
-        hero: { 
-          title: "Élevage de Gros Bétail", 
-          subtitle: "Développement de la filière bovine en RDC" 
+        hero: {
+          title: "Élevage de Gros Bétail",
+          subtitle: "Développement de la filière bovine en RDC"
         },
-        intro: { 
+        intro: {
           kicker: "Notre Expertise Bovine",
-          title: "Un Élevage Moderne et Productif", 
+          title: "Un Élevage Moderne et Productif",
           text: "Nous accompagnons les éleveurs dans l'amélioration génétique de leur cheptel, la gestion des pâturages et l'optimisation de la production laitière et carnée.",
           highlights: [
             "Sélection de races adaptées au climat local",
@@ -1208,21 +1216,21 @@ export const fr = {
           ]
         },
         features: [
-          { 
-            title: "Amélioration Génétique", 
-            desc: "Sélection et reproduction de races bovines à haut potentiel productif." 
+          {
+            title: "Amélioration Génétique",
+            desc: "Sélection et reproduction de races bovines à haut potentiel productif."
           },
-          { 
-            title: "Santé Animale", 
-            desc: "Programme complet de vaccination et soins vétérinaires préventifs." 
+          {
+            title: "Santé Animale",
+            desc: "Programme complet de vaccination et soins vétérinaires préventifs."
           },
-          { 
-            title: "Alimentation Équilibrée", 
-            desc: "Formulation de rations alimentaires adaptées aux besoins nutritionnels." 
+          {
+            title: "Alimentation Équilibrée",
+            desc: "Formulation de rations alimentaires adaptées aux besoins nutritionnels."
           },
-          { 
-            title: "Gestion des Pâturages", 
-            desc: "Techniques de rotation et de régénération des pâturages." 
+          {
+            title: "Gestion des Pâturages",
+            desc: "Techniques de rotation et de régénération des pâturages."
           }
         ],
         stats: [
@@ -1232,15 +1240,15 @@ export const fr = {
           { value: "100%", label: "Animaux vaccinés" }
         ]
       },
-      
+
       apiculture: {
-        hero: { 
-          title: "Apiculture Durable", 
-          subtitle: "L'or liquide de nos forêts" 
+        hero: {
+          title: "Apiculture Durable",
+          subtitle: "L'or liquide de nos forêts"
         },
-        intro: { 
+        intro: {
           kicker: "Notre Approche Apicole",
-          title: "Protection des Abeilles, Richesse des Communautés", 
+          title: "Protection des Abeilles, Richesse des Communautés",
           text: "Notre programme d'apiculture durable allie préservation de la biodiversité et création de revenus pour les communautés locales.",
           highlights: [
             "Ruches traditionnelles améliorées",
@@ -1256,15 +1264,15 @@ export const fr = {
           { title: "Pollinisation", desc: "Contribution à la préservation des écosystèmes et à l'augmentation des rendements agricoles." }
         ]
       },
-      
+
       pisciculture: {
-        hero: { 
-          title: "Pisciculture Durable", 
-          subtitle: "Élevage de poissons responsable" 
+        hero: {
+          title: "Pisciculture Durable",
+          subtitle: "Élevage de poissons responsable"
         },
-        intro: { 
+        intro: {
           kicker: "Notre Expertise Aquacole",
-          title: "Une Pêche Durable pour Demain", 
+          title: "Une Pêche Durable pour Demain",
           text: "Développement de l'aquaculture continentale avec des méthodes respectueuses de l'environnement et des ressources en eau.",
           highlights: [
             "Élevage de Tilapia et Clarias",
@@ -1280,15 +1288,15 @@ export const fr = {
           { title: "Formation Continue", desc: "Appui technique aux pisciculteurs pour une production optimale." }
         ]
       },
-      
+
       chiens: {
-        hero: { 
-          title: "Élevage Canin Professionnel", 
-          subtitle: "Sécurité, Compagnie et Sauvetage" 
+        hero: {
+          title: "Élevage Canin Professionnel",
+          subtitle: "Sécurité, Compagnie et Sauvetage"
         },
-        intro: { 
+        intro: {
           kicker: "Notre Engagement Canin",
-          title: "Des Chiens Éduqués pour Tous les Besoins", 
+          title: "Des Chiens Éduqués pour Tous les Besoins",
           text: "Élevage de chiens de race avec un accent particulier sur le bien-être animal et les aptitudes spécifiques à chaque race.",
           highlights: [
             "Bergers Allemands et Belges",
@@ -1304,15 +1312,15 @@ export const fr = {
           { title: "Suivi Vétérinaire", desc: "Vaccins à jour et bilan de santé complet." }
         ]
       },
-      
+
       serpents: {
-        hero: { 
-          title: "Centre d'Élevage de Serpents", 
-          subtitle: "Recherche et Production d'Antivenins" 
+        hero: {
+          title: "Centre d'Élevage de Serpents",
+          subtitle: "Recherche et Production d'Antivenins"
         },
-        intro: { 
+        intro: {
           kicker: "Notre Mission Scientifique",
-          title: "Préservation et Recherche sur les Serpents", 
+          title: "Préservation et Recherche sur les Serpents",
           text: "Notre centre spécialisé contribue à la recherche sur les venins et à la production de sérums antivenimeux pour sauver des vies.",
           highlights: [
             "Élevage contrôlé d'espèces venimeuses",

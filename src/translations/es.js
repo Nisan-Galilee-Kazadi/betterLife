@@ -492,11 +492,11 @@ export const es = {
       address: {
         title: "Dirección",
         value:
-          "No. 5 Av. Des Etangs, Q/ Joli Parc, C/ Ngaliema, Kinshasa - RDC",
+          "N° 5 Av. Des Etangs, Q/ Joli Parc, C/ Ngaliema, Kinshasa - RDC",
       },
       email: {
         title: "Email",
-        value: "info@betterlife-ong.org",
+        value: "infos@betterlife-ong.org",
       },
       phone: {
         title: "Teléfono",
@@ -1384,4 +1384,120 @@ export const es = {
       },
     },
   },
+  home: {
+    hero: {
+      title: "Elija un Ambiente Sano,\nUna Alimentación Sana",
+      subtitle:
+        "Nuestra misión es proteger el medio ambiente, la biodiversidad, luchar por la conservación de la naturaleza, el bienestar de la población y promover la seguridad alimentaria.",
+      cta1: "Descubra nuestras acciones",
+      cta2: "Contáctenos",
+      slides: [
+        {
+          title: "Protección del Medio Ambiente y la Biodiversidad",
+          description: "Luchando contra la deforestación y preservando los ecosistemas de la RDC para un futuro sostenible."
+        },
+        {
+          title: "Seguridad Alimentaria",
+          description: "Mejorando la producción agrícola y las cadenas de valor para alimentar a nuestras poblaciones."
+        },
+        {
+          title: "Mecanización Agrícola",
+          description: "Modernizando las prácticas y proporcionando equipos adaptados para una agricultura eficiente."
+        },
+        {
+          title: "Proyectos Comunitarios",
+          description: "Servicios básicos y actividades generadoras de ingresos para el desarrollo de nuestras aldeas."
+        },
+        {
+          title: "Ganadería a Gran Escala",
+          description: "Sistemas modernos (bovino, caprino, porcino, avícola) y salud animal en el centro de nuestra experiencia."
+        },
+        {
+          title: "Agricultura",
+          description: "Promoviendo agricultura sostenible con enfoque en cacao Criollo, café Arábica y té."
+        }
+      ]
+    },
+    stats: {
+      title: "Nuestro Impacto en Cifras",
+      subtitle: "Resultados concretos que transforman vidas",
+    },
+    mission: {
+      kicker: "Nuestra Misión",
+      title: "Actuando por el Clima y la Biodiversidad",
+      desc1:
+        "Better Life ayuda a comprender fácilmente por qué ciertos comportamientos humanos tienen un impacto negativo en la biodiversidad y propone vías de acción concretas.",
+      desc2:
+        "Hemos creado viveros escolares de un millón quinientos mil árboles de especies forestales y frutales para luchar contra el calentamiento global.",
+      stat1_val: "3M+",
+      stat1_label: "Árboles plantados",
+      stat2_val: "2021",
+      stat2_label: "Año de creación",
+      cards: {
+        biodiversity: {
+          title: "Biodiversidad",
+          desc: "Protegiendo ecosistemas frágiles",
+        },
+        agriculture: {
+          title: "Agricultura",
+          desc: "Prácticas climáticamente inteligentes",
+        },
+        reforestation: {
+          title: "Reforestación",
+          desc: "Lucha contra el calentamiento",
+        },
+        community: {
+          title: "Comunidad",
+          desc: "Proyectos de desarrollo local",
+        },
+      },
+    },
+    projects: {
+      kicker: "Nuestros Logros",
+      title: "Proyectos Recientes",
+      cards: {
+        p1: {
+          title: "Reforestación Masiva Kinshasa",
+          location: "Kinshasa, RDC",
+          impact: "500,000 árboles plantados",
+          status: "En curso",
+        },
+        p2: {
+          title: "Agricultura Sostenible Bas-Congo",
+          location: "Kongo Central",
+          impact: "1,200 agricultores formados",
+          status: "Completado",
+        },
+        p3: {
+          title: "Protección Biodiversidad Salonga",
+          location: "Parque Nacional",
+          impact: "15 comunidades beneficiarias",
+          status: "En curso",
+        },
+      },
+    },
+    testimonials: {
+      kicker: "Testimonios",
+      title: "Lo que dicen de nosotros",
+      t1: {
+        quote:
+          "Gracias a Better Life, mis ingresos se triplicaron y mi tierra es más fértil que antes. La formación en agricultura sostenible realmente cambió mi vida.",
+        author: "Marie Nkulu",
+        role: "Agricultora, Kongo Central",
+      },
+      t2: {
+        quote:
+          "Este proyecto ha transformado nuestra escuela. Los estudiantes ahora son embajadores ambientales y participan activamente en el vivero escolar.",
+        author: "Director de Escuela Primaria",
+        role: "Ngaliema, Kinshasa",
+      },
+    },
+    cta: {
+      title: "Únase a Nuestra Misión",
+      subtitle:
+        "Juntos, podemos crear un futuro sostenible para la RDC y proteger nuestro medio ambiente",
+      btn1: "Hacer una Donación",
+      btn2: "Ser Socio",
+    },
+  }
 };

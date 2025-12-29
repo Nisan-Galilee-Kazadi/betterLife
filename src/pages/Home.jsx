@@ -17,6 +17,10 @@ import heroImage1 from "../images/hero_clean.png";
 import heroImage2 from "../images/hero_agriculture.png";
 import heroImage3 from "../images/hero_reforestation.png";
 import heroImage4 from "../images/images.jfif";
+import heroImage5 from "./Actions/Mecanisation/images/IMG-20251215-WA0000.jpg";
+import heroImage6 from "./Actions/Communautaire/images/hero_education.jpg";
+import heroImage7 from "./Actions/elevages/images/hero_gros_betail.jpg";
+import heroImage8 from "./Actions/agriculture/images/hero_cacao.png";
 
 // Animated Counter Component
 function AnimatedCounter({ end, duration = 5000, suffix = "" }) {
@@ -112,9 +116,8 @@ function FadeIn({ children, delay = 0 }) {
   return (
     <div
       ref={ref}
-      className={`transition-all duration-1000 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-      }`}
+      className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
     >
       {children}
     </div>
@@ -129,27 +132,39 @@ export function Home() {
   const heroSlides = [
     {
       src: heroImage1,
-      alt: "Plantation de cacao durable",
+      alt: "Protection de la Biodiversité",
       title: t("home.hero.slides.0.title"),
       description: t("home.hero.slides.0.description")
     },
     {
       src: heroImage2,
-      alt: "Agriculture durable au Congo",
+      alt: "Sécurité Alimentaire",
       title: t("home.hero.slides.1.title"),
       description: t("home.hero.slides.1.description")
     },
     {
-      src: heroImage3,
-      alt: "Reboisement et reforestation",
+      src: heroImage5,
+      alt: "Mécanisation Agricole",
       title: t("home.hero.slides.2.title"),
       description: t("home.hero.slides.2.description")
     },
     {
-      src: heroImage4,
-      alt: "Communauté locale",
+      src: heroImage6,
+      alt: "Projets Communautaires",
       title: t("home.hero.slides.3.title"),
       description: t("home.hero.slides.3.description")
+    },
+    {
+      src: heroImage7,
+      alt: "Élevage Moderne",
+      title: t("home.hero.slides.4.title"),
+      description: t("home.hero.slides.4.description")
+    },
+    {
+      src: heroImage8,
+      alt: "Cultures Durables",
+      title: t("home.hero.slides.5.title"),
+      description: t("home.hero.slides.5.description")
     },
   ];
 
@@ -207,18 +222,17 @@ export function Home() {
       >
         {/* Carousel Slides */}
         {heroSlides.map((slide, index) => (
-          <div 
+          <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentSlide ? "opacity-100" : "opacity-0"
-            }`}
+            className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? "opacity-100" : "opacity-0"
+              }`}
           >
             <img
               src={slide.src}
               alt={slide.alt}
-              className="absolute inset-0 h-full w-full object-cover brightness-[0.6]"
+              className="absolute inset-0 h-full w-full object-cover brightness-[0.5]"
             />
-            <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/60 via-black/20 to-black/40" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/40" />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 pb-48 sm:pb-0">
               <h1 className="text-4xl md:text-6xl font-bold mb-4 max-w-4xl">
                 {slide.title}
@@ -229,7 +243,7 @@ export function Home() {
             </div>
           </div>
         ))}
-        
+
         {/* Fixed CTA Buttons */}
         <div className="absolute bottom-16 sm:bottom-20 left-1/2 -translate-x-1/2 z-10 flex flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-[90%] sm:max-w-max px-4 sm:px-0">
           <Link
@@ -292,9 +306,8 @@ export function Home() {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`h-2 rounded-full transition-all ${
-                index === currentSlide ? "w-8 bg-white" : "w-2 bg-white/50"
-              }`}
+              className={`h-2 rounded-full transition-all ${index === currentSlide ? "w-8 bg-white" : "w-2 bg-white/50"
+                }`}
               aria-label={`${t("common.goToImage")} ${index + 1}`}
             />
           ))}
@@ -319,28 +332,28 @@ export function Home() {
             {[
               {
                 icon: FaUsers,
-                number: "85000",
+                number: "9587",
                 label: t("common.beneficiaries"),
                 color: "blue",
-                suffix: "+",
-              },
-              {
-                icon: FaTree,
-                number: "450000",
-                label: t("common.trees"),
-                color: "green",
                 suffix: "",
               },
               {
+                icon: FaTree,
+                number: "3000000",
+                label: t("common.trees"),
+                color: "green",
+                suffix: "+",
+              },
+              {
                 icon: FaGlobeAmericas,
-                number: "28",
+                number: "186",
                 label: t("common.actions"),
                 color: "blue",
                 suffix: "",
               },
               {
                 icon: FaHandsHelping,
-                number: "5",
+                number: "17",
                 label: t("common.provinces"),
                 color: "green",
                 suffix: "",
@@ -348,25 +361,22 @@ export function Home() {
             ].map((stat, index) => (
               <FadeIn key={stat.label} delay={index * 100}>
                 <div
-                  className={`rounded-2xl border-2 ${
-                    stat.color === "green"
-                      ? "border-green-200 bg-white"
-                      : "border-blue-200 bg-white"
-                  } p-8 text-center shadow-lg transition hover:scale-105 hover:shadow-2xl`}
+                  className={`rounded-2xl border-2 ${stat.color === "green"
+                    ? "border-green-200 bg-white"
+                    : "border-blue-200 bg-white"
+                    } p-8 text-center shadow-lg transition hover:scale-105 hover:shadow-2xl`}
                 >
                   <stat.icon
-                    className={`text-6xl mb-4 mx-auto ${
-                      stat.color === "green"
-                        ? "text-[#63b32e]"
-                        : "text-[#0f70b7]"
-                    }`}
+                    className={`text-6xl mb-4 mx-auto ${stat.color === "green"
+                      ? "text-[#63b32e]"
+                      : "text-[#0f70b7]"
+                      }`}
                   />
                   <p
-                    className={`text-4xl font-bold mb-2 ${
-                      stat.color === "green"
-                        ? "text-[#63b32e]"
-                        : "text-[#0f70b7]"
-                    }`}
+                    className={`text-4xl font-bold mb-2 ${stat.color === "green"
+                      ? "text-[#63b32e]"
+                      : "text-[#0f70b7]"
+                      }`}
                   >
                     <AnimatedCounter end={stat.number} suffix={stat.suffix} />
                   </p>
