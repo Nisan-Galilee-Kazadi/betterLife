@@ -2,7 +2,7 @@ import React from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { Link } from "react-router-dom";
 import { FaBriefcase, FaGraduationCap, FaCheckCircle } from "react-icons/fa";
-import career_hero from "../images/looking-upward-majestic-weeping-willow-against-blue-sky.jpg";
+import employment_hero from "../images/employment_hero.png";
 
 export const EmploiStage = () => {
     const { t } = useLanguage();
@@ -12,9 +12,9 @@ export const EmploiStage = () => {
             {/* Hero Section */}
             <div className="relative bg-zinc-900 py-32 sm:py-48 overflow-hidden">
                 <img
-                    src={career_hero}
+                    src={employment_hero}
                     alt="Careers at Better Life"
-                    className="absolute inset-0 h-full w-full object-cover object-center"
+                    className="absolute inset-0 h-full w-full object-cover object-center opacity-40"
                 />
                 <div className="absolute inset-0 bg-black/50" />
                 <div className="relative mx-auto max-w-7xl px-6 lg:px-8 text-center">

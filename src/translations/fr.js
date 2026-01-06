@@ -765,6 +765,7 @@ export const fr = {
       hero: {
         kicker: "Actualités / Blog",
         title: "Articles et annonces",
+        subtitle: "Restez informé de nos actions et actualités sur le terrain."
       },
       items: {
         excerpt:
@@ -785,8 +786,129 @@ export const fr = {
     news: {
       hero: {
         title: "Dernières Actualités",
+        subtitle: "Suivez nos actions sur le terrain et nos dernières réalisations"
       },
+      categories: {
+        all: "Toutes",
+        announcement: "Annonces",
+        partnership: "Partenariats",
+        training: "Formations",
+        success: "Succès",
+        infrastructure: "Infrastructure",
+        recognition: "Reconnaissance"
+      },
+      featured: {
+        label: "À la Une"
+      },
+      articles: {
+        reforestation2025: {
+          title: "Lancement du Programme de Reboisement 2025",
+          excerpt: "Un objectif ambitieux de 1.5 million d'arbres pour lutter contre le changement climatique"
+        },
+        unepPartnership: {
+          title: "Partenariat Stratégique avec le PNUE",
+          excerpt: "Collaboration majeure pour la conservation de la biodiversité au Congo"
+        },
+        farmersTraining: {
+          title: "Formation de 500 Agriculteurs à Kikwit",
+          excerpt: "Programme intensif sur les techniques d'agriculture durable et agroforesterie"
+        },
+        bioCertification: {
+          title: "Certification Bio pour 150 Producteurs",
+          excerpt: "Reconnaissance internationale de nos pratiques agricoles durables"
+        },
+        nurseryMbandaka: {
+          title: "Nouvelle Pépinière à Mbandaka",
+          excerpt: "Infrastructure moderne avec capacité de 200,000 plants par an"
+        },
+        excellenceAward: {
+          title: "Prix d'Excellence Environnementale 2024",
+          excerpt: "Better Life reconnue pour son impact dans la lutte contre la déforestation"
+        }
+      },
+      readMore: "Lire la suite",
+      newsletter: {
+        title: "Restez Informé",
+        text: "Inscrivez-vous à notre newsletter pour recevoir nos actualités et rapports d'impact",
+        placeholder: "Votre adresse email",
+        subscribe: "S'abonner"
+      }
     },
+    gallery: {
+      hero: {
+        title: "Galerie Photo & Vidéo",
+        subtitle: "Découvrez en images nos actions sur le terrain et l'impact de nos projets"
+      },
+      stats: {
+        photos: "Photos",
+        videos: "Vidéos",
+        albums: "Albums",
+        years: "Ans d'Archives"
+      },
+      collections: {
+        kicker: "Collections",
+        title: "Nos Albums Thématiques",
+        photos: "photos",
+        viewAlbum: "Voir l'album",
+        reforestation: {
+          title: "Reboisement",
+          desc: "Plantations d'arbres et restauration des forêts à travers la RDC"
+        },
+        farmersTraining: {
+          title: "Formation des Agriculteurs",
+          desc: "Sessions de formation et transfert de compétences agricoles"
+        },
+        biodiversity: {
+          title: "Biodiversité",
+          desc: "Protection de la faune et de la flore du bassin du Congo"
+        },
+        communities: {
+          title: "Communautés",
+          desc: "Projets de développement et autonomisation des villages"
+        },
+        nurseries: {
+          title: "Pépinières",
+          desc: "Nos centres de production de plants forestiers et fruitiers"
+        },
+        events: {
+          title: "Événements",
+          desc: "Cérémonies, partenariats et moments forts de l'organisation"
+        }
+      },
+      recent: {
+        kicker: "Récent",
+        title: "Photos Récentes",
+        items: {
+          plantationKinshasa: "Plantation à Kinshasa",
+          trainingKikwit: "Formation à Kikwit",
+          modernHives: "Ruches Modernes",
+          villageWell: "Puits Villageois",
+          certificates: "Remise de Certificats",
+          bioHarvest: "Récolte Bio",
+          butterfliesSalonga: "Papillons de Salonga",
+          schoolGarden: "Jardin Scolaire",
+          unepPartnership: "Partenariat PNUE",
+          excellenceAward: "Prix d'Excellence",
+          nurseryMbandaka: "Pépinière Mbandaka",
+          communityAssembly: "Assemblée Communautaire"
+        }
+      },
+      videos: {
+        kicker: "Vidéos",
+        title: "Nos Vidéos",
+        watch: "Regarder",
+        items: {
+          reforestationYear: "Une Année de Reboisement",
+          farmersPortrait: "Portrait d'Agriculteurs",
+          congoBiodiversity: "Biodiversité du Congo"
+        }
+      },
+      cta: {
+        title: "Partagez Vos Photos",
+        text: "Vous avez participé à nos activités ? Envoyez-nous vos photos et vidéos !",
+        btn: "Envoyer des Médias"
+      }
+    }
   },
 
   Actions: {

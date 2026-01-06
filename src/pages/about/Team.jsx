@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { SectionTitle } from '../../components/SectionTitle'
 import { useLanguage } from '../../contexts/LanguageContext'
-import team_hero from '../../images/close-up-black-people-with-hands-joined.jpg'
+import team_hero from '../../images/team_hero.png'
 
 export function Team() {
     const { t } = useLanguage()

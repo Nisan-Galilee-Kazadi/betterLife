@@ -8,7 +8,7 @@ import {
   FaUsers,
   FaBuilding,
 } from "react-icons/fa";
-import partners_hero from "../../images/national-unity-day-ar-c.jpg";
+import partners_hero from "../../images/partners_hero.png";
 import { useLanguage } from "../../contexts/LanguageContext";
 
 export function Partners() {
@@ -124,7 +124,7 @@ export function Partners() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+      <div className="relative isolate overflow-hidden bg-gray-900 py-32 sm:py-48">
         <img
           src={partners_hero}
           alt="Better Life Partners"

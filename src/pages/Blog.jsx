@@ -1,12 +1,15 @@
 import React from 'react'
 import { SectionTitle } from '../components/SectionTitle'
 import { useLanguage } from '../contexts/LanguageContext'
-import blog_hero from '../images/planted-tree-farm.jpg'
+import blog_hero from '../images/blog_hero.png'
+import cocoa_img from '../images/cocoa-beans-cocoa-pod-wooden-surface.jpg'
+import community_img from '../images/activists-collecting-paper-trash-bag.jpg'
+import carbon_img from '../images/view-bamboo-trees-forest.jpg'
 
 const blogItems = [
-    { title: 'Programme cacao durable 2025', tag: 'Formation', date: 'Jan 2025' },
-    { title: "Lancement d'un nouveau projet communautaire", tag: 'Communauté', date: 'Dec 2024' },
-    { title: 'Guide pratique crédit carbone', tag: 'Carbone', date: 'Nov 2024' },
+    { title: 'Programme cacao durable 2025', tag: 'Formation', date: 'Jan 2025', image: cocoa_img },
+    { title: "Lancement d'un nouveau projet communautaire", tag: 'Communauté', date: 'Dec 2024', image: community_img },
+    { title: 'Guide pratique crédit carbone', tag: 'Carbone', date: 'Nov 2024', image: carbon_img },
 ]
 
 export function Blog() {
@@ -39,14 +42,17 @@ export function Blog() {
                 </div>
                 <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {blogItems.map((item) => (
-                        <article key={item.title} className="rounded-xl border border-slate-200 bg-slate-50 p-5 shadow-sm">
-                            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-600">{item.tag}</p>
-                            <h3 className="mt-2 text-lg font-semibold text-slate-900">{item.title}</h3>
-                            <p className="mt-1 text-xs text-slate-500">{item.date}</p>
-                            <p className="mt-3 text-sm text-slate-600">
-                                {t('blog.index.items.excerpt')}
-                            </p>
-                            <button className="mt-4 text-sm font-semibold text-sky-600 hover:text-sky-700">{t('blog.index.items.readMore')}</button>
+                        <article key={item.title} className="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden shadow-sm hover:shadow-md transition">
+                            <img src={item.image} alt={item.title} className="h-48 w-full object-cover" />
+                            <div className="p-5">
+                                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-600">{item.tag}</p>
+                                <h3 className="mt-2 text-lg font-semibold text-slate-900">{item.title}</h3>
+                                <p className="mt-1 text-xs text-slate-500">{item.date}</p>
+                                <p className="mt-3 text-sm text-slate-600">
+                                    {t('blog.index.items.excerpt')}
+                                </p>
+                                <button className="mt-4 text-sm font-semibold text-sky-600 hover:text-sky-700">{t('blog.index.items.readMore')}</button>
+                            </div>
                         </article>
                     ))}
                 </div>

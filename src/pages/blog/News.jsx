@@ -1,8 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { SectionTitle } from '../../components/SectionTitle'
-import { FaTree, FaHandshake, FaGraduationCap, FaCheckCircle, FaHammer, FaTrophy, FaCalendar, FaUser } from 'react-icons/fa'
+import { FaCalendar, FaUser } from 'react-icons/fa'
 import { useLanguage } from '../../contexts/LanguageContext'
+import media_hero from '../../images/media_hero.png'
+import news_reforestation from '../../images/news_reforestation.png'
+import news_partnership from '../../images/news_partnership.png'
+import news_training from '../../images/news_training.png'
+import cocoa_beans from '../../images/cocoa-beans-cocoa-pod-wooden-surface.jpg'
+import planted_tree from '../../images/planted-tree-farm.jpg'
+import community_hands from '../../images/close-up-black-people-with-hands-joined.jpg'
 
 export function BlogNews() {
     const { t } = useLanguage()
@@ -12,16 +19,16 @@ export function BlogNews() {
             title: t('blog.news.articles.reforestation2025.title'),
             date: '5 Décembre 2024',
             category: t('blog.news.categories.announcement'),
-            icon: FaTree,
+            image: news_reforestation,
             excerpt: t('blog.news.articles.reforestation2025.excerpt'),
-            content: 'Dans le cadre de notre engagement pour la lutte contre le changement climatique, nous lançons notre plus grand programme de reboisement à ce jour...',
+            content: 'Dans le cadre de notre engagement pour la lutteqs contre le changement climatique, nous lançons notre plus grand programme de reboisement à ce jour...',
             author: 'Équipe Better Life'
         },
         {
             title: t('blog.news.articles.unepPartnership.title'),
             date: '28 Novembre 2024',
             category: t('blog.news.categories.partnership'),
-            icon: FaHandshake,
+            image: news_partnership,
             excerpt: t('blog.news.articles.unepPartnership.excerpt'),
             content: 'Ce partenariat stratégique permettra de décupler notre impact en matière de conservation de la biodiversité...',
             author: 'Direction Générale'
@@ -30,7 +37,7 @@ export function BlogNews() {
             title: t('blog.news.articles.farmersTraining.title'),
             date: '15 Novembre 2024',
             category: t('blog.news.categories.training'),
-            icon: FaGraduationCap,
+            image: news_training,
             excerpt: t('blog.news.articles.farmersTraining.excerpt'),
             content: 'Durant trois semaines intensives, nos experts ont formé 500 agriculteurs aux techniques modernes d\'agriculture durable...',
             author: 'Département Agriculture'
@@ -39,7 +46,7 @@ export function BlogNews() {
             title: t('blog.news.articles.bioCertification.title'),
             date: '2 Novembre 2024',
             category: t('blog.news.categories.success'),
-            icon: FaCheckCircle,
+            image: cocoa_beans,
             excerpt: t('blog.news.articles.bioCertification.excerpt'),
             content: 'C\'est une grande fierté pour nous de voir ces producteurs obtenir leur certification bio après 2 ans d\'accompagnement...',
             author: 'Équipe Certification'
@@ -48,7 +55,7 @@ export function BlogNews() {
             title: t('blog.news.articles.nurseryMbandaka.title'),
             date: '20 Octobre 2024',
             category: t('blog.news.categories.infrastructure'),
-            icon: FaHammer,
+            image: planted_tree,
             excerpt: t('blog.news.articles.nurseryMbandaka.excerpt'),
             content: 'Cette nouvelle infrastructure renforce notre capacité de production et nous rapproche de notre objectif de 1.5 million d\'arbres...',
             author: 'Département Reboisement'
@@ -57,7 +64,7 @@ export function BlogNews() {
             title: t('blog.news.articles.excellenceAward.title'),
             date: '10 Octobre 2024',
             category: t('blog.news.categories.recognition'),
-            icon: FaTrophy,
+            image: community_hands,
             excerpt: t('blog.news.articles.excellenceAward.excerpt'),
             content: 'Cette reconnaissance récompense nos efforts constants pour la protection de l\'environement et le développement durable...',
             author: 'Communication'
@@ -77,8 +84,14 @@ export function BlogNews() {
     return (
         <div className="bg-white">
             {/* Hero Section */}
-            <div className="relative isolate overflow-hidden bg-gradient-to-br from-[#0f70b7] to-[#63b32e] py-24 sm:py-32">
-                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="relative isolate overflow-hidden bg-slate-900 py-24 sm:py-32">
+                <img
+                    src={media_hero}
+                    alt="Media and News"
+                    className="absolute inset-0 -z-10 h-full w-full object-cover object-center opacity-50"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#0f70b7]/70 to-[#63b32e]/70" />
+                <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="mx-auto max-w-2xl text-center">
                         <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
                             {t('blog.news.hero.title')}
@@ -106,73 +119,77 @@ export function BlogNews() {
 
                 {/* Featured News */}
                 <div className="mb-16">
-                    {(() => {
-                        const FeaturedIcon = news[0].icon;
-                        return (
-                            <div className="rounded-3xl bg-gradient-to-br from-[#0f70b7] to-[#63b32e] p-8 text-white">
-                                <div className="grid gap-8 lg:grid-cols-2 items-center">
-                                    <div>
-                                        <span className="px-3 py-1 bg-white/20 rounded-full text-sm font-semibold">
-                                            {t('blog.news.featured.label')}
-                                        </span>
-                                        <h2 className="text-3xl font-bold mt-4 mb-4">{news[0].title}</h2>
-                                        <p className="text-white/90 mb-6">{news[0].excerpt}</p>
-                                        <div className="flex items-center gap-4 text-sm text-white/80">
-                                            <span className="flex items-center gap-2">
-                                                <FaCalendar />
-                                                {news[0].date}
-                                            </span>
-                                            <span className="flex items-center gap-2">
-                                                <FaUser />
-                                                {news[0].author}
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div className="flex items-center justify-center">
-                                        <FeaturedIcon className="text-9xl text-white/90" />
-                                    </div>
+                    <div className="rounded-3xl bg-gradient-to-br from-[#0f70b7] to-[#63b32e] p-8 text-white overflow-hidden">
+                        <div className="grid gap-8 lg:grid-cols-2 items-center">
+                            <div>
+                                <span className="px-3 py-1 bg-white/20 rounded-full text-sm font-semibold">
+                                    {t('blog.news.featured.label')}
+                                </span>
+                                <h2 className="text-3xl font-bold mt-4 mb-4">{news[0].title}</h2>
+                                <p className="text-white/90 mb-6">{news[0].excerpt}</p>
+                                <div className="flex items-center gap-4 text-sm text-white/80">
+                                    <span className="flex items-center gap-2">
+                                        <FaCalendar />
+                                        {news[0].date}
+                                    </span>
+                                    <span className="flex items-center gap-2">
+                                        <FaUser />
+                                        {news[0].author}
+                                    </span>
                                 </div>
                             </div>
-                        );
-                    })()}
+                            <div className="flex items-center justify-center">
+                                <img
+                                    src={news[0].image}
+                                    alt={news[0].title}
+                                    className="w-full h-64 object-cover rounded-2xl shadow-2xl"
+                                />
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 {/* News Grid */}
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                     {news.slice(1).map((article) => {
-                        const ArticleIcon = article.icon;
                         return (
-                            <div key={article.title} className="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-slate-900/5 transition hover:shadow-xl hover:ring-[#63b32e]/20">
-                                <ArticleIcon className="text-7xl mb-4 text-[#63b32e] mx-auto" />
+                            <div key={article.title} className="rounded-2xl bg-white overflow-hidden shadow-lg ring-1 ring-slate-900/5 transition hover:shadow-xl hover:ring-[#63b32e]/20">
+                                <img
+                                    src={article.image}
+                                    alt={article.title}
+                                    className="w-full h-48 object-cover"
+                                />
 
-                                <div className="mb-4">
-                                    <span className="px-3 py-1 bg-green-100 text-[#63b32e] rounded-full text-xs font-semibold">
-                                        {article.category}
-                                    </span>
+                                <div className="p-6">
+                                    <div className="mb-4">
+                                        <span className="px-3 py-1 bg-green-100 text-[#63b32e] rounded-full text-xs font-semibold">
+                                            {article.category}
+                                        </span>
+                                    </div>
+
+                                    <h3 className="text-xl font-bold text-slate-900 mb-3">
+                                        {article.title}
+                                    </h3>
+
+                                    <p className="text-slate-600 mb-4 text-sm">
+                                        {article.excerpt}
+                                    </p>
+
+                                    <div className="flex items-center justify-between text-xs text-slate-500 mb-4">
+                                        <span className="flex items-center gap-1">
+                                            <FaCalendar />
+                                            {article.date}
+                                        </span>
+                                        <span className="flex items-center gap-1">
+                                            <FaUser />
+                                            {article.author}
+                                        </span>
+                                    </div>
+
+                                    <button className="w-full rounded-lg bg-[#0f70b7] text-white py-2 font-semibold hover:bg-[#0d5a94] transition">
+                                        {t('blog.news.readMore')}
+                                    </button>
                                 </div>
-
-                                <h3 className="text-xl font-bold text-slate-900 mb-3">
-                                    {article.title}
-                                </h3>
-
-                                <p className="text-slate-600 mb-4 text-sm">
-                                    {article.excerpt}
-                                </p>
-
-                                <div className="flex items-center justify-between text-xs text-slate-500 mb-4">
-                                    <span className="flex items-center gap-1">
-                                        <FaCalendar />
-                                        {article.date}
-                                    </span>
-                                    <span className="flex items-center gap-1">
-                                        <FaUser />
-                                        {article.author}
-                                    </span>
-                                </div>
-
-                                <button className="w-full rounded-lg bg-[#0f70b7] text-white py-2 font-semibold hover:bg-[#0d5a94] transition">
-                                    {t('blog.news.readMore')}
-                                </button>
                             </div>
                         );
                     })}
