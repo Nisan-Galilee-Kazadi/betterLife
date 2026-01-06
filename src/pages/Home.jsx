@@ -14,13 +14,18 @@ import { GiForest } from "react-icons/gi";
 import { MdAgriculture } from "react-icons/md";
 import { useLanguage } from "../contexts/LanguageContext";
 import heroImage1 from "../images/hero_clean.png";
-import heroImage2 from "../images/hero_agriculture.png";
+import hero_agriculture from "../images/agricultural-advertisement-banner-group-new-modern-generic-tractors-green-meadow-sunny-day-mixed.jpg";
+import hero_food_security from "../images/food_security_hero.png";
+
 import heroImage3 from "../images/hero_reforestation.png";
 import heroImage4 from "../images/images.jfif";
 import heroImage5 from "./Actions/Mecanisation/images/IMG-20251215-WA0000.jpg";
 import heroImage6 from "./Actions/Communautaire/images/hero_education.jpg";
-import heroImage7 from "./Actions/elevages/images/hero_gros_betail.jpg";
+import heroImage7 from "../images/wide-angle-portrait-beautiful-healthy-cows-row-eating-hay-cowshed-organic-dairy-farm-copy-space.jpg";
 import heroImage8 from "./Actions/agriculture/images/hero_cacao.png";
+import heroImage9 from "../images/low-angle-perspective-tree-with-beautiful-canopy.jpg";
+import heroImage10 from "../images/le-coucher-du-soleil-derriere-la-silhouette-des-pylones-d-electricite.jpg";
+import heroImage11 from "../images/planted-tree-farm.jpg";
 
 // Animated Counter Component
 function AnimatedCounter({ end, duration = 5000, suffix = "" }) {
@@ -137,13 +142,13 @@ export function Home() {
       description: t("home.hero.slides.0.description")
     },
     {
-      src: heroImage2,
+      src: hero_food_security,
       alt: "Sécurité Alimentaire",
       title: t("home.hero.slides.1.title"),
       description: t("home.hero.slides.1.description")
     },
     {
-      src: heroImage5,
+      src: hero_agriculture,
       alt: "Mécanisation Agricole",
       title: t("home.hero.slides.2.title"),
       description: t("home.hero.slides.2.description")
@@ -165,6 +170,24 @@ export function Home() {
       alt: "Cultures Durables",
       title: t("home.hero.slides.5.title"),
       description: t("home.hero.slides.5.description")
+    },
+    {
+      src: heroImage9,
+      alt: "Protection de l'Environnement",
+      title: t("Actions.environement.hero.title") || "Environnement",
+      description: t("Actions.environement.hero.subtitle") || "Protéger notre nature"
+    },
+    {
+      src: heroImage10,
+      alt: "Énergie Communautaire",
+      title: t("Actions.communautaire.energie.hero.title") || "Énergie",
+      description: t("Actions.communautaire.energie.hero.subtitle") || "Énergie pour tous"
+    },
+    {
+      src: heroImage11,
+      alt: "Reforestation",
+      title: t("Actions.environement.protection_foret.hero.title") || "Reforestation",
+      description: t("Actions.environement.protection_foret.hero.subtitle") || "Planter pour l'avenir"
     },
   ];
 

@@ -14,6 +14,7 @@ import {
 } from "react-icons/gi";
 import { MdHealthAndSafety, MdScience } from "react-icons/md";
 import { useLanguage } from "../../contexts/LanguageContext";
+import elevage_hero from "../../images/wide-angle-portrait-beautiful-healthy-cows-row-eating-hay-cowshed-organic-dairy-farm-copy-space.jpg";
 
 export function ActionsElevage() {
   const { t } = useLanguage();
@@ -30,13 +31,19 @@ export function ActionsElevage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <div className="relative isolate overflow-hidden bg-gradient-to-br from-[#63b32e] to-[#0f70b7] py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="relative isolate overflow-hidden bg-zinc-900 py-32 sm:py-48">
+        <img
+          src={elevage_hero}
+          alt="Elevage"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+            <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl drop-shadow-2xl">
               {t("Actions.elevage.hero.title")}
             </h1>
-            <p className="mt-6 text-lg leading-8 text-white/90">
+            <p className="mt-6 text-xl leading-8 text-white font-medium drop-shadow-xl">
               {t("Actions.elevage.hero.subtitle")}
             </p>
           </div>
@@ -217,16 +224,16 @@ export function ActionsElevage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact"
+              to="/rejoindre"
               className="rounded-md bg-white px-8 py-3.5 text-base font-semibold text-[#63b32e] shadow-lg transition hover:bg-slate-50"
             >
-              {t("Actions.elevage.cta.btn_contact")}
+              {t("Actions.elevage.cta.btn_join")}
             </Link>
             <Link
               to="/contact"
               className="rounded-md bg-white/10 backdrop-blur-sm px-8 py-3.5 text-base font-semibold text-white transition hover:bg-white/20"
             >
-              {t("Actions.elevage.cta.btn_contact")}
+              {t("Actions.elevage.cta.btn_partner")}
             </Link>
           </div>
         </div>

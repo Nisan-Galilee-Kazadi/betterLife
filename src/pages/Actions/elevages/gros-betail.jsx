@@ -4,15 +4,16 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { FaStethoscope, FaSeedling, FaClipboardCheck, FaDna } from "react-icons/fa";
 import { GiCow, GiSpermWhale, GiHealthNormal, GiGrain } from "react-icons/gi";
 import { useLanguage } from "../../../contexts/LanguageContext";
+import hero_betail from "./images/hero_gros_betail.jpg";
 
 // Image: Cattle in field - Unsplash
 const imgHero = "https://images.unsplash.com/photo-1541625602330-2277db6e788d?auto=format&fit=crop&q=80&w=2070";
 
 const featureIcons = [
-  <FaDna className="text-4xl text-green-600 mb-4 mx-auto" />,
-  <FaStethoscope className="text-4xl text-blue-600 mb-4 mx-auto" />,
-  <GiGrain className="text-4xl text-yellow-600 mb-4 mx-auto" />,
-  <FaClipboardCheck className="text-4xl text-purple-600 mb-4 mx-auto" />
+    <FaDna className="text-4xl text-green-600 mb-4 mx-auto" />,
+    <FaStethoscope className="text-4xl text-blue-600 mb-4 mx-auto" />,
+    <GiGrain className="text-4xl text-yellow-600 mb-4 mx-auto" />,
+    <FaClipboardCheck className="text-4xl text-purple-600 mb-4 mx-auto" />
 ];
 
 export default function GrosBetail() {
@@ -21,18 +22,19 @@ export default function GrosBetail() {
 
     return (
         <div className="bg-white">
-            <div className="relative isolate overflow-hidden bg-stone-900 py-24 sm:py-32">
+            <div className="relative isolate overflow-hidden bg-zinc-900 py-32 sm:py-48">
                 <img
-                    src={imgHero}
+                    src={hero_betail}
                     alt="Elevage bovin"
-                    className="absolute inset-0 -z-10 h-full w-full object-cover brightness-[0.4]"
+                    className="absolute inset-0 h-full w-full object-cover object-center"
                 />
-                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                <div className="absolute inset-0 bg-black/50" />
+                <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="mx-auto max-w-2xl text-center">
-                        <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+                        <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl drop-shadow-2xl">
                             {t("Actions.elevage.gros_betail.hero.title")}
                         </h1>
-                        <p className="mt-6 text-lg leading-8 text-stone-200">
+                        <p className="mt-6 text-xl leading-8 text-white font-medium drop-shadow-xl">
                             {t("Actions.elevage.gros_betail.hero.subtitle")}
                         </p>
                     </div>

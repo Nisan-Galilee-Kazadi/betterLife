@@ -26,7 +26,10 @@ export function Breadcrumb() {
     news: t("nav.news"),
     gallery: t("nav.gallery"),
     contact: t("nav.contact"),
-    rejoindre: t("home.cta.btn2"), // 'Devenir Partenaire' approximation
+    rejoindre: t("common.join"),
+    "emplois-stages": t("nav.emplois_stage"),
+    emploi: t("career.form.job"),
+    stage: t("career.form.internship"),
   };
 
   if (pathnames.length === 0) return null;

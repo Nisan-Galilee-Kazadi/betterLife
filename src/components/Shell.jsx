@@ -23,19 +23,19 @@ import logoWhite from "../images/Logo-betterlife-officiel-Blanc-300x300.png";
 const socialLinks = [
   {
     icon: FaFacebook,
-    href: "https://facebook.com/betterlife-ong",
+    href: "https://www.facebook.com/betterlifedrc/?locale=fr_FR",
     color: "bg-[#1877F2]",
   },
-  { icon: FaXTwitter, href: "#", color: "bg-black" },
-  { icon: FaLinkedin, href: "#", color: "bg-[#0077b5]" },
+  { icon: FaXTwitter, href: "https://x.com/BETTERLIFE27626", color: "bg-black" },
+  { icon: FaLinkedin, href: "https://www.linkedin.com/company/better-life-org", color: "bg-[#0077b5]" },
   {
     icon: FaYoutube,
-    href: "https://youtube.com/@betterlife-ong",
+    href: "https://www.youtube.com/@BetterLifeOrg-s5yn",
     color: "bg-[#FF0000]",
   },
-  { icon: FaInstagram, href: "#", color: "bg-[#E1306C]" },
-  { icon: FaTiktok, href: "#", color: "bg-[#000000]" },
-  { icon: FaWhatsapp, href: "#", color: "bg-[#25D366]" },
+  { icon: FaInstagram, href: "https://www.instagram.com/betterlifeong/", color: "bg-[#E1306C]" },
+  { icon: FaTiktok, href: "https://www.tiktok.com/@betterlifeworld", color: "bg-[#000000]" },
+  { icon: FaWhatsapp, href: "https://wa.me/243829495919", color: "bg-[#25D366]" },
 ];
 
 // Recursive NavItem Component
@@ -178,10 +178,10 @@ function MobileNavItem({
         <Link
           to={item.to}
           className={`text-base font-semibold ${isScrolled
-              ? isActive
-                ? "text-[#63b32e]"
-                : "text-slate-800"
-              : "text-white"
+            ? isActive
+              ? "text-[#63b32e]"
+              : "text-slate-800"
+            : "text-white"
             }`}
           onClick={() => {
             if (!hasChildren) {
@@ -443,7 +443,7 @@ export function Shell({ children }) {
         { name: t("nav.gallery"), to: "/blog/gallery" },
       ],
     },
-    { name: t("nav.emplois_stage"), to: "/rejoindre" },
+    { name: t("nav.emplois_stage"), to: "/emplois-stages" },
     { name: t("nav.donation"), to: "/donation" },
     { name: t("nav.contact"), to: "/contact" },
   ];
@@ -662,7 +662,7 @@ export function Shell({ children }) {
 
       {/* Breadcrumb - Only for submenus (depth > 1) */}
       {location.pathname.split("/").filter((x) => x).length > 1 && (
-        <div className="hidden lg:block pt-[40px] lg:pt-[110px]">
+        <div className="hidden lg:block pt-[40px] lg:pt-[120px]">
           <Breadcrumb />
         </div>
       )}

@@ -4,6 +4,7 @@ import { SectionTitle } from "../../components/SectionTitle";
 import { FaTractor, FaCogs, FaTools, FaIndustry } from "react-icons/fa";
 import { GiFactory, GiGears, GiMechanicGarage, GiFarmTractor } from "react-icons/gi";
 import { useLanguage } from "../../contexts/LanguageContext";
+import hero_img from "../../images/agricultural-advertisement-banner-group-new-modern-generic-tractors-green-meadow-sunny-day-mixed.jpg";
 
 export function ActionsMecanisation() {
   const { t } = useLanguage();
@@ -14,13 +15,19 @@ export function ActionsMecanisation() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <div className="relative isolate overflow-hidden bg-gradient-to-br from-[#0f70b7] to-[#63b32e] py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="relative isolate overflow-hidden bg-zinc-900 py-32 sm:py-48">
+        <img
+          src={hero_img}
+          alt="Mecanisation"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+            <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl drop-shadow-2xl">
               {t("Actions.mecanisation.hero.title")}
             </h1>
-            <p className="mt-6 text-lg leading-8 text-white/90">
+            <p className="mt-6 text-xl leading-8 text-white font-medium drop-shadow-xl">
               {t("Actions.mecanisation.hero.subtitle")}
             </p>
           </div>

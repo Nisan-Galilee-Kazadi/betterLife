@@ -1,21 +1,28 @@
 import React from 'react'
 import { SectionTitle } from '../components/SectionTitle'
 import { FaLocationDot, FaEnvelope, FaPhone, FaClock, FaPaperPlane } from 'react-icons/fa6'
+import contact_hero from "../images/homme-d-affaires-afro-americain-souriant-au-telephone-au-bureau.jpg";
 import { useLanguage } from '../contexts/LanguageContext'
 
 export function Contact() {
     const { t } = useLanguage()
 
     return (
-        <div className="bg-white">
+        <div className="min-h-screen bg-slate-50">
             {/* Hero Section */}
-            <div className="relative isolate overflow-hidden bg-gradient-to-br from-[#63b32e] to-[#0f70b7] py-24 sm:py-32">
-                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="relative bg-zinc-900 py-32 sm:py-48 overflow-hidden">
+                <img
+                    src={contact_hero}
+                    alt="Contact Better Life"
+                    className="absolute inset-0 h-full w-full object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-black/50" />
+                <div className="relative max-w-7xl mx-auto px-4 text-center">
                     <div className="mx-auto max-w-2xl text-center">
-                        <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+                        <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl drop-shadow-2xl">
                             {t('contact.hero.title')}
                         </h1>
-                        <p className="mt-6 text-lg leading-8 text-white/90">
+                        <p className="mt-6 text-xl leading-8 text-white font-medium drop-shadow-xl">
                             {t('contact.hero.subtitle')}
                         </p>
                     </div>
@@ -59,7 +66,7 @@ export function Contact() {
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-slate-900 mb-2">{t('contact.info.email.title')}</h3>
-                                        <a href={`mailto:${t('contact.info.email.value')}`} className="text-[#0f70b7] hover:underline">
+                                        <a href={`mailto:${t('contact.info.email.value')} `} className="text-[#0f70b7] hover:underline">
                                             {t('contact.info.email.value')}
                                         </a>
                                     </div>
@@ -159,7 +166,7 @@ export function Contact() {
                     </div>
                 </div>
 
-                {/* Google Maps
+                {/* Google Maps */}
                 <div className="mt-16">
                     <div className="text-center mb-8">
                         <h2 className="text-3xl font-bold text-slate-900 mb-3">{t('contact.map.title')}</h2>
@@ -177,7 +184,7 @@ export function Contact() {
                             title="Better Life ONG Location"
                         />
                     </div>
-                </div> */}
+                </div>
             </div>
         </div>
     )

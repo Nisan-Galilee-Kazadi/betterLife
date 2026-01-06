@@ -1,5 +1,3 @@
-import { ActionsCommunautaire } from "../pages/Actions/Communautaire";
-
 export const fr = {
   common: {
     readMore: "En savoir plus",
@@ -41,7 +39,7 @@ export const fr = {
     agriculture: "Agriculture ",
     cacao: "Cacaoyer (Criollo)",
     cafe: "Café Arabica",
-    the: "Thiéier",
+    the: "Théier",
     coton_caoutchouc: "Coton & Caoutchouc",
     arboriculture: "Arboriculture",
     plantes_medicinales: "Plantes médicinales",
@@ -64,7 +62,7 @@ export const fr = {
     tracteur: "Tracteur",
     accessoires: "Accessoires",
     autres: "Autres Équipements",
-    environement: "environement",
+    environement: "Environnement",
     protection_foret: "Protection de la Forêt",
     reboisement: "Reboisement",
     credit_carbone: "Crédit Carbone",
@@ -83,6 +81,198 @@ export const fr = {
     donation: "Donation",
     contact: "Contact",
   },
+  join: {
+    hero: {
+      title: "Better Life besoin de vous !",
+      subtitle: "Ensemble, agissons pour le bien de notre planète et nos générations futures."
+    },
+    mission: "Better Life assure des missions mobilisées au travers de quatre enjeux principaux : l'environnement, l'adaptation au changement climatique, la biodiversité, et la promotion de la sécurité alimentaire.",
+    intro: {
+      warning: "Les avertissements concernant le réchauffement climatique ont été extrêmement clairs depuis longtemps. Nous sommes confrontés à une crise climatique mondiale.",
+      call: "Devenez membre et participez activement à nos actions."
+    },
+    membershipType: {
+      title: "Type d'Adhésion",
+      options: {
+        lowIncome: "Partenaire bas revenu (150$)",
+        basic: "Partenaire de base (300$)",
+        accompanying: "Partenaire d'accompagnement (500$)",
+        supporting: "Partenaire de soutien (600$)",
+        social: "Partenaire Social (1.200$)",
+        voluntary: "Partenaire volontaire / Don (Montant libre)"
+      }
+    },
+    personalInfo: {
+      title: "2. Informations Générales",
+      who_is_member: "Qui est l'adhérent ?",
+      civility: "Mr / Mme / Couple",
+      mr: "M.",
+      mrs: "Mme",
+      couple: "Couple",
+      lastname: "Nom(s) et Prénom(s)",
+      profession: "Profession",
+      nationality: "Nationalité",
+      status: "Statut",
+      physicalPerson: "Vous-même (particulier)",
+      moralPerson: "Une personne morale",
+      raison_sociale: "Raison sociale",
+      id_number: "Numéro d'identification",
+      hectare: "Hectare",
+      village: "Village",
+      benevolat_question: "Souhaitez-vous être contacté pour du bénévolat ?",
+      yes: "Oui",
+      no: "Non"
+    },
+    addressContact: {
+      title: "Adresse & Contact",
+      address: "Adresse",
+      code_postal: "Code postal",
+      neighborhood: "Quartier",
+      city: "Ville",
+      province: "Province",
+      country: "Pays",
+      phone: "Téléphone",
+      email: "Adresse e-mail"
+    },
+    paymentPreference: {
+      title: "3. Mode de paiement",
+      bank: "Virement",
+      card: "CB",
+      cash: "Espèces",
+      check: "Chèque",
+      other: "Autre (précisez)",
+      note: "Veuillez noter que les frais d'adhésion ne sont pas remboursables. Une fois votre adhésion validée, aucun remboursement ne pourra être effectué."
+    },
+    sectors: {
+      title: "4. Secteur d'Intérêt (Cochez les cases correspondantes)",
+      food_security: "Sécurité Alimentaire",
+      health_insurance: "Assurance sante",
+      large_scale_agri: "Projets agricoles à grande échelle",
+      machinery: "Acquisition de machines agricoles",
+      carbon_credits: "Accès aux crédits carbones",
+      medicinal_plants: "Production de plantes médicinales",
+      fundraising: "Levée de fonds pour des projets communautaires",
+      env_protection: "Protection de l'environnement",
+      training_health_agri: "Formation sur la santé et l'agriculture"
+    },
+    contributions: {
+      title: "6. Apports et Contributions",
+      question: "Quels types de ressources ou d'expertise êtes-vous prêt à apporter à l'organisation ?",
+      financial: "Contribution financière",
+      technical: "Expertise technique",
+      active_agri: "Participation active aux projets agricoles",
+      other: "Autre (précisez)"
+    },
+    experience: {
+      title: "5. Expérience et Engagement",
+      question: "Avez-vous une expérience dans les projets agricoles ou environnementaux ?",
+      details_label: "Si oui, veuillez fournir des détails sur votre expérience :",
+      why_join_label: "Pourquoi souhaitez-vous rejoindre l'organisation ?",
+      yes: "Oui",
+      no: "Non"
+    },
+    cgu: {
+      title: "7. Consentement et Engagement",
+      text: "Je reconnais avoir pris connaissance des objectifs et des règles de l'organisation, et je m'engage à respecter les termes et conditions fixés par ses contrats.",
+      readAndApproved: "Lu et Approuvé",
+      date: "Date",
+      signature: "Signature",
+      signaturePlaceholder: "Tapez votre nom complet pour signer",
+      link: "Voir les conditions complètes",
+      submit: "Envoyer mon adhésion",
+      submitting: "Envoi en cours..."
+    },
+    form: {
+      title: "Formulaire d'adhésion",
+      success: "Félicitations ! Votre demande d'adhésion a été enregistrée avec succès.",
+      error: "Une erreur est survenue lors de l'envoi."
+    }
+  },
+  career: {
+    hero: {
+      titleJob: "Postuler pour un Emploi",
+      titleInternship: "Postuler pour un Stage",
+      subtitle: "Rejoignez notre équipe et contribuez à un avenir durable."
+    },
+    form: {
+      title: "Formulaire de Candidature",
+      type: "Type de candidature",
+      job: "Emploi",
+      internship: "Stage",
+      cv: "Curriculum Vitae (CV)",
+      cvPlaceholder: "Lien vers votre CV ou nom du fichier",
+      motivation: "Lettre de motivation / Message",
+      motivationPlaceholder: "Parlez-nous de vos motivations...",
+      education: "Niveau d'études",
+      educationPlaceholder: "Ex: Master en Agronomie",
+      experience: "Expérience pertinente",
+      experiencePlaceholder: "Résumé de vos expériences passées",
+      submit: "Envoyer ma candidature",
+      success: "Votre candidature a été envoyée avec succès ! Nous vous contacterons bientôt."
+    }
+  },
+  employment: {
+    hero: {
+      title: "Emplois & Stages",
+      subtitle: "Rejoignez notre équipe et contribuez à un avenir durable."
+    },
+    summary: {
+      title: "Nos Opportunités de Carrière",
+      text: "Chez Better Life, nous sommes constamment à la recherche de personnes passionnées qui souhaitent faire une différence dans la protection de l'environnement et le développement durable en RDC."
+    },
+    jobs: {
+      title: "Carrières Professionnelles",
+      description: "Découvrez nos offres d'emploi actuelles et rejoignez une équipe dynamique d'experts dédiés à l'environnement.",
+      btn: "Postuler pour un Emploi"
+    },
+    internships: {
+      title: "Stages Étudiants",
+      description: "Développez vos compétences et gagnez de l'expérience sur le terrain en contribuant à nos divers projets.",
+      btn: "Postuler pour un Stage"
+    }
+  },
+  conditions: {
+    title: "Conditions Générales d'Adhésion",
+    backToForm: "Retour au formulaire",
+    sections: {
+      regulation: {
+        title: "1. Objectifs et Engagement",
+        text: "• Accord avec la mission de l'organisation : Le Partenaire doit adhérer aux objectifs de l'organisation, qui sont la Promotion de la Sécurité Alimentaire, la Protection de l'Environnement, et le développement de projets agricoles communautaires.\n• Engagement actif : Le Partenaire s'engage à participer activement aux activités et projets de l'organisation, y compris la gestion des projets agricoles et environnementaux."
+      },
+      types: {
+        title: "2. Types d'adhésion",
+        text: "• Adhésion individuelle : Ouverte aux personnes physiques qui souhaitent participer à titre individuel.\n• Adhésion en tant que groupe ou organisation : Ouverte aux coopératives agricoles, entreprises, ou groupes communautaires qui souhaitent s'impliquer dans les projets à grande échelle.\n• Adhésion d'institution partenaire : Pour les institutions qui souhaitent apporter un soutien technique ou financier."
+      },
+      criteria: {
+        title: "3. Critères d'adhésion",
+        text: "• Nationalité et résidence : Les Partenaires doivent être résidents dans la zone géographique où l'organisation opère, ou avoir un intérêt pour les activités dans cette région.\n• Expérience agricole (facultatif selon le type d'adhésion) : Pour les Partenaires participant à des projets agricoles, une expérience dans le domaine de l'agriculture ou de la gestion des terres peut être requise.\n• Intérêt pour l'agriculture durable et l'environnement : Les Partenaires doivent démontrer un intérêt pour l'agriculture durable, la réduction des émissions de carbone, et la préservation de l'environnement."
+      },
+      fees: {
+        title: "4. Frais d'Adhésion",
+        text: "• Cotisation annuelle : Les Partenaires sont tenus de payer des frais d'adhésion, qui peuvent varier selon le type d'adhésion individuelle ou organisationnelle.\n• Frais de projet : Dans certains cas, les Partenaires peuvent être invités à contribuer financièrement aux projets spécifiques pour l'achat de machines agricoles ou pour la mise en œuvre de programmes environnementaux ou agricole."
+      },
+      responsibilities: {
+        title: "5. Responsabilités des Partenaires",
+        text: "• Participation aux assemblées et réunions : Les Partenaires doivent participer aux assemblées générales et aux réunions pour discuter des projets en cours, des décisions stratégiques, et de la gestion des fonds.\n• Respect des règlements : Les Partenaires doivent respecter les règles internes, la charte de l'organisation, et les règlements spécifiques aux projets en cours.\n• Contribution aux projets communautaires : Les Partenaires doivent participer activement aux projets de collecte de fonds, de sensibilisation, et aux activités agricoles et environnementales."
+      },
+      resources: {
+        title: "6. Accès aux Ressources et Avantages",
+        text: "• Accès aux machines agricoles : Les Partenaires ont un accès privilégié aux équipements et machines agricoles de l'organisation pour leurs activités, sous conditions.\n• Accès aux crédits carbones : Les Partenaires peuvent participer aux programmes d'évaluation et d'accès aux crédits carbone, avec un partage des bénéfices générés.\n• Formation et assistance technique : Les Partenaires peuvent bénéficier de formations sur les pratiques agricoles modernes, la gestion de l'environnement, et l'utilisation des technologies durables."
+      },
+      termination: {
+        title: "7. Conditions de Résiliation",
+        text: "• Manquement aux engagements : Un Partenaire peut être exclu de l'organisation en cas de manquement répété à ses responsabilités ou d'actions contraires aux objectifs de l'organisation.\n• Non-paiement des cotisations : Si un Partenaire ne paie pas sa contribution ne dépassent pas 30 %, il peut perdre ses droits d'adhésion."
+      },
+      projects: {
+        title: "8. Critères spécifiques aux projets",
+        text: "• Projets agricoles à grande échelle : Pour participer à ces projets, les Partenaires doivent disposer de terres ou être en mesure de collaborer avec des exploitations agricoles locales.\n• Levée de fonds pour des projets communautaires : Les Partenaires sont encouragés à participer activement aux initiatives de financement pour les projets agricoles ou environnementaux."
+      },
+      consent: {
+        title: "9. Consentement et Engagement",
+        text: "• Je reconnais avoir pris connaissance des objectifs et des règles de l'organisation, et je m'engage à respecter les termes et conditions fixés par ses contrats."
+      }
+    }
+  },
   donation: {
     hero: {
       title: "Soutenez Nos Actions",
@@ -94,7 +284,7 @@ export const fr = {
       "Les dons financent des projets de reboisement, d'agriculture durable et des programmes communautaires.",
     support: {
       title: "Pourquoi soutenir",
-      text: "Votre soutien contribue directement aux communautés et à la préservation de l'environement.",
+      text: "Votre soutien contribue directement aux communautés et à la préservation de l'environnement.",
     },
     methods: {
       title: "Méthodes de don",
@@ -111,13 +301,13 @@ export const fr = {
       hero: {
         title: "Notre Mission",
         subtitle:
-          "Protéger l'environement et promouvoir un développement durable pour les générations futures",
+          "Protéger l'environnement et promouvoir un développement durable pour les générations futures",
       },
       vision: {
         kicker: "Notre Vision",
         title: "Un Avenir Durable pour Tous",
         text: "Nous imaginons un monde où l'harmonie entre l'homme et la nature est restaurée, où chaque communauté a accès à une alimentation saine et à un environement préservé.",
-        desc: "Better Life s'engage à créer un impact positif et durable en République Démocratique du Congo et au-delà, en plaçant la protection de l'environement et le bien-être des communautés au cœur de toutes nos actions.",
+        desc: "Better Life s'engage à créer un impact positif et durable en République Démocratique du Congo et au-delà, en plaçant la protection de l'environnement et le bien-être des communautés au cœur de toutes nos actions.",
       },
       mission: {
         kicker: "Notre Mission",
@@ -282,7 +472,7 @@ export const fr = {
       intro: {
         kicker: "Collaboration",
         title: "La Force du Partenariat",
-        text: "Nos partenariats stratégiques nous permettent de multiplier notre impact et d'atteindre nos objectifs ambitieux de protection de l'environement et de développement durable.",
+        text: "Nos partenariats stratégiques nous permettent de multiplier notre impact et d'atteindre nos objectifs ambitieux de protection de l'environnement et de développement durable.",
       },
       strategic: {
         title: "Partenaires Stratégiques Internationaux",
@@ -632,13 +822,12 @@ export const fr = {
     agriculture: {
       hero: {
         title: "Agriculture Durable",
-        subtitle:
-          "Promouvoir des pratiques agricoles respectueuses de l'environement et économiquement viables",
+        subtitle: "Promouvoir des pratiques agricoles respectueuses de l'environnement et économiquement viables",
       },
       intro: {
         kicker: "Notre Approche",
         title: "Agriculture Intelligente",
-        text: "Nous soutenons les agriculteurs dans la transition vers des pratiques durables qui augmentent la productivité tout en préservant l'environement.",
+        text: "Nous soutenons les agriculteurs dans la transition vers des pratiques durables qui augmentent la productivité tout en préservant l'environnement.",
         subtext: "Face aux défis climatiques, nous encourageons une agriculture résiliente.",
         objectives: {
           title: "Nos Objectifs",
@@ -699,7 +888,7 @@ export const fr = {
           },
           {
             title: "Transformation",
-            desc: "Valorisation des produits agricoles pour augementer les revenus."
+            desc: "Valorisation des produits agricoles pour augmenter les revenus."
           },
           {
             title: "Gestion Simplifiée",
@@ -725,8 +914,53 @@ export const fr = {
         text: "Agriculteurs ou passionnés, nous avons besoin de vous",
         btn_train: "Formation",
         btn_more: "Savoir Plus"
-      },
+      }
     },
+    agricultures: {
+      cacao: {
+        hero: { title: "Cacao (Criollo)", subtitle: "L'Or Brun de la RDC" },
+        intro: { kicker: "Origine", title: "Le Cacao Criollo", text: "Une variété rare et prisée pour ses arômes fins et délicats." },
+        features: { kicker: "Caractéristiques", title: "Pourquoi le Criollo ?", items: ["Arômes fruités", "Fèves blanches", "Fermentation courte", "Grande valeur"] },
+        technique: { title: "Technique Culturale", items: ["Sous ombrage forestier", "Association avec bananiers", "Récolte manuelle sélective"] },
+        impact: { title: "Impact", stats: [{ value: "500T", label: "Production" }, { value: "1200", label: "Producteurs" }] }
+      },
+      cafe: {
+        hero: { title: "Café Arabica", subtitle: "L'excellence des hautes terres" },
+        intro: { kicker: "Terroir", title: "Café de Montagne", text: "Cultivé en altitude pour une complexité aromatique unique." },
+        features: { kicker: "Qualité", title: "Notre Café", items: ["Altitude > 1200m", "Traitement lavé", "Séchage sur lits africains", "Score SCA 85+"] },
+        technique: { title: "Processus", items: ["Cueillette fine", "Dépulpage le jour même", "Fermentation contrôlée"] },
+        impact: { title: "Impact", stats: [{ value: "300T", label: "Export" }, { value: "800", label: "Familles" }] }
+      },
+      the: {
+        hero: { title: "Théier", subtitle: "La culture du bien-être" },
+        intro: { kicker: "Tradition", title: "Thé des Virunga", text: "Des plantateurs passionnés pour un thé au caractère affirmé." },
+        features: { kicker: "Produit", title: "Types de Thé", items: ["Thé noir orthodoxe", "Thé vert", "Thé blanc (bourgeons)", "Bio certifié"] },
+        technique: { title: "Savoir-faire", items: ["Cueillette impériale (un bourgeon, deux feuilles)", "Flétrissage naturel", "Roulage artisanal"] },
+        impact: { title: "Impact", stats: [{ value: "150T", label: "Production" }, { value: "450", label: "Femmes employées" }] }
+      },
+      coton_caoutchouc: {
+        hero: { title: "Coton & Caoutchouc", subtitle: "Cultures de rente industrielles" },
+        intro: { kicker: "Industrie", title: "Filières Stratégiques", text: "Relance des cultures industrielles pour l'économie locale." },
+        features: { kicker: "Filières", title: "Double Impact", items: ["Coton fibre longue", "Hévéa clonal", "Transformation locale", "Textile & Industrie"] },
+        technique: { title: "Agro-industrie", items: ["Plantations durables", "Encadrement technique", "Mécanisation adaptée"] },
+        impact: { title: "Impact", stats: [{ value: "1000ha", label: "Surfaces" }, { value: "2000", label: "Emplois directs" }] }
+      },
+      arboriculture: {
+        hero: { title: "Arboriculture", subtitle: "Vergers fruitiers diversifiés" },
+        intro: { kicker: "Diversité", title: "Fruits Tropicaux", text: "Une abondance de saveurs pour la consommation locale et l'export." },
+        features: { kicker: "Variétés", title: "Nos Fruits", items: ["Mangues greffées", "Avocats Hass", "Agrumes", "Fruits de la passion"] },
+        technique: { title: "Pratiques", items: ["Greffage", "Taille de formation", "Lutte intégrée", "Irrigation goutte-à-goutte"] },
+        impact: { title: "Impact", stats: [{ value: "50k", label: "Arbres" }, { value: "Vitamine", label: "Nutrition" }] }
+      },
+      plantes_medicinales: {
+        hero: { title: "Plantes Médicinales", subtitle: "La pharmacopée naturelle" },
+        intro: { kicker: "Santé", title: "Savoir Ancestral & Science", text: "Valorisation des plantes médicinales locales pour la santé communautaire." },
+        features: { kicker: "Espèces", title: "Plantes Clés", items: ["Artemisia (Paludisme)", "Moringa (Nutrition)", "Prunus Africana", "Citronnelle"] },
+        technique: { title: "Transformation", items: ["Séchage solaire", "Exctraction huiles essentielles", "Conditionnement hygiénique"] },
+        impact: { title: "Impact", stats: [{ value: "20", label: "Jardins de santé" }, { value: "10k", label: "Patients aidés" }] }
+      }
+    },
+
 
     environement: {
       hero: { title: "environement", subtitle: "Protéger notre cadre de vie et nos ressources naturelles" },
@@ -773,20 +1007,51 @@ export const fr = {
     },
 
     mecanisation: {
-      hero: { title: "Mécanisation Agricole", subtitle: "Moderniser l'agriculture pour plus de rendement" },
-      intro: { kicker: "Technologie", title: "Modernisation des Outils", text: "Introduction raisonnée de la mécanisation pour alléger le travail." },
+      hero: { title: "Mécanisation Agricole", subtitle: "Moderniser pour une agriculture performante" },
+      intro: {
+        kicker: "Notre Vision",
+        title: "L'Avenir est à la Mécanisation",
+        text: "Nous facilitons l'accès aux équipements modernes pour augmenter la productivité tout en réduisant la pénibilité du travail agricole.",
+        stats: [
+          { value: "200+", label: "Tracteurs déployés" },
+          { value: "1000+", label: "Hectares labourés" },
+          { value: "50+", label: "Ateliers mobiles" },
+          { value: "500+", label: "Opérateurs formés" }
+        ]
+      },
       programs: {
-        kicker: "Équipements",
-        title: "Nos Solutions",
+        kicker: "Nos Programmes",
+        title: "Solutions de Mécanisation",
         items: [
-          { title: "Tracteurs", desc: "Labour et préparation efficace des sols.", impact: "50ha/jour" },
-          { title: "Unités de Transformation", desc: "Valorisation locale des produits.", impact: "+40% valeur" },
-          { title: "Maintenance", desc: "Ateliers de réparation locaux.", impact: "Durabilité" },
-          { title: "Formation", desc: "Techniciens qualifiés.", impact: "Compétence" }
+          {
+            title: "Tracteurs Agricoles",
+            desc: "Location et vente de tracteurs adaptés aux exploitations locales.",
+            impact: "100+ exploitations"
+          },
+          {
+            title: "Unités de Transformation",
+            desc: "Équipements pour la transformation des produits agricoles (moulins, presses).",
+            impact: "50+ unités"
+          },
+          {
+            title: "Maintenance & Réparation",
+            desc: "Service d'entretien et de réparation pour assurer la longévité du matériel.",
+            impact: "200+ interventions"
+          },
+          {
+            title: "Formation des Opérateurs",
+            desc: "Formation à l'utilisation et à la maintenance des équipements agricoles.",
+            impact: "500+ opérateurs"
+          }
         ]
       },
       benefits: { title: "Avantages", items: ["Productivité accrue", "Réduction pénibilité", "Attractivité jeunesse", "Précision"] },
-      cta: { title: "Moderniser", text: "Accédez aux équipements", btn_contact: "Nous contacter", btn_more: "Détails" },
+      cta: {
+        title: "Modernisez Votre Exploitation",
+        text: "Investissez dans la mécanisation pour améliorer votre productivité et votre rentabilité.",
+        btn_contact: "Nous contacter",
+        btn_more: "En savoir plus"
+      },
       // Sub-pages
       tracteur: {
         hero: { title: "Nos Tracteurs", subtitle: "Puissance et fiabilité au service des champs" },
@@ -807,119 +1072,48 @@ export const fr = {
     elevage: {
       hero: {
         title: "Élevage Durable",
-        subtitle: "Développer la production animale pour la sécurité alimentaire et économique."
+        subtitle: "Pratiques respectueuses et rentables"
       },
       intro: {
-        kicker: "Production Animale",
-        title: "Notre Approche de l'Élevage",
-        text: "Nous encourageons des pratiques d'élevage respectueuses du bien-être animal et intégrées à l'agriculture pour un cycle durable."
-      },
-      gros_betail: {
-        hero: {
-          title: "Élevage de Gros Bétail",
-          subtitle: "Développement de l'élevage bovin pour une production durable de viande et de lait"
-        },
-        intro: {
-          kicker: "Élevage Bovin",
-          title: "Notre Programme d'Élevage de Gros Bétail",
-          text: "Nous soutenons les éleveurs locaux avec des techniques modernes d'élevage bovin pour améliorer la productivité tout en préservant les ressources naturelles."
-        },
-        features: [
-          {
-            title: "Sélection Génétique",
-            desc: "Amélioration des races locales par sélection et croisement"
-          },
-          {
-            title: "Santé Animale",
-            desc: "Programme de vaccination et soins vétérinaires réguliers"
-          },
-          {
-            title: "Alimentation",
-            desc: "Conseils en alimentation équilibrée et fourrage de qualité"
-          },
-          {
-            title: "Gestion Durable",
-            desc: "Pratiques d'élevage respectueuses de l'environnement"
-          }
-        ]
-      },
-      pisciculture: {
-        hero: {
-          title: "Pisciculture Durable",
-          subtitle: "Développement de l'élevage de poissons pour une source durable de protéines"
-        },
-        intro: {
-          kicker: "Élevage Aquatique",
-          title: "Notre Programme de Pisciculture",
-          text: "Nous soutenons le développement de la pisciculture familiale et commerciale avec des techniques adaptées aux conditions locales pour améliorer la sécurité alimentaire et générer des revenus."
-        },
-        features: [
-          "Élevage de tilapia et silure",
-          "Construction d'étangs piscicoles",
-          "Alimentation et gestion de la qualité de l'eau",
-          "Transformation et commercialisation"
-        ]
-      },
-      chiens: {
-        hero: {
-          title: "Élevage Canin de Qualité",
-          subtitle: "Élevage de chiens de race et de compagnie pour la protection et la compagnie"
-        },
-        intro: {
-          kicker: "Élevage Canin",
-          title: "Notre Programme d'Élevage Canin",
-          text: "Nous développons un élevage canin de qualité, axé sur le bien-être animal et la préservation des races locales et de compagnie."
-        },
-        features: [
-          "Élevage de chiens de race Berger Belge Malinois",
-          "Chiens de garde et de protection",
-          "Éducation et dressage de base",
-          "Suivi vétérinaire et conseils d'élevage"
-        ]
-      },
-      serpents: {
-        hero: {
-          title: "Élevage de Serpents",
-          subtitle: "Élevage responsable de serpents pour la recherche et la conservation"
-        },
-        intro: {
-          kicker: "Herpétoculture",
-          title: "Notre Programme d'Élevage de Serpents",
-          text: "Nous développons un programme d'élevage de serpents dans un but de recherche scientifique, de conservation des espèces et de production de venin à des fins médicales."
-        },
-        features: [
-          "Élevage d'espèces locales et menacées",
-          "Production de venin pour la recherche médicale",
-          "Programme de conservation des espèces",
-          "Formation en manipulation sécurisée"
-        ]
-      },
-      apiculture: {
-        hero: {
-          title: "Apiculture Durable",
-          subtitle: "Développement de l'apiculture pour la production de miel et la préservation des écosystèmes"
-        },
-        intro: {
-          kicker: "Production de Miel",
-          title: "Notre Programme d'Apiculture",
-          text: "Nous formons et équipons les apiculteurs locaux pour une production de miel de qualité tout en participant à la préservation des abeilles et de la biodiversité."
-        },
-        features: [
-          "Formation aux techniques apicoles modernes",
-          "Fourniture de ruches traditionnelles et modernes",
-          "Transformation et conditionnement du miel",
-          "Commercialisation des produits de la ruche"
+        kicker: "Notre Approche",
+        title: "Élevage Moderne et Responsable",
+        text: "Nous développons des méthodes d'élevage qui allient productivité, bien-être animal et respect de l'environnement pour une sécurité alimentaire durable.",
+        stats: [
+          { value: "5000+", label: "Têtes de bétail" },
+          { value: "15+", label: "Espèces élevées" },
+          { value: "3", label: "Centres vétérinaires" },
+          { value: "100+", label: "Éleveurs formés" }
         ]
       },
       types: {
-        kicker: "Filières",
-        title: "Nos Types d'Élevage",
+        kicker: "Nos Filières",
+        title: "Types d'élevage soutenus",
         items: [
-          { title: "Élevage de chiens", desc: "Élevage de chiens de race et de compagnie.", production: "Animaux de compagnie" },
-          { title: "Élevage de serpents", desc: "Élevage de serpents pour la recherche et la conservation.", production: "Lait & Viande" },
-          { title: "Gros Bétail", desc: "Bovins pour la viande et le lait.", production: "Mixte" },
-          { title: "Apiculture", desc: "Production de miel et pollinisation.", production: "Miel & Cire" },
-          { title: "Pisciculture", desc: "Élevage de poissons en étangs.", production: "Tilapia & Silure" }
+          {
+            title: "Élevage Canin",
+            desc: "Élevage professionnel de chiens de race et de compagnie pour la sécurité et l'assistance.",
+            production: "Animaux de compagnie & Sécurité"
+          },
+          {
+            title: "Élevage de Serpents",
+            desc: "Programme de recherche et conservation des espèces de serpents locaux.",
+            production: "Recherche & Conservation"
+          },
+          {
+            title: "Gros Bétail",
+            desc: "Élevage bovin moderne axé sur la qualité de la viande et la production laitière.",
+            production: "Lait & Viande"
+          },
+          {
+            title: "Apiculture",
+            desc: "Production de miel biologique et préservation des abeilles locales.",
+            production: "Miel & Produits dérivés"
+          },
+          {
+            title: "Pisciculture",
+            desc: "Production durable de poissons d'eau douce dans des bassins aménagés.",
+            production: "Poisson frais & Alevins"
+          }
         ]
       },
       Actions: {
@@ -952,9 +1146,92 @@ export const fr = {
         ]
       },
       cta: {
-        title: "Démarrez votre élevage",
-        text: "Nous vous accompagnons de l'installation à la commercialisation.",
-        btn_contact: "Nous contacter"
+        title: "Rejoignez Notre Programme",
+        text: "Développez votre activité d'élevage avec notre accompagnement personnalisé",
+        btn_join: "Devenir éleveur partenaire",
+        btn_partner: "Devenir partenaire"
+      },
+      // Sub-pages
+      gros_betail: {
+        hero: { title: "Élevage de Gros Bétail", subtitle: "Développement de la filière bovine en RDC" },
+        intro: {
+          kicker: "Notre Expertise Bovine",
+          title: "Un Élevage Moderne et Productif",
+          text: "Nous accompagnons les éleveurs dans l'amélioration génétique de leur cheptel, la gestion des pâturages et l'optimisation de la production laitière et carnée.",
+          highlights: ["Sélection de races adaptées au climat local", "Techniques d'élevage durables", "Accès aux soins vétérinaires", "Commercialisation des produits"]
+        },
+        features: [
+          { title: "Amélioration Génétique", desc: "Sélection et reproduction de races bovines à haut potentiel productif." },
+          { title: "Santé Animale", desc: "Programme complet de vaccination et soins vétérinaires préventifs." },
+          { title: "Alimentation Équilibrée", desc: "Formulation de rations alimentaires adaptées aux besoins nutritionnels." },
+          { title: "Gestion des Pâturages", desc: "Techniques de rotation et de régénération des pâturages." }
+        ],
+        stats: [
+          { value: "2x", label: "Augmentation de la production laitière" },
+          { value: "-30%", label: "Réduction de la mortalité animale" },
+          { value: "50+", label: "Éleveurs formés" },
+          { value: "100%", label: "Animaux vaccinés" }
+        ]
+      },
+      apiculture: {
+        hero: { title: "Apiculture Durable", subtitle: "L'or liquide de nos forêts" },
+        intro: {
+          kicker: "Notre Approche Apicole",
+          title: "Protection des Abeilles, Richesse des Communautés",
+          text: "Notre programme d'apiculture durable allie préservation de la biodiversité et création de revenus pour les communautés locales.",
+          highlights: ["Ruches traditionnelles améliorées", "Méthodes de récolte durables", "Transformation des produits de la ruche", "Marchés locaux et à l'export"]
+        },
+        features: [
+          { title: "Ruches Modernes", desc: "Conception de ruches adaptées aux conditions locales et respectueuses des abeilles." },
+          { title: "Miel Bio Certifié", desc: "Production de miel 100% naturel sans produits chimiques." },
+          { title: "Cire d'Abeille", desc: "Valorisation de la cire pour des produits cosmétiques et artisanaux." },
+          { title: "Pollinisation", desc: "Contribution à la préservation des écosystèmes et à l'augmentation des rendements agricoles." }
+        ]
+      },
+      pisciculture: {
+        hero: { title: "Pisciculture Durable", subtitle: "Élevage de poissons responsable" },
+        intro: {
+          kicker: "Notre Expertise Aquacole",
+          title: "Une Pêche Durable pour Demain",
+          text: "Développement de l'aquaculture continentale avec des méthodes respectueuses de l'environnement et des ressources en eau.",
+          highlights: ["Élevage de Tilapia et Clarias", "Systèmes en étangs et bassins", "Alimentation optimisée", "Gestion durable de l'eau"]
+        },
+        features: [
+          { title: "Alevins de Qualité", desc: "Sélection rigoureuse des géniteurs et reproduction contrôlée." },
+          { title: "Alimentation Optimisée", desc: "Riches en protéines pour une croissance rapide et saine." },
+          { title: "Gestion de l'Eau", desc: "Systèmes de filtration et de renouvellement pour une eau de qualité." },
+          { title: "Formation Continue", desc: "Appui technique aux pisciculteurs pour une production optimale." }
+        ]
+      },
+      chiens: {
+        hero: { title: "Élevage Canin Professionnel", subtitle: "Sécurité, Compagnie et Sauvetage" },
+        intro: {
+          kicker: "Notre Engagement Canin",
+          title: "Des Chiens Éduqués pour Tous les Besoins",
+          text: "Élevage de chiens de race avec un accent particulier sur le bien-être animal et les aptitudes spécifiques à chaque race.",
+          highlights: ["Bergers Allemands et Belges", "Chiens de garde et de défense", "Chiens d'assistance", "Animaux de compagnie"]
+        },
+        features: [
+          { title: "Élevage Éthique", desc: "Conditions de vie optimales et respect du bien-être animal." },
+          { title: "Pédigrée Certifié", desc: "Animaux inscrits au LOF avec généalogie contrôlée." },
+          { title: "Éducation Précoce", desc: "Socialisation et bases d'éducation dès le plus jeune âge." },
+          { title: "Suivi Vétérinaire", desc: "Vaccins à jour et bilan de santé complet." }
+        ]
+      },
+      serpents: {
+        hero: { title: "Centre d'Élevage de Serpents", subtitle: "Recherche et Production d'Antivenins" },
+        intro: {
+          kicker: "Notre Mission Scientifique",
+          title: "Préservation et Recherche sur les Serpents",
+          text: "Notre centre spécialisé contribue à la recherche sur les venins et à la production de sérums antivenimeux pour sauver des vies.",
+          highlights: ["Élevage contrôlé d'espèces venimeuses", "Extraction sécurisée de venin", "Recherche médicale", "Programmes de sensibilisation"]
+        },
+        features: [
+          { title: "Extraction Sécurisée", desc: "Protocoles stricts pour la manipulation et la traçabilité." },
+          { title: "Recherche Scientifique", desc: "Étude des propriétés thérapeutiques des venins." },
+          { title: "Conservation", desc: "Programmes de protection des espèces menacées." },
+          { title: "Formation", desc: "Ateliers sur la prévention et les premiers secours en cas de morsure." }
+        ]
       }
     },
     communautaire: {
@@ -1083,259 +1360,48 @@ export const fr = {
         features: ["Briques stabilisées", "Toitures durables", "Assainissement", "Plans d'urbanisme"]
       }
     },
-    agricultures: {
-      cacao: {
-        hero: { title: "Cacao (Criollo)", subtitle: "L'Or Brun de la RDC" },
-        intro: { kicker: "Origine", title: "Le Cacao Criollo", text: "Une variété rare et prisée pour ses arômes fins et délicats." },
-        features: { kicker: "Caractéristiques", title: "Pourquoi le Criollo ?", items: ["Arômes fruités", "Fèves blanches", "Fermentation courte", "Grande valeur"] },
-        technique: { title: "Technique Culturale", items: ["Sous ombrage forestier", "Association avec bananiers", "Récolte manuelle sélective"] },
-        impact: { title: "Impact", stats: [{ value: "500T", label: "Production" }, { value: "1200", label: "Producteurs" }] }
-      },
-      cafe: {
-        hero: { title: "Café Arabica", subtitle: "L'excellence des hautes terres" },
-        intro: { kicker: "Terroir", title: "Café de Montagne", text: "Cultivé en altitude pour une complexité aromatique unique." },
-        features: { kicker: "Qualité", title: "Notre Café", items: ["Altitude > 1200m", "Traitement lavé", "Séchage sur lits africains", "Score SCA 85+"] },
-        technique: { title: "Processus", items: ["Cueillette fine", "Dépulpage le jour même", "Fermentation contrôlée"] },
-        impact: { title: "Impact", stats: [{ value: "300T", label: "Export" }, { value: "800", label: "Familles" }] }
-      },
-      the: {
-        hero: { title: "Théier", subtitle: "La culture du bien-être" },
-        intro: { kicker: "Tradition", title: "Thé des Virunga", text: "Des plantateurs passionnés pour un thé au caractère affirmé." },
-        features: { kicker: "Produit", title: "Types de Thé", items: ["Thé noir orthodoxe", "Thé vert", "Thé blanc (bourgeons)", "Bio certifié"] },
-        technique: { title: "Savoir-faire", items: ["Cueillette impériale (un bourgeon, deux feuilles)", "Flétrissage naturel", "Roulage artisanal"] },
-        impact: { title: "Impact", stats: [{ value: "150T", label: "Production" }, { value: "450", label: "Femmes employées" }] }
-      },
-      coton_caoutchouc: {
-        hero: { title: "Coton & Caoutchouc", subtitle: "Cultures de rente industrielles" },
-        intro: { kicker: "Industrie", title: "Filières Stratégiques", text: "Relance des cultures industrielles pour l'économie locale." },
-        features: { kicker: "Filières", title: "Double Impact", items: ["Coton fibre longue", "Hévéa clonal", "Transformation locale", "Textile & Industrie"] },
-        technique: { title: "Agro-industrie", items: ["Plantations durables", "Encadrement technique", "Mécanisation adaptée"] },
-        impact: { title: "Impact", stats: [{ value: "1000ha", label: "Surfaces" }, { value: "2000", label: "Emplois directs" }] }
-      },
-      arboriculture: {
-        hero: { title: "Arboriculture", subtitle: "Vergers fruitiers diversifiés" },
-        intro: { kicker: "Diversité", title: "Fruits Tropicaux", text: "Une abondance de saveurs pour la consommation locale et l'export." },
-        features: { kicker: "Variétés", title: "Nos Fruits", items: ["Mangues greffées", "Avocats Hass", "Agrumes", "Fruits de la passion"] },
-        technique: { title: "Pratiques", items: ["Greffage", "Taille de formation", "Lutte intégrée", "Irrigation goutte-à-goutte"] },
-        impact: { title: "Impact", stats: [{ value: "50k", label: "Arbres" }, { value: "Vitamine", label: "Nutrition" }] }
-      },
-      plantes_medicinales: {
-        hero: { title: "Plantes Médicinales", subtitle: "La pharmacopée naturelle" },
-        intro: { kicker: "Santé", title: "Savoir Ancestral & Science", text: "Valorisation des plantes médicinales locales pour la santé communautaire." },
-        features: { kicker: "Espèces", title: "Plantes Clés", items: ["Artemisia (Paludisme)", "Moringa (Nutrition)", "Prunus Africana", "Citronnelle"] },
-        technique: { title: "Transformation", items: ["Séchage solaire", "Exctraction huiles essentielles", "Conditionnement hygiénique"] },
-        impact: { title: "Impact", stats: [{ value: "20", label: "Jardins de santé" }, { value: "10k", label: "Patients aidés" }] }
-      }
+
+  },
+  employment: {
+    hero: {
+      title: "Recrutement & Stages",
+      subtitle: "Rejoignez une équipe dynamique et engagée pour la protection de l'environnement."
     },
-    elevages: {
-      hero: {
-        title: "Élevage Durable",
-        subtitle: "Pratiques respectueuses et rentables"
-      },
-      intro: {
-        kicker: "Notre Approche",
-        title: "Élevage Moderne et Responsable",
-        text: "Nous développons des méthodes d'élevage qui allient productivité, bien-être animal et respect de l'environnement pour une sécurité alimentaire durable.",
-        stats: [
-          { value: "5000+", label: "Têtes de bétail" },
-          { value: "15+", label: "Espèces élevées" },
-          { value: "3", label: "Centres vétérinaires" },
-          { value: "100+", label: "Éleveurs formés" }
-        ]
-      },
-      types: {
-        kicker: "Nos Filières",
-        title: "Types d'élevage soutenus",
-        items: [
-          {
-            title: "Élevage Canin",
-            desc: "Élevage professionnel de chiens de race et de compagnie pour la sécurité et l'assistance.",
-            production: "Animaux de compagnie & Sécurité"
-          },
-          {
-            title: "Gros Bétail",
-            desc: "Élevage bovin moderne axé sur la qualité de la viande et la production laitière.",
-            production: "Lait & Viande"
-          },
-          {
-            title: "Pisciculture",
-            desc: "Production durable de poissons d'eau douce dans des bassins aménagés.",
-            production: "Poisson frais & Alevins"
-          },
-          {
-            title: "Apiculture",
-            desc: "Production de miel biologique et préservation des abeilles locales.",
-            production: "Miel & Produits dérivés"
-          },
-          {
-            title: "Élevage de Serpents",
-            desc: "Programme de recherche et conservation des espèces de serpents locaux.",
-            production: "Recherche & Conservation"
-          }
-        ]
-      },
-      Actions: {
-        title: "Nos Actions Clés",
-        items: [
-          "Programmes de vaccination",
-          "Accès aux intrants de qualité",
-          "Formation des éleveurs",
-          "Accès aux marchés"
-        ]
-      },
-      story: {
-        title: "Nos Réussites",
-        text: "La coopérative laitière de Masisi a doublé sa production en 2 ans grâce à nos programmes de formation et d'accompagnement technique.",
-        testimonial: {
-          text: "Grâce aux formations reçues, j'ai pu améliorer la productivité de mon élevage et accéder à de nouveaux marchés.",
-          author: "Jean K., Éleveur de bétail à Masisi"
-        }
-      },
-      cta: {
-        title: "Rejoignez Notre Programme",
-        text: "Développez votre activité d'élevage avec notre accompagnement personnalisé",
-        btn_join: "Devenir éleveur partenaire",
-        btn_partner: "Devenir partenaire"
-      },
-
-      // Pages spécifiques
-      gros_betail: {
-        hero: {
-          title: "Élevage de Gros Bétail",
-          subtitle: "Développement de la filière bovine en RDC"
-        },
-        intro: {
-          kicker: "Notre Expertise Bovine",
-          title: "Un Élevage Moderne et Productif",
-          text: "Nous accompagnons les éleveurs dans l'amélioration génétique de leur cheptel, la gestion des pâturages et l'optimisation de la production laitière et carnée.",
-          highlights: [
-            "Sélection de races adaptées au climat local",
-            "Techniques d'élevage durables",
-            "Accès aux soins vétérinaires",
-            "Commercialisation des produits"
-          ]
-        },
-        features: [
-          {
-            title: "Amélioration Génétique",
-            desc: "Sélection et reproduction de races bovines à haut potentiel productif."
-          },
-          {
-            title: "Santé Animale",
-            desc: "Programme complet de vaccination et soins vétérinaires préventifs."
-          },
-          {
-            title: "Alimentation Équilibrée",
-            desc: "Formulation de rations alimentaires adaptées aux besoins nutritionnels."
-          },
-          {
-            title: "Gestion des Pâturages",
-            desc: "Techniques de rotation et de régénération des pâturages."
-          }
-        ],
-        stats: [
-          { value: "2x", label: "Augmentation de la production laitière" },
-          { value: "-30%", label: "Réduction de la mortalité animale" },
-          { value: "50+", label: "Éleveurs formés" },
-          { value: "100%", label: "Animaux vaccinés" }
-        ]
-      },
-
-      apiculture: {
-        hero: {
-          title: "Apiculture Durable",
-          subtitle: "L'or liquide de nos forêts"
-        },
-        intro: {
-          kicker: "Notre Approche Apicole",
-          title: "Protection des Abeilles, Richesse des Communautés",
-          text: "Notre programme d'apiculture durable allie préservation de la biodiversité et création de revenus pour les communautés locales.",
-          highlights: [
-            "Ruches traditionnelles améliorées",
-            "Méthodes de récolte durables",
-            "Transformation des produits de la ruche",
-            "Marchés locaux et à l'export"
-          ]
-        },
-        features: [
-          { title: "Ruches Modernes", desc: "Conception de ruches adaptées aux conditions locales et respectueuses des abeilles." },
-          { title: "Miel Bio Certifié", desc: "Production de miel 100% naturel sans produits chimiques." },
-          { title: "Cire d'Abeille", desc: "Valorisation de la cire pour des produits cosmétiques et artisanaux." },
-          { title: "Pollinisation", desc: "Contribution à la préservation des écosystèmes et à l'augmentation des rendements agricoles." }
-        ]
-      },
-
-      pisciculture: {
-        hero: {
-          title: "Pisciculture Durable",
-          subtitle: "Élevage de poissons responsable"
-        },
-        intro: {
-          kicker: "Notre Expertise Aquacole",
-          title: "Une Pêche Durable pour Demain",
-          text: "Développement de l'aquaculture continentale avec des méthodes respectueuses de l'environnement et des ressources en eau.",
-          highlights: [
-            "Élevage de Tilapia et Clarias",
-            "Systèmes en étangs et bassins",
-            "Alimentation optimisée",
-            "Gestion durable de l'eau"
-          ]
-        },
-        features: [
-          { title: "Alevins de Qualité", desc: "Sélection rigoureuse des géniteurs et reproduction contrôlée." },
-          { title: "Alimentation Optimisée", desc: "Riches en protéines pour une croissance rapide et saine." },
-          { title: "Gestion de l'Eau", desc: "Systèmes de filtration et de renouvellement pour une eau de qualité." },
-          { title: "Formation Continue", desc: "Appui technique aux pisciculteurs pour une production optimale." }
-        ]
-      },
-
-      chiens: {
-        hero: {
-          title: "Élevage Canin Professionnel",
-          subtitle: "Sécurité, Compagnie et Sauvetage"
-        },
-        intro: {
-          kicker: "Notre Engagement Canin",
-          title: "Des Chiens Éduqués pour Tous les Besoins",
-          text: "Élevage de chiens de race avec un accent particulier sur le bien-être animal et les aptitudes spécifiques à chaque race.",
-          highlights: [
-            "Bergers Allemands et Belges",
-            "Chiens de garde et de défense",
-            "Chiens d'assistance",
-            "Animaux de compagnie"
-          ]
-        },
-        features: [
-          { title: "Élevage Éthique", desc: "Conditions de vie optimales et respect du bien-être animal." },
-          { title: "Pédigrée Certifié", desc: "Animaux inscrits au LOF avec généalogie contrôlée." },
-          { title: "Éducation Précoce", desc: "Socialisation et bases d'éducation dès le plus jeune âge." },
-          { title: "Suivi Vétérinaire", desc: "Vaccins à jour et bilan de santé complet." }
-        ]
-      },
-
-      serpents: {
-        hero: {
-          title: "Centre d'Élevage de Serpents",
-          subtitle: "Recherche et Production d'Antivenins"
-        },
-        intro: {
-          kicker: "Notre Mission Scientifique",
-          title: "Préservation et Recherche sur les Serpents",
-          text: "Notre centre spécialisé contribue à la recherche sur les venins et à la production de sérums antivenimeux pour sauver des vies.",
-          highlights: [
-            "Élevage contrôlé d'espèces venimeuses",
-            "Extraction sécurisée de venin",
-            "Recherche médicale",
-            "Programmes de sensibilisation"
-          ]
-        },
-        features: [
-          { title: "Extraction Sécurisée", desc: "Protocoles stricts pour la manipulation et la traçabilité." },
-          { title: "Recherche Scientifique", desc: "Étude des propriétés thérapeutiques des venins." },
-          { title: "Conservation", desc: "Programmes de protection des espèces menacées." },
-          { title: "Formation", desc: "Ateliers sur la prévention et les premiers secours en cas de morsure." }
-        ]
-      }
+    summary: {
+      title: "Travailler chez Better Life",
+      text: "Nous recherchons des talents passionnés par le développement durable, l'agroécologie et la conservation de la biodiversité. Que vous soyez un expert confirmé ou un étudiant en quête d'apprentissage, votre contribution compte pour bâtir un avenir plus vert."
+    },
+    jobs: {
+      title: "Offres d'Emploi",
+      description: "Vous souhaitez mettre votre expertise au service d'une cause noble ? Découvrez nos opportunités de carrière.",
+      btn: "Formulaire d'emploi"
+    },
+    internships: {
+      title: "Stages & Apprentissage",
+      description: "Étudiant ou jeune diplômé ? Venez acquérir une expérience pratique au cœur de nos projets de terrain.",
+      btn: "Formulaire de stage"
+    }
+  },
+  donation: {
+    hero: {
+      title: "Faites un Don",
+      subtitle: "Soutenez nos actions pour un avenir durable."
+    },
+    kicker: "Soutien",
+    title: "Votre Aide est Précieuse",
+    description: "Chaque contribution nous permet d'étendre nos programmes et d'avoir un impact réel sur le terrain.",
+    support: {
+      title: "Pourquoi nous soutenir ?",
+      text: "Vos dons financent directement la reforestation, l'agriculture durable et l'aide aux communautés."
+    },
+    methods: {
+      title: "Moyens de paiement",
+      text: "Nous acceptons les virements bancaires, cartes de crédit et mobile money."
+    },
+    cta: {
+      title: "Agissez maintenant",
+      text: "Contactez-nous pour finaliser votre don ou pour toute question.",
+      btn: "Contacter"
     }
   }
 };

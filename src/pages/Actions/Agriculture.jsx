@@ -18,6 +18,7 @@ import imgThe from "./agriculture/images/hero_the.png";
 import imgCoton from "./agriculture/images/hero_coton_hevea.png";
 import imgArbo from "./agriculture/images/hero_arboriculture.png";
 import imgPlantes from "./agriculture/images/hero_plantes_medicinales.png";
+import hero_img from "../../images/hero_agriculture.png";
 
 export function ActionsAgriculture() {
   const { t } = useLanguage();
@@ -33,13 +34,19 @@ export function ActionsAgriculture() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <div className="relative isolate overflow-hidden bg-gradient-to-br from-[#63b32e] to-[#0f70b7] py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="relative isolate overflow-hidden bg-zinc-900 py-32 sm:py-48">
+        <img
+          src={hero_img}
+          alt="Agriculture"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+            <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl drop-shadow-2xl">
               {t("Actions.agriculture.hero.title")}
             </h1>
-            <p className="mt-6 text-lg leading-8 text-white/90">
+            <p className="mt-6 text-xl leading-8 text-white font-medium drop-shadow-xl">
               {t("Actions.agriculture.hero.subtitle")}
             </p>
           </div>
@@ -96,50 +103,48 @@ export function ActionsAgriculture() {
               title={t("Actions.agriculture.programs.title")}
             />
           </div>
-          <div className="grid gap-8 lg:grid-cols-3">
-            <div className="grid gap-8 md:w-[1060px] md:grid-cols-2 lg:grid-cols-3">
-              {t("Actions.agriculture.programs.items").map((program, index) => {
-                const images = [imgCacao, imgCafe, imgThe, imgCoton, imgArbo, imgPlantes];
-                const links = [
-                  "/Actions/agriculture/cacao",
-                  "/Actions/agriculture/cafe",
-                  "/Actions/agriculture/theier",
-                  "/Actions/agriculture/coton-caoutchouc",
-                  "/Actions/agriculture/arboriculture",
-                  "/Actions/agriculture/plantes-medicinales"
-                ];
-                const img = images[index] || imgCacao;
-                const link = links[index] || "#";
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {t("Actions.agriculture.programs.items").map((program, index) => {
+              const images = [imgCacao, imgCafe, imgThe, imgCoton, imgArbo, imgPlantes];
+              const links = [
+                "/Actions/agriculture/cacao",
+                "/Actions/agriculture/cafe",
+                "/Actions/agriculture/theier",
+                "/Actions/agriculture/coton-caoutchouc",
+                "/Actions/agriculture/arboriculture",
+                "/Actions/agriculture/plantes-medicinales"
+              ];
+              const img = images[index] || imgCacao;
+              const link = links[index] || "#";
 
-                return (
-                  <Link
-                    to={link}
-                    key={index}
-                    className="group relative flex flex-col overflow-hidden rounded-2xl  bg-white shadow-lg ring-1 ring-slate-900/5 transition hover:shadow-2xl hover:scale-[1.02]"
-                  >
-                    <div className="h-48 w-full overflow-hidden">
-                      <img src={img} alt={program.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-110" />
+              return (
+                <Link
+                  to={link}
+                  key={index}
+                  className="group relative flex flex-col overflow-hidden rounded-2xl  bg-white shadow-lg ring-1 ring-slate-900/5 transition hover:shadow-2xl hover:scale-[1.02]"
+                >
+                  <div className="h-48 w-full overflow-hidden">
+                    <img src={img} alt={program.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-110" />
+                  </div>
+                  <div className="p-8 flex-1 flex flex-col">
+                    <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#63b32e] transition">
+                      {program.title}
+                    </h3>
+                    <p className="text-slate-600 mb-6 flex-1">{program.desc}</p>
+                    <div className="space-y-2">
+                      {program.benefits.map((benefit, i) => (
+                        <div key={i} className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 rounded-full bg-[#63b32e]" />
+                          <span className="text-sm text-slate-700">
+                            {benefit}
+                          </span>
+                        </div>
+                      ))}
                     </div>
-                    <div className="p-8 flex-1 flex flex-col">
-                      <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#63b32e] transition">
-                        {program.title}
-                      </h3>
-                      <p className="text-slate-600 mb-6 flex-1">{program.desc}</p>
-                      <div className="space-y-2">
-                        {program.benefits.map((benefit, i) => (
-                          <div key={i} className="flex items-center gap-2">
-                            <div className="w-1.5 h-1.5 rounded-full bg-[#63b32e]" />
-                            <span className="text-sm text-slate-700">
-                              {benefit}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
 

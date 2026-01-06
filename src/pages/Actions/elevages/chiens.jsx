@@ -3,27 +3,26 @@ import { Link } from "react-router-dom";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { FaDog } from "react-icons/fa";
 import { useLanguage } from "../../../contexts/LanguageContext";
-
-// Image: Guard Dog (Malinois) - Unsplash
-const imgHero = "https://images.unsplash.com/photo-1586671267731-da2cf3ceeb80?auto=format&fit=crop&q=80&w=2089";
+import hero_img from "./images/hero_chiens.jpg";
 
 export default function Chiens() {
     const { t } = useLanguage();
 
     return (
         <div className="bg-white">
-            <div className="relative isolate overflow-hidden bg-zinc-900 py-24 sm:py-32">
+            <div className="relative isolate overflow-hidden bg-zinc-900 py-32 sm:py-48">
                 <img
-                    src={imgHero}
+                    src={hero_img}
                     alt="Elevage canin"
-                    className="absolute inset-0 -z-10 h-full w-full object-cover object-[center_100%] brightness-[0.4]"
+                    className="absolute inset-0 h-full w-full object-cover object-[center_100%]"
                 />
-                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                <div className="absolute inset-0 bg-black/50" />
+                <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="mx-auto max-w-2xl text-center">
-                        <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+                        <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl drop-shadow-2xl">
                             {t("Actions.elevage.chiens.hero.title")}
                         </h1>
-                        <p className="mt-6 text-lg leading-8 text-zinc-300">
+                        <p className="mt-6 text-xl leading-8 text-white font-medium drop-shadow-xl">
                             {t("Actions.elevage.chiens.hero.subtitle")}
                         </p>
                     </div>
@@ -44,7 +43,7 @@ export default function Chiens() {
                     {t("Actions.elevage.chiens.features").map((item, idx) => (
                         <div key={idx} className="p-6 bg-zinc-50 rounded-xl border border-zinc-200 hover:shadow-md transition">
                             <FaDog className="text-4xl text-zinc-600 mb-4 mx-auto" />
-                            <p className="font-semibold text-zinc-800 text-center">{item}</p>
+                            <p className="text-zinc-600 text-center text-sm">{item.desc}</p>
                         </div>
                     ))}
                 </div>

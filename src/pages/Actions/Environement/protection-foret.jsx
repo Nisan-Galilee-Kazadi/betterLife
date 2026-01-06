@@ -4,25 +4,26 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { FaTree, FaShieldAlt, FaBinoculars } from "react-icons/fa";
 import { useLanguage } from "../../../contexts/LanguageContext";
 
-const imgHero = "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&q=80&w=2074";
+import hero_img from "./images/hero_protection_foret.jpg";
 
 export default function ProtectionForet() {
     const { t } = useLanguage();
 
     return (
         <div className="bg-white">
-            <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+            <div className="relative isolate overflow-hidden bg-zinc-900 py-32 sm:py-48">
                 <img
-                    src={imgHero}
+                    src={hero_img}
                     alt="Forêt tropicale"
-                    className="absolute inset-0 -z-10 h-full w-full object-cover brightness-[0.4]"
+                    className="absolute inset-0 h-full w-full object-cover object-center"
                 />
-                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                <div className="absolute inset-0 bg-black/50" />
+                <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="mx-auto max-w-2xl text-center">
-                        <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+                        <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl drop-shadow-2xl">
                             {t("Actions.environement.protection_foret.hero.title")}
                         </h1>
-                        <p className="mt-6 text-lg leading-8 text-green-200">
+                        <p className="mt-6 text-xl leading-8 text-white font-medium drop-shadow-xl">
                             {t("Actions.environement.protection_foret.hero.subtitle")}
                         </p>
                     </div>

@@ -3,27 +3,27 @@ import { Link } from "react-router-dom";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { FaFish } from "react-icons/fa";
 import { useLanguage } from "../../../contexts/LanguageContext";
+import hero_img from "./images/hero_pisciculture.jpg";
 
-// Image: Fish farming/Water - Unsplash
-const imgHero = "https://images.unsplash.com/photo-1549419137-ed002b859341?auto=format&fit=crop&q=80&w=2070";
 
 export default function Pisciculture() {
     const { t } = useLanguage();
 
     return (
         <div className="bg-white">
-            <div className="relative isolate overflow-hidden bg-blue-900 py-24 sm:py-32">
+            <div className="relative isolate overflow-hidden bg-zinc-900 py-32 sm:py-48">
                 <img
-                    src={imgHero}
+                    src={hero_img}
                     alt="Pisciculture"
-                    className="absolute inset-0 -z-10 h-full w-full object-cover brightness-[0.4]"
+                    className="absolute inset-0 h-full w-full object-cover object-center"
                 />
-                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                <div className="absolute inset-0 bg-black/50" />
+                <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="mx-auto max-w-2xl text-center">
-                        <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+                        <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl drop-shadow-2xl">
                             {t("Actions.elevage.pisciculture.hero.title")}
                         </h1>
-                        <p className="mt-6 text-lg leading-8 text-cyan-100">
+                        <p className="mt-6 text-xl leading-8 text-white font-medium drop-shadow-xl">
                             {t("Actions.elevage.pisciculture.hero.subtitle")}
                         </p>
                     </div>
@@ -44,7 +44,7 @@ export default function Pisciculture() {
                     {t("Actions.elevage.pisciculture.features").map((item, idx) => (
                         <div key={idx} className="p-6 bg-cyan-50 rounded-xl border border-cyan-200 hover:shadow-md transition">
                             <FaFish className="text-4xl text-cyan-600 mb-4 mx-auto" />
-                            <p className="font-semibold text-slate-800 text-center">{item}</p>
+                            <p className="text-slate-600 text-center text-sm">{item.desc}</p>
                         </div>
                     ))}
                 </div>

@@ -4,25 +4,26 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { FaGraduationCap, FaBookReader, FaSchool } from "react-icons/fa";
 import { useLanguage } from "../../../contexts/LanguageContext";
 
-const imgHero = "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=2070";
+import hero_img from "./images/hero_education.jpg";
 
 export default function Education() {
     const { t } = useLanguage();
 
     return (
         <div className="bg-white">
-            <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+            <div className="relative isolate overflow-hidden bg-zinc-900 py-32 sm:py-48">
                 <img
-                    src={imgHero}
+                    src={hero_img}
                     alt="Éducation"
-                    className="absolute inset-0 -z-10 h-full w-full object-cover brightness-[0.4]"
+                    className="absolute inset-0 h-full w-full object-cover object-center"
                 />
-                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                <div className="absolute inset-0 bg-black/50" />
+                <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="mx-auto max-w-2xl text-center">
-                        <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+                        <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl drop-shadow-2xl">
                             {t("Actions.communautaire.education.hero.title")}
                         </h1>
-                        <p className="mt-6 text-lg leading-8 text-sky-100">
+                        <p className="mt-6 text-xl leading-8 text-white font-medium drop-shadow-xl">
                             {t("Actions.communautaire.education.hero.subtitle")}
                         </p>
                     </div>

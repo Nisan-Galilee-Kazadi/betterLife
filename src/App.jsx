@@ -7,6 +7,9 @@ import { Blog } from "./pages/Blog";
 import { Contact } from "./pages/Contact";
 import { Donation } from "./pages/Donation";
 import { PlaceholderPage } from "./pages/PlaceholderPage";
+import { Conditions } from "./pages/Conditions";
+import { EmploiStage } from "./pages/EmploiStage";
+import { CareerForm } from "./pages/CareerForm";
 import { LanguageProvider } from "./contexts/LanguageContext";
 
 // About Pages
@@ -125,6 +128,10 @@ function App() {
           <Route path="/blog/gallery" element={<BlogGallery />} />
 
           <Route path="/rejoindre" element={<Rejoindre />} />
+          <Route path="/emplois-stages" element={<EmploiStage />} />
+          <Route path="/conditions" element={<Conditions />} />
+          <Route path="/emplois-stages/emploi" element={<CareerForm />} />
+          <Route path="/emplois-stages/stage" element={<CareerForm />} />
           <Route path="/donation" element={<Donation />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

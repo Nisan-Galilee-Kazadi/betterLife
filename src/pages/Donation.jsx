@@ -1,4 +1,5 @@
 import React from "react";
+import hero_clean from "../images/les-mains-serrees-mettant-des-pieces-dans-la-boite-a-dons.jpg";
 import { SectionTitle } from "../components/SectionTitle";
 import { useLanguage } from "../contexts/LanguageContext";
 
@@ -6,13 +7,19 @@ export function Donation() {
   const { t } = useLanguage();
   return (
     <div className="bg-white">
-      <div className="relative isolate overflow-hidden bg-gradient-to-br from-[#63b32e] to-[#0f70b7] py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="relative isolate overflow-hidden bg-zinc-900 py-32 sm:py-48">
+        <img
+          src={hero_clean}
+          alt="Donate to NGO"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+            <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl drop-shadow-2xl">
               {t("donation.hero.title")}
             </h1>
-            <p className="mt-6 text-lg leading-8 text-white/90">
+            <p className="mt-6 text-xl leading-8 text-white font-medium drop-shadow-xl">
               {t("donation.hero.subtitle")}
             </p>
           </div>

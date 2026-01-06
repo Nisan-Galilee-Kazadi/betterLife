@@ -1,6 +1,7 @@
 import React from 'react'
 import { SectionTitle } from '../components/SectionTitle'
 import { useLanguage } from '../contexts/LanguageContext'
+import blog_hero from '../images/planted-tree-farm.jpg'
 
 const blogItems = [
     { title: 'Programme cacao durable 2025', tag: 'Formation', date: 'Jan 2025' },
@@ -10,11 +11,32 @@ const blogItems = [
 
 export function Blog() {
     const { t } = useLanguage()
-    
+
     return (
         <div className="bg-white">
+            {/* Hero Section */}
+            <div className="relative isolate overflow-hidden bg-slate-900 py-24 sm:py-32 mb-12">
+                <img
+                    src={blog_hero}
+                    alt="NGO Blog & News"
+                    className="absolute inset-0 -z-10 h-full w-full object-cover object-center opacity-60"
+                />
+                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                    <div className="mx-auto max-w-2xl text-center">
+                        <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl drop-shadow-lg">
+                            {t('blog.index.hero.title')}
+                        </h1>
+                        <p className="mt-6 text-lg leading-8 text-white font-medium drop-shadow-md">
+                            {t('blog.index.hero.subtitle') || "Restez informé de nos actions et actualités sur le terrain."}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
             <div className="mx-auto max-w-6xl px-6 py-6 sm:py-10">
-                <SectionTitle kicker={t('blog.index.hero.kicker')} title={t('blog.index.hero.title')} />
+                <div className="text-center">
+                    <SectionTitle kicker={t('blog.index.hero.kicker')} title={t('blog.index.hero.title')} />
+                </div>
                 <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {blogItems.map((item) => (
                         <article key={item.title} className="rounded-xl border border-slate-200 bg-slate-50 p-5 shadow-sm">
