@@ -211,26 +211,7 @@ export const fr = {
       success: "Votre candidature a été envoyée avec succès ! Nous vous contacterons bientôt."
     }
   },
-  employment: {
-    hero: {
-      title: "Emplois & Stages",
-      subtitle: "Rejoignez notre équipe et contribuez à un avenir durable."
-    },
-    summary: {
-      title: "Nos Opportunités de Carrière",
-      text: "Chez Better Life, nous sommes constamment à la recherche de personnes passionnées qui souhaitent faire une différence dans la protection de l'environnement et le développement durable en RDC."
-    },
-    jobs: {
-      title: "Carrières Professionnelles",
-      description: "Découvrez nos offres d'emploi actuelles et rejoignez une équipe dynamique d'experts dédiés à l'environnement.",
-      btn: "Postuler pour un Emploi"
-    },
-    internships: {
-      title: "Stages Étudiants",
-      description: "Développez vos compétences et gagnez de l'expérience sur le terrain en contribuant à nos divers projets.",
-      btn: "Postuler pour un Stage"
-    }
-  },
+
   conditions: {
     title: "Conditions Générales d'Adhésion",
     backToForm: "Retour au formulaire",
@@ -273,29 +254,7 @@ export const fr = {
       }
     }
   },
-  donation: {
-    hero: {
-      title: "Soutenez Nos Actions",
-      subtitle: "Votre contribution aide à financer nos projets sur le terrain",
-    },
-    kicker: "Faire un don",
-    title: "Soutenir Better Life",
-    description:
-      "Les dons financent des projets de reboisement, d'agriculture durable et des programmes communautaires.",
-    support: {
-      title: "Pourquoi soutenir",
-      text: "Votre soutien contribue directement aux communautés et à la préservation de l'environnement.",
-    },
-    methods: {
-      title: "Méthodes de don",
-      text: "Virement bancaire, mobile money, ou don en ligne via notre formulaire de contact.",
-    },
-    cta: {
-      title: "Prêt à contribuer ?",
-      text: "Contactez-nous pour organiser votre don ou obtenir un reçu fiscal.",
-      btn: "Nous contacter",
-    },
-  },
+
   about: {
     mission: {
       hero: {
