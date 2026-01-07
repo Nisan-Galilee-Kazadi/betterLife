@@ -5,7 +5,7 @@ import { FaSearch, FaTimes } from "react-icons/fa";
 import { fr } from "../translations/fr";
 import { en } from "../translations/en";
 import { es } from "../translations/es";
-import { sw } from "../translations/sw";
+import { sw } from "../translations/sw.jsx";
 
 const translationsByCode = { fr, en, es, sw };
 

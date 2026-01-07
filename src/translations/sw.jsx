@@ -662,118 +662,118 @@ export const sw = {
   },
   home: {
     hero: {
-      title: "Choose a Healthy Environment,\nHealthy Food",
+      title: "Chagua Mazingira Yaliyo Salama,\nChakula Chenye Afya",
       subtitle:
-        "Our mission is to protect the environment, biodiversity, fight for nature conservation, the well-being of the population and promote food security.",
-      cta1: "Discover our actions",
-      cta2: "Contact us",
+        "Dhamira yetu ni kulinda mazingira, bioanuwai, kupigania uhifadhi wa mazingira, ustawi wa watu na kuchochea usalama wa chakula.",
+      cta1: "Gundua vitendo vyetu",
+      cta2: "Wasiliana nasi",
       slides: [
         {
-          title: "Environmental Protection and Biodiversity",
-          description: "Fighting deforestation and preserving the DRC's unique ecosystems for a sustainable future."
+          title: "Ulinzi wa Mazingira na Bioanuwai",
+          description: "Kupambana na ukataji miti na kuhifadhi mifumo ya kipekee ya DRC kwa ajili ya mustakabali endelevu."
         },
         {
-          title: "Food Security",
-          description: "Improving agricultural production and local value chains to sustainably feed our populations."
+          title: "Usalama wa Chakula",
+          description: "Kuboresha uzalishaji wa kilimo na minyororo ya thamani ya ndani kulisha watu wetu kwa njia endelevu."
         },
         {
-          title: "Agricultural Mechanization",
-          description: "Modernizing practices and providing adapted equipment for high-performance agriculture."
+          title: "Umekanizaji wa Kilimo",
+          description: "Kukarabati mazoea na kutoa vifaa vinavyofaa kwa kilimo cha hali ya juu."
         },
         {
-          title: "Community Projects",
-          description: "Basic services and income-generating activities for the development of our villages."
+          title: "Miradi ya Jamii",
+          description: "Huduma za msingi na shughuli zinazozalisha mapato kwa ajili ya maendeleo ya vijiji vyetu."
         },
         {
-          title: "Large-Scale Livestock Farming",
-          description: "Modern systems (bovine, caprine, porcine, poultry) and animal health at the heart of our expertise."
+          title: "Ufugaji wa Wanyama wa Kiwango Kikubwa",
+          description: "Mifumo ya kisasa (ng'ombe, mbuzi, nguruwe, kuku) na afya ya wanyama katika moyo wa ujuzi wetu."
         },
         {
-          title: "Agriculture",
-          description: "Promoting sustainable agriculture with a focus on Criollo cocoa, Arabica coffee, and tea."
+          title: "Kilimo",
+          description: "Kuchochea kilimo endelevu kikuzingatia kakao ya Criollo, kahawa ya Arabica, na chai."
         }
       ]
     },
     stats: {
-      title: "Our Impact in Numbers",
-      subtitle: "Concrete results that transform lives",
+      title: "Athari Zetu kwa Namba",
+      subtitle: "Matokeo halisi yanayobadilisha maisha",
     },
     mission: {
-      kicker: "Our Mission",
-      title: "Acting for Climate and Biodiversity",
+      kicker: "Dhamira Yetu",
+      title: "Kuchukua Hatua kwa Mabadiliko ya Tabianchi na Bioanuwai",
       desc1:
-        "Better Life helps people easily understand why certain human behaviors have a negative impact on biodiversity and proposes concrete action paths.",
+        "Better Life inawasaidia watu kuelewa kwa urahisi kwa nini tabia fulani za binadamu zina athari hasi kwa bioanuwai na inapendekeza njia halisi za hatua.",
       desc2:
-        "We have created school nurseries of one million five hundred thousand forest and fruit species trees to fight global warming.",
+        "Tumeunda vituo vya miche shuleni vya miti milioni moja na laki tano ya spishi za misitu na matunda kupambana na ongezeko la joto duniani.",
       stat1_val: "3M+",
-      stat1_label: "Trees planted",
+      stat1_label: "Miti iliopandwa",
       stat2_val: "2021",
-      stat2_label: "Creation year",
+      stat2_label: "Mwaka wa kuanzishwa",
       cards: {
         biodiversity: {
-          title: "Biodiversity",
-          desc: "Protecting fragile ecosystems",
+          title: "Bioanuwai",
+          desc: "Kulinda mifumo ya ikolojia dhaifu",
         },
         agriculture: {
-          title: "Agriculture",
-          desc: "Climate-smart practices",
+          title: "Kilimo",
+          desc: "Mazoea mahiri ya mabadiliko ya tabianchi",
         },
         reforestation: {
-          title: "Reforestation",
-          desc: "Fighting global warming",
+          title: "Uoteshaji Miti",
+          desc: "Kupambana na ongezeko la joto duniani",
         },
         community: {
-          title: "Community",
-          desc: "Local development projects",
+          title: "Jamii",
+          desc: "Miradi ya maendeleo ya ndani",
         },
       },
     },
     projects: {
-      kicker: "Our Achievements",
-      title: "Recent Projects",
+      kicker: "Mafanikio Yetu",
+      title: "Miradi ya Hivi Punde",
       cards: {
         p1: {
-          title: "Massive Reforestation Kinshasa",
+          title: "Uoteshaji Miti wa Kiwango Kikubwa Kinshasa",
           location: "Kinshasa, DRC",
-          impact: "500,000 trees planted",
-          status: "In progress",
+          impact: "Miti 500,000 zimepandwa",
+          status: "Inaendelea",
         },
         p2: {
-          title: "Sustainable Agriculture Bas-Congo",
+          title: "Kilimo Endelevu Bas-Congo",
           location: "Kongo Central",
-          impact: "1,200 farmers trained",
-          status: "Completed",
+          impact: "Wakulima 1,200 wamefunzwa",
+          status: "Imekamilika",
         },
         p3: {
-          title: "Salonga Biodiversity Protection",
-          location: "National Park",
-          impact: "15 beneficiary communities",
-          status: "In progress",
+          title: "Ulinzi wa Bioanuwai wa Salonga",
+          location: "Hifadhi ya Kitaifa",
+          impact: "Jamii 15 wanufaika",
+          status: "Inaendelea",
         },
       },
     },
     testimonials: {
-      kicker: "Testimonials",
-      title: "What they say about us",
+      kicker: "Ushuhuda",
+      title: "Wanachosema kuhusu sisi",
       t1: {
         quote:
-          "Thanks to Better Life, my income has tripled and my land is more fertile than before. The sustainable agriculture training really changed my life.",
+          "Kwa shukrani kwa Better Life, mapato yangu yamezidi mara tatu na ardhi yangu ni yenye rutuba zaidi kuliko awali. Mafunzo ya kilimo endelevu yamebadilisha maisha yangu kweli.",
         author: "Marie Nkulu",
-        role: "Farmer, Kongo Central",
+        role: "Mkulima, Kongo Central",
       },
       t2: {
         quote:
-          "This project has transformed our school. The students are now environmental ambassadors and actively participate in the school nursery.",
-        author: "Primary School Director",
+          "Mradi huu umebadilisha shule yetu. Wanafunzi sasa ni balozi wa mazingira wanashiriki kikamilifu katika kituo cha miche cha shule.",
+        author: "Mkurugenzi wa Shule ya Msingi",
         role: "Ngaliema, Kinshasa",
       },
     },
     cta: {
-      title: "Join Our Mission",
+      title: "Jiunge na Dhamira Yetu",
       subtitle:
-        "Together, we can create a sustainable future for the DRC and protect our environment",
-      btn1: "Donate",
-      btn2: "Become a Partner",
+        "Pamoja, tunaweza kuunda mustakabali endelevu kwa DRC na kulinda mazingira yetu",
+      btn1: "Changia",
+      btn2: "Kuwa Mshirika",
     },
   },
   about: {
@@ -1046,46 +1046,57 @@ export const sw = {
         btn: "Wasiliana Nasi",
       },
     },
-    footer: {
-      description:
-        "Ulinzi wa Mazingira, Bioanuwai na Maendeleo Endelevu katika Jamhuri ya Kidemokrasia ya Kongo.",
-      nav_title: "Maelekezo",
-      activities_title: "Shughuli",
-      contact_title: "Wasiliana Nasi",
-      rights: "Haki zote zimehifadhiwa.",
-      tagline: "Ulimwengu bora",
-      location: "Joli Parc, C/Ngaliema",
+  footer: {
+    location: "Joli Parc, C/Ngaliema",
+    tagline: "Maendeleo Endelevu kwa Vizazi Vijavyo",
+    description: "Ulinzi wa Mazingira, Bioanuwai na Maendeleo Endelevu katika Jamhuri ya Kidemokrasia ya Kongo.",
+    nav_title: "Maelekezo",
+    contact_title: "Mawasiliano",
+    rights: "Haki zote zimehifadhiwa © Better Life",
+    activities_title: "Shughuli",
+    newsletter: {
+      title: "Jiandikishe kwa Jarida Letu",
+      placeholder: "Barua pepe yako",
+      button: "Jiandikisha"
     },
-    Actions: {
-      Environement: "Mazingira & Hali ya Hewa",
-      index: {
-        kicker: "Vitendo Vyetu",
-        title: "Vitendo Vyetu",
-        subtitle: "Vichocheo vya Athari Inayodumu",
-        approach: {
-          kicker: "Njia Iliyounganishwa"
+    quick_links: "Viungulo Haraka",
+    contact_info: "Mawasiliano",
+    social_media: "Mitandao ya Kijamii"
+  },
+  Actions: {
+    environment: "Mazingira & Hali ya Hewa",
+    index: {
+      kicker: "Vitendo Vyetu",
+      title: "Vitendo Vyetu",
+      subtitle: "Vichocheo vya Athari Inayodumu",
+      approach: {
+        kicker: "Njia Iliyounganishwa"
+      },
+      objectives: {
+        kicker: "Malengo Muhimu"
+      },
+      cards: {
+        agriculture: {
+          title: "Kilimo",
+          desc: "Kubadilisha kilimo na kufuata mazoea mahiri kwa ajili ya usalama wa chakula."
         },
-        objectives: {
-          kicker: "Malengo Muhimu"
+        elevage: {
+          title: "Ufugaji",
+          desc: "Mifumo mahiri inayopunguza uzalishaji wa gesi chafu."
         },
-        cards: {
-          agriculture: {
-            desc: "Kubadilisha kilimo na kufuata mazoea mahiri kwa ajili ya usalama wa chakula."
-          },
-          elevage: {
-            desc: "Mifumo mahiri inayopunguza uzalishaji wa gesi chafu."
-          },
-          communautaire: {
-            desc: "Kukuza ustawi wa watu, afya, elimu na maendeleo shirikishi vijijini."
-          },
-          equipements: {
-            title: "Vifaa & Mafunzo",
-            desc: "Usaidizi wa kiufundi na vifaa kwa wazalishaji wa ndani."
-          },
-          Environement: {
-            desc: "Vichocheo shuleni, uoteshaji miti, na kupambana na ongezeko la joto duniani."
-          }
+        communautaire: {
+          title: "Maendeleo ya Jamii",
+          desc: "Kukuza ustawi wa watu, afya, elimu na maendeleo shirikishi vijijini."
+        },
+        equipements: {
+          title: "Vifaa & Mafunzo",
+          desc: "Usaidizi wa kiufundi na vifaa kwa wazalishaji wa ndani."
+        },
+        environment: {
+          title: "Mazingira",
+          desc: "Vichocheo shuleni, uoteshaji miti, na kupambana na ongezeko la joto duniani."
         }
+      }
       },
       agriculture: {
         hero: {
@@ -1213,58 +1224,92 @@ export const sw = {
           impact: { title: "Athari", stats: [{ value: "20", label: "Bustani za afya" }, { value: "10k", label: "Wagonjwa waliosaidiwa" }] }
         }
       },
-      environement: {
+      environment: {
         hero: {
-          title: "Environmental Protection",
-          subtitle: "Preserving our natural heritage for future generations"
+          title: "Ulinzi wa Mazingira",
+          subtitle: "Kuhifadhi urithi wetu wa asili kwa vizazi vijavyo"
+        },
+        protection_foret: {
+          hero: {
+            title: "Ulinzi wa Misitu",
+            subtitle: "Kuhifadhi mapafu ya dunia yetu"
+          },
+          intro: {
+            title: "Uhifadhi wa Misitu",
+            text: "Mipango yetu ya ulinzi wa misitu inalenga kuhifadhi misitu yetu ya asili na kudumisha mazingira salama kwa wote.",
+            highlights: [
+              "Ulinzi wa wanyamapori",
+              "Urejeshaji wa misitu",
+              "Ufuatiliaji wa misitu",
+              "Ushiriki wa jamii"
+            ]
+          }
         },
         intro: {
-          kicker: "Our Commitment",
-          title: "Acting for Biodiversity",
-          text: "We implement concrete actions for the conservation of ecosystems, the sustainable management of natural resources, and the fight against climate change.",
+          kicker: "Ahadi Yetu",
+          title: "Kutenda kwa Ajili ya Bioanuwai",
+          text: "Tunatekeleza vitendo halisi vya uhifadhi wa mifumo ikolojia, usimamizi endelevu wa rasilimali za asili, na kupambana na mabadiliko ya tabia nchi.",
           stats: {
-            planted: { number: "450k", label: "Trees" },
-            survival: { number: "85%", label: "Survival rate" }
+            planted: { number: "450k", label: "Miti" },
+            survival: { number: "85%", label: "Kiwango cha Ustawi" }
           }
         },
         programs: {
-          kicker: "Our Programs",
-          title: "Our Green Initiatives",
+          kicker: "Mipango Yetu",
+          title: "Mipango Yetu ya Kijani",
           items: [
-            { title: "Waste Management", desc: "Recycling and valorization.", benefits: ["Cleanliness", "Circular economy"] },
-            { title: "Clean Energy", desc: "Promotion of improved stoves.", benefits: ["Less CO2", "Health"] },
-            { title: "Education", desc: "Awareness in schools.", benefits: ["Future generation", "Conscience"] }
+            { title: "Usimamizi wa Taka", desc: "Kuchakata tena na kuongeza thamani ya taka.", benefits: ["Usafi", "Uchumi wa mzunguko"] },
+            { title: "Nishati Safi", desc: "Kuhamasisha matumizi ya jiko bora.", benefits: ["Chini ya CO2", "Afya"] },
+            { title: "Elimu", desc: "Sensitisheni shuleni.", benefits: ["Kizazi cha baadaye", "Ufahamu"] }
           ]
         },
         impact: {
-          title: "Our Environmental Impact",
+          title: "Athari Yetu ya Kimazingira",
           stats: [
-            { number: "-30%", label: "CO2 Emissions" },
-            { number: "50T", label: "Recycled waste" },
-            { number: "10k", label: "Aware children" }
+            { number: "-30%", label: "Uzalishaji wa CO2" },
+            { number: "50T", label: "Taka zilizochakatwa" },
+            { number: "10k", label: "Watoto waliosensitiwa" }
           ]
         },
         cta: {
-          title: "Protect Our Planet",
-          text: "Join us in our mission to preserve nature and build a sustainable future.",
-          btn_join: "Become a member",
-          btn_sponsor: "Sponsor a tree"
+          title: "Tunze Sayari Yetu",
+          text: "Jiunge nasi katika dhamira yetu ya kuhifadhi asili na kujenga mustakabali endelevu.",
+          btn_join: "Kuwa mwanachama",
+          btn_sponsor: 'Tunza mti'
         },
-        // Sub-pages
+        // Ukurasa wa chini
         protection_foret: {
-          hero: { title: "Forest Protection", subtitle: "Lungs of the planet" },
-          intro: { title: "Conservation", text: "Fight against deforestation and poaching." },
-          features: ["Eco-guard patrols", "Participatory mapping", "Restoration", "Protected areas"]
+          hero: { 
+            title: "Ulinzi wa Msitu", 
+            subtitle: "Mapafu ya sayari" 
+          },
+          intro: { 
+            title: "Uhifadhi", 
+            text: "Kupambana na ukataji miti na uwindaji haramu." 
+          },
+          features: ["Ulinzi wa walezi wa mazingira", "Ramani ya ushiriki", "Urejeshaji", "Maeneo yaliyohifadhiwa"]
         },
         credit_carbone: {
-          hero: { title: "Carbon Credit", subtitle: "Valuing sequestration" },
-          intro: { title: "Climate Finance", text: "Generate income through conservation." },
-          features: ["Certification", "Credit sales", "Community income", "Carbon monitoring"]
+          hero: { 
+            title: "Stakabadhi ya Kaboni", 
+            subtitle: "Kuongeza thamani ya kufyonza gesi chafu" 
+          },
+          intro: { 
+            title: "Fedha za Hali ya Hewa", 
+            text: "Pata mapato kupitia uhifadhi wa misitu." 
+          },
+          features: ["Uthibitisho", "Uuzaji wa stakabadhi", "Mapato ya jamii", "Ufuatiliaji wa kaboni"]
         },
         eco_kelasi: {
-          hero: { title: "Eco-Kelasi", subtitle: "The ecological school" },
-          intro: { title: "Environmental Education", text: "Learning to love and protect nature from an early age." },
-          features: ["School gardens", "Nature clubs", "Waste sorting", "Educational outings"]
+          hero: { 
+            title: "Eko-Shule", 
+            subtitle: "Shule ya kimazingira" 
+          },
+          intro: { 
+            title: "Elimu ya Mazingira", 
+            text: "Kujifunza kupenda na kulinda asili tangu utotoni." 
+          },
+          features: ["Bustani za shule", "Vikundi vya asili", "Uchambuzi wa taka", "Safari za kielimu"]
         }
       },
       mecanisation: {
@@ -1377,7 +1422,7 @@ export const sw = {
             }
           ]
         },
-        Actions: {
+      Actions: {
           kicker: "Services",
           title: "Support for Breeders",
           items: [
@@ -1495,10 +1540,35 @@ export const sw = {
           ]
         }
       },
-      communautaire: {
+      community: {
         hero: {
-          title: "Community Development",
-          subtitle: "Empowering communities for a sustainable future"
+          title: "Maendeleo ya Jamii",
+          subtitle: "Kuwawezesha jamii kwa mustakabali endelevu"
+        },
+        energie: {
+          hero: {
+            title: "Nishati Endelevu",
+            subtitle: "Nishati safi kwa maendeleo endelevu"
+          },
+          intro: {
+            title: "Nishati kwa Wote",
+            text: "Suluhisho za nishati zinazoweza kudumu kwa ajili ya jamii za vijijini na mjini.",
+            highlights: [
+              "Vyanzo vya nishati mbadala",
+              "Teknolojia nafuu",
+              "Uwezeshaji wa kijamii",
+              "Uboreshaji wa maisha"
+            ]
+          },
+          programs: {
+            title: "Mipango ya Nishati",
+            items: [
+              "Jiko bora za mkaa",
+              "Mifumo ya nishati ya jua",
+              "Biogesi ya nyumbani",
+              "Minara ya taa za jua"
+            ]
+          }
         },
         intro: {
           kicker: "Our Approach",
@@ -1849,9 +1919,51 @@ export const sw = {
         text: "Tunakubali uhamisho wa benki, kadi za mkopo, na pesa za simu."
       },
       cta: {
-        title: "Chukua Hatua Sasa",
-        text: "Wasiliana nasi kukamilisha mchango wako au kwa swali lolote.",
-        btn: "Wasiliana Nasi"
+      }
+    },
+    communautaire: {
+      energie: {
+        hero: {
+          title: "Nishati Endelevu",
+          subtitle: "Nishati safi kwa maisha bora"
+        }
+      }
+    },
+    environement: {
+      hero: {
+        title: "Ulinzi wa Mazingira",
+        subtitle: "Kulinda mazingira yetu kwa vizazi vijavyo"
+      },
+      protection_foret: {
+        hero: {
+          title: "Ulinzi wa Misitu",
+          subtitle: "Kuhifadhi mapafu ya dunia yetu"
+        }
       }
     }
-  };
+  },
+  donation: {
+    hero: {
+      title: "Toa Msaada",
+      subtitle: "Saidia matendo yetu kwa ajili ya mustakabali endelevu."
+    },
+    kicker: "Msaada",
+    title: "Msaada Wako ni wa Thamani",
+    description: "Kila mchango unatuwezesha kupanua programu zetu na kuwa na athari halisi mashinani.",
+    support: {
+      title: "Kwa nini utusaidie?",
+      text: "Michango yako inafadhili moja kwa moja upandaji miti, kilimo endelevu, na msaada kwa jamii."
+    },
+    methods: {
+      title: "Njia za Malipo",
+      text: "Tunakubali uhamisho wa benki, kadi za mkopo, na pesa za simu."
+    },
+    cta: {
+      title: "Chukua Hatua Sasa",
+      text: "Wasiliana nasi kukamilisha mchango wako au kwa swali lolote.",
+      btn: "Wasiliana Nasi"
+    }
+  }
+};
+
+export default sw;
