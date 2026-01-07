@@ -17,8 +17,8 @@ import { FaSearch, FaGlobe } from "react-icons/fa";
 import { SearchOverlay } from "./SearchOverlay";
 import { Breadcrumb } from "./Breadcrumb";
 import { useLanguage } from "../contexts/LanguageContext";
-import logoOfficial from "../images/cropped-Logo-betterlife-officiel.png";
-import logoWhite from "../images/Logo-betterlife-officiel-Blanc-300x300.png";
+import logoOfficial from "../images/cropped-Logo-betterlife-officiel.webp";
+import logoWhite from "../images/Logo-betterlife-officiel-Blanc-300x300.webp";
 
 const socialLinks = [
   {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { SectionTitle } from '../components/SectionTitle'
 import { FaLocationDot, FaEnvelope, FaPhone, FaClock, FaPaperPlane } from 'react-icons/fa6'
-import contact_hero from "../images/homme-d-affaires-afro-americain-souriant-au-telephone-au-bureau.jpg";
+import contact_hero from "../images/homme-d-affaires-afro-americain-souriant-au-telephone-au-bureau.webp";
 import { useLanguage } from '../contexts/LanguageContext'
 
 export function Contact() {

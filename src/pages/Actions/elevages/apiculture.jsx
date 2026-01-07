@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { GiBee, GiHoneycomb } from "react-icons/gi";
 import { useLanguage } from "../../../contexts/LanguageContext";
-import hero_img from "./images/hero_apiculture.jpg";
+import hero_img from "./images/hero_apiculture.webp";
 
 
 export default function Apiculture() {

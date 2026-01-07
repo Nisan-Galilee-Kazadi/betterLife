@@ -4,7 +4,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { FaChild, FaLeaf, FaRecycle } from "react-icons/fa";
 import { useLanguage } from "../../../contexts/LanguageContext";
 
-import hero_img from "./images/hero_eco_kelasi.jpg";
+import hero_img from "./images/hero_eco_kelasi.webp";
 
 export default function EcoKelasi() {
     const { t } = useLanguage();

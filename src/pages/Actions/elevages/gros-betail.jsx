@@ -4,7 +4,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { FaStethoscope, FaSeedling, FaClipboardCheck, FaDna } from "react-icons/fa";
 import { GiCow, GiSpermWhale, GiHealthNormal, GiGrain } from "react-icons/gi";
 import { useLanguage } from "../../../contexts/LanguageContext";
-import hero_betail from "./images/hero_gros_betail.jpg";
+import hero_betail from "./images/hero_gros_betail.webp";
 
 // Image: Cattle in field - Unsplash
 const imgHero = "https://images.unsplash.com/photo-1541625602330-2277db6e788d?auto=format&fit=crop&q=80&w=2070";

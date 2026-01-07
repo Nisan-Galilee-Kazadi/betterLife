@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { FaHome } from "react-icons/fa";
 import { useLanguage } from "../../../contexts/LanguageContext";
-import hero_img from "./images/hero_habitation.jpg";
+import hero_img from "./images/hero_habitation.webp";
 
 export default function Habitation() {
     const { t } = useLanguage();

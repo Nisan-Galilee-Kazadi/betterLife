@@ -5,7 +5,7 @@ import { FaLeaf, FaSpa, FaMugHot } from "react-icons/fa";
 import { GiPlantRoots } from "react-icons/gi";
 import { useLanguage } from "../../../contexts/LanguageContext";
 
-import imgHero from "./images/hero_the.png";
+import imgHero from "./images/hero_the.webp";
 
 export default function Theier() {
     const { t } = useLanguage();

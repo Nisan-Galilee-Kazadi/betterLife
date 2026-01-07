@@ -4,7 +4,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { FaTree, FaShieldAlt, FaBinoculars } from "react-icons/fa";
 import { useLanguage } from "../../../contexts/LanguageContext";
 
-import hero_img from "./images/hero_protection_foret.jpg";
+import hero_img from "./images/hero_protection_foret.webp";
 
 export default function ProtectionForet() {
     const { t } = useLanguage();

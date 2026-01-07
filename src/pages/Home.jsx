@@ -13,19 +13,19 @@ import {
 import { GiForest } from "react-icons/gi";
 import { MdAgriculture } from "react-icons/md";
 import { useLanguage } from "../contexts/LanguageContext";
-import heroImage1 from "../images/hero_clean.png";
-import hero_agriculture from "../images/agricultural-advertisement-banner-group-new-modern-generic-tractors-green-meadow-sunny-day-mixed.jpg";
-import hero_food_security from "../images/food_security_hero.png";
+import heroImage1 from "../images/hero_clean.webp";
+import hero_agriculture from "../images/agricultural-advertisement-banner-group-new-modern-generic-tractors-green-meadow-sunny-day-mixed.webp";
+import hero_food_security from "../images/food_security_hero.webp";
 
-import heroImage3 from "../images/hero_reforestation.png";
-import heroImage4 from "../images/images.jfif";
-import heroImage5 from "./Actions/Mecanisation/images/IMG-20251215-WA0000.jpg";
-import heroImage6 from "./Actions/Communautaire/images/hero_education.jpg";
-import heroImage7 from "../images/wide-angle-portrait-beautiful-healthy-cows-row-eating-hay-cowshed-organic-dairy-farm-copy-space.jpg";
-import heroImage8 from "./Actions/agriculture/images/hero_cacao.png";
-import heroImage9 from "../images/low-angle-perspective-tree-with-beautiful-canopy.jpg";
-import heroImage10 from "../images/le-coucher-du-soleil-derriere-la-silhouette-des-pylones-d-electricite.jpg";
-import heroImage11 from "../images/planted-tree-farm.jpg";
+import heroImage3 from "../images/hero_reforestation.webp";
+import heroImage4 from "../images/images.webp";
+import heroImage5 from "./Actions/Mecanisation/images/IMG-20251215-WA0000.webp";
+import heroImage6 from "../images/close-up-black-people-with-hands-joined.webp";
+import heroImage7 from "../images/wide-angle-portrait-beautiful-healthy-cows-row-eating-hay-cowshed-organic-dairy-farm-copy-space.webp";
+import heroImage8 from "./Actions/agriculture/images/hero_cacao.webp";
+import heroImage9 from "../images/low-angle-perspective-tree-with-beautiful-canopy.webp";
+import heroImage10 from "../images/le-coucher-du-soleil-derriere-la-silhouette-des-pylones-d-electricite.webp";
+import heroImage11 from "../images/planted-tree-farm.webp";
 
 // Animated Counter Component
 function AnimatedCounter({ end, duration = 5000, suffix = "" }) {

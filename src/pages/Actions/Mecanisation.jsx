@@ -4,7 +4,7 @@ import { SectionTitle } from "../../components/SectionTitle";
 import { FaTractor, FaCogs, FaTools, FaIndustry } from "react-icons/fa";
 import { GiFactory, GiGears, GiMechanicGarage, GiFarmTractor } from "react-icons/gi";
 import { useLanguage } from "../../contexts/LanguageContext";
-import hero_img from "../../images/agricultural-advertisement-banner-group-new-modern-generic-tractors-green-meadow-sunny-day-mixed.jpg";
+import hero_img from "../../images/agricultural-advertisement-banner-group-new-modern-generic-tractors-green-meadow-sunny-day-mixed.webp";
 
 export function ActionsMecanisation() {
   const { t } = useLanguage();

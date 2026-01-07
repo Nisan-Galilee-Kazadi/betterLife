@@ -10,7 +10,7 @@ import {
 import { GiTrashCan, GiEarthAmerica } from "react-icons/gi";
 import { MdSchool, MdNaturePeople } from "react-icons/md";
 import { useLanguage } from "../../contexts/LanguageContext";
-import hero_img from "../../images/hero_reforestation.png";
+import hero_img from "../../images/hero_reforestation.webp";
 
 export function ActionsEnvironement() {
   const { t } = useLanguage();

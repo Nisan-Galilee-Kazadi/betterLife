@@ -5,12 +5,12 @@ import { FaTools } from "react-icons/fa";
 import { useLanguage } from "../../../contexts/LanguageContext";
 
 // Importing images from relative path - taking the rest of images
-import img7 from "./images/IMG-20251215-WA0006.jpg";
-import img8 from "./images/IMG-20251215-WA0007.jpg";
-import img9 from "./images/IMG-20251215-WA0008.jpg";
-import img10 from "./images/IMG-20251215-WA0009.jpg";
-import img11 from "./images/IMG-20251215-WA0010.jpg";
-import img12 from "./images/IMG-20251215-WA0011.jpg";
+import img7 from "./images/IMG-20251215-WA0006.webp";
+import img8 from "./images/IMG-20251215-WA0007.webp";
+import img9 from "./images/IMG-20251215-WA0008.webp";
+import img10 from "./images/IMG-20251215-WA0009.webp";
+import img11 from "./images/IMG-20251215-WA0010.webp";
+import img12 from "./images/IMG-20251215-WA0011.webp";
 
 export default function Accessoires() {
     const { t } = useLanguage();

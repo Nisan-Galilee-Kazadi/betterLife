@@ -5,7 +5,7 @@ import { FaMugHot, FaMountain, FaAward } from "react-icons/fa";
 import { GiCoffeeBeans, GiCoffeePot } from "react-icons/gi";
 import { useLanguage } from "../../../contexts/LanguageContext";
 
-import imgHero from "./images/hero_cafe.png";
+import imgHero from "./images/hero_cafe.webp";
 
 export default function Cafe() {
     const { t } = useLanguage();

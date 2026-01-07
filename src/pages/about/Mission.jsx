@@ -4,7 +4,7 @@ import { SectionTitle } from '../../components/SectionTitle'
 import { FaSeedling, FaHandsHelping, FaLightbulb, FaStar, FaGlobeAmericas, FaGem } from 'react-icons/fa'
 import { MdNaturePeople, MdEco, MdGroups, MdTrendingUp } from 'react-icons/md'
 import { useLanguage } from '../../contexts/LanguageContext'
-import mission_hero from '../../images/close-up-black-people-with-hands-joined.jpg'
+import mission_hero from '../../images/close-up-black-people-with-hands-joined.webp'
 
 export function Mission() {
     const { t } = useLanguage()

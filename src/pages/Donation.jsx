@@ -1,5 +1,5 @@
 import React from "react";
-import hero_clean from "../images/les-mains-serrees-mettant-des-pieces-dans-la-boite-a-dons.jpg";
+import hero_clean from "../images/les-mains-serrees-mettant-des-pieces-dans-la-boite-a-dons.webp";
 import { SectionTitle } from "../components/SectionTitle";
 import { useLanguage } from "../contexts/LanguageContext";
 

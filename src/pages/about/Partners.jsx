@@ -8,7 +8,7 @@ import {
   FaUsers,
   FaBuilding,
 } from "react-icons/fa";
-import partners_hero from "../../images/partners_hero.png";
+import partners_hero from "../../images/partners_hero.webp";
 import { useLanguage } from "../../contexts/LanguageContext";
 
 export function Partners() {

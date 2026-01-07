@@ -5,7 +5,7 @@ import { FaSeedling, FaLeaf, FaSun, FaChartBar, FaTree } from "react-icons/fa";
 import { GiChocolateBar, GiCoffeeBeans, GiFarmer } from "react-icons/gi";
 import { useLanguage } from "../../../contexts/LanguageContext";
 
-import imgHero from "./images/hero_cacao.png";
+import imgHero from "./images/hero_cacao.webp";
 
 export default function Cacao() {
     const { t } = useLanguage();

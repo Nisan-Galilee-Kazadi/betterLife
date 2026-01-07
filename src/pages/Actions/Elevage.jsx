@@ -14,7 +14,7 @@ import {
 } from "react-icons/gi";
 import { MdHealthAndSafety, MdScience } from "react-icons/md";
 import { useLanguage } from "../../contexts/LanguageContext";
-import elevage_hero from "../../images/wide-angle-portrait-beautiful-healthy-cows-row-eating-hay-cowshed-organic-dairy-farm-copy-space.jpg";
+import elevage_hero from "../../images/wide-angle-portrait-beautiful-healthy-cows-row-eating-hay-cowshed-organic-dairy-farm-copy-space.webp";
 
 export function ActionsElevage() {
   const { t } = useLanguage();

@@ -2,7 +2,7 @@ import React from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { Link } from "react-router-dom";
 import { FaBriefcase, FaGraduationCap, FaCheckCircle } from "react-icons/fa";
-import employment_hero from "../images/employment_hero.png";
+import employment_hero from "../images/employment_hero.webp";
 
 export const EmploiStage = () => {
     const { t } = useLanguage();

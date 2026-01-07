@@ -5,7 +5,7 @@ import { FaCogs } from "react-icons/fa";
 import { useLanguage } from "../../../contexts/LanguageContext";
 
 // Reusing img1 for generic header as it is high quality
-import imgHeader from "./images/IMG-20251215-WA0000.jpg";
+import imgHeader from "./images/IMG-20251215-WA0000.webp";
 
 export default function Autres() {
     const { t } = useLanguage();

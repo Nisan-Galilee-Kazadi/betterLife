@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { FaSolarPanel, FaBolt, FaWater } from "react-icons/fa";
-import hero_img from "./images/hero_energie.jpg";
+import hero_img from "./images/hero_energie.webp";
 
 export default function Energie() {
     const { t } = useLanguage();

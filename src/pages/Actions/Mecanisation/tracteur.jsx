@@ -5,12 +5,12 @@ import { FaTractor } from "react-icons/fa";
 import { useLanguage } from "../../../contexts/LanguageContext";
 
 // Importing images from relative path
-import img1 from "./images/IMG-20251215-WA0000.jpg";
-import img2 from "./images/IMG-20251215-WA0001.jpg";
-import img3 from "./images/IMG-20251215-WA0002.jpg";
-import img4 from "./images/IMG-20251215-WA0003.jpg";
-import img5 from "./images/IMG-20251215-WA0004.jpg";
-import img6 from "./images/IMG-20251215-WA0005.jpg";
+import img1 from "./images/IMG-20251215-WA0000.webp";
+import img2 from "./images/IMG-20251215-WA0001.webp";
+import img3 from "./images/IMG-20251215-WA0002.webp";
+import img4 from "./images/IMG-20251215-WA0003.webp";
+import img5 from "./images/IMG-20251215-WA0004.webp";
+import img6 from "./images/IMG-20251215-WA0005.webp";
 
 export default function Tracteur() {
     const { t } = useLanguage();

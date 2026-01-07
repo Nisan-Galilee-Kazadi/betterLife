@@ -5,7 +5,7 @@ import { FaHeartbeat, FaMortarPestle, FaLeaf, FaSun } from "react-icons/fa";
 import { GiMedicinePills, GiHealthPotion } from "react-icons/gi";
 import { useLanguage } from "../../../contexts/LanguageContext";
 
-import imgHero from "./images/hero_plantes_medicinales.png";
+import imgHero from "./images/hero_plantes_medicinales.webp";
 
 export default function PlantesMedicinales() {
     const { t } = useLanguage();

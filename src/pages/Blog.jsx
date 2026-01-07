@@ -1,10 +1,10 @@
 import React from 'react'
 import { SectionTitle } from '../components/SectionTitle'
 import { useLanguage } from '../contexts/LanguageContext'
-import blog_hero from '../images/blog_hero.png'
-import cocoa_img from '../images/cocoa-beans-cocoa-pod-wooden-surface.jpg'
-import community_img from '../images/activists-collecting-paper-trash-bag.jpg'
-import carbon_img from '../images/view-bamboo-trees-forest.jpg'
+import blog_hero from '../images/blog_hero.webp'
+import cocoa_img from '../images/cocoa-beans-cocoa-pod-wooden-surface.webp'
+import community_img from '../images/activists-collecting-paper-trash-bag.webp'
+import carbon_img from '../images/view-bamboo-trees-forest.webp'
 
 const blogItems = [
     { title: 'Programme cacao durable 2025', tag: 'Formation', date: 'Jan 2025', image: cocoa_img },

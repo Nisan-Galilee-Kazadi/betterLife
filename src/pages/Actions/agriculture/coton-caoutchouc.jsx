@@ -5,7 +5,7 @@ import { FaIndustry, FaTshirt, FaCar, FaFlask, FaCloud, FaTree } from "react-ico
 // import { GiCottonFlower, GiRubberBoot } from "react-icons/gi"; // Removing likely invalid icons
 import { useLanguage } from "../../../contexts/LanguageContext";
 
-import imgHero from "./images/hero_coton_hevea.png";
+import imgHero from "./images/hero_coton_hevea.webp";
 
 export default function CotonCaoutchouc() {
     const { t } = useLanguage();

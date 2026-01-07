@@ -4,7 +4,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { FaHeartbeat, FaBaby, FaSyringe } from "react-icons/fa";
 import { useLanguage } from "../../../contexts/LanguageContext";
 
-import hero_img from "./images/hero_sante.jpg";
+import hero_img from "./images/hero_sante.webp";
 
 export default function Sante() {
     const { t } = useLanguage();

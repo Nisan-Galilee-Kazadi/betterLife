@@ -12,13 +12,13 @@ import {
 import { GiFarmer, GiPlantRoots } from "react-icons/gi";
 import { useLanguage } from "../../contexts/LanguageContext";
 
-import imgCacao from "./agriculture/images/hero_cacao.png";
-import imgCafe from "./agriculture/images/hero_cafe.png";
-import imgThe from "./agriculture/images/hero_the.png";
-import imgCoton from "./agriculture/images/hero_coton_hevea.png";
-import imgArbo from "./agriculture/images/hero_arboriculture.png";
-import imgPlantes from "./agriculture/images/hero_plantes_medicinales.png";
-import hero_img from "../../images/hero_agriculture.png";
+import imgCacao from "./agriculture/images/hero_cacao.webp";
+import imgCafe from "./agriculture/images/hero_cafe.webp";
+import imgThe from "./agriculture/images/hero_the.webp";
+import imgCoton from "./agriculture/images/hero_coton_hevea.webp";
+import imgArbo from "./agriculture/images/hero_arboriculture.webp";
+import imgPlantes from "./agriculture/images/hero_plantes_medicinales.webp";
+import hero_img from "../../images/hero_agriculture.webp";
 
 export function ActionsAgriculture() {
   const { t } = useLanguage();

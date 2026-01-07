@@ -4,7 +4,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { FaCloud, FaMoneyBillWave, FaChartLine } from "react-icons/fa";
 import { useLanguage } from "../../../contexts/LanguageContext";
 
-import hero_img from "./images/hero_credit_carbone.jpg";
+import hero_img from "./images/hero_credit_carbone.webp";
 
 export default function CreditCarbone() {
     const { t } = useLanguage();

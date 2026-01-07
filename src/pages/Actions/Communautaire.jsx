@@ -18,7 +18,7 @@ import {
 } from "react-icons/gi";
 import { MdEmojiPeople, MdVolunteerActivism } from "react-icons/md";
 import { useLanguage } from "../../contexts/LanguageContext";
-import hero_img from "../../images/close-up-black-people-with-hands-joined.jpg";
+import hero_img from "../../images/close-up-black-people-with-hands-joined.webp";
 
 export function ActionsCommunautaire() {
   const { t } = useLanguage();

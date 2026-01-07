@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { GiSnake } from "react-icons/gi";
 import { useLanguage } from "../../../contexts/LanguageContext";
-import hero_img from "./images/hero_serpents.jpg";
+import hero_img from "./images/hero_serpents.webp";
 
 
 export default function Serpents() {

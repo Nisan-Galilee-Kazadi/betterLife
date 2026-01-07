@@ -5,7 +5,7 @@ import { FaAppleAlt, FaLemon, FaTree, FaLeaf } from "react-icons/fa";
 import { GiFruitBowl } from "react-icons/gi";
 import { useLanguage } from "../../../contexts/LanguageContext";
 
-import imgHero from "./images/hero_arboriculture.png";
+import imgHero from "./images/hero_arboriculture.webp";
 
 export default function Arboriculture() {
     const { t } = useLanguage();

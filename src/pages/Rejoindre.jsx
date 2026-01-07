@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
-import join_hero from "../images/close-up-black-people-with-hands-joined.jpg";
+import join_hero from "../images/close-up-black-people-with-hands-joined.webp";
 import { FaUser, FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane, FaBriefcase, FaGlobe, FaFileContract } from "react-icons/fa";
 
 export function Rejoindre() {

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { FaFish } from "react-icons/fa";
 import { useLanguage } from "../../../contexts/LanguageContext";
-import hero_img from "./images/hero_pisciculture.jpg";
+import hero_img from "./images/hero_pisciculture.webp";
 
 
 export default function Pisciculture() {

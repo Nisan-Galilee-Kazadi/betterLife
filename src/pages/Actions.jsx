@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa6";
 // FaHandsHelping is removed as it is not exported by the module
 import { useLanguage } from "../contexts/LanguageContext";
-import hero_img from "../images/IMG_6687.JPG";
+import hero_img from "../images/IMG_6687.webp";
 
 // Build Actions array using translation keys (with fallbacks)
 export function Actions() {

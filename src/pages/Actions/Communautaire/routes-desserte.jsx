@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { FaRoad, FaTruck, FaMapMarkedAlt } from "react-icons/fa";
 import { useLanguage } from "../../../contexts/LanguageContext";
-import hero_img from "./images/hero_routes.jpg";
+import hero_img from "./images/hero_routes.webp";
 
 export default function RoutesDesserte() {
     const { t } = useLanguage();

@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom'
 import { SectionTitle } from '../../components/SectionTitle'
 import { FaCalendar, FaUser } from 'react-icons/fa'
 import { useLanguage } from '../../contexts/LanguageContext'
-import media_hero from '../../images/media_hero.png'
-import news_reforestation from '../../images/news_reforestation.png'
-import news_partnership from '../../images/news_partnership.png'
-import news_training from '../../images/news_training.png'
-import cocoa_beans from '../../images/cocoa-beans-cocoa-pod-wooden-surface.jpg'
-import planted_tree from '../../images/planted-tree-farm.jpg'
-import community_hands from '../../images/close-up-black-people-with-hands-joined.jpg'
+import media_hero from "../../images/media_hero.webp";
+import news_reforestation from "../../images/news_reforestation.webp";
+import news_partnership from "../../images/news_partnership.webp";
+import news_training from '../../images/news_training.webp'
+import cocoa_beans from '../../images/cocoa-beans-cocoa-pod-wooden-surface.webp'
+import planted_tree from '../../images/planted-tree-farm.webp'
+import community_hands from '../../images/close-up-black-people-with-hands-joined.webp'
 
 export function BlogNews() {
     const { t } = useLanguage()
