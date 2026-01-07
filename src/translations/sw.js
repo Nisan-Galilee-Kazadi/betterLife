@@ -91,223 +91,222 @@ export const sw = {
       call: "Kuwa mwanachama na shiriki kikamilifu katika vitendo vyetu."
     },
     membershipType: {
-      title: "Title",
+      title: "Uraia",
       options: {
-        lowIncome: "Low-income partner ($150)",
-        basic: "Basic partner ($300)",
-        accompanying: "Accompanying partner ($500)",
-        supporting: "Supporting partner ($600)",
-        social: "Social Partner ($1,200)",
-        benefactor: "Benefactor Partner ($2,400)",
-        honorary: "Honorary Partner ($5,000)"
+        lowIncome: "Mshirika wa Kipato cha Chini ($150)",
+        basic: "Mshirika wa Kawaida ($300)",
+        accompanying: "Mshirika Sahaba ($500)",
+        supporting: "Mshirika Msaidizi ($600)",
+        social: "Mshirika wa Kijamii ($1,200)",
+        voluntary: "Mshirika wa Hiari / Msaada (Kiasi chochote)",
+        benefactor: "Mshirika Mfadhili ($10,000+)",
+        honorary: "Mwanachama wa Heshima",
       }
     },
     personalInfo: {
-      title: "2. General Information",
-      who_is_member: "Who is the member?",
-      civility: "Mr / Mrs / Couple",
-      mr: "Mr.",
-      mrs: "Mrs.",
-      couple: "Couple",
-      lastname: "Full Name(s)",
-      profession: "Profession",
-      nationality: "Nationality",
-      status: "Status",
-      physicalPerson: "Individual",
-      moralPerson: "Legal Entity",
-      raison_sociale: "Company Name",
-      id_number: "ID Number",
-      hectare: "Hectare",
-      village: "Village",
-      benevolat_question: "Do you wish to be contacted for volunteering?",
-      yes: "Yes",
-      no: "No"
+      civility: "Cheo",
+      mr: "Bw.",
+      mrs: "Bibi",
+      couple: "Wanandoa",
+      lastname: "Jina kamili",
+      profession: "Kazi",
+      nationality: "Uraia",
+      status: "Hali",
+      physicalPerson: "Mtu wa Kawaida",
+      moralPerson: "Shirika/Taasisi",
+      raison_sociale: "Jina la biashara",
+      id_number: "Namba ya Kitambulisho",
+      hectare: "Hekta",
+      village: "Kijiji",
+      benevolat_question: "Je, ungependa kuwasiliana nasi kwa ajili ya kujitolea?",
+      yes: "Ndiyo",
+      no: "Hapana"
     },
     addressContact: {
-      title: "Address & Contact",
-      address: "Address",
-      code_postal: "Postal code",
-      neighborhood: "Neighborhood",
-      city: "City",
-      province: "Province",
-      country: "Country",
-      phone: "Phone",
-      email: "Email address"
+      title: "Anwani na Mawasiliano",
+      address: "Anwani",
+      code_postal: "Sanduku la Posta",
+      neighborhood: "Mtaa",
+      city: "Mji",
+      province: "Mkoa",
+      country: "Nchi",
+      phone: "Simu",
+      email: "Barua pepe"
     },
     paymentPreference: {
-      title: "3. Payment Mode",
-      bank: "Transfer",
-      card: "Card",
-      cash: "Cash",
-      check: "Check",
-      other: "Other (specify)",
-      note: "Please note that membership fees are non-refundable. Once your membership is validated, no refund can be made."
+      title: "3. Njia ya Malipo",
+      bank: "Uhamisho wa Benki",
+      card: "Kadi",
+      cash: "Pesa Taslimu",
+      check: "Hundi",
+      other: "Nyingine (fafanua)",
+      note: "Tafadhali kumbuka kuwa ada ya uanachama hairudishwi. Mara tu uanachama wako utakapoidhinishwa, hakuna urejesho utakaofanywa."
     },
     sectors: {
-      title: "4. Sector of Interest (Check corresponding boxes)",
-      food_security: "Food Security",
-      health_insurance: "Health insurance",
-      large_scale_agri: "Large-scale agricultural projects",
-      machinery: "Agricultural machinery acquisition",
-      carbon_credits: "Access to carbon credits",
-      medicinal_plants: "Medicinal plants production",
-      fundraising: "Fundraising for community projects",
-      env_protection: "Environmental protection",
-      training_health_agri: "Health and agriculture training"
+      title: "4. Sekta ya Maslahi (Weka alama kwenye masanduku yanayohusika)",
+      food_security: "Usalama wa Chakula",
+      health_insurance: "Bima ya afya",
+      large_scale_agri: "Miradi mikubwa ya kilimo",
+      machinery: "Ununuzi wa mitambo ya kilimo",
+      carbon_credits: "Mikopo ya kaboni",
+      medicinal_plants: "Mimea ya dawa na asili",
+      fundraising: "Kuchangisha fedha",
+      env_protection: "Ulinzi wa mazingira",
+      training_health_agri: "Mafunzo ya afya na kilimo"
     },
     contributions: {
-      title: "6. Inputs and Contributions",
-      question: "What types of resources or expertise are you ready to bring to the organization?",
-      financial: "Financial contribution",
-      technical: "Technical expertise",
-      active_agri: "Active participation in agricultural projects",
-      other: "Other (specify)"
+      title: "5. Michango na Ushiriki",
+      question: "Je, ungependa kutoa mchango gani?",
+      financial: "Mchango wa kifedha",
+      technical: "Msaada wa kiufundi / Utaalamu",
+      active_agri: "Ushiriki amilifu katika miradi ya kilimo",
+      other: "Nyingine"
     },
     experience: {
-      title: "5. Experience and Engagement",
-      question: "Do you have experience in agricultural or environmental projects?",
-      details_label: "If yes, please provide details on your experience:",
-      why_join_label: "Why do you want to join the organization?",
-      yes: "Yes",
-      no: "No"
+      title: "6. Uzoefu",
+      question: "Je, una uzoefu wa awali katika miradi ya kilimo au mazingira?",
+      details_label: "Ikiwa ndiyo, tafadhali toa maelezo juu ya uzoefu wako:",
+      why_join_label: "Kwa nini unataka kujiunga na shirika?",
+      yes: "Ndiyo",
+      no: "Hapana"
     },
     cgu: {
-      title: "7. Consent and Engagement",
-      text: "I acknowledge having read the objectives and rules of the organization, and I commit to respecting the terms and conditions set by its contracts.",
-      readAndApproved: "Read and Approved",
-      date: "Date",
-      signature: "Signature",
-      signaturePlaceholder: "Type your full name to sign",
-      link: "See full conditions",
-      submit: "Send my membership",
-      submitting: "Sending in progress..."
+      title: "7. Idhini na Maelekezo",
+      text: "Ninathibitisha kuwa nimesoma malengo na sheria za shirika, na ninaahidi kuheshimu vigezo na masharti yaliyowekwa na mikataba yake.",
+      readAndApproved: "Nimesoma na nimekubali",
+      date: "Tarehe",
+      signature: "Sahihi",
+      signaturePlaceholder: "Andika jina lako hapa kama sahihi",
+      link: "Soma masharti kamili hapa",
+      submit: "Tuma Maombi",
+      submitting: "Inatuma maombi..."
     },
     form: {
-      title: "Membership Form",
-      success: "Congratulations! Your membership request has been successfully recorded.",
-      error: "An error occurred while sending."
+      title: "Fomu ya Uanachama",
+      success: "Hongera! Ombi lako la uanachama limerekodiwa kwa mafanikio.",
+      error: "Hitilafu imetokea wakati wa kutuma."
     }
   },
   career: {
     hero: {
-      titleJob: "Apply for a Job",
-      titleInternship: "Apply for an Internship",
-      subtitle: "Join our team and contribute to a sustainable future."
+      titleJob: "Omba Kazi",
+      titleInternship: "Omba Mafunzo",
+      subtitle: "Jiunge na timu yetu na uchangie mustakabali endelevu."
     },
     form: {
-      title: "Application Form",
-      type: "Application Type",
-      job: "Job",
-      internship: "Internship",
-      cv: "Curriculum Vitae (CV)",
-      cvPlaceholder: "Link to your CV or file name",
-      motivation: "Cover Letter / Message",
-      motivationPlaceholder: "Tell us about your motivations...",
-      education: "Education Level",
-      educationPlaceholder: "e.g., Master's in Agronomy",
-      experience: "Relevant Experience",
-      experiencePlaceholder: "Summary of your past experiences",
-      submit: "Submit Application",
-      success: "Your application has been successfully sent! We will contact you soon."
+      title: "Fomu ya Maombi",
+      type: "Aina ya Maombi",
+      job: "Kazi",
+      internship: "Mafunzo",
+      cv: "Wasifu (CV)",
+      cvPlaceholder: "Kiungo cha CV yako au jina la faili",
+      motivation: "Barua ya Maombi / Ujumbe",
+      motivationPlaceholder: "Tuambie kuhusu nia yako...",
+      education: "Kiwango cha Elimu",
+      educationPlaceholder: "mfano, Uzamili katika Kilimo",
+      experience: "Uzoefu Unaohusika",
+      experiencePlaceholder: "Muhtasari wa uzoefu wako uliopita",
+      submit: "Tuma Maombi",
+      success: "Maombi yako yametunwa kwa mafanikio! Tutakuwasiliana hivi karibuni."
     }
   },
   employment: {
     hero: {
-      title: "Jobs & Internships",
-      subtitle: "Join our team and contribute to a sustainable future."
+      title: "Kazi & Mafunzo",
+      subtitle: "Jiunge na timu yetu na uchangie mustakabali endelevu."
     },
     summary: {
-      title: "Our Career Opportunities",
-      text: "At Better Life, we are constantly looking for passionate individuals who want to make a difference in environmental protection and sustainable development in the DRC."
+      title: "Fursa Zetu za Kazi",
+      text: "Katika Better Life, tunatafuta kila mara watu wenye shauku wanaotaka kuleta mabadiliko katika ulinzi wa mazingira na maendeleo endelevu nchini DRC."
     },
     jobs: {
-      title: "Professional Careers",
-      description: "Discover our current job openings and join a dynamic team of experts dedicated to the environment.",
-      btn: "Apply for a Job"
+      title: "Kazi za Kitaalamu",
+      description: "Gundua nafasi zetu za kazi za sasa na ujiunge na timu ya wataalamu waliojitolea kwa mazingira.",
+      btn: "Omba Kazi"
     },
     internships: {
-      title: "Student Internships",
-      description: "Develop your skills and gain field experience by contributing to our various projects.",
-      btn: "Apply for an Internship"
+      title: "Mafunzo kwa Wanafunzi",
+      description: "Kuza ujuzi wako na upate uzoefu wa nyanjani kwa kuchangia katika miradi yetu mbalimbali.",
+      btn: "Omba Mafunzo"
     }
   },
   conditions: {
-    title: "General Membership Conditions",
-    backToForm: "Back to form",
+    title: "Masharti ya Jumla ya Uanachama",
+    backToForm: "Rudi kwenye fomu",
     sections: {
       regulation: {
-        title: "1. Objectives and Engagement",
-        text: "• Agreement with the organization's mission: The Partner must adhere to the organization's objectives: Food Security Promotion, Environmental Protection, and Community Agricultural Project Development.\n• Active engagement: The Partner commits to actively participating in the organization's activities and projects, including the management of agricultural and environmental projects."
+        title: "1. Malengo na Ushiriki",
+        text: "• Kukubaliana na wito wa shirika: Mshirika lazima azingatie malengo ya shirika: Kukuza Usalama wa Chakula, Ulinzi wa Mazingira, na Maendeleo ya Miradi ya Kilimo ya Jamii.\n• Ushiriki amilifu: Mshirika anajitolea kushiriki kikamilifu katika shughuli na miradi ya shirika, ikiwa ni pamoja na usimamizi wa miradi ya kilimo na mazingira."
       },
       types: {
-        title: "2. Membership types",
-        text: "• Individual membership: Open to individuals wishing to participate personally.\n• Group or organization membership: Open to agricultural cooperatives, businesses, or community groups wishing to get involved in large-scale projects.\n• Partner institution membership: For institutions wishing to provide technical or financial support."
+        title: "2. Aina za uanachama",
+        text: "• Uanachama wa mtu binafsi: Uwazi kwa watu wanaotaka kushiriki kibinafsi.\n• Uanachama wa kikundi au shirika: Uwazi kwa vyama vya ushirika vya kilimo, biashara, au vikundi vya jamii vinavyotaka kushiriki katika miradi mikubwa.\n• Uanachama wa taasisi mshirika: Kwa taasisi zinazotaka kutoa usaidizi wa kiufundi au wa kifedha."
       },
       criteria: {
-        title: "3. Membership criteria",
-        text: "• Nationality and residence: Partners must be residents in the geographical area where the organization operates, or have an interest in activities in this region.\n• Agricultural experience (optional): For Partners participating in agricultural projects, experience in agriculture or land management may be required.\n• Interest in sustainable agriculture and environment: Partners must demonstrate an interest in sustainable agriculture, carbon emission reduction, and environmental preservation."
+        title: "3. Vigezo vya uanachama",
+        text: "• Uraia na makazi: Washirika lazima wawe wakazi katika eneo la kijiografia ambapo shirika linafanya kazi, au wawe na maslahi katika shughuli za eneo hili.\n• Uzoefu wa kilimo (hiari): Kwa Washirika wanaoshiriki katika miradi ya kilimo, uzoefu katika kilimo au usimamizi wa ardhi unaweza kuhitajika.\n• Nia katika kilimo endelevu na mazingira: Washirika lazima waonyeshe nia katika kilimo endelevu, kupunguza uzalishaji wa kaboni, na uhifadhi wa mazingira."
       },
       fees: {
-        title: "4. Membership Fees",
-        text: "• Annual fee: Partners are required to pay a membership fee, which may vary by individual or organizational membership type.\n• Project fees: In some cases, Partners may be invited to contribute financially to specific projects for agricultural machinery purchase or environmental/agricultural program implementation."
+        title: "4. Ada za Uanachama",
+        text: "• Ada ya kila mwaka: Washirika wanatakiwa kulipa ada ya uanachama, ambayo inaweza kutofautiana kulingana na aina ya uanachama wa mtu binafsi au shirika.\n• Ada za mradi: Katika baadhi ya matukio, Washirika wanaweza kualikwa kuchangia kifedha kwa miradi maalum kwa ajili ya ununuzi wa mitambo ya kilimo au utekelezaji wa programu za mazingira/kilimo."
       },
       responsibilities: {
-        title: "5. Partner Responsibilities",
-        text: "• Participation in assemblies and meetings: Partners must participate in general assemblies and meetings to discuss ongoing projects, strategic decisions, and fund management.\n• Compliance with regulations: Partners must respect internal rules, the organization's charter, and specific project regulations.\n• Contribution to community projects: Partners must actively participate in fundraising, awareness initiatives, and agricultural/environmental activities."
+        title: "5. Majukumu ya Mshirika",
+        text: "• Ushiriki katika mikutano: Washirika wanapaswa kushiriki katika mikutano mikuu na mikutano ya kujadili miradi inayoendelea, maamuzi ya kimkakati, na usimamizi wa fedha.\n• Kuzingatia kanuni: Washirika lazima waheshimu sheria za ndani, katiba ya shirika, na kanuni maalum za mradi.\n• Mchango kwa miradi ya jamii: Washirika lazima washiriki kikamilifu katika kuchangisha fedha, mipango ya uhamasishaji, na shughuli za kilimo/mazingira."
       },
       resources: {
-        title: "6. Access to Resources and Benefits",
-        text: "• Access to agricultural machinery: Partners have privileged access to equipment and machinery under conditions.\n• Access to carbon credits: Partners can participate in assessment and access programs, with benefit sharing.\n• Training and technical assistance: Partners can benefit from training on modern practices, environmental management, and sustainable technologies."
+        title: "6. Upatikanaji wa Rasilimali na Faida",
+        text: "• Upatikanaji wa mitambo ya kilimo: Washirika wana fursa ya upendeleo ya kupata vifaa na mitambo chini ya masharti maalum.\n• Upatikanaji wa mikopo ya kaboni: Washirika wanaweza kushiriki katika tathmini na programu za ufikiaji, na kugawana faida.\n• Mafunzo na usaidizi wa kiufundi: Washirika wanaweza kufaidika na mafunzo juu ya mbinu za kisasa, usimamizi wa mazingira, na teknolojia endelevu."
       },
       termination: {
-        title: "7. Termination Conditions",
-        text: "• Breach of commitments: A Partner may be excluded for repeated failure or actions contrary to objectives.\n• Non-payment of dues: If a Partner does not pay their contribution (not exceeding 30%), they may lose membership rights."
+        title: "7. Masharti ya Kusitisha",
+        text: "• Ukiukaji wa ahadi: Mshirika anaweza kuondolewa kwa kushindwa mara kwa mara au hatua zinazokwenda kinyume na malengo.\n• Kutolipa ada: Ikiwa Mshirika hatakulipa mchango wao, anaweza kupoteza haki za uanachama."
       },
       projects: {
-        title: "8. Project-specific criteria",
-        text: "• Large-scale agricultural projects: Partners must have land or be able to collaborate with local farms.\n• Fundraising for community projects: Partners are encouraged to participate in financing initiatives."
+        title: "8. Vigezo maalum vya mradi",
+        text: "• Miradi mikubwa ya kilimo: Washirika lazima wawe na ardhi au waweze kushirikiana na mashamba ya asili.\n• Kuchangisha fedha kwa miradi ya jamii: Washirika wanahimizwa kushiriki katika mipango ya ufadhili."
       },
       consent: {
-        title: "9. Consent and Engagement",
-        text: "• I acknowledge having read the objectives and rules of the organization, and I commit to respecting the terms and conditions set by its contracts."
+        title: "9. Idhini na Maelekezo",
+        text: "• Ninathibitisha kuwa nimesoma malengo na sheria za shirika, na ninaahidi kuheshimu vigezo na masharti yaliyowekwa na mikataba yake."
       }
     }
   },
   quickLinks: {
     ongoing: {
-      title: "Ongoing Projects",
-      text: "Discover our 12 active projects transforming lives across the country",
+      title: "Miradi Inayoendelea",
+      text: "Gundua miradi yetu 12 inayofanya kazi kubadilisha maisha nchini kote",
     },
     completed: {
-      title: "Completed Projects",
-      text: "28 projects successfully completed, 85,000+ direct beneficiaries",
+      title: "Miradi Iliyokamilika",
+      text: "Miradi 28 imekamilika kwa mafanikio, wanufaika wa moja kwa moja 85,000+",
     },
   },
   featured: {
-    kicker: "Featured Projects",
-    title: "Our Key Initiatives",
+    kicker: "Miradi Iliyoangaziwa",
+    title: "Mipango Yetu Muhimu",
     items: [
       {
-        title: "Massive Reforestation Kinshasa",
+        title: "Upandaji Miti kwa Wingi Kinshasa",
         location: "Kinshasa, DRC",
-        status: "Ongoing",
+        status: "Inaendelea",
         beneficiaries: "50,000",
         budget: "2.5M USD",
         trees: "500,000",
       },
       {
-        title: "Climate-Smart Agriculture Kikwit",
+        title: "Kilimo Mahiri cha Tabianchi Kikwit",
         location: "Kikwit, Kwilu",
-        status: "Ongoing",
-        beneficiaries: "3,000",
+        status: "Inaendelea",
+        beneficiaries: "12,000",
         budget: "1.8M USD",
         trees: "0",
       },
       {
-        title: "Biodiversity Protection Salonga",
-        location: "Salonga National Park",
-        status: "Ongoing",
-        beneficiaries: "15 communities",
+        title: "Ulinzi wa Bioanuwai Salonga",
+        location: "Hifadhi ya Salonga",
+        status: "Imekamilika",
+        beneficiaries: "15 jamii",
         budget: "3.2M USD",
         trees: "0",
       },
@@ -780,653 +779,1079 @@ export const sw = {
   about: {
     mission: {
       hero: {
-        title: "About Better Life",
-        subtitle: "A committed organization for a sustainable future",
+        title: "Wito Wetu",
+        subtitle: "Kulinda mazingira na kukuza maendeleo endelevu kwa vizazi vijavyo",
       },
       vision: {
-        kicker: "Our Vision",
-        title: "A green and prosperous world",
-        text: "We envision a future where communities live in harmony with nature, where food security is guaranteed, and where biodiversity is preserved.",
-        desc: "Our goal is to be a leader in sustainable development in the DRC."
+        kicker: "Maono Yetu",
+        title: "Mustakabali Endelevu kwa Wote",
+        text: "Tunawazia ulimwengu ambapo maelewano kati ya binadamu na asili yanarejeshwa, ambapo kila jamii inapata chakula bora na mazingira yaliyohifadhiwa.",
+        desc: "Better Life imejitolea kuunda matokeo chanya na ya kudumu katika Jamhuri ya Kidemokrasia ya Kongo na kwingineko, kwa kuweka ulinzi wa mazingira na ustawi wa jamii katika kitovu cha hatua zetu zote.",
       },
       mission: {
-        kicker: "Our Mission",
-        title: "Acting for the planet",
-        text: "Our mission is to protect the environment, promote sustainable agriculture, and support community development.",
-        desc: "Through concrete actions and strong partnerships, we transform lives."
+        kicker: "Wito Wetu",
+        title: "Kuchukua Hatua kwa Mabadiliko",
+        text: "Tunafanya kazi kila siku kwa ajili ya ulinzi wa mazingira, uhifadhi wa bioanuwai na kukuza usalama wa chakula.",
+        desc: "Kupitia programu bunifu na shirikishi, tunahamasisha jamii za asili kuunda mabadiliko chanya na ya kudumu yanayomnufaisha kila mmoja.",
       },
       values: {
-        kicker: "Our Values",
-        title: "What drives us",
+        kicker: "Maadili Yetu",
+        title: "Nguzo za Hatua Zetu",
         items: [
-          { title: "Integrity", desc: "Transparency and honesty in all our actions." },
-          { title: "Commitment", desc: "Passion for our cause and beneficiaries." },
-          { title: "Collaboration", desc: "Working together for greater impact." },
-          { title: "Innovation", desc: "Finding new solutions for complex challenges." }
-        ]
+          {
+            title: "Mikopo Midogo na Ujasiriamali",
+            desc: "Usaidizi wa kifedha na kiufundi kwa ajili ya maendeleo ya shughuli zinazozalisha mapato.",
+            impact: "Biashara ndogo ndogo 500+ zimesaidiwa"
+          },
+          {
+            title: "Mafunzo ya Ufundi",
+            desc: "Ukuzaji wa ujuzi wa kiufundi na ujasiriamali kwa vijana na wanawake.",
+            impact: "Watu 2000+ wamefunzwa"
+          },
+          {
+            title: "Upatikanaji wa Maji Safi",
+            desc: "Ufungaji wa visima na mifumo ya usambazaji wa maji katika jamii za vijijini.",
+            impact: "Vituo vya maji 50+ vimejengwa"
+          },
+          {
+            title: "Kilimo Endelevu",
+            desc: "Mafunzo ya kiikolojia ya kilimo na mbinu za kilimo mseto kwa ajili ya uzalishaji endelevu.",
+            impact: "Wakulima 1000+ wamefunzwa"
+          },
+          {
+            title: "Usalama wa Chakula",
+            desc: "Programu za lishe na mseto wa chakula ili kupambana na utapiamlo.",
+            impact: "Watu 5000+ wamefikiwa"
+          },
+          {
+            title: "Uwezeshaji wa Wanawake",
+            desc: "Programu maalum za kuimarisha uongozi na uhuru wa kiuchumi wa wanawake.",
+            impact: "Wanawake 1000+ wamesaidiwa"
+          }
+        ],
       },
       impact: {
-        kicker: "Our Impact",
-        title: "Results that speak",
+        kicker: "Maeneo ya Hatua Zetu",
+        title: "Mahali Tunapofanya Kazi",
         items: [
-          { number: "50+", label: "Communities" },
-          { number: "1M+", label: "Trees" },
-          { number: "20k", label: "Farmers" }
-        ]
+          {
+            title: "Ulinzi wa Mazingira",
+            desc: "Uoteshaji miti, uhifadhi wa misitu, mapambano dhidi ya ukataji miti na uhifadhi wa mifumo ya asili.",
+          },
+          {
+            title: "Usalama wa Chakula",
+            desc: "Kukuza kilimo endelevu, mafunzo ya mbinu za kisasa za kilimo na usaidizi kwa wakulima wa asili.",
+          },
+          {
+            title: "Bioanuwai",
+            desc: "Ulinzi wa viumbe walio katika hatari, urejeshaji wa makazi ya asili na kutoa elimu juu ya umuhimu wa bioanuwai.",
+          },
+          {
+            title: "Maendeleo ya Jamii",
+            desc: "Uwezeshaji wa jamii, kuunda fursa za kiuchumi endelevu na kuboresha hali ya maisha.",
+          },
+        ],
       },
       cta: {
-        title: "Get Involved",
-        text: "Join us and be part of the change.",
-        btn_volunteer: "Volunteer",
-        btn_contact: "Contact us"
-      }
+        title: "Jiunge na Wito Wetu",
+        text: "Pamoja, tunaweza kuunda mustakabali wa kijani kibichi na endelevu kwa wote",
+        btn_volunteer: "Kuwa Jitolea",
+        btn_contact: "Wasiliana Nasi",
+      },
     },
     team: {
       hero: {
-        title: "Our Team",
-        subtitle: "Experts dedicated to sustainable development"
+        title: "Timu Yetu",
+        subtitle: "Wataalamu wenye shauku waliojitolea kulinda mazingira na maendeleo endelevu",
       },
-      // ... repeated or specific team content
-    }
-  },
-  footer: {
-    description:
-      "Protection of the environment, Biodiversity and Sustainable Development in the Democratic Republic of Congo.",
-    nav_title: "Navigation",
-    activities_title: "Activities",
-    contact_title: "Contact Us",
-    rights: "All rights reserved.",
-    tagline: "A better world",
-    location: "Joli Parc, C/Ngaliema",
-  },
-  Actions: {
-    Environement: "Environment & Climate",
-    index: {
-      kicker: "Our Actions",
-      title: "Drivers of Lasting Impact",
-      approach: {
-        kicker: "Integrated Approach"
+      leadership: {
+        kicker: "Uongozi",
+        title: "Timu ya Uongozi",
+        text: "Timu ya fani mbalimbali inayochanganya ujuzi wa kisayansi, uzoefu wa nyanjani, na shauku kwa mazingira",
       },
-      objectives: {
-        kicker: "Key Objectives"
+      members: [
+        {
+          name: "Dr. Jean-Baptiste Mukendi",
+          role: "Mkurugenzi Mkuu",
+          bio: "Mtaalamu wa maendeleo endelevu mwenye uzoefu wa zaidi ya miaka 15 katika uhifadhi wa mazingira katika Afrika ya Kati.",
+          expertise: ["Uongozi", "Mkakati", "Uhifadhi"],
+        },
+        {
+          name: "Marie-Claire Kabamba",
+          role: "Mkurugenzi wa Operesheni",
+          bio: "Mtaalamu wa usimamizi wa miradi ya mazingira na maendeleo ya jamii, mwenye shauku ya kuwezesha jamii za asili.",
+          expertise: ["Usimamizi wa Miradi", "Maendeleo", "Mafunzo"],
+        },
+        {
+          name: "Prof. André Tshiala",
+          role: "Mshauri wa Kisayansi",
+          bio: "Mwanabiolojia mashuhuri aliyebobea katika bioanuwai ya kitropiki na mifumo ya ikolojia ya misitu ya Bonde la Kongo.",
+          expertise: ["Bioanuwai", "Utafiti", "Mifumo ya Ikolojia"],
+        },
+        {
+          name: "Sylvie Mbuyi",
+          role: "Meneja wa Kilimo Endelevu",
+          bio: "Mtaalamu wa kilimo mwenye ujuzi wa kilimo kinachozingatia tabianchi na mbinu za kilimo hai zilizobadilishwa kwa hali ya hewa ya kitropiki.",
+          expertise: ["Kilimo", "Kilimo Hai", "Ubunifu"],
+        },
+        {
+          name: "Patrick Nsimba",
+          role: "Mratibu wa Uoteshaji Miti",
+          bio: "Mhandisi wa misitu anayeratibu programu zetu za uoteshaji miti na kurejesha misitu iliyoharibiwa.",
+          expertise: ["Misitu", "Uoteshaji Miti", "Vituo vya Miche"],
+        },
+        {
+          name: "Grâce Lumingu",
+          role: "Meneja wa Mawasiliano",
+          bio: "Mtaalamu wa mawasiliano ya mazingira na uhamasishaji jamii, anayetoa elimu juu ya changamoto za kiikolojia.",
+          expertise: ["Mawasiliano", "Uhamasishaji", "Vyombo vya Habari"],
+        },
+      ],
+      advisory: {
+        kicker: "Bodi ya Ushauri",
+        title: "Washauri Wetu Wataalamu",
+        text: "Wataalamu wa kimataifa wanaoongoza mkakati na programu zetu",
+        members: [
+          {
+            name: "Dr. Amina Diallo",
+            role: "Mtaalamu wa Tabianchi",
+            org: "Taasisi ya Tabianchi ya Afrika",
+          },
+          {
+            name: "Robert Smith",
+            role: "Mtaalamu wa Uhifadhi",
+            org: "Mfuko wa Mazingira wa Dunia",
+          },
+          {
+            name: "Dr. Elena Rossi",
+            role: "Mtafiti wa Kilimo Hai",
+            org: "Kituo cha Euro-Mediterranean",
+          },
+        ]
       },
-      cards: {
-        agriculture: {
-          desc: "Transforming agriculture and adopting climate-smart practices for food security."
-        },
-        elevage: {
-          desc: "Smart food supply systems reducing greenhouse gas emissions."
-        },
-        communautaire: {
-          desc: "Promoting population well-being, health, education, and participatory rural development."
-        },
-        equipements: {
-          title: "Equipment & Training",
-          desc: "Technical and material support for local producers."
-        },
-        Environement: {
-          desc: "School nurseries, reforestation, and fighting global warming via forest and fruit species."
-        }
+      cta: {
+        title: "Jiunge na Timu",
+        text: "Je, unataka kutumia ujuzi wako kwa ajili ya sababu nzuri? Jiunge nasi!",
+        items: [
+          "Wajitolea",
+          "Wanagenzi",
+          "Washauri",
+          "Washirika wa Ndani",
+        ],
+        btn: "Angalia Nafasi"
       }
     },
-    agriculture: {
+    partners: {
       hero: {
-        title: "Kilimo Endelevu",
-        subtitle: "Kukuza mazoea ya kilimo ambayo ni rafiki kwa mazingira na yenye faida kiuchumi",
+        title: "Washirika Wetu",
+        subtitle: "Pamoja, tunatengeneza matokeo endelevu kwa mazingira na jamii",
       },
       intro: {
-        kicker: "Njia Yetu",
-        title: "Kilimo Mahiri",
-        text: "Tunasaidia wakulima katika mabadiliko kuelekea mazoea endelevu yanayoongeza tija huku yakihifadhi mazingira.",
-        subtext: "Kukabiliana na changamoto za hali ya hewa, tunahimiza kilimo chenye ustahimilivu.",
+        kicker: "Ushirikiano",
+        title: "Nguvu ya Ushirikiano",
+        text: "Ushirikiano wetu wa kimkakati unatuwezesha kuzidisha matokeo yetu na kufikia malengo yetu makubwa ya ulinzi wa mazingira na maendeleo endelevu.",
+      },
+      strategic: {
+        title: "Washirika wa Kimkakati wa Kimataifa",
+        items: [
+          {
+            name: "Mpango wa Umoja wa Mataifa wa Mazingira",
+            acronym: "UNEP",
+            type: "Shirika la Kimataifa",
+            desc: "Ushirikiano katika programu za uhifadhi wa bioanuwai na mapambano dhidi ya mabadiliko ya tabianchi.",
+            focus: ["Tabianchi", "Bioanuwai", "Ufadhili"],
+          },
+          {
+            name: "Mfuko wa Mazingira wa Dunia",
+            acronym: "WWF",
+            type: "Shirika la Kimataifa (NGO)",
+            desc: "Ushirikiano wa kimkakati kwa ajili ya ulinzi wa misitu ya Bonde la Kongo na uhifadhi wa viumbe walio katika hatari.",
+            focus: ["Uhifadhi", "Misitu", "Wanyamapori"],
+          },
+          {
+            name: "Benki ya Maendeleo ya Afrika",
+            acronym: "AfDB",
+            type: "Taasisi ya Kifedha",
+            desc: "Usaidizi wa kifedha na kiufundi kwa ajili ya miradi yetu ya kilimo endelevu na maendeleo ya vijijini.",
+            focus: ["Ufadhili", "Kilimo", "Miundombinu"],
+          },
+        ],
+      },
+      local: {
+        title: "Washirika wa Ndani na Kitaifa",
+        items: [
+          {
+            name: "Wizara ya Mazingira na Asili",
+            acronym: "MEN",
+            type: "Wizara",
+            desc: "Ushirikiano katika programu za uhifadhi wa bioanuwai na mapambano dhidi ya mabadiliko ya tabianchi.",
+            focus: ["Tabianchi", "Bioanuwai", "Ufadhili"],
+          },
+        ],
+      },
+      technical: {
+        title: "Washirika wa Kiufundi",
+        items: [
+          {
+            name: "Vyuo Vikuu & Vituo vya Utafiti",
+            desc: "Usaidizi wa kisayansi, tafiti za matokeo na ubunifu ili kuimarisha miradi yetu.",
+          },
+          {
+            name: "Wataalamu & Washauri",
+            desc: "Utaalamu wa nyanjani (kilimo mseto, bioanuwai, tabianchi) na kusaidia jamii.",
+          },
+          {
+            name: "Mashirika ya Kiufundi",
+            desc: "Uhamishaji wa ujuzi, mafunzo na utekelezaji wa suluhisho endelevu.",
+          },
+        ],
+      },
+      private: {
+        title: "Washirika wa Sekta Binafsi",
+        text: "Kampuni zilizojitolea zinachukua nafasi muhimu katika ufadhili, ubunifu na kuunda minyororo ya thamani endelevu.",
+        items: [
+          "Viwanda vya Kilimo",
+          "Biashara Ndogo na za Kati",
+          "Kampuni Chipukizi & Ubunifu",
+          "Taasisi za Kifedha",
+          "Kampuni zenye Matokeo Chanya",
+          "Bidhaa Zinazowajibika",
+        ],
+      },
+      benefits: {
+        kicker: "Faida",
+        title: "Kwa nini uwe mshirika?",
+        items: [
+          {
+            title: "Matokeo Yanayopimika",
+            desc: "Changia matokeo halisi nyanjani (uoteshaji miti, kilimo endelevu, jamii).",
+          },
+          {
+            title: "Kuonekana & Uaminifu",
+            desc: "Thibitisha ahadi yako ya kijamii (CSR) kwa washirika wako.",
+          },
+          {
+            title: "Ubunifu wa Pamoja",
+            desc: "Tutuze suluhisho linalofaa mahitaji ya nyanjani kwa pamoja.",
+          },
+          {
+            title: "Mtandao",
+            desc: "Pata ufikiaji wa mtandao wa washirika wa kiserikali, kiufundi na kijamii.",
+          },
+        ],
+      },
+      cta: {
+        title: "Kuwa Mshirika",
+        text: "Wasiliana nasi ili kujenga ushirikiano unaofaa malengo yako na wito wetu.",
+        btn: "Wasiliana Nasi",
+      },
+    },
+    footer: {
+      description:
+        "Ulinzi wa Mazingira, Bioanuwai na Maendeleo Endelevu katika Jamhuri ya Kidemokrasia ya Kongo.",
+      nav_title: "Maelekezo",
+      activities_title: "Shughuli",
+      contact_title: "Wasiliana Nasi",
+      rights: "Haki zote zimehifadhiwa.",
+      tagline: "Ulimwengu bora",
+      location: "Joli Parc, C/Ngaliema",
+    },
+    Actions: {
+      Environement: "Mazingira & Hali ya Hewa",
+      index: {
+        kicker: "Vitendo Vyetu",
+        title: "Vitendo Vyetu",
+        subtitle: "Vichocheo vya Athari Inayodumu",
+        approach: {
+          kicker: "Njia Iliyounganishwa"
+        },
         objectives: {
-          title: "Malengo Yetu",
+          kicker: "Malengo Muhimu"
+        },
+        cards: {
+          agriculture: {
+            desc: "Kubadilisha kilimo na kufuata mazoea mahiri kwa ajili ya usalama wa chakula."
+          },
+          elevage: {
+            desc: "Mifumo mahiri inayopunguza uzalishaji wa gesi chafu."
+          },
+          communautaire: {
+            desc: "Kukuza ustawi wa watu, afya, elimu na maendeleo shirikishi vijijini."
+          },
+          equipements: {
+            title: "Vifaa & Mafunzo",
+            desc: "Usaidizi wa kiufundi na vifaa kwa wazalishaji wa ndani."
+          },
+          Environement: {
+            desc: "Vichocheo shuleni, uoteshaji miti, na kupambana na ongezeko la joto duniani."
+          }
+        }
+      },
+      agriculture: {
+        hero: {
+          title: "Kilimo Endelevu",
+          subtitle: "Kukuza mazoea ya kilimo ambayo ni rafiki kwa mazingira na yenye faida kiuchumi",
+        },
+        intro: {
+          kicker: "Njia Yetu",
+          title: "Kilimo Mahiri",
+          text: "Tunasaidia wakulima katika mabadiliko kuelekea mazoea endelevu yanayoongeza tija huku yakihifadhi mazingira.",
+          subtext: "Kukabiliana na changamoto za hali ya hewa, tunahimiza kilimo chenye ustahimilivu.",
+          objectives: {
+            title: "Malengo Yetu",
+            items: [
+              "Kuongeza tija",
+              "Kufundisha wakulima",
+              "Kupunguza dawa za kuua wadudu",
+              "Usalama wa chakula"
+            ]
+          }
+        },
+        programs: {
+          kicker: "Programu Zetu",
+          title: "Mipango ya Kilimo",
           items: [
-            "Kuongeza tija",
-            "Kufundisha wakulima",
-            "Kupunguza dawa za kuua wadudu",
-            "Usalama wa chakula"
+            {
+              title: "Agroforestry",
+              desc: "Ushirikiano wa miti katika mazao ili kurejesha udongo na kubadilisha mapato.",
+              benefits: ["Ulinzi wa udongo", "Utofauti", "Bioanuwai"]
+            },
+            {
+              title: "Mazao ya Kudumu",
+              desc: "Maendeleo ya mazao endelevu kama kakao na kahawa chini ya kivuli.",
+              benefits: ["Mapato thabiti", "Kivuli cha asili", "Ubora wa juu"]
+            },
+            {
+              title: "Usimamizi wa Maji",
+              desc: "Mbinu bora za umwagiliaji na uhifadhi wa maji.",
+              benefits: ["Uchumi", "Ustahimilivu", "Uzalishaji wa mwaka mzima"]
+            }
+          ]
+        },
+        training: {
+          title: "Mafunzo na Usaidizi",
+          items: [
+            {
+              title: "Mbinu za Kilimo",
+              desc: "Kujifunza mbinu za kilimo hai na endelevu."
+            },
+            {
+              title: "Usimamizi wa Wadudu",
+              desc: "Mapambano ya kibaolojia yaliyojumuishwa dhidi ya magonjwa na wadudu waharibifu."
+            },
+            {
+              title: "Uongezaji Thamani",
+              desc: "Uboreshaji wa bidhaa za kilimo ili kuongeza mapato."
+            },
+            {
+              title: "Usimamizi Rahisi",
+              desc: "Mafunzo juu ya usimamizi wa kimsingi wa shamba."
+            }
+          ],
+          impact: {
+            title: "Athari Yetu",
+            stats: [
+              { number: "1200+", label: "Wakulima waliofunzwa" },
+              { number: "+40%", label: "Wastani wa mavuno" },
+              { number: "15", label: "Vyama vya ushirika" },
+              { number: "-85%", label: "Dawa za kuua wadudu" }
+            ]
+          },
+          testimonial: {
+            text: "Shukrani kwa mafunzo ya mseto wa misitu na kilimo, sijafanikiwa tu kuongeza uzalishaji wangu wa kakao, bali pia nimeimarisha ardhi yangu kwa ajili ya watoto wangu.",
+            author: "Jean K., Mkulima mshirika"
+          }
+        },
+        cta: {
+          title: "Jiunge na harakati",
+          text: "Wakulima au wapenzi, tunakuhitaji",
+          btn_train: "Mafunzo",
+          btn_more: "Soma Zaidi"
+        }
+      },
+      agricultures: {
+        cacao: {
+          hero: { title: "Kakao (Criollo)", subtitle: "Dhahabu ya RDC" },
+          intro: { kicker: "Asili", title: "Kakao ya Criollo", text: "Aina adimu na inayothaminiwa kwa harufu yake nzuri na ya hila." },
+          features: { kicker: "Sifa", title: "Kwa nini Criollo?", items: ["Harufu ya matunda", "Maharagwe meupe", "Uchachushaji mfupi", "Thamani ya juu"] },
+          technique: { title: "Mbinu ya Kilimo", items: ["Chini ya kivuli cha misitu", "Ushirikiano na migomba", "Uvunaji wa mwongozo uliochaguliwa"] },
+          impact: { title: "Athari", stats: [{ value: "500T", label: "Uzalishaji" }, { value: "1200", label: "Wazalishaji" }] }
+        },
+        cafe: {
+          hero: { title: "Kahawa ya Arabica", subtitle: "Ubora wa Nyanda za Juu" },
+          intro: { kicker: "Terroir", title: "Kahawa ya Milimani", text: "Inapandwa kwenye mwinuko kwa utajiri wa kipekee wa harufu." },
+          features: { kicker: "Ubora", title: "Kahawa Yetu", items: ["Mwinuko > 1200m", "Usindikaji uliosafishwa", "Kukausha kwenye vitanda vya Kiafrika", "Alama ya SCA 85+"] },
+          technique: { title: "Mchakato", items: ["Uchumaji mzuri", "Kuondoa mimbari siku hiyo hiyo", "Uchachushaji unaodhibitiwa"] },
+          impact: { title: "Athari", stats: [{ value: "300T", label: "Mauzo ya nje" }, { value: "800", label: "Familia" }] }
+        },
+        the: {
+          hero: { title: "Chai", subtitle: "Utamaduni wa Ustawi" },
+          intro: { kicker: "Mila", title: "Chai ya Virunga", text: "Wakulima wenye shauku kwa chai yenye tabia dhabiti." },
+          features: { kicker: "Bidhaa", title: "Aina za Chai", items: ["Chai nyeusi ya kiorthodox", "Chai ya kijani", "Chai nyeupe (machipukizi)", "Iliyothibitishwa kuwa Bio"] },
+          technique: { title: "Ujuzi", items: ["Uchumaji wa kifalme (chipukizi moja, majani mawili)", "Kunyauka kiasili", "Kuviringisha kwa mikono"] },
+          impact: { title: "Athari", stats: [{ value: "150T", label: "Uzalishaji" }, { value: "450", label: "Wanawake walioajiriwa" }] }
+        },
+        coton_caoutchouc: {
+          hero: { title: "Pamba na Mpira", subtitle: "Mazao ya Biashara ya Viwandani" },
+          intro: { kicker: "Viwanda", title: "Sekta za Kimkakati", text: "Ufufuaji wa mazao ya viwandani kwa uchumi wa ndani." },
+          features: { kicker: "Sekta", title: "Athari Mbili", items: ["Pamba ya nyuzi ndefu", "Mpira wa kloni", "Usindikaji wa ndani", "Nguo na Viwanda"] },
+          technique: { title: "Kilimo-viwanda", items: ["Mashamba endelevu", "Usimamizi wa kiufundi", "Umekanizaji uliorekebishwa"] },
+          impact: { title: "Athari", stats: [{ value: "1000ha", label: "Eneo" }, { value: "2000", label: "Kazi za moja kwa moja" }] }
+        },
+        arboriculture: {
+          hero: { title: "Arboriculture", subtitle: "Mashamba ya Matunda Yaliyotofautishwa" },
+          intro: { kicker: "Utofauti", title: "Matunda ya Kitropiki", text: "Wingi wa ladha kwa matumizi ya ndani na nje." },
+          features: { kicker: "Aina", title: "Matunda Yetu", items: ["Miembe iliyounganishwa", "Parachichi za Hass", "Machungwa", "Tunda la mateso"] },
+          technique: { title: "Mazoea", items: ["Kuunganisha", "Kupogoa kwa mafunzo", "Udhibiti jumuishi", "Umwagiliaji wa matone"] },
+          impact: { title: "Athari", stats: [{ value: "50k", label: "Miti" }, { value: "Vitamini", label: "Lishe" }] }
+        },
+        plantes_medicinales: {
+          hero: { title: "Mimea ya Dawa", subtitle: "Pharmacopoeia ya Asili" },
+          intro: { kicker: "Afya", title: "Maarifa ya Mababa na Sayansi", text: "Uthamini wa mimea ya dawa ya kienyeji kwa afya ya jamii." },
+          features: { kicker: "Spishi", title: "Mimea Muhimu", items: ["Artemisia (Malaria)", "Moringa (Lishe)", "Prunus Africana", "Mchaichai"] },
+          technique: { title: "Usindikaji", items: ["Kukausha kwa jua", "Uchituzi wa mafuta muhimu", "Ufungaji wa usafi"] },
+          impact: { title: "Athari", stats: [{ value: "20", label: "Bustani za afya" }, { value: "10k", label: "Wagonjwa waliosaidiwa" }] }
+        }
+      },
+      environement: {
+        hero: {
+          title: "Environmental Protection",
+          subtitle: "Preserving our natural heritage for future generations"
+        },
+        intro: {
+          kicker: "Our Commitment",
+          title: "Acting for Biodiversity",
+          text: "We implement concrete actions for the conservation of ecosystems, the sustainable management of natural resources, and the fight against climate change.",
+          stats: {
+            planted: { number: "450k", label: "Trees" },
+            survival: { number: "85%", label: "Survival rate" }
+          }
+        },
+        programs: {
+          kicker: "Our Programs",
+          title: "Our Green Initiatives",
+          items: [
+            { title: "Waste Management", desc: "Recycling and valorization.", benefits: ["Cleanliness", "Circular economy"] },
+            { title: "Clean Energy", desc: "Promotion of improved stoves.", benefits: ["Less CO2", "Health"] },
+            { title: "Education", desc: "Awareness in schools.", benefits: ["Future generation", "Conscience"] }
+          ]
+        },
+        impact: {
+          title: "Our Environmental Impact",
+          stats: [
+            { number: "-30%", label: "CO2 Emissions" },
+            { number: "50T", label: "Recycled waste" },
+            { number: "10k", label: "Aware children" }
+          ]
+        },
+        cta: {
+          title: "Protect Our Planet",
+          text: "Join us in our mission to preserve nature and build a sustainable future.",
+          btn_join: "Become a member",
+          btn_sponsor: "Sponsor a tree"
+        },
+        // Sub-pages
+        protection_foret: {
+          hero: { title: "Forest Protection", subtitle: "Lungs of the planet" },
+          intro: { title: "Conservation", text: "Fight against deforestation and poaching." },
+          features: ["Eco-guard patrols", "Participatory mapping", "Restoration", "Protected areas"]
+        },
+        credit_carbone: {
+          hero: { title: "Carbon Credit", subtitle: "Valuing sequestration" },
+          intro: { title: "Climate Finance", text: "Generate income through conservation." },
+          features: ["Certification", "Credit sales", "Community income", "Carbon monitoring"]
+        },
+        eco_kelasi: {
+          hero: { title: "Eco-Kelasi", subtitle: "The ecological school" },
+          intro: { title: "Environmental Education", text: "Learning to love and protect nature from an early age." },
+          features: ["School gardens", "Nature clubs", "Waste sorting", "Educational outings"]
+        }
+      },
+      mecanisation: {
+        hero: { title: "Agricultural Mechanization", subtitle: "Modernizing for efficient agriculture" },
+        intro: {
+          kicker: "Our Vision",
+          title: "The Future is Mechanization",
+          text: "We facilitate access to modern equipment to increase productivity while reducing the arduousness of agricultural work.",
+          stats: [
+            { value: "200+", label: "Tractors deployed" },
+            { value: "1000+", label: "Hectares plowed" },
+            { value: "50+", label: "Mobile workshops" },
+            { value: "500+", label: "Operators trained" }
+          ]
+        },
+        programs: {
+          kicker: "Our Programs",
+          title: "Mechanization Solutions",
+          items: [
+            {
+              title: "Agricultural Tractors",
+              desc: "Rental and sale of tractors adapted to local farms.",
+              impact: "100+ farms"
+            },
+            {
+              title: "Processing Units",
+              desc: "Equipment for processing agricultural products (mills, presses).",
+              impact: "50+ units"
+            },
+            {
+              title: "Maintenance & Repair",
+              desc: "Service and repair to ensure equipment longevity.",
+              impact: "200+ interventions"
+            },
+            {
+              title: "Operator Training",
+              desc: "Training on the use and maintenance of agricultural equipment.",
+              impact: "500+ operators"
+            }
+          ]
+        },
+        benefits: { title: "Benefits", items: ["Increased productivity", "Reduced drudgery", "Youth attractiveness", "Precision"] },
+        cta: {
+          title: "Modernize Your Farm",
+          text: "Invest in mechanization to improve your productivity and profitability.",
+          btn_contact: "Contact us",
+          btn_more: "Learn more"
+        },
+        // Sub-pages
+        tracteur: {
+          hero: { title: "Our Tractors", subtitle: "Power and reliability at the service of the fields" },
+          intro: { title: "Modern Fleet", text: "Equipment adapted to our territories." },
+          features: ["All-Terrain Tractors", "Low Consumption", "Parts available", "Integrated GPS"]
+        },
+        accessoires: {
+          hero: { title: "Agricultural Accessories", subtitle: "The right tool for every task" },
+          intro: { title: "Equipment", text: "Seeders, plows, and trailers to optimize every step." },
+          features: ["Disc plows", "Precision seeders", "5T Trailers", "Irrigation systems"]
+        },
+        autres: {
+          hero: { title: "Other Equipment", subtitle: "Continuous innovation" },
+          intro: { title: "Diversification", text: "Drones, sensors, and small motorized tools." },
+          features: ["Surveillance drones", "Moisture sensors", "Power tillers", "Chippers"]
+        }
+      },
+      elevage: {
+        hero: {
+          title: "Sustainable Livestock",
+          subtitle: "Respectful and profitable practices"
+        },
+        intro: {
+          kicker: "Our Approach",
+          title: "Modern and Responsible Breeding",
+          text: "We develop livestock methods that combine productivity, animal welfare, and respect for the environment for sustainable food security.",
+          stats: [
+            { value: "5000+", label: "Head of livestock" },
+            { value: "15+", label: "Species raised" },
+            { value: "3", label: "Veterinary centers" },
+            { value: "100+", label: "Trained breeders" }
+          ]
+        },
+        types: {
+          kicker: "Our Sectors",
+          title: "Supported Livestock Types",
+          items: [
+            {
+              title: "Dog Breeding",
+              desc: "Professional breeding of pedigree and companion dogs for security and assistance.",
+              production: "Pets & Security"
+            },
+            {
+              title: "Snake Breeding",
+              desc: "Research and conservation program for local snake species.",
+              production: "Research & Conservation"
+            },
+            {
+              title: "Large Livestock",
+              desc: "Modern cattle breeding focused on meat quality and milk production.",
+              production: "Milk & Meat"
+            },
+            {
+              title: "Beekeeping",
+              desc: "Organic honey production and preservation of local bees.",
+              production: "Honey & Derived products"
+            },
+            {
+              title: "Fish Farming",
+              desc: "Sustainable freshwater fish production in managed ponds.",
+              production: "Fresh fish & Fingerlings"
+            }
+          ]
+        },
+        Actions: {
+          kicker: "Services",
+          title: "Support for Breeders",
+          items: [
+            { title: "Animal Health", features: ["Vaccination", "Veterinary care", "Disease prevention"] },
+            { title: "Genetic Improvement", features: ["Crossbreeding", "Selection", "High-performance breeds"] },
+            { title: "Training", features: ["Livestock management", "Hygiene", "Nutrition"] },
+            { title: "Infrastructure", features: ["Shelter construction", "Feeders", "Drinkers"] }
+          ]
+        },
+        story: {
+          tag: "Testimony",
+          title: "Local Success",
+          text: "The installation of modern poultry units allowed 50 women from the cooperative to double their income in one year.",
+          benefits: ["Financial autonomy", "Nutritional security", "Capacity building"],
+          stats: [
+            { label: "Poultry", value: "5000+", color: "green" },
+            { label: "Income", value: "+100%", color: "blue" }
+          ]
+        },
+        stats: {
+          title: "Key Figures",
+          items: [
+            { number: "250", label: "Supported breeders" },
+            { number: "10k", label: "Head of livestock" },
+            { number: "5T", label: "Honey produced" },
+            { number: "12", label: "Fish units" }
+          ]
+        },
+        cta: {
+          title: "Join Our Program",
+          text: "Develop your livestock activity with our personalized support",
+          btn_join: "Become a partner breeder",
+          btn_partner: "Become a partner"
+        },
+        // Sub-pages
+        gros_betail: {
+          hero: { title: "Large Livestock Breeding", subtitle: "Development of the bovine sector in DRC" },
+          intro: {
+            kicker: "Our Bovine Expertise",
+            title: "Modern and Productive Livestock",
+            text: "We support breeders in the genetic improvement of their herd, pasture management, and optimization of milk and meat production.",
+            highlights: ["Selection of breeds adapted to local climate", "Sustainable breeding techniques", "Access to veterinary care", "Product marketing"]
+          },
+          features: [
+            { title: "Genetic Improvement", desc: "Selection and reproduction of bovine breeds with high productive potential." },
+            { title: "Animal Health", desc: "Complete vaccination program and preventive veterinary care." },
+            { title: "Balanced Nutrition", desc: "Formulation of food rations adapted to nutritional needs." },
+            { title: "Pasture Management", desc: "Rotation and regeneration techniques for pastures." }
+          ],
+          stats: [
+            { value: "2x", label: "Increase in milk production" },
+            { value: "-30%", label: "Reduction in animal mortality" },
+            { value: "50+", label: "Trained breeders" },
+            { value: "100%", label: "Animals vaccinated" }
+          ]
+        },
+        apiculture: {
+          hero: { title: "Sustainable Beekeeping", subtitle: "The liquid gold of our forests" },
+          intro: {
+            kicker: "Our Beekeeping Approach",
+            title: "Bee Protection, Community Wealth",
+            text: "Our sustainable beekeeping program combines biodiversity preservation and income creation for local communities.",
+            highlights: ["Improved traditional hives", "Sustainable harvesting methods", "Processing of hive products", "Local and export markets"]
+          },
+          features: [
+            { title: "Modern Hives", desc: "Design of hives adapted to local conditions and respectful of bees." },
+            { title: "Certified Bio Honey", desc: "100% natural honey production without chemicals." },
+            { title: "Beeswax", desc: "Valorization of wax for cosmetic and artisanal products." },
+            { title: "Pollination", desc: "Contribution to ecosystem preservation and increased agricultural yields." }
+          ]
+        },
+        pisciculture: {
+          hero: { title: "Sustainable Fish Farming", subtitle: "Responsible fish breeding" },
+          intro: {
+            kicker: "Our Aquaculture Expertise",
+            title: "Sustainable Fishing for Tomorrow",
+            text: "Development of inland aquaculture with methods respectful of the environment and water resources.",
+            highlights: ["Tilapia and Clarias breeding", "Pond and tank systems", "Optimized feeding", "Sustainable water management"]
+          },
+          features: [
+            { title: "Quality Fingerlings", desc: "Rigorous selection of broodstock and controlled reproduction." },
+            { title: "Optimized Feeding", desc: "Rich in protein for fast and healthy growth." },
+            { title: "Water Management", desc: "Filtration and renewal systems for quality water." },
+            { title: "Continuous Training", desc: "Technical support to fish farmers for optimal production." }
+          ]
+        },
+        chiens: {
+          hero: { title: "Professional Dog Breeding", subtitle: "Security, Companionship and Rescue" },
+          intro: {
+            kicker: "Our Canine Commitment",
+            title: "Educated Dogs for All Needs",
+            text: "Breeding pedigree dogs with a particular focus on animal welfare and specific skills for each breed.",
+            highlights: ["German and Belgian Shepherds", "Guard and defense dogs", "Assistance dogs", "Pets"]
+          },
+          features: [
+            { title: "Ethical Breeding", desc: "Optimal living conditions and respect for animal welfare." },
+            { title: "Certified Pedigree", desc: "Animals registered with LOF with controlled genealogy." },
+            { title: "Early Education", desc: "Socialization and education basics from an early age." },
+            { title: "Veterinary Follow-up", desc: "Up-to-date vaccines and complete health check." }
+          ]
+        },
+        serpents: {
+          hero: { title: "Snake Breeding Center", subtitle: "Research and Anti-venom Production" },
+          intro: {
+            kicker: "Our Scientific Mission",
+            title: "Preservation and Research on Snakes",
+            text: "Our specialized center contributes to venom research and the production of anti-venom serums to save lives.",
+            highlights: ["Controlled breeding of venomous species", "Safe venom extraction", "Medical research", "Awareness programs"]
+          },
+          features: [
+            { title: "Safe Extraction", desc: "Strict protocols for handling and traceability." },
+            { title: "Scientific Research", desc: "Study of therapeutic properties of venoms." },
+            { title: "Conservation", desc: "Protection programs for endangered species." },
+            { title: "Training", desc: "Workshops on prevention and first aid in case of bite." }
           ]
         }
       },
-      programs: {
-        kicker: "Programu Zetu",
-        title: "Mipango ya Kilimo",
-        items: [
-          {
-            title: "Agroforestry",
-            desc: "Ushirikiano wa miti katika mazao ili kurejesha udongo na kubadilisha mapato.",
-            benefits: ["Ulinzi wa udongo", "Utofauti", "Bioanuwai"]
-          },
-          {
-            title: "Mazao ya Kudumu",
-            desc: "Maendeleo ya mazao endelevu kama kakao na kahawa chini ya kivuli.",
-            benefits: ["Mapato thabiti", "Kivuli cha asili", "Ubora wa juu"]
-          },
-          {
-            title: "Usimamizi wa Maji",
-            desc: "Mbinu bora za umwagiliaji na uhifadhi wa maji.",
-            benefits: ["Uchumi", "Ustahimilivu", "Uzalishaji wa mwaka mzima"]
+      communautaire: {
+        hero: {
+          title: "Community Development",
+          subtitle: "Empowering communities for a sustainable future"
+        },
+        intro: {
+          kicker: "Our Approach",
+          title: "At the heart of local communities",
+          text: "We work hand in hand with communities to develop sustainable solutions that improve living conditions while preserving the environment.",
+          highlights: [
+            "Participatory approach",
+            "Integrated local development",
+            "Capacity building",
+            "Empowerment of women and youth"
+          ],
+          stats: [
+            { value: "50+", label: "Supported communities" },
+            { value: "10k+", label: "Direct beneficiaries" },
+            { value: "200+", label: "Completed projects" },
+            { value: "5", label: "Provinces covered" }
+          ]
+        },
+        programs: {
+          kicker: "Our Programs",
+          title: "Local Initiatives",
+          items: [
+            {
+              title: "Micro-credit and Entrepreneurship",
+              desc: "Financial and technical support for the development of income-generating activities.",
+              impact: "500+ micro-businesses supported"
+            },
+            {
+              title: "Education and Training",
+              desc: "Construction of schools, teacher training, and scholarships for underprivileged children.",
+              impact: "2000+ beneficiary students"
+            },
+            {
+              title: "Community Health",
+              desc: "Mobile clinics, vaccination campaigns, and basic hygiene awareness.",
+              impact: "10,000+ patients treated"
+            },
+            {
+              title: "Access to Drinking Water",
+              desc: "Boreholes, standpipes, and sanitation systems for rural communities.",
+              impact: "15,000+ people served"
+            },
+            {
+              title: "Food Security",
+              desc: "Nutrition and food diversification programs to fight malnutrition.",
+              impact: "5000+ families supported"
+            },
+            {
+              title: "Women Empowerment",
+              desc: "Professional training and support for female entrepreneurial initiatives.",
+              impact: "2000+ women trained"
+            }
+          ]
+        },
+        women: {
+          title: "Women's Empowerment",
+          text: "We believe that empowering women is the key to sustainable community development. Our programs aim to strengthen their leadership, skills, and economic independence.",
+          items: [
+            "Business management training",
+            "Adult literacy",
+            "Female market gardening",
+            "Savings and credit cooperatives"
+          ],
+          stats: [
+            { number: "2,000+", label: "Women trained" },
+            { number: "300+", label: "Micro-businesses created" },
+            { number: "85%", label: "Success rate" },
+            { number: "10", label: "Cooperatives supported" }
+          ],
+          testimonial: {
+            text: "Thanks to the entrepreneurship training, I was able to create my small business and provide for my family.",
+            author: "Marie K., Program beneficiary"
           }
-        ]
-      },
-      cta: {
-        title: "Jiunge na harakati",
-        text: "Wakulima au wapenzi, tunakuhitaji",
-        btn_train: "Mafunzo",
-        btn_more: "Soma Zaidi"
+        },
+        stories: {
+          kicker: "Success Stories",
+          title: "Our Successes",
+          items: [
+            {
+              title: "The School of Hope in Kibumba",
+              achievement: "Infrastructure & Education",
+              desc: "Construction and equipment of a primary school for 500 children in a remote village in North Kivu.",
+              impact: "500 children enrolled, 15 teachers trained, 1 library equipped"
+            },
+            {
+              title: "Water, Source of Life in Tshikapa",
+              achievement: "Health & Access",
+              desc: "Installation of 5 boreholes equipped with hand pumps, serving 3,000 people.",
+              impact: "3,000 beneficiaries, 5 water points installed, 10 committees trained in maintenance"
+            },
+            {
+              title: "Women Entrepreneurs of Goma",
+              achievement: "Economy & Autonomy",
+              desc: "Training and microcredit program for 200 women entrepreneurs in the informal sector.",
+              impact: "200 women trained, 150 micro-businesses launched, 80% repayment rate"
+            }
+          ]
+        },
+        cta: {
+          title: "Participate",
+          text: "Help us build a better world for everyone.",
+          btn_donate: "Make a donation",
+          btn_volunteer: "Volunteer"
+        },
+        // Sub-pages
+        sante: {
+          hero: { title: "Afya ya Jamii", subtitle: "Upatikanaji wa huduma kwa wote" },
+          intro: { title: "Huduma za Karibu", text: "Mapambano dhidi ya magonjwa ya kawaida na huduma za uzazi." },
+          features: ["Kampeni za chanjo", "Kliniki zinazotembea", "Afya ya uzazi", "Mapambano dhidi ya utapiamlo"]
+        },
+        energie: {
+          hero: { title: "Nishati Jadidifu", subtitle: "Mwanga na Nguvu" },
+          intro: { title: "Umeme wa Vijijini", text: "Mabwawa madogo ya kuzalisha umeme na paneli za jua." },
+          features: ["Nishati ya jua ya nyumbani", "Umeme mdogo wa maji", "Biogesi", "Usimamizi wa ndani"]
+        },
+        education: {
+          hero: { title: "Elimu", subtitle: "Mustakabali wa watoto wetu" },
+          intro: { title: "Maarifa kwa Wote", text: "Ujenzi wa shule na ufadhili wa masomo." },
+          features: ["Miundombinu ya shule", "Vifaa vya shule", "Mafunzo ya walimu", "Kujua kusoma na kuandika"]
+        },
+        routes_desserte: {
+          hero: { title: "Barabara za Vijijini", subtitle: "Kufungua maeneo ya vijijini" },
+          intro: { title: "Miundombinu", text: "Ukarabati wa njia kwa ajili ya usafirishaji wa bidhaa." },
+          features: ["Ufyatuzi wa mikono", "Daraja na mifereji", "Matengenezo endelevu", "Upatikanaji wa masoko"]
+        },
+        habitation: {
+          hero: { title: "Makazi ya Jamii", subtitle: "Paa la heshima" },
+          intro: { title: "Makazi Endelevu", text: "Ujenzi wa nyumba kwa kutumia rasilimali za ndani zilizoboreshwa." },
+          features: ["Matofali yaliyoimarishwa", "Paa endelevu", "Usafi wa mazingira", "Mipango ya mijini"]
+        }
       }
     },
-    agricultures: {
-      cacao: {
-        hero: { title: "Kakao (Criollo)", subtitle: "Dhahabu ya RDC" },
-        intro: { kicker: "Asili", title: "Kakao ya Criollo", text: "Aina adimu na inayothaminiwa kwa harufu yake nzuri na ya hila." },
-        features: { kicker: "Sifa", title: "Kwa nini Criollo?", items: ["Harufu ya matunda", "Maharagwe meupe", "Uchachushaji mfupi", "Thamani ya juu"] },
-        technique: { title: "Mbinu ya Kilimo", items: ["Chini ya kivuli cha misitu", "Ushirikiano na migomba", "Uvunaji wa mwongozo uliochaguliwa"] },
-        impact: { title: "Athari", stats: [{ value: "500T", label: "Uzalishaji" }, { value: "1200", label: "Wazalishaji" }] }
+    blog: {
+      index: {
+        hero: {
+          kicker: "Habari / Blogu",
+          title: "Makala na Matangazo",
+          subtitle: "Pata habari kuhusu matendo yetu na habari mpya za nyanjani.",
+        },
+        items: {
+          excerpt: "Ongeza dondoo, vyombo vya habari (picha/video), na kiungo cha makala kamili hapa.",
+          readMore: "Soma Makala",
+        },
+        sections: {
+          interviews: {
+            title: "Mahojiano na Video",
+            desc: "Pata rasilimali za multimedia hapa: ushuhuda wa wazalishaji, washirika, nyuma ya pazia.",
+          },
+          campaigns: {
+            title: "Kampeni Zinazoendelea",
+            desc: "Matangazo ya matukio, uchangishaji fedha, siku za upandaji miti, vikao vya mafunzo ya wazi.",
+          },
+        },
       },
-      cafe: {
-        hero: { title: "Kahawa ya Arabica", subtitle: "Ubora wa Nyanda za Juu" },
-        intro: { kicker: "Terroir", title: "Kahawa ya Milimani", text: "Inapandwa kwenye mwinuko kwa utajiri wa kipekee wa harufu." },
-        features: { kicker: "Ubora", title: "Kahawa Yetu", items: ["Mwinuko > 1200m", "Usindikaji uliosafishwa", "Kukausha kwenye vitanda vya Kiafrika", "Alama ya SCA 85+"] },
-        technique: { title: "Mchakato", items: ["Uchumaji mzuri", "Kuondoa mimbari siku hiyo hiyo", "Uchachushaji unaodhibitiwa"] },
-        impact: { title: "Athari", stats: [{ value: "300T", label: "Mauzo ya nje" }, { value: "800", label: "Familia" }] }
+      news: {
+        hero: {
+          title: "Habari",
+          subtitle: "Pata habari kuhusu hatua na mafanikio yetu ya hivi punde",
+        },
+        intro: {
+          kicker: "Habari za Hivi Punde",
+          title: "Fuata Matukio Yetu",
+          text: "Fuata matukio yetu, mafanikio, na miradi mipya ya maendeleo endelevu nchini DRC.",
+        },
+        categories: {
+          title: "Vitengo",
+          all: "Zote",
+          announcement: "Tangazo",
+          partnership: "Ushirikiano",
+          training: "Mafunzo",
+          success: "Mafanikio",
+          infrastructure: "Miundombinu",
+          recognition: "Utambuzi",
+          projects: "Miradi",
+          events: "Matukio",
+          partnerships: "Mashirikiano",
+          trainings: "Mafunzo",
+        },
+        filters: {
+          title: "Chuja",
+          date: "Tarehe",
+          category: "Kitengo",
+          search: "Tafuta habari...",
+        },
+        featured: {
+          label: "Iliyoangaziwa",
+        },
+        readMore: "Soma zaidi →",
+        empty: {
+          title: "Hakuna Habari",
+          text: "Hakuna makala yanayopatikana kwa wakati huu. Tafadhali rudia baadaye kwa sasisho mpya.",
+        },
+        newsletter: {
+          title: "Pata Habari",
+          text: "Jisajili kwenye jarida letu ili kupokea habari zetu moja kwa moja kwenye kisanduku chako cha barua",
+          placeholder: "Anwani yako ya barua pepe",
+          subscribe: "Jiunge",
+        },
+        articles: {
+          reforestation2025: {
+            title: "Uzinduzi wa Programu ya Uoteshaji Miti 2025",
+            excerpt: "Better Life inatangaza uzinduzi wa mpango wake kabambe wa kupanda miti milioni 1 kufikia 2025.",
+          },
+          unepPartnership: {
+            title: "Ushirikiano wa Kimkakati na UNEP",
+            excerpt: "Kusainiwa kwa makubaliano ya ushirikiano na Mpango wa Mazingira wa Umoja wa Mataifa ili kuimarisha matendo yetu.",
+          },
+          farmersTraining: {
+            title: "Mafunzo ya Wakulima 500 huko Kikwit",
+            excerpt: "Mafanikio ya programu yetu ya mafunzo ya kilimo kinachozingatia tabianchi tukiwa na wakulima 500 waliofunzwa.",
+          },
+          bioCertification: {
+            title: "Cheti cha Kilimo Hai kwa Wazalishaji 150",
+            excerpt: "Wazalishaji 150 wanaosaidiwa na Better Life wapata cheti chao cha kilimo hai.",
+          },
+          nurseryMbandaka: {
+            title: "Kituo Kipya cha Miche huko Mbandaka",
+            excerpt: "Uzinduzi wa kituo chetu kipya cha miche chenye uwezo wa kutoa miche 600,000 kwa mwaka.",
+          },
+          excellenceAward: {
+            title: "Tuzo ya Ubora wa Mazingira 2024",
+            excerpt: "Better Life yapata Tuzo ya Ubora wa Mazingira kutoka Wizara ya Mazingira.",
+          },
+        },
       },
-      the: {
-        hero: { title: "Chai", subtitle: "Utamaduni wa Ustawi" },
-        intro: { kicker: "Mila", title: "Chai ya Virunga", text: "Wakulima wenye shauku kwa chai yenye tabia dhabiti." },
-        features: { kicker: "Bidhaa", title: "Aina za Chai", items: ["Chai nyeusi ya kiorthodox", "Chai ya kijani", "Chai nyeupe (machipukizi)", "Iliyothibitishwa kuwa Bio"] },
-        technique: { title: "Ujuzi", items: ["Uchumaji wa kifalme (chipukizi moja, majani mawili)", "Kunyauka kiasili", "Kuviringisha kwa mikono"] },
-        impact: { title: "Athari", stats: [{ value: "150T", label: "Uzalishaji" }, { value: "450", label: "Wanawake walioajiriwa" }] }
-      },
-      coton_caoutchouc: {
-        hero: { title: "Pamba na Mpira", subtitle: "Mazao ya Biashara ya Viwandani" },
-        intro: { kicker: "Viwanda", title: "Sekta za Kimkakati", text: "Ufufuaji wa mazao ya viwandani kwa uchumi wa ndani." },
-        features: { kicker: "Sekta", title: "Athari Mbili", items: ["Pamba ya nyuzi ndefu", "Mpira wa kloni", "Usindikaji wa ndani", "Nguo na Viwanda"] },
-        technique: { title: "Kilimo-viwanda", items: ["Mashamba endelevu", "Usimamizi wa kiufundi", "Umekanizaji uliorekebishwa"] },
-        impact: { title: "Athari", stats: [{ value: "1000ha", label: "Eneo" }, { value: "2000", label: "Kazi za moja kwa moja" }] }
-      },
-      arboriculture: {
-        hero: { title: "Arboriculture", subtitle: "Mashamba ya Matunda Yaliyotofautishwa" },
-        intro: { kicker: "Utofauti", title: "Matunda ya Kitropiki", text: "Wingi wa ladha kwa matumizi ya ndani na nje." },
-        features: { kicker: "Aina", title: "Matunda Yetu", items: ["Miembe iliyounganishwa", "Parachichi za Hass", "Machungwa", "Tunda la mateso"] },
-        technique: { title: "Mazoea", items: ["Kuunganisha", "Kupogoa kwa mafunzo", "Udhibiti jumuishi", "Umwagiliaji wa matone"] },
-        impact: { title: "Athari", stats: [{ value: "50k", label: "Miti" }, { value: "Vitamini", label: "Lishe" }] }
-      },
-      plantes_medicinales: {
-        hero: { title: "Mimea ya Dawa", subtitle: "Pharmacopoeia ya Asili" },
-        intro: { kicker: "Afya", title: "Maarifa ya Mababa na Sayansi", text: "Uthamini wa mimea ya dawa ya kienyeji kwa afya ya jamii." },
-        features: { kicker: "Spishi", title: "Mimea Muhimu", items: ["Artemisia (Malaria)", "Moringa (Lishe)", "Prunus Africana", "Mchaichai"] },
-        technique: { title: "Usindikaji", items: ["Kukausha kwa jua", "Uchituzi wa mafuta muhimu", "Ufungaji wa usafi"] },
-        impact: { title: "Athari", stats: [{ value: "20", label: "Bustani za afya" }, { value: "10k", label: "Wagonjwa waliosaidiwa" }] }
-      }
-    },
-    environement: {
-      hero: {
-        title: "Environmental Protection",
-        subtitle: "Preserving our natural heritage for future generations"
-      },
-      intro: {
-        kicker: "Our Commitment",
-        title: "Acting for Biodiversity",
-        text: "We implement concrete actions for the conservation of ecosystems, the sustainable management of natural resources, and the fight against climate change.",
+      gallery: {
+        hero: {
+          title: "Matunzio ya Picha",
+          subtitle: "Gundua vitendo vyetu nyanjani na mafanikio katika picha",
+        },
+        intro: {
+          kicker: "Picha Zetu",
+          title: "Gundua Kazi Yetu",
+          text: "Picha na video za miradi yetu, matukio, na mafanikio katika maeneo tofauti ya DRC.",
+        },
         stats: {
-          planted: { number: "450k", label: "Trees" },
-          survival: { number: "85%", label: "Survival rate" }
-        }
+          photos: "Picha",
+          videos: "Video",
+          albums: "Albamu",
+          years: "Miaka ya kumbukumbu",
+        },
+        categories: {
+          title: "Vitengo",
+          all: "Zote",
+          projects: "Miradi",
+          events: "Matukio",
+          communities: "Jamii",
+          nature: "Asili",
+        },
+        filters: {
+          title: "Chuja",
+          date: "Tarehe",
+          category: "Kitengo",
+          location: "Mahali",
+        },
+        collections: {
+          kicker: "Mikusanyiko",
+          title: "Albamu za Kimaudhui",
+          viewAlbum: "Angalia albamu",
+          photos: "picha",
+          reforestation: {
+            title: "Uoteshaji Miti 2024",
+            desc: "Picha za kampeni zetu za upandaji miti nchi nzima",
+          },
+          farmersTraining: {
+            title: "Mafunzo ya Wakulima",
+            desc: "Vivutio vya vikao vyetu vya mafunzo ya kilimo endelevu",
+          },
+          biodiversity: {
+            title: "Bioanuwai",
+            desc: "Viumbe wa porini na mimea inayolindwa na programu zetu za uhifadhi",
+          },
+          communities: {
+            title: "Jamii",
+            desc: "Mikutano na jamii zinazofaidika na miradi yetu",
+          },
+          nurseries: {
+            title: "Vituo vya Miche",
+            desc: "Vituo vyetu vya miche shuleni na uzalishaji wa miche",
+          },
+          events: {
+            title: "Matukio",
+            desc: "Sherehe, uzinduzi, na maadhimisho ya mafanikio yetu",
+          },
+        },
+        recent: {
+          kicker: "Zilizotokea Hivi Punde",
+          title: "Picha za Hivi Punde Zilizoongezwa",
+          items: {
+            plantationKinshasa: "Upandaji wa Kinshasa",
+            trainingKikwit: "Mafunzo ya Kikwit",
+            modernHives: "Mizinga ya Kisasa",
+            villageWell: "Kisima cha Kijiji",
+            certificates: "Sherehe za Vyeti",
+            bioHarvest: "Mavuno ya Kijani",
+            butterfliesSalonga: "Vipepeo wa Salonga",
+            schoolGarden: "Bustani ya Shule",
+            unepPartnership: "Ushirikiano wa UNEP",
+            excellenceAward: "Tuzo ya Ubora",
+            nurseryMbandaka: "Kituo cha Miche cha Mbandaka",
+            communityAssembly: "Mkusanyiko wa Jamii",
+          },
+        },
+        videos: {
+          kicker: "Video",
+          title: "Filamu Zetu za Kumbukumbu",
+          watch: "▶ Tazama",
+          duration: "Muda",
+          views: "Mitazamo",
+          items: {
+            reforestationYear: "Uoteshaji Miti: Mwaka Mmoja wa Upandaji",
+            farmersPortrait: "Picha ya Wakulima Waliobadilishwa",
+            congoBiodiversity: "Bioanuwai ya Bonde la Kongo",
+          },
+        },
+        empty: {
+          title: "Hakuna Picha",
+          text: "Hakuna picha zinazopatikana kwa wakati huu. Tafadhali rudia baadaye kwa maudhui mapya.",
+        },
+        view: {
+          title: "Angalia Picha",
+          close: "Funga",
+          prev: "Iliyopita",
+          next: "Inayofuata",
+          info: "Habari",
+        },
+        cta: {
+          title: "Shiriki Picha Zako",
+          text: "Je, ulishiriki katika moja ya matukio yetu? Shiriki picha zako nasi!",
+          btn: "Tuma Picha",
+        },
       },
-      programs: {
-        kicker: "Our Programs",
-        title: "Our Green Initiatives",
-        items: [
-          { title: "Waste Management", desc: "Recycling and valorization.", benefits: ["Cleanliness", "Circular economy"] },
-          { title: "Clean Energy", desc: "Promotion of improved stoves.", benefits: ["Less CO2", "Health"] },
-          { title: "Education", desc: "Awareness in schools.", benefits: ["Future generation", "Conscience"] }
-        ]
-      },
-      impact: {
-        title: "Our Environmental Impact",
-        stats: [
-          { number: "-30%", label: "CO2 Emissions" },
-          { number: "50T", label: "Recycled waste" },
-          { number: "10k", label: "Aware children" }
-        ]
-      },
-      cta: {
-        title: "Protect Our Planet",
-        text: "Join us in our mission to preserve nature and build a sustainable future.",
-        btn_join: "Become a member",
-        btn_sponsor: "Sponsor a tree"
-      },
-      // Sub-pages
-      protection_foret: {
-        hero: { title: "Forest Protection", subtitle: "Lungs of the planet" },
-        intro: { title: "Conservation", text: "Fight against deforestation and poaching." },
-        features: ["Eco-guard patrols", "Participatory mapping", "Restoration", "Protected areas"]
-      },
-      credit_carbone: {
-        hero: { title: "Carbon Credit", subtitle: "Valuing sequestration" },
-        intro: { title: "Climate Finance", text: "Generate income through conservation." },
-        features: ["Certification", "Credit sales", "Community income", "Carbon monitoring"]
-      },
-      eco_kelasi: {
-        hero: { title: "Eco-Kelasi", subtitle: "The ecological school" },
-        intro: { title: "Environmental Education", text: "Learning to love and protect nature from an early age." },
-        features: ["School gardens", "Nature clubs", "Waste sorting", "Educational outings"]
-      }
     },
-    mecanisation: {
-      hero: { title: "Agricultural Mechanization", subtitle: "Modernizing for efficient agriculture" },
-      intro: {
-        kicker: "Our Vision",
-        title: "The Future is Mechanization",
-        text: "We facilitate access to modern equipment to increase productivity while reducing the arduousness of agricultural work.",
-        stats: [
-          { value: "200+", label: "Tractors deployed" },
-          { value: "1000+", label: "Hectares plowed" },
-          { value: "50+", label: "Mobile workshops" },
-          { value: "500+", label: "Operators trained" }
-        ]
-      },
-      programs: {
-        kicker: "Our Programs",
-        title: "Mechanization Solutions",
-        items: [
-          {
-            title: "Agricultural Tractors",
-            desc: "Rental and sale of tractors adapted to local farms.",
-            impact: "100+ farms"
-          },
-          {
-            title: "Processing Units",
-            desc: "Equipment for processing agricultural products (mills, presses).",
-            impact: "50+ units"
-          },
-          {
-            title: "Maintenance & Repair",
-            desc: "Service and repair to ensure equipment longevity.",
-            impact: "200+ interventions"
-          },
-          {
-            title: "Operator Training",
-            desc: "Training on the use and maintenance of agricultural equipment.",
-            impact: "500+ operators"
-          }
-        ]
-      },
-      benefits: { title: "Benefits", items: ["Increased productivity", "Reduced drudgery", "Youth attractiveness", "Precision"] },
-      cta: {
-        title: "Modernize Your Farm",
-        text: "Invest in mechanization to improve your productivity and profitability.",
-        btn_contact: "Contact us",
-        btn_more: "Learn more"
-      },
-      // Sub-pages
-      tracteur: {
-        hero: { title: "Our Tractors", subtitle: "Power and reliability at the service of the fields" },
-        intro: { title: "Modern Fleet", text: "Equipment adapted to our territories." },
-        features: ["All-Terrain Tractors", "Low Consumption", "Parts available", "Integrated GPS"]
-      },
-      accessoires: {
-        hero: { title: "Agricultural Accessories", subtitle: "The right tool for every task" },
-        intro: { title: "Equipment", text: "Seeders, plows, and trailers to optimize every step." },
-        features: ["Disc plows", "Precision seeders", "5T Trailers", "Irrigation systems"]
-      },
-      autres: {
-        hero: { title: "Other Equipment", subtitle: "Continuous innovation" },
-        intro: { title: "Diversification", text: "Drones, sensors, and small motorized tools." },
-        features: ["Surveillance drones", "Moisture sensors", "Power tillers", "Chippers"]
-      }
-    },
-    elevage: {
+    donation: {
       hero: {
-        title: "Sustainable Livestock",
-        subtitle: "Respectful and profitable practices"
+        title: "Toa Msaada",
+        subtitle: "Saidia matendo yetu kwa ajili ya mustakabali endelevu."
       },
-      intro: {
-        kicker: "Our Approach",
-        title: "Modern and Responsible Breeding",
-        text: "We develop livestock methods that combine productivity, animal welfare, and respect for the environment for sustainable food security.",
-        stats: [
-          { value: "5000+", label: "Head of livestock" },
-          { value: "15+", label: "Species raised" },
-          { value: "3", label: "Veterinary centers" },
-          { value: "100+", label: "Trained breeders" }
-        ]
+      kicker: "Msaada",
+      title: "Msaada Wako ni wa Thamani",
+      description: "Kila mchango unatuwezesha kupanua programu zetu na kuwa na athari halisi mashinani.",
+      support: {
+        title: "Kwa nini utusaidie?",
+        text: "Michango yako inafadhili moja kwa moja upandaji miti, kilimo endelevu, na msaada kwa jamii."
       },
-      types: {
-        kicker: "Our Sectors",
-        title: "Supported Livestock Types",
-        items: [
-          {
-            title: "Dog Breeding",
-            desc: "Professional breeding of pedigree and companion dogs for security and assistance.",
-            production: "Pets & Security"
-          },
-          {
-            title: "Snake Breeding",
-            desc: "Research and conservation program for local snake species.",
-            production: "Research & Conservation"
-          },
-          {
-            title: "Large Livestock",
-            desc: "Modern cattle breeding focused on meat quality and milk production.",
-            production: "Milk & Meat"
-          },
-          {
-            title: "Beekeeping",
-            desc: "Organic honey production and preservation of local bees.",
-            production: "Honey & Derived products"
-          },
-          {
-            title: "Fish Farming",
-            desc: "Sustainable freshwater fish production in managed ponds.",
-            production: "Fresh fish & Fingerlings"
-          }
-        ]
-      },
-      Actions: {
-        kicker: "Services",
-        title: "Support for Breeders",
-        items: [
-          { title: "Animal Health", features: ["Vaccination", "Veterinary care", "Disease prevention"] },
-          { title: "Genetic Improvement", features: ["Crossbreeding", "Selection", "High-performance breeds"] },
-          { title: "Training", features: ["Livestock management", "Hygiene", "Nutrition"] },
-          { title: "Infrastructure", features: ["Shelter construction", "Feeders", "Drinkers"] }
-        ]
-      },
-      story: {
-        tag: "Testimony",
-        title: "Local Success",
-        text: "The installation of modern poultry units allowed 50 women from the cooperative to double their income in one year.",
-        benefits: ["Financial autonomy", "Nutritional security", "Capacity building"],
-        stats: [
-          { label: "Poultry", value: "5000+", color: "green" },
-          { label: "Income", value: "+100%", color: "blue" }
-        ]
-      },
-      stats: {
-        title: "Key Figures",
-        items: [
-          { number: "250", label: "Supported breeders" },
-          { number: "10k", label: "Head of livestock" },
-          { number: "5T", label: "Honey produced" },
-          { number: "12", label: "Fish units" }
-        ]
+      methods: {
+        title: "Njia za Malipo",
+        text: "Tunakubali uhamisho wa benki, kadi za mkopo, na pesa za simu."
       },
       cta: {
-        title: "Join Our Program",
-        text: "Develop your livestock activity with our personalized support",
-        btn_join: "Become a partner breeder",
-        btn_partner: "Become a partner"
-      },
-      // Sub-pages
-      gros_betail: {
-        hero: { title: "Large Livestock Breeding", subtitle: "Development of the bovine sector in DRC" },
-        intro: {
-          kicker: "Our Bovine Expertise",
-          title: "Modern and Productive Livestock",
-          text: "We support breeders in the genetic improvement of their herd, pasture management, and optimization of milk and meat production.",
-          highlights: ["Selection of breeds adapted to local climate", "Sustainable breeding techniques", "Access to veterinary care", "Product marketing"]
-        },
-        features: [
-          { title: "Genetic Improvement", desc: "Selection and reproduction of bovine breeds with high productive potential." },
-          { title: "Animal Health", desc: "Complete vaccination program and preventive veterinary care." },
-          { title: "Balanced Nutrition", desc: "Formulation of food rations adapted to nutritional needs." },
-          { title: "Pasture Management", desc: "Rotation and regeneration techniques for pastures." }
-        ],
-        stats: [
-          { value: "2x", label: "Increase in milk production" },
-          { value: "-30%", label: "Reduction in animal mortality" },
-          { value: "50+", label: "Trained breeders" },
-          { value: "100%", label: "Animals vaccinated" }
-        ]
-      },
-      apiculture: {
-        hero: { title: "Sustainable Beekeeping", subtitle: "The liquid gold of our forests" },
-        intro: {
-          kicker: "Our Beekeeping Approach",
-          title: "Bee Protection, Community Wealth",
-          text: "Our sustainable beekeeping program combines biodiversity preservation and income creation for local communities.",
-          highlights: ["Improved traditional hives", "Sustainable harvesting methods", "Processing of hive products", "Local and export markets"]
-        },
-        features: [
-          { title: "Modern Hives", desc: "Design of hives adapted to local conditions and respectful of bees." },
-          { title: "Certified Bio Honey", desc: "100% natural honey production without chemicals." },
-          { title: "Beeswax", desc: "Valorization of wax for cosmetic and artisanal products." },
-          { title: "Pollination", desc: "Contribution to ecosystem preservation and increased agricultural yields." }
-        ]
-      },
-      pisciculture: {
-        hero: { title: "Sustainable Fish Farming", subtitle: "Responsible fish breeding" },
-        intro: {
-          kicker: "Our Aquaculture Expertise",
-          title: "Sustainable Fishing for Tomorrow",
-          text: "Development of inland aquaculture with methods respectful of the environment and water resources.",
-          highlights: ["Tilapia and Clarias breeding", "Pond and tank systems", "Optimized feeding", "Sustainable water management"]
-        },
-        features: [
-          { title: "Quality Fingerlings", desc: "Rigorous selection of broodstock and controlled reproduction." },
-          { title: "Optimized Feeding", desc: "Rich in protein for fast and healthy growth." },
-          { title: "Water Management", desc: "Filtration and renewal systems for quality water." },
-          { title: "Continuous Training", desc: "Technical support to fish farmers for optimal production." }
-        ]
-      },
-      chiens: {
-        hero: { title: "Professional Dog Breeding", subtitle: "Security, Companionship and Rescue" },
-        intro: {
-          kicker: "Our Canine Commitment",
-          title: "Educated Dogs for All Needs",
-          text: "Breeding pedigree dogs with a particular focus on animal welfare and specific skills for each breed.",
-          highlights: ["German and Belgian Shepherds", "Guard and defense dogs", "Assistance dogs", "Pets"]
-        },
-        features: [
-          { title: "Ethical Breeding", desc: "Optimal living conditions and respect for animal welfare." },
-          { title: "Certified Pedigree", desc: "Animals registered with LOF with controlled genealogy." },
-          { title: "Early Education", desc: "Socialization and education basics from an early age." },
-          { title: "Veterinary Follow-up", desc: "Up-to-date vaccines and complete health check." }
-        ]
-      },
-      serpents: {
-        hero: { title: "Snake Breeding Center", subtitle: "Research and Anti-venom Production" },
-        intro: {
-          kicker: "Our Scientific Mission",
-          title: "Preservation and Research on Snakes",
-          text: "Our specialized center contributes to venom research and the production of anti-venom serums to save lives.",
-          highlights: ["Controlled breeding of venomous species", "Safe venom extraction", "Medical research", "Awareness programs"]
-        },
-        features: [
-          { title: "Safe Extraction", desc: "Strict protocols for handling and traceability." },
-          { title: "Scientific Research", desc: "Study of therapeutic properties of venoms." },
-          { title: "Conservation", desc: "Protection programs for endangered species." },
-          { title: "Training", desc: "Workshops on prevention and first aid in case of bite." }
-        ]
+        title: "Chukua Hatua Sasa",
+        text: "Wasiliana nasi kukamilisha mchango wako au kwa swali lolote.",
+        btn: "Wasiliana Nasi"
       }
-    },
-    communautaire: {
-      hero: {
-        title: "Community Development",
-        subtitle: "Empowering communities for a sustainable future"
-      },
-      intro: {
-        kicker: "Our Approach",
-        title: "At the heart of local communities",
-        text: "We work hand in hand with communities to develop sustainable solutions that improve living conditions while preserving the environment.",
-        highlights: [
-          "Participatory approach",
-          "Integrated local development",
-          "Capacity building",
-          "Empowerment of women and youth"
-        ],
-        stats: [
-          { value: "50+", label: "Supported communities" },
-          { value: "10k+", label: "Direct beneficiaries" },
-          { value: "200+", label: "Completed projects" },
-          { value: "5", label: "Provinces covered" }
-        ]
-      },
-      programs: {
-        kicker: "Our Programs",
-        title: "Local Initiatives",
-        items: [
-          {
-            title: "Micro-credit and Entrepreneurship",
-            desc: "Financial and technical support for the development of income-generating activities.",
-            impact: "500+ micro-businesses supported"
-          },
-          {
-            title: "Education and Training",
-            desc: "Construction of schools, teacher training, and scholarships for underprivileged children.",
-            impact: "2000+ beneficiary students"
-          },
-          {
-            title: "Community Health",
-            desc: "Mobile clinics, vaccination campaigns, and basic hygiene awareness.",
-            impact: "10,000+ patients treated"
-          },
-          {
-            title: "Access to Drinking Water",
-            desc: "Boreholes, standpipes, and sanitation systems for rural communities.",
-            impact: "15,000+ people served"
-          },
-          {
-            title: "Food Security",
-            desc: "Nutrition and food diversification programs to fight malnutrition.",
-            impact: "5000+ families supported"
-          },
-          {
-            title: "Women Empowerment",
-            desc: "Professional training and support for female entrepreneurial initiatives.",
-            impact: "2000+ women trained"
-          }
-        ]
-      },
-      women: {
-        title: "Women's Empowerment",
-        text: "We believe that empowering women is the key to sustainable community development. Our programs aim to strengthen their leadership, skills, and economic independence.",
-        items: [
-          "Business management training",
-          "Adult literacy",
-          "Female market gardening",
-          "Savings and credit cooperatives"
-        ],
-        stats: [
-          { number: "2,000+", label: "Women trained" },
-          { number: "300+", label: "Micro-businesses created" },
-          { number: "85%", label: "Success rate" },
-          { number: "10", label: "Cooperatives supported" }
-        ],
-        testimonial: {
-          text: "Thanks to the entrepreneurship training, I was able to create my small business and provide for my family.",
-          author: "Marie K., Program beneficiary"
-        }
-      },
-      stories: {
-        kicker: "Success Stories",
-        title: "Our Successes",
-        items: [
-          {
-            title: "The School of Hope in Kibumba",
-            achievement: "Infrastructure & Education",
-            desc: "Construction and equipment of a primary school for 500 children in a remote village in North Kivu.",
-            impact: "500 children enrolled, 15 teachers trained, 1 library equipped"
-          },
-          {
-            title: "Water, Source of Life in Tshikapa",
-            achievement: "Health & Access",
-            desc: "Installation of 5 boreholes equipped with hand pumps, serving 3,000 people.",
-            impact: "3,000 beneficiaries, 5 water points installed, 10 committees trained in maintenance"
-          },
-          {
-            title: "Women Entrepreneurs of Goma",
-            achievement: "Economy & Autonomy",
-            desc: "Training and microcredit program for 200 women entrepreneurs in the informal sector.",
-            impact: "200 women trained, 150 micro-businesses launched, 80% repayment rate"
-          }
-        ]
-      },
-      cta: {
-        title: "Participate",
-        text: "Help us build a better world for everyone.",
-        btn_donate: "Make a donation",
-        btn_volunteer: "Volunteer"
-      },
-      // Sub-pages
-      sante: {
-        hero: { title: "Community Health", subtitle: "Access to care for all" },
-        intro: { title: "Local Care", text: "Fight against endemic diseases and maternal care." },
-        features: ["Vaccination campaigns", "Mobile clinics", "Maternal health", "Malnutrition fight"]
-      },
-      energie: {
-        hero: { title: "Renewable Energy", subtitle: "Light and Power" },
-        intro: { title: "Rural Electrification", text: "Micro-dams and solar panels." },
-        features: ["Domestic solar", "Micro-hydroelectricity", "Biogas", "Local maintenance"]
-      },
-      education: {
-        hero: { title: "Education", subtitle: "Our children's future" },
-        intro: { title: "Knowledge for All", text: "School construction and scholarships." },
-        features: ["School infrastructure", "Supplies", "Teacher training", "Literacy"]
-      },
-      route_desserte_agricole: {
-        hero: { title: "Feeder Roads", subtitle: "Opening up the countryside" },
-        intro: { title: "Infrastructure", text: "Rehabilitation of tracks for product flow." },
-        features: ["Manual maintenance", "Bridges and culverts", "Sustainable maintenance", "Market access"]
-      },
-      habitation: {
-        hero: { title: "Social Housing", subtitle: "A decent roof" },
-        intro: { title: "Sustainable Housing", text: "Construction of houses using improved local materials." },
-        features: ["Stabilized bricks", "Sustainable roofing", "Sanitation", "Urban plans"]
-      },
     }
-  },
-  blog: {
-    index: {
-      hero: {
-        kicker: "Habari / Blogu",
-        title: "Makala na Matangazo",
-        subtitle: "Pata habari kuhusu matendo yetu na habari mpya mashinani."
-      },
-      items: {
-        excerpt: "Add excerpt, media (photo/video), and link to the full article here.",
-        readMore: "Read Article",
-      },
-      sections: {
-        interviews: {
-          title: "Interviews and Videos",
-          desc: "Find multimedia resources here: producer testimonials, partners, behind the scenes.",
-        },
-        campaigns: {
-          title: "Ongoing Campaigns",
-          desc: "Event announcements, fundraising, reforestation days, open training sessions.",
-        },
-      },
-    },
-    news: {
-      hero: {
-        title: "Latest News",
-      },
-    },
-  },
-  donation: {
-    hero: {
-      title: "Toa Msaada",
-      subtitle: "Saidia matendo yetu kwa ajili ya mustakabali endelevu."
-    },
-    kicker: "Msaada",
-    title: "Msaada Wako ni wa Thamani",
-    description: "Kila mchango unatuwezesha kupanua programu zetu na kuwa na athari halisi mashinani.",
-    support: {
-      title: "Kwa nini utusaidie?",
-      text: "Michango yako inafadhili moja kwa moja upandaji miti, kilimo endelevu, na msaada kwa jamii."
-    },
-    methods: {
-      title: "Njia za Malipo",
-      text: "Tunakubali uhamisho wa benki, kadi za mkopo, na pesa za simu."
-    },
-    cta: {
-      title: "Chukua Hatua Sasa",
-      text: "Wasiliana nasi kukamilisha mchango wako au kwa swali lolote.",
-      btn: "Wasiliana Nasi"
-    }
-  }
-};
+  };

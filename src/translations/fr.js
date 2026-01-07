@@ -874,7 +874,8 @@ export const fr = {
     Environement: "Environnement & Climat",
     index: {
       kicker: "Nos Actions",
-      title: "Leviers d'Impact Durable",
+      title: "Nos Actions",
+      subtitle: "Leviers d'Impact Durable",
       approach: {
         kicker: "Approche Intégrée"
       },
@@ -1394,6 +1395,7 @@ export const fr = {
         }
       },
       stories: {
+        kicker: "Histoires de Succès",
         title: "Nos Réussites",
         items: [
           {

@@ -21,31 +21,34 @@ async function loadTranslations() {
 }
 
 function flattenKeys(obj, prefix = "") {
-  const keys = [];
+  return flattenKeysWithValues(obj, prefix).map(p => p.k);
+}
+
+function flattenKeysWithValues(obj, prefix = "") {
+  const entries = [];
   if (Array.isArray(obj)) {
     const base = prefix.replace(/^\./, "");
     // include the array path itself
-    keys.push(base);
+    entries.push({ k: base, v: obj });
     // include indexed entries and recurse into each item
     for (let i = 0; i < obj.length; i++) {
-      keys.push(`${base}.${i}`);
-      keys.push(...flattenKeys(obj[i], `${prefix}.${i}`));
+      entries.push(...flattenKeysWithValues(obj[i], `${prefix}.${i}`));
     }
-    return keys;
+    return entries;
   }
   if (obj && typeof obj === "object") {
     for (const k of Object.keys(obj)) {
       const childPrefix = prefix ? `${prefix}.${k}` : k;
-      keys.push(...flattenKeys(obj[k], childPrefix));
+      entries.push(...flattenKeysWithValues(obj[k], childPrefix));
     }
-    return keys;
+    return entries;
   }
-  return [prefix.replace(/^\./, "")];
+  return [{ k: prefix.replace(/^\./, ""), v: obj }];
 }
 
 function findUsageKeys(srcFolder) {
   const files = listFiles(srcFolder, [".jsx", ".js"]);
-  const regex = /t\(\s*["'](.+?)["']\s*\)/g;
+  const regex = /\bt\(\s*["'](.+?)["']\s*\)/g;
   const keys = new Set();
   for (const file of files) {
     const content = fs.readFileSync(file, "utf8");
@@ -93,27 +96,117 @@ function listFiles(dir, extList) {
       flattenPerLang["fr"].has("contact.hero.title")
     );
     const usedKeys = findUsageKeys(srcDir);
-    const missing = {};
-    for (const key of usedKeys) {
-      for (const lang of Object.keys(flattenPerLang)) {
-        if (!flattenPerLang[lang].has(key)) {
-          missing[lang] = missing[lang] || [];
-          missing[lang].push(key);
+    const missingInLang = {}; // keys used in code but missing in file
+    const missingParity = {}; // keys present in one file but missing in others
+    const emptyValues = {}; // keys with empty string values
+
+    const languages = Object.keys(flattenPerLang);
+    const allKnownKeys = new Set([...usedKeys]);
+    for (const langKeys of Object.values(flattenPerLang)) {
+      for (const k of langKeys) allKnownKeys.add(k);
+    }
+
+    for (const key of allKnownKeys) {
+      for (const lang of languages) {
+        const hasKey = flattenPerLang[lang].has(key);
+        const isUsedInCode = usedKeys.includes(key);
+
+        if (!hasKey) {
+          if (isUsedInCode) {
+            missingInLang[lang] = missingInLang[lang] || [];
+            missingInLang[lang].push(key);
+          } else {
+            missingParity[lang] = missingParity[lang] || [];
+            missingParity[lang].push(key);
+          }
+        } else {
+          // Key exists, check if value is empty
+          const val = translations[lang];
+          // We need the value from the original object to check if it's empty
+          // Actually, let's look up the value in the flattened map we should have kept
         }
       }
     }
 
-    if (Object.keys(missing).length === 0) {
-      console.log("No missing translation keys — good.");
+    // Let's refine the logic to be more robust
+    const flatMaps = {};
+    for (const [lang, obj] of Object.entries(translations)) {
+      flatMaps[lang] = {};
+      const pairs = flattenKeysWithValues(obj);
+      for (const { k, v } of pairs) {
+        flatMaps[lang][k] = v;
+      }
+    }
+
+    const allKeysAcrossFiles = new Set();
+    for (const lang of languages) {
+      for (const k of Object.keys(flatMaps[lang])) {
+        allKeysAcrossFiles.add(k);
+      }
+    }
+
+    const report = {
+      missingInCode: {}, // Used in code, missing in file
+      missingParity: {}, // Present in some files, missing in others
+      empty: {}          // Key exists but value is empty
+    };
+
+    for (const key of usedKeys) {
+      for (const lang of languages) {
+        if (!flatMaps[lang].hasOwnProperty(key)) {
+          report.missingInCode[lang] = report.missingInCode[lang] || [];
+          report.missingInCode[lang].push(key);
+        }
+      }
+    }
+
+    for (const key of allKeysAcrossFiles) {
+      for (const lang of languages) {
+        if (!flatMaps[lang].hasOwnProperty(key)) {
+          report.missingParity[lang] = report.missingParity[lang] || [];
+          report.missingParity[lang].push(key);
+        } else if (typeof flatMaps[lang][key] === 'string' && flatMaps[lang][key].trim() === '') {
+          report.empty[lang] = report.empty[lang] || [];
+          report.empty[lang].push(key);
+        }
+      }
+    }
+
+    let hasErrors = false;
+
+    if (Object.keys(report.missingInCode).length > 0) {
+      console.log("\n[ERROR] Missing translation keys (Used in code but not in file):");
+      for (const lang of Object.keys(report.missingInCode)) {
+        console.log(`  ${lang}: ${report.missingInCode[lang].length} keys`);
+        report.missingInCode[lang].forEach(k => console.log(`    - ${k}`));
+      }
+      hasErrors = true;
+    }
+
+    if (Object.keys(report.missingParity).length > 0) {
+      console.log("\n[WARNING] Language parity issues (Defined in some files but missing in others):");
+      for (const lang of Object.keys(report.missingParity)) {
+        console.log(`  ${lang}: ${report.missingParity[lang].length} keys missing`);
+        report.missingParity[lang].forEach(k => console.log(`    - ${k}`));
+      }
+      // Parity issues might just be warnings, but user wants to "debug" and "fix"
+      // so I'll treat them as errors for now or just report them.
+    }
+
+    if (Object.keys(report.empty).length > 0) {
+      console.log("\n[WARNING] Empty translation values:");
+      for (const lang of Object.keys(report.empty)) {
+        console.log(`  ${lang}: ${report.empty[lang].length} keys empty`);
+        report.empty[lang].forEach(k => console.log(`    - ${k}`));
+      }
+    }
+
+    if (!hasErrors && Object.keys(report.missingParity).length === 0 && Object.keys(report.empty).length === 0) {
+      console.log("\nNo translation issues found. Everything is perfect!");
       process.exit(0);
     }
 
-    console.log("Missing translation keys per language:");
-    for (const lang of Object.keys(missing)) {
-      console.log(`\n== ${lang} (${missing[lang].length}) ==`);
-      console.log(missing[lang].join("\n"));
-    }
-    process.exit(1);
+    process.exit(hasErrors ? 1 : 0);
   } catch (err) {
     console.error("Error running translation check:", err);
     process.exit(2);

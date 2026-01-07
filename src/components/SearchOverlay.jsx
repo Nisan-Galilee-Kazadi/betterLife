@@ -90,29 +90,45 @@ function keyToRoute(key) {
   return { path: "/", section: "Autre" };
 }
 
-function useSearchData(language) {
+function useSearchData() {
   return useMemo(() => {
-    const bundle = translationsByCode[language] || translationsByCode.fr;
-    const flat = flatten(bundle);
-    return flat.map(({ key, value }) => {
-      const { path, section } = keyToRoute(key);
-      return {
-        key,
-        title: value.length > 80 ? `${value.slice(0, 80)}…` : value,
-        content: value,
-        path,
-        section,
-      };
+    const allResults = [];
+    const seen = new Set();
+
+    Object.entries(translationsByCode).forEach(([lang, bundle]) => {
+      const flat = flatten(bundle);
+      flat.forEach(({ key, value }) => {
+        if (!value || typeof value !== "string") return;
+
+        const { path, section } = keyToRoute(key);
+        // Create a unique identifier for the result to avoid too many duplicates
+        // We group by path and normalized content
+        const normalizedValue = value.toLowerCase().trim();
+        const id = `${path}|${normalizedValue}`;
+
+        if (!seen.has(id)) {
+          allResults.push({
+            key,
+            title: value.length > 100 ? `${value.slice(0, 100)}…` : value,
+            content: value,
+            path,
+            section,
+            lang
+          });
+          seen.add(id);
+        }
+      });
     });
-  }, [language]);
+    return allResults;
+  }, []);
 }
 
 export function SearchOverlay({ isOpen, onClose }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [results, setResults] = useState([]);
   const inputRef = useRef(null);
-  const { t, language } = useLanguage();
-  const searchData = useSearchData(language);
+  const { t } = useLanguage();
+  const searchData = useSearchData();
 
   useEffect(() => {
     if (isOpen && inputRef.current) {
@@ -131,18 +147,29 @@ export function SearchOverlay({ isOpen, onClose }) {
   }, [onClose]);
 
   useEffect(() => {
-    if (searchQuery.trim().length < 2) {
+    const query = searchQuery.trim().toLowerCase();
+    if (query.length < 2) {
       setResults([]);
       return;
     }
 
-    const query = searchQuery.toLowerCase();
     const filtered = searchData.filter(
       (item) =>
         item.title.toLowerCase().includes(query) ||
-        item.content.toLowerCase().includes(query)
+        item.content.toLowerCase().includes(query) ||
+        item.section.toLowerCase().includes(query)
     );
-    setResults(filtered);
+
+    // Sort results: exact matches or title matches first
+    const sorted = [...filtered].sort((a, b) => {
+      const aTitleMatch = a.title.toLowerCase().includes(query);
+      const bTitleMatch = b.title.toLowerCase().includes(query);
+      if (aTitleMatch && !bTitleMatch) return -1;
+      if (!aTitleMatch && bTitleMatch) return 1;
+      return 0;
+    });
+
+    setResults(sorted.slice(0, 20)); // Limit to top 20 results for performance
   }, [searchQuery, searchData]);
 
   if (!isOpen) return null;

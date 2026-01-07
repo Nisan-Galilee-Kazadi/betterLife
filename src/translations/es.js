@@ -886,7 +886,8 @@ export const es = {
     Environement: "Medio Ambiente y Clima",
     index: {
       kicker: "Nuestras Acciones",
-      title: "Motores de Impacto Sostenible",
+      title: "Nuestras Acciones",
+      subtitle: "Motores de Impacto Sostenible",
       approach: {
         kicker: "Enfoque Integrado"
       },
@@ -1471,15 +1472,181 @@ export const es = {
     tagline: "Un mundo mejor",
     location: "Joli Parc, C/Ngaliema",
   },
+  about: {
+    mission: {
+      hero: {
+        title: "Nuestra Misión",
+        subtitle: "Proteger el medio ambiente y promover el desarrollo sostenible para las generaciones futuras",
+      },
+      vision: {
+        kicker: "Nuestra Visión",
+        title: "Un Futuro Sostenible para Todos",
+        text: "Imaginamos un mundo donde se restaura la armonía entre el hombre y la naturaleza, donde cada comunidad tiene acceso a alimentos saludables y a un entorno preservado.",
+        desc: "Better Life se compromete a crear un impacto positivo y duradero en la República Democrática del Congo y más allá, situando la protección del medio ambiente y el bienestar de la comunidad en el centro de todas nuestras acciones.",
+      },
+      mission: {
+        kicker: "Nuestra Misión",
+        title: "Actuando por el Cambio",
+        text: "Trabajamos diariamente por la protección del medio ambiente, la conservación de la biodiversidad y el fomento de la seguridad alimentaria.",
+        desc: "A través de programas innovadores y participativos, movilizamos a las comunidades locales para crear un cambio positivo y duradero que beneficie a todos.",
+      },
+      values: {
+        kicker: "Nuestros Valores",
+        title: "Los Pilares de Nuestra Acción",
+        items: [
+          {
+            title: "Microcrédito y Emprendimiento",
+            desc: "Apoyo financiero y técnico para el desarrollo de actividades generadoras de ingresos.",
+            impact: "Más de 500 microempresas apoyadas"
+          },
+          {
+            title: "Formación Profesional",
+            desc: "Desarrollo de competencias técnicas y empresariales para jóvenes y mujeres.",
+            impact: "Más de 2000 personas formadas"
+          },
+          {
+            title: "Acceso al Agua Potable",
+            desc: "Instalación de pozos y sistemas de abastecimiento de agua en comunidades rurales.",
+            impact: "Más de 50 puntos de agua construidos"
+          },
+          {
+            title: "Agricultura Sostenible",
+            desc: "Formación en técnicas de agroecología y agroforestería para una producción sostenible.",
+            impact: "Más de 1000 agricultores formados"
+          },
+          {
+            title: "Seguridad Alimentaria",
+            desc: "Programmas de nutrición y diversificación alimentaria para combatir la malnutrición.",
+            impact: "Más de 5000 personas impactadas"
+          },
+          {
+            title: "Empoderamiento de las Mujeres",
+            desc: "Programas específicos para fortalecer el liderazgo y la independencia económica de las mujeres.",
+            impact: "Más de 1000 mujeres apoyadas"
+          }
+        ],
+      },
+      impact: {
+        kicker: "Nuestras Áreas de Acción",
+        title: "Dónde Intervenimos",
+        items: [
+          {
+            title: "Protección del Medio Ambiente",
+            desc: "Reforestación, conservación de bosques, lucha contra la deforestación y preservación de los ecosistemas naturales.",
+          },
+          {
+            title: "Seguridad Alimentaria",
+            desc: "Promoción de la agricultura sostenible, formación en técnicas agrícolas modernas y apoyo a los agricultores locales.",
+          },
+          {
+            title: "Biodiversidad",
+            desc: "Protección de especies amenazadas, restauración de hábitats naturales y concienciación sobre la importancia de la biodiversidad.",
+          },
+          {
+            title: "Desarrollo Comunitario",
+            desc: "Empoderamiento de las comunidades, creación de oportunidades económicas sostenibles y mejora de las condiciones de vida.",
+          },
+        ],
+      },
+      cta: {
+        title: "Únete a Nuestra Misión",
+        text: "Juntos podemos crear un futuro más verde y sostenible para todos",
+        btn_volunteer: "Hazte Voluntario",
+        btn_contact: "Contáctanos",
+      },
+    },
+    team: {
+      hero: {
+        title: "Nuestro Equipo",
+        subtitle: "Expertos apasionados dedicados a la protección del medio ambiente y al desarrollo sostenible",
+      },
+      leadership: {
+        kicker: "Liderazgo",
+        title: "El Equipo Directivo",
+        text: "Un equipo multidisciplinario que combina experiencia científica, experiencia de campo y pasión por el medio ambiente",
+      },
+      members: [
+        {
+          name: "Dr. Jean-Baptiste Mukendi",
+          role: "Director General",
+          bio: "Experto en desarrollo sostenible con más de 15 años de experiencia en conservación ambiental en África Central.",
+          expertise: ["Liderazgo", "Estrategia", "Conservación"],
+        },
+        {
+          name: "Marie-Claire Kabamba",
+          role: "Directora de Operaciones",
+          bio: "Especialista en gestión de proyectos ambientales y desarrollo comunitario, apasionada por el empoderamiento de las comunidades locales.",
+          expertise: ["Gestión de Proyectos", "Desarrollo", "Formación"],
+        },
+        {
+          name: "Prof. André Tshiala",
+          role: "Asesor Científico",
+          bio: "Reconocido biólogo especializado en biodiversidad tropical y ecosistemas forestales de la cuenca del Congo.",
+          expertise: ["Biodiversidad", "Investigación", "Ecosistemas"],
+        },
+        {
+          name: "Sylvie Mbuyi",
+          role: "Responsable de Agricultura Sostenible",
+          bio: "Agrónoma con experiencia en agricultura climáticamente inteligente y técnicas de permacultura adaptadas al clima tropical.",
+          expertise: ["Agricultura", "Permacultura", "Innovación"],
+        },
+        {
+          name: "Patrick Nsimba",
+          role: "Coordinador de Reforestación",
+          bio: "Ingeniero forestal que coordina nuestros programas de reforestación y restauración de bosques degradados.",
+          expertise: ["Silvicultura", "Reforestación", "Viveros"],
+        },
+        {
+          name: "Grâce Lumingu",
+          role: "Responsable de Comunicación",
+          bio: "Experta en comunicación ambiental y movilización comunitaria, sensibiliza sobre los problemas ecológicos.",
+          expertise: ["Comunicación", "Sensibilización", "Medios"],
+        },
+      ],
+      advisory: {
+        kicker: "Consejo Asesor",
+        title: "Nuestros Asesores Expertos",
+        text: "Expertos internacionales que guían nuestra estrategia y programas",
+        members: [
+          {
+            name: "Dr. Amina Diallo",
+            role: "Experta en Clima",
+            org: "Instituto Africano del Clima",
+          },
+          {
+            name: "Robert Smith",
+            role: "Especialista en Conservación",
+            org: "Fondo Verde Global",
+          },
+          {
+            name: "Dr. Elena Rossi",
+            role: "Investigadora en Agroecología",
+            org: "Centro Euro-Mediterráneo",
+          },
+        ]
+      },
+      cta: {
+        title: "Únete al Equipo",
+        text: "¿Quieres poner tus habilidades al servicio de una causa noble? ¡Únete a nosotros!",
+        btn: "Ver Ofertas"
+      }
+    },
+    partners: {
+      hero: {
+        title: "Nuestros Socios",
+        subtitle: "Colaborando para un mayor impacto"
+      }
+    }
+  },
   blog: {
     index: {
       hero: {
         kicker: "Noticias / Blog",
         title: "Artículos y anuncios",
+        subtitle: "Manténgase informado sobre nuestras acciones y últimas noticias del campo.",
       },
       items: {
-        excerpt:
-          "Agregue aquí el extracto, los medios (foto/video) y el enlace al artículo completo.",
+        excerpt: "Agregue aquí el extracto, los medios (foto/video) y el enlace al artículo completo.",
         readMore: "Leer artículo",
       },
       sections: {
@@ -1492,6 +1659,216 @@ export const es = {
           desc: "Anuncios de eventos, recaudación de fondos, días de reforestación, sesiones de formación abiertas.",
         },
       },
+    },
+    news: {
+      hero: {
+        title: "Noticias",
+        subtitle: "Manténgase informado sobre nuestras últimas acciones y logros",
+      },
+      intro: {
+        kicker: "Noticias Recientes",
+        title: "Siga Nuestros Eventos",
+        text: "Siga nuestros eventos, éxitos y nuevos proyectos para el desarrollo sostenible en la RDC.",
+      },
+      categories: {
+        title: "Categorías",
+        all: "Todas",
+        announcement: "Anuncio",
+        partnership: "Asociación",
+        training: "Formación",
+        success: "Éxito",
+        infrastructure: "Infraestructura",
+        recognition: "Reconocimiento",
+        projects: "Proyectos",
+        events: "Eventos",
+        partnerships: "Asociaciones",
+        trainings: "Formaciones",
+      },
+      filters: {
+        title: "Filtrar",
+        date: "Fecha",
+        category: "Categoría",
+        search: "Buscar noticias...",
+      },
+      featured: {
+        label: "Destacado",
+      },
+      readMore: "Leer más →",
+      empty: {
+        title: "Sin Noticias",
+        text: "No hay artículos disponibles en este momento. Vuelva más tarde para nuevas actualizaciones.",
+      },
+      newsletter: {
+        title: "Manténgase Informado",
+        text: "Suscríbase a nuestro boletín para recibir nuestras noticias directamente en su bandeja de entrada",
+        placeholder: "Su dirección de correo electrónico",
+        subscribe: "Suscribirse",
+      },
+      articles: {
+        reforestation2025: {
+          title: "Lanzamiento del Programa de Reforestación 2025",
+          excerpt: "Better Life anuncia el lanzamiento de su ambicioso programa de plantación de 1 millón de árboles para 2025.",
+        },
+        unepPartnership: {
+          title: "Asociación Estratégica con el PNUMA",
+          excerpt: "Firma de un acuerdo de asociación con el Programa de las Naciones Unidas para el Medio Ambiente para fortalecer nuestras acciones.",
+        },
+        farmersTraining: {
+          title: "Formación de 500 Agricultores en Kikwit",
+          excerpt: "Éxito de nuestro programa de formación en agricultura climáticamente inteligente con 500 agricultores formados.",
+        },
+        bioCertification: {
+          title: "Certificación Orgánica para 150 Productores",
+          excerpt: "150 productores apoyados por Better Life obtienen su certificación de agricultura orgánica.",
+        },
+        nurseryMbandaka: {
+          title: "Nuevo Vivero en Mbandaka",
+          excerpt: "Inauguración de nuestro nuevo vivero capaz de producir 600,000 plantas por año.",
+        },
+        excellenceAward: {
+          title: "Premio de Excelencia Ambiental 2024",
+          excerpt: "Better Life recibe el Premio de Excelencia Ambiental otorgado por el Ministerio de Medio Ambiente.",
+        },
+      },
+    },
+    gallery: {
+      hero: {
+        title: "Galería de Fotos",
+        subtitle: "Descubra nuestras acciones en el campo y logros en imágenes",
+      },
+      intro: {
+        kicker: "Nuestras Fotos",
+        title: "Descubra Nuestro Trabajo",
+        text: "Fotos y videos de nuestros proyectos, eventos y éxitos en diferentes regiones de la RDC.",
+      },
+      stats: {
+        photos: "Fotos",
+        videos: "Videos",
+        albums: "Álbumes",
+        years: "Años de archivos",
+      },
+      categories: {
+        title: "Categorías",
+        all: "Todas",
+        projects: "Proyectos",
+        events: "Eventos",
+        communities: "Comunidades",
+        nature: "Naturaleza",
+      },
+      filters: {
+        title: "Filtrar",
+        date: "Fecha",
+        category: "Categoría",
+        location: "Ubicación",
+      },
+      collections: {
+        kicker: "Colecciones",
+        title: "Álbumes Temáticos",
+        viewAlbum: "Ver álbum",
+        photos: "fotos",
+        reforestation: {
+          title: "Reforestación 2024",
+          desc: "Fotos de nuestras campañas de plantación de árboles en todo el país",
+        },
+        farmersTraining: {
+          title: "Formación de Agricultores",
+          desc: "Momentos destacados de nuestras sesiones de formación en agricultura sostenible",
+        },
+        biodiversity: {
+          title: "Biodiversidad",
+          desc: "La fauna y flora protegidas por nuestros programas de conservación",
+        },
+        communities: {
+          title: "Comunidades",
+          desc: "Encuentros con las comunidades beneficiarias de nuestros proyectos",
+        },
+        nurseries: {
+          title: "Viveros",
+          desc: "Nuestros viveros escolares y la producción de plantas",
+        },
+        events: {
+          title: "Eventos",
+          desc: "Ceremonias, inauguraciones y celebraciones de nuestros éxitos",
+        },
+      },
+      recent: {
+        kicker: "Recientes",
+        title: "Últimas Fotos Agregadas",
+        items: {
+          plantationKinshasa: "Plantación Kinshasa",
+          trainingKikwit: "Formación Kikwit",
+          modernHives: "Colmenas Modernas",
+          villageWell: "Pozo del Pueblo",
+          certificates: "Ceremonia de Certificados",
+          bioHarvest: "Cosecha Orgánica",
+          butterfliesSalonga: "Mariposas Salonga",
+          schoolGarden: "Jardín Escolar",
+          unepPartnership: "Asociación PNUMA",
+          excellenceAward: "Premio de Excelencia",
+          nurseryMbandaka: "Vivero Mbandaka",
+          communityAssembly: "Asamblea Comunitaria",
+        },
+      },
+      videos: {
+        kicker: "Videos",
+        title: "Nuestros Documentales",
+        watch: "▶ Ver",
+        duration: "Duración",
+        views: "Vistas",
+        items: {
+          reforestationYear: "Reforestación: Un Año de Plantación",
+          farmersPortrait: "Retrato de Agricultores Transformados",
+          congoBiodiversity: "La Biodiversidad de la Cuenca del Congo",
+        },
+      },
+      empty: {
+        title: "Sin Fotos",
+        text: "No hay fotos disponibles en este momento. Vuelva más tarde para nuevo contenido.",
+      },
+      view: {
+        title: "Ver Foto",
+        close: "Cerrar",
+        prev: "Anterior",
+        next: "Siguiente",
+        info: "Información",
+      },
+      cta: {
+        title: "Comparta Sus Fotos",
+        text: "¿Participó en uno de nuestros eventos? ¡Comparta sus fotos con nosotros!",
+        btn: "Enviar Fotos",
+      },
+    },
+  },
+  Actions: {
+    Environement: "Medio Ambiente y Clima",
+    index: {
+      kicker: "Nuestras Acciones",
+      title: "Nuestras Acciones",
+      subtitle: "Motores de Impacto Sostenible",
+      approach: {
+        kicker: "Enfoque Integrado"
+      },
+      objectives: {
+        kicker: "Objetivos Clave"
+      },
+      cards: {
+        agriculture: {
+          desc: "Transformar la agricultura y adoptar prácticas inteligentes frente al clima para la seguridad alimentaria."
+        },
+        elevage: {
+          desc: "Sistemas inteligentes de suministro de alimentos que reducen las emisiones de gases de efecto invernadero."
+        },
+        communautaire: {
+          desc: "Promover el bienestar de la población, la salud, la educación y el desarrollo rural participativo."
+        },
+        equipements: {
+          title: "Equipos y Formación",
+          desc: "Apoyo técnico y material para los productores locales."
+        },
+        environement: {
+          desc: "Viveros escolares, reforestación y lucha contra el calentamiento global mediante especies forestales y frutales."
+        }
+      }
     },
     news: {
       hero: {

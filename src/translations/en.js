@@ -788,11 +788,184 @@ export const en = {
     tagline: "A better world",
     location: "Joli Parc, C/Ngaliema",
   },
+  about: {
+    mission: {
+      hero: {
+        title: "Our Mission",
+        subtitle: "Protecting the environment and promoting sustainable development for future generations",
+      },
+      vision: {
+        kicker: "Our Vision",
+        title: "A Sustainable Future for All",
+        text: "We imagine a world where the harmony between man and nature is restored, where every community has access to healthy food and a preserved environment.",
+        desc: "Better Life is committed to creating a positive and lasting impact in the Democratic Republic of Congo and beyond, by placing environmental protection and community well-being at the heart of all our actions.",
+      },
+      mission: {
+        kicker: "Our Mission",
+        title: "Acting for Change",
+        text: "We work daily for the protection of the environment, the conservation of biodiversity, and the promotion of food security.",
+        desc: "Through innovative and participatory programs, we mobilize local communities to create positive and lasting change that benefits everyone.",
+      },
+      values: {
+        kicker: "Our Values",
+        title: "The Pillars of Our Action",
+        items: [
+          {
+            title: "Microcredit and Entrepreneurship",
+            desc: "Financial and technical support for the development of income-generating activities.",
+            impact: "500+ micro-businesses supported"
+          },
+          {
+            title: "Vocational Training",
+            desc: "Development of technical and entrepreneurial skills for youth and women.",
+            impact: "2000+ people trained"
+          },
+          {
+            title: "Access to Drinking Water",
+            desc: "Installation of boreholes and water supply systems in rural communities.",
+            impact: "50+ water points built"
+          },
+          {
+            title: "Sustainable Agriculture",
+            desc: "Training in agroecology and agroforestry techniques for sustainable production.",
+            impact: "1000+ farmers trained"
+          },
+          {
+            title: "Food Security",
+            desc: "Nutrition and food diversification programs to fight malnutrition.",
+            impact: "5000+ people impacted"
+          },
+          {
+            title: "Women's Empowerment",
+            desc: "Specific programs to strengthen the leadership and economic independence of women.",
+            impact: "1000+ women supported"
+          }
+        ],
+      },
+      impact: {
+        kicker: "Our Areas of Action",
+        title: "Where We Intervene",
+        items: [
+          {
+            title: "Environmental Protection",
+            desc: "Reforestation, forest conservation, fight against deforestation, and preservation of natural ecosystems.",
+          },
+          {
+            title: "Food Security",
+            desc: "Promotion of sustainable agriculture, training in modern agricultural techniques, and support for local farmers.",
+          },
+          {
+            title: "Biodiversity",
+            desc: "Protection of endangered species, restoration of natural habitats, and raising awareness of the importance of biodiversity.",
+          },
+          {
+            title: "Community Development",
+            desc: "Empowerment of communities, creation of sustainable economic opportunities, and improvement of living conditions.",
+          },
+        ],
+      },
+      cta: {
+        title: "Join Our Mission",
+        text: "Together, we can create a greener and more sustainable future for all",
+        btn_volunteer: "Become a Volunteer",
+        btn_contact: "Contact Us",
+      },
+    },
+    team: {
+      hero: {
+        title: "Our Team",
+        subtitle: "Passionate experts dedicated to environmental protection and sustainable development",
+      },
+      leadership: {
+        kicker: "Leadership",
+        title: "The Management Team",
+        text: "A multidisciplinary team combining scientific expertise, field experience, and a passion for the environment",
+      },
+      members: [
+        {
+          name: "Dr. Jean-Baptiste Mukendi",
+          role: "General Director",
+          bio: "Sustainable development expert with over 15 years of experience in environmental conservation in Central Africa.",
+          expertise: ["Leadership", "Strategy", "Conservation"],
+        },
+        {
+          name: "Marie-Claire Kabamba",
+          role: "Operations Director",
+          bio: "Specialist in environmental project management and community development, passionate about local community empowerment.",
+          expertise: ["Project Management", "Development", "Training"],
+        },
+        {
+          name: "Prof. André Tshiala",
+          role: "Scientific Advisor",
+          bio: "Renowned biologist specializing in tropical biodiversity and forest ecosystems of the Congo Basin.",
+          expertise: ["Biodiversity", "Research", "Ecosystems"],
+        },
+        {
+          name: "Sylvie Mbuyi",
+          role: "Sustainable Agriculture Manager",
+          bio: "Agronomist with expertise in climate-smart agriculture and permaculture techniques adapted to tropical climates.",
+          expertise: ["Agriculture", "Permaculture", "Innovation"],
+        },
+        {
+          name: "Patrick Nsimba",
+          role: "Reforestation Coordinator",
+          bio: "Forestry engineer coordinating our reforestation and degraded forest restoration programs.",
+          expertise: ["Forestry", "Reforestation", "Nurseries"],
+        },
+        {
+          name: "Grâce Lumingu",
+          role: "Communication Manager",
+          bio: "Expert in environmental communication and community mobilization, she raises awareness about ecological issues.",
+          expertise: ["Communication", "Awareness", "Media"],
+        },
+      ],
+      advisory: {
+        kicker: "Advisory Board",
+        title: "Our Expert Advisors",
+        text: "International experts who guide our strategy and programs",
+        members: [
+          {
+            name: "Dr. Amina Diallo",
+            role: "Climate Expert",
+            org: "African Climate Institute",
+          },
+          {
+            name: "Robert Smith",
+            role: "Conservation Specialist",
+            org: "Global Green Fund",
+          },
+          {
+            name: "Dr. Elena Rossi",
+            role: "Agroecology Researcher",
+            org: "Euro-Mediterranean Center",
+          },
+        ]
+      },
+      cta: {
+        title: "Join the Team",
+        text: "Want to put your skills to work for a noble cause? Join us!",
+        items: [
+          "Volunteers",
+          "Interns",
+          "Expert Consultants",
+          "Local Partners",
+        ],
+        btn: "See Offers"
+      }
+    },
+    partners: {
+      hero: {
+        title: "Our Partners",
+        subtitle: "Collaborating for greater impact"
+      }
+    }
+  },
   Actions: {
     Environement: "Environment & Climate",
     index: {
       kicker: "Our Actions",
-      title: "Drivers of Lasting Impact",
+      title: "Our Actions",
+      subtitle: "Drivers of Lasting Impact",
       approach: {
         kicker: "Integrated Approach"
       },
@@ -1366,7 +1539,7 @@ export const en = {
         intro: { title: "Knowledge for All", text: "School construction and scholarships." },
         features: ["School infrastructure", "Supplies", "Teacher training", "Literacy"]
       },
-      route_desserte_agricole: {
+      routes_desserte: {
         hero: { title: "Feeder Roads", subtitle: "Opening up the countryside" },
         intro: { title: "Infrastructure", text: "Rehabilitation of tracks for product flow." },
         features: ["Manual maintenance", "Bridges and culverts", "Sustainable maintenance", "Market access"]
@@ -1383,7 +1556,7 @@ export const en = {
       hero: {
         kicker: "News / Blog",
         title: "Articles and Announcements",
-        subtitle: "Stay informed about our actions and news on the ground."
+        subtitle: "Stay informed about our actions and latest news from the field.",
       },
       items: {
         excerpt: "Add excerpt, media (photo/video), and link to the full article here.",
@@ -1402,7 +1575,180 @@ export const en = {
     },
     news: {
       hero: {
-        title: "Latest News",
+        title: "News",
+        subtitle: "Stay informed about our latest actions and achievements",
+      },
+      intro: {
+        kicker: "Recent News",
+        title: "Follow Our Events",
+        text: "Follow our events, successes, and new projects for sustainable development in the DRC.",
+      },
+      categories: {
+        title: "Categories",
+        all: "All",
+        announcement: "Announcement",
+        partnership: "Partnership",
+        training: "Training",
+        success: "Success",
+        infrastructure: "Infrastructure",
+        recognition: "Recognition",
+        projects: "Projects",
+        events: "Events",
+        partnerships: "Partnerships",
+        trainings: "Trainings",
+      },
+      filters: {
+        title: "Filter",
+        date: "Date",
+        category: "Category",
+        search: "Search news...",
+      },
+      featured: {
+        label: "Featured",
+      },
+      readMore: "Read more →",
+      empty: {
+        title: "No News",
+        text: "No articles available at this time. Please check back later for new updates.",
+      },
+      newsletter: {
+        title: "Stay Informed",
+        text: "Subscribe to our newsletter to receive our news directly in your inbox",
+        placeholder: "Your email address",
+        subscribe: "Subscribe",
+      },
+      articles: {
+        reforestation2025: {
+          title: "Launch of the 2025 Reforestation Program",
+          excerpt: "Better Life announces the launch of its ambitious program to plant 1 million trees by 2025.",
+        },
+        unepPartnership: {
+          title: "Strategic Partnership with UNEP",
+          excerpt: "Signing of a partnership agreement with the United Nations Environment Programme to strengthen our actions.",
+        },
+        farmersTraining: {
+          title: "Training of 500 Farmers in Kikwit",
+          excerpt: "Success of our climate-smart agriculture training program with 500 farmers trained.",
+        },
+        bioCertification: {
+          title: "Organic Certification for 150 Producers",
+          excerpt: "150 producers supported by Better Life obtain their organic farming certification.",
+        },
+        nurseryMbandaka: {
+          title: "New Nursery in Mbandaka",
+          excerpt: "Inauguration of our new nursery capable of producing 600,000 plants per year.",
+        },
+        excellenceAward: {
+          title: "2024 Environmental Excellence Award",
+          excerpt: "Better Life receives the Environmental Excellence Award from the Ministry of Environment.",
+        },
+      },
+    },
+    gallery: {
+      hero: {
+        title: "Photo Gallery",
+        subtitle: "Discover our actions in the field and achievements in images",
+      },
+      intro: {
+        kicker: "Our Photos",
+        title: "Discover Our Work",
+        text: "Photos and videos of our projects, events, and successes in different regions of the DRC.",
+      },
+      stats: {
+        photos: "Photos",
+        videos: "Videos",
+        albums: "Albums",
+        years: "Years of archives",
+      },
+      categories: {
+        title: "Categories",
+        all: "All",
+        projects: "Projects",
+        events: "Events",
+        communities: "Communities",
+        nature: "Nature",
+      },
+      filters: {
+        title: "Filter",
+        date: "Date",
+        category: "Category",
+        location: "Location",
+      },
+      collections: {
+        kicker: "Collections",
+        title: "Thematic Albums",
+        viewAlbum: "View album",
+        photos: "photos",
+        reforestation: {
+          title: "Reforestation 2024",
+          desc: "Photos of our tree planting campaigns across the country",
+        },
+        farmersTraining: {
+          title: "Farmers Training",
+          desc: "Highlights of our sustainable agriculture training sessions",
+        },
+        biodiversity: {
+          title: "Biodiversity",
+          desc: "Fauna and flora protected by our conservation programs",
+        },
+        communities: {
+          title: "Communities",
+          desc: "Meetings with beneficiary communities of our projects",
+        },
+        nurseries: {
+          title: "Nurseries",
+          desc: "Our school nurseries and plant production",
+        },
+        events: {
+          title: "Events",
+          desc: "Ceremonies, inaugurations, and celebrations of our successes",
+        },
+      },
+      recent: {
+        kicker: "Recent",
+        title: "Latest Photos Added",
+        items: {
+          plantationKinshasa: "Kinshasa Plantation",
+          trainingKikwit: "Kikwit Training",
+          modernHives: "Modern Hives",
+          villageWell: "Village Well",
+          certificates: "Certificates Ceremony",
+          bioHarvest: "Organic Harvest",
+          butterfliesSalonga: "Salonga Butterflies",
+          schoolGarden: "School Garden",
+          unepPartnership: "UNEP Partnership",
+          excellenceAward: "Excellence Award",
+          nurseryMbandaka: "Mbandaka Nursery",
+          communityAssembly: "Community Assembly",
+        },
+      },
+      videos: {
+        kicker: "Videos",
+        title: "Our Documentaries",
+        watch: "▶ Watch",
+        duration: "Duration",
+        views: "Views",
+        items: {
+          reforestationYear: "Reforestation: One Year of Planting",
+          farmersPortrait: "Portrait of Transformed Farmers",
+          congoBiodiversity: "Congo Basin Biodiversity",
+        },
+      },
+      empty: {
+        title: "No Photos",
+        text: "No photos available at this time. Please check back later for new content.",
+      },
+      view: {
+        title: "View Photo",
+        close: "Close",
+        prev: "Previous",
+        next: "Next",
+        info: "Information",
+      },
+      cta: {
+        title: "Share Your Photos",
+        text: "Did you participate in one of our events? Share your photos with us!",
+        btn: "Send Photos",
       },
     },
   },
