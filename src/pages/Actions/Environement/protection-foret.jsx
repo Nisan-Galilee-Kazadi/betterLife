@@ -21,10 +21,10 @@ export default function ProtectionForet() {
                 <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="mx-auto max-w-2xl text-center">
                         <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl drop-shadow-2xl">
-                            {t("Actions.environement.protection_foret.hero.title")}
+                            {t("Actions.environement.protection_foret_section.hero.title")}
                         </h1>
                         <p className="mt-6 text-xl leading-8 text-white font-medium drop-shadow-xl">
-                            {t("Actions.environement.protection_foret.hero.subtitle")}
+                            {t("Actions.environement.protection_foret_section.hero.subtitle")}
                         </p>
                     </div>
                 </div>
@@ -34,14 +34,14 @@ export default function ProtectionForet() {
                 <div className="text-center mb-16 max-w-3xl mx-auto">
                     <SectionTitle
                         kicker="Conservation"
-                        title={t("Actions.environement.protection_foret.intro.title")}
+                        title={t("Actions.environement.protection_foret_section.intro.title")}
                     >
-                        {t("Actions.environement.protection_foret.intro.text")}
+                        {t("Actions.environement.protection_foret_section.intro.text")}
                     </SectionTitle>
                 </div>
 
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-                    {t("Actions.environement.protection_foret.features").map((item, idx) => (
+                    {t("Actions.environement.protection_foret_section.features").map((item, idx) => (
                         <div key={idx} className="p-6 bg-green-50 rounded-xl border border-green-200 hover:shadow-md transition text-center">
                             <FaShieldAlt className="text-4xl text-green-700 mb-4 mx-auto" />
                             <p className="font-semibold text-green-900">{item}</p>

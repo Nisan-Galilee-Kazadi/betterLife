@@ -19,10 +19,10 @@ export default function Energie() {
                 <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="mx-auto max-w-2xl text-center">
                         <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl drop-shadow-2xl">
-                            {t("Actions.communautaire.energie.hero.title")}
+                            {t("Actions.communautaire.energie_subpage.hero.title")}
                         </h1>
                         <p className="mt-6 text-xl leading-8 text-white font-medium drop-shadow-xl">
-                            {t("Actions.communautaire.energie.hero.subtitle")}
+                            {t("Actions.communautaire.energie_subpage.hero.subtitle")}
                         </p>
                     </div>
                 </div>
@@ -32,14 +32,14 @@ export default function Energie() {
                 <div className="text-center mb-16 max-w-3xl mx-auto">
                     <SectionTitle
                         kicker="Électricité"
-                        title={t("Actions.communautaire.energie.intro.title")}
+                        title={t("Actions.communautaire.energie_subpage.intro.title")}
                     >
-                        {t("Actions.communautaire.energie.intro.text")}
+                        {t("Actions.communautaire.energie_subpage.intro.text")}
                     </SectionTitle>
                 </div>
 
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-                    {t("Actions.communautaire.energie.features").map((item, idx) => (
+                    {t("Actions.communautaire.energie_subpage.features").map((item, idx) => (
                         <div key={idx} className="p-6 bg-yellow-50 rounded-xl border border-yellow-200 hover:shadow-md transition text-center">
                             <FaSolarPanel className="text-4xl text-amber-500 mb-4 mx-auto" />
                             <p className="font-semibold text-amber-900">{item}</p>

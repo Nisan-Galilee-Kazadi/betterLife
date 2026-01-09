@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { SectionTitle } from "../components/SectionTitle";
+import { TestimonialSection } from "../components/TestimonialSection";
 import {
   FaUsers,
   FaTree,
@@ -194,7 +195,7 @@ export function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 5000); // Augmenté à 5 secondes pour une meilleure lisibilité
+    }, 9000); // Augmenté à 5 secondes pour une meilleure lisibilité
     return () => clearInterval(interval);
   }, [heroSlides.length]);
 
@@ -492,80 +493,36 @@ export function Home() {
         {/* Recent Projects Section removed per new nav */}
 
         {/* Testimonials Section */}
-        <FadeIn>
-          <div className="mb-24">
-            <div className="text-center mb-12">
-              <SectionTitle
-                kicker={t("home.testimonials.kicker")}
-                title={t("home.testimonials.title")}
-              />
-            </div>
-            <div className="grid gap-8 md:grid-cols-2">
-              {[
-                {
-                  quote: t("home.testimonials.t1.quote"),
-                  author: t("home.testimonials.t1.author"),
-                  role: t("home.testimonials.t1.role"),
-                },
-                {
-                  quote: t("home.testimonials.t2.quote"),
-                  author: t("home.testimonials.t2.author"),
-                  role: t("home.testimonials.t2.role"),
-                },
-              ].map((testimonial, index) => (
-                <div
-                  key={index}
-                  className="rounded-2xl border-2 border-green-200 bg-gradient-to-br from-green-50 to-white p-8 shadow-lg"
-                >
-                  <FaQuoteLeft className="text-4xl text-[#63b32e] mb-4" />
-                  <p className="text-slate-700 italic mb-6 text-lg">
-                    "{testimonial.quote}"
-                  </p>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#63b32e] to-[#0f70b7] flex items-center justify-center text-white font-bold text-xl">
-                      {testimonial.author.charAt(0)}
-                    </div>
-                    <div>
-                      <p className="font-bold text-slate-900">
-                        {testimonial.author}
-                      </p>
-                      <p className="text-sm text-slate-600">
-                        {testimonial.role}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </FadeIn>
+        <TestimonialSection />
 
         {/* CTA Section */}
-        <FadeIn>
-          <div className="rounded-3xl bg-gradient-to-r from-[#0f70b7] to-[#63b32e] p-12 text-center shadow-2xl">
-            <FaHeart className="text-6xl text-white mx-auto mb-6" />
-            <h2 className="text-3xl font-bold text-white mb-4">
-              {t("home.cta.title")}
-            </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              {t("home.cta.subtitle")}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="rounded-md bg-white px-8 py-4 text-base font-semibold text-[#0f70b7] shadow-lg transition hover:bg-slate-50"
-              >
-                {t("home.cta.btn1")}
-              </Link>
-              <Link
-                to="/rejoindre"
-                className="rounded-md bg-white/10 backdrop-blur-sm px-8 py-4 text-base font-semibold text-white transition hover:bg-white/20"
-              >
-                {t("home.cta.btn2")}
-              </Link>
-            </div>
+        <div className="relative isolate overflow-hidden bg-gradient-to-r from-[#0f70b7] to-[#63b32e] py-24 sm:py-32">
+          <div className="absolute inset-0 bg-black/20" />
+          <div className="relative mx-auto max-w-7xl px-6 lg:px-8 text-center">
+            <FadeIn>
+              <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+                {t("home.cta.title")}
+              </h2>
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                {t("home.cta.subtitle")}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="rounded-md bg-white px-8 py-4 text-base font-semibold text-[#0f70b7] shadow-lg transition hover:bg-slate-50"
+                >
+                  {t("home.cta.btn1")}
+                </Link>
+                <Link
+                  to="/rejoindre"
+                  className="rounded-md bg-white/10 backdrop-blur-sm px-8 py-4 text-base font-semibold text-white transition hover:bg-white/20"
+                >
+                  {t("home.cta.btn2")}
+                </Link>
+              </div>
+            </FadeIn>
           </div>
-        </FadeIn>
+        </div>
       </div>
     </div>
   );

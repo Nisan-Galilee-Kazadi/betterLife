@@ -1092,7 +1092,7 @@ export const sw = {
           title: "Vifaa & Mafunzo",
           desc: "Usaidizi wa kiufundi na vifaa kwa wazalishaji wa ndani."
         },
-        environment: {
+        environment_section: {
           title: "Mazingira",
           desc: "Vichocheo shuleni, uoteshaji miti, na kupambana na ongezeko la joto duniani."
         }
@@ -1278,7 +1278,7 @@ export const sw = {
           btn_sponsor: 'Tunza mti'
         },
         // Ukurasa wa chini
-        protection_foret: {
+        protection_foret_section: {
           hero: { 
             title: "Ulinzi wa Msitu", 
             subtitle: "Mapafu ya sayari" 
@@ -1679,8 +1679,7 @@ export const sw = {
           intro: { title: "Huduma za Karibu", text: "Mapambano dhidi ya magonjwa ya kawaida na huduma za uzazi." },
           features: ["Kampeni za chanjo", "Kliniki zinazotembea", "Afya ya uzazi", "Mapambano dhidi ya utapiamlo"]
         },
-        energie: {
-          hero: { title: "Nishati Jadidifu", subtitle: "Mwanga na Nguvu" },
+        energie_subpage: {hero: { title: "Nishati Jadidifu", subtitle: "Mwanga na Nguvu" },
           intro: { title: "Umeme wa Vijijini", text: "Mabwawa madogo ya kuzalisha umeme na paneli za jua." },
           features: ["Nishati ya jua ya nyumbani", "Umeme mdogo wa maji", "Biogesi", "Usimamizi wa ndani"]
         },
@@ -1934,7 +1933,7 @@ export const sw = {
         title: "Ulinzi wa Mazingira",
         subtitle: "Kulinda mazingira yetu kwa vizazi vijavyo"
       },
-      protection_foret: {
+      protection_foret_final: {
         hero: {
           title: "Ulinzi wa Misitu",
           subtitle: "Kuhifadhi mapafu ya dunia yetu"
