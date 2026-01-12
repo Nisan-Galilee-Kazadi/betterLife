@@ -1925,57 +1925,46 @@ export const sw = {
         }
       }
     },
-    environement: {
-      hero: {
-        title: "Ulinzi wa Mazingira",
-        subtitle: "Kulinda mazingira yetu kwa vizazi vijavyo"
-      },
-      protection_foret_final: {
-        hero: {
-          title: "Ulinzi wa Misitu",
-          subtitle: "Kuhifadhi mapafu ya dunia yetu"
-        }
-      }
-    }
-  },
 
-  footer: {
-    location: "Joli Parc, C/Ngaliema",
-    tagline: "Maendeleo Endelevu kwa Vizazi Vijavyo",
-    description: "Ulinzi wa Mazingira, Bioanuwai na Maendeleo Endelevu katika Jamhuri ya Kidemokrasia ya Kongo.",
-    nav_title: "Maelekezo",
-    contact_title: "Mawasiliano",
-    rights: "Haki zote zimehifadhiwa © Better Life",
-    activities_title: "Shughuli",
-    newsletter: {
-      title: "Jiandikishe kwa Jarida Letu",
-      placeholder: "Barua pepe yako",
-      button: "Jiandikisha"
+    footer: {
+      location: "Joli Parc, C/Ngaliema",
+      tagline: "Maendeleo Endelevu kwa Vizazi Vijavyo",
+      description: "Ulinzi wa Mazingira, Bioanuwai na Maendeleo Endelevu katika Jamhuri ya Kidemokrasia ya Kongo.",
+      nav_title: "Maelekezo",
+      contact_title: "Mawasiliano",
+      rights: "Haki zote zimehifadhiwa  Better Life",
+      activities_title: "Shughuli",
+      newsletter: {
+        title: "Jiandikishe kwa Jarida Letu",
+        placeholder: "Barua pepe yako",
+        button: "Jiandikisha"
+      },
+      quick_links: "Viungulo Haraka",
+      contact_info: "Mawasiliano",
+      social_media: "Mitandao ya Kijamii"
     },
-    quick_links: "Viungulo Haraka",
-    contact_info: "Mawasiliano",
-    social_media: "Mitandao ya Kijamii"
-  },
-  donation: {
-    hero: {
-      title: "Toa Msaada",
-      subtitle: "Saidia matendo yetu kwa ajili ya mustakabali endelevu."
-    },
-    kicker: "Msaada",
-    title: "Msaada Wako ni wa Thamani",
-    description: "Kila mchango unatuwezesha kupanua programu zetu na kuwa na athari halisi mashinani.",
-    support: {
-      title: "Kwa nini utusaidie?",
-      text: "Michango yako inafadhili moja kwa moja upandaji miti, kilimo endelevu, na msaada kwa jamii."
-    },
-    methods: {
-      title: "Njia za Malipo",
-      text: "Tunakubali uhamisho wa benki, kadi za mkopo, na pesa za simu."
-    },
-    cta: {
-      title: "Chukua Hatua Sasa",
-      text: "Wasiliana nasi kukamilisha mchango wako au kwa swali lolote.",
-      btn: "Wasiliana Nasi"
+    donation: {
+      hero: {
+        title: "Toa Msaada",
+        subtitle: "Saidia matendo yetu kwa ajili ya mustakabali endelevu."
+      },
+      kicker: "Msaada",
+      title: "Msaada Wako ni wa Thamani",
+      description: "Kila mchango unatuwezesha kupanua programu zetu na kuwa na athari halisi mashinani.",
+      support: {
+        title: "Kwa nini utusaidie?",
+        text: "Michango yako inafadhili moja kwa moja upandaji miti, kilimo endelevu, na msaada kwa jamii."
+      },
+      rights: "Haki zote zimehifadhiwa © Better Life",
+      activities_title: "Shughuli",
+      newsletter: {
+        title: "Jiandikishe kwa Jarida Letu",
+        placeholder: "Barua pepe yako",
+        button: "Jiandikisha"
+      },
+      quick_links: "Viungulo Haraka",
+      contact_info: "Mawasiliano",
+      social_media: "Mitandao ya Kijamii"
     }
   },
   testimonialSection: {
