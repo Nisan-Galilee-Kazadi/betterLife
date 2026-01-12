@@ -4,7 +4,7 @@ import { SectionTitle } from '../../components/SectionTitle'
 import { useLanguage } from '../../contexts/LanguageContext'
 import team_hero from "../../images/team_hero.webp";
 import rhPhoto from "../../images/Rh.jpg";
-import gestionProjetPhoto from "../../images/Gp.jpg";
+import gestionProjetPhoto from "../../images/GP.jpg";
 import secretariatPhoto from "../../images/Sec.jpg";
 import dircomPhoto from "../../images/dircom.jpg";
 import financierePhoto from "../../images/finaciere.jpg";
