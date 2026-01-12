@@ -431,40 +431,81 @@ export const sw = {
     },
     members: [
       {
-        name: "Dr. Jean-Baptiste Mukendi",
-        role: "Director General",
-        bio: "Sustainable development expert with over 15 years of experience in environmental conservation in Central Africa.",
-        expertise: ["Leadership", "Strategy", "Conservation"],
+        name: "Ir DEKEY MOLO Blaise",
+        role: "Mratibu wa Kitaifa",
+        bio: "Anahakikisha uratibu wa jumla wa shughuli za NGO katika ngazi ya kitaifa.",
+        expertise: ["Uratibu", "Mkakati", "Usimamizi"],
+        mail: "coordination@betterlife-ong.org"
       },
       {
-        name: "Marie-Claire Kabamba",
-        role: "Operations Director",
-        bio: "Specialist in environmental project management and community development, passionate about empowering local communities.",
-        expertise: ["Project Management", "Development", "Training"],
+        name: "Ir KILUNGU KASONGO Bernard",
+        role: "Mjumbe wa Kitaifa",
+        bio: "Anawakilisha shirika kwa taasisi na kusimamia wajumbe wa mikoa.",
+        expertise: ["Mahusiano ya Kitaasisi", "Uongozi", "Maendeleo"],
+        mail: "bernardkilungu@betterlife-ong.org"
       },
       {
-        name: "Prof. André Tshiala",
-        role: "Scientific Advisor",
-        bio: "Renowned biologist specializing in tropical biodiversity and Congo Basin forest ecosystems.",
-        expertise: ["Biodiversity", "Research", "Ecosystems"],
+        name: "Mme MPOYI NGALULA Sarah",
+        role: "Mkurugenzi wa Rasilimali Watu",
+        bio: "Anasimamia rasilimali watu, ajira na maendeleo ya ujuzi wa timu.",
+        expertise: ["Rasilimali Watu", "Ajira", "Mafunzo"],
+        mail: "rh@betterlife-ong.org"
       },
       {
-        name: "Sylvie Mbuyi",
-        role: "Sustainable Agriculture Head",
-        bio: "Agronomist with expertise in climate-smart agriculture and permaculture techniques adapted to tropical climates.",
-        expertise: ["Agriculture", "Permaculture", "Innovation"],
+        name: "Mme YANGA LUBULU Déborah",
+        role: "Katibu",
+        bio: "Anatoa msaada wa kiutawala na usimamizi wa nyaraka za shirika.",
+        expertise: ["Utawala", "Uandaji", "Ukatibu"],
+        mail: "secretariat@betterlife-ong.org"
       },
       {
-        name: "Patrick Nsimba",
-        role: "Reforestation Coordinator",
-        bio: "Forestry engineer coordinating our reforestation and degraded forest restoration programs.",
-        expertise: ["Forestry", "Reforestation", "Nurseries"],
+        name: "Mme LUTONADIO NSIMBA Florence",
+        role: "Mkurugenzi wa Fedha",
+        bio: "Anasimamia usimamizi wa kifedha, kibajeti na za uhasibu wa Better Life.",
+        expertise: ["Fedha", "Uhasibu", "Ukaguzi"],
+        mail: "compta@betterlife-ong.org"
       },
       {
-        name: "Grâce Lumingu",
-        role: "Communication Manager",
-        bio: "Expert in environmental communication and community mobilization, raising awareness on ecological issues.",
-        expertise: ["Communication", "Awareness", "Media"],
+        name: "Mme META NYEMABU Ornella",
+        role: "Meneja wa Mradi",
+        bio: "Anahusika na upangaji, utekelezaji na ufuatiliaji wa miradi ya NGO.",
+        expertise: ["Usimamizi wa Mradi", "Upangaji", "Ufuatiliaji na Tathmini"],
+        mail: "gestionprojet@betterlife-ong.org"
+      },
+      {
+        name: "Mme BAKAKUWA NGALULA Marceline",
+        role: "Mkurugenzi wa Kiufundi",
+        bio: "Anasimamia vipengele vya kiufundi na visayansi vya programu za mazingira na kilimo.",
+        expertise: ["Utaalamu wa Kiufundi", "Kilimo", "Mazingira"],
+        mail: "dt@betterlife-ong.org"
+      },
+      {
+        name: "LUMUMBA MPUMPU Nathan",
+        role: "Mkurugenzi wa Mawasiliano na Masoko",
+        bio: "Anaendesha mkakati wa mawasiliano na mwonekano wa shughuli za NGO.",
+        expertise: ["Mawasiliano", "Masoko", "Mahusiano ya Umma"],
+        mail: "betterlifeorg@gmail.com"
+      },
+      {
+        name: "Itaainishwa",
+        role: "Katibu wa Utawala",
+        bio: "Anatoa msaada wa kiutawala na usimamizi wa nyaraka kwa shirika.",
+        expertise: ["Utawala", "Shirika", "Ukatibu"],
+        mail: "Itaainishwa"
+      },
+      {
+        name: "Itaainishwa",
+        role: "Mkurugenzi wa Fedha",
+        bio: "Anasimamia usimamizi wa fedha, bajeti na uhasibu wa Better Life.",
+        expertise: ["Fedha", "Uhasibu", "Ukaguzi"],
+        mail: "Itaainishwa"
+      },
+      {
+        name: "Itaainishwa",
+        role: "Mkurugenzi wa Mawasiliano na Masoko",
+        bio: "Anaongoza mkakati wa mawasiliano na uonekano wa vitendo vya NGO.",
+        expertise: ["Mawasiliano", "Masoko", "Mahusiano ya Umma"],
+        mail: "Itaainishwa"
       },
     ],
     advisory: {
@@ -619,44 +660,44 @@ export const sw = {
   },
   contact: {
     hero: {
-      title: "Contact Us",
-      subtitle: "Feel free to contact us for any question or partnership",
+      title: "Wasiliana Nasi",
+      subtitle: "Usisite kuwasiliana nasi kwa swali lolote au ushirikiano",
     },
     info: {
-      kicker: "Stay Connected",
-      title: "Our Contact Info",
+      kicker: "Baki na Mawasiliano",
+      title: "Habari zetu za Mawasiliano",
       address: {
-        title: "Address",
+        title: "Anwani",
         value: "N° 5 Av. Des Etangs, Q/ Joli Parc, C/ Ngaliema, Kinshasa - RDC",
       },
       email: {
-        title: "Email",
+        title: "Barua pepe",
         value: "infos@betterlife-ong.org",
       },
       phone: {
-        title: "Phone",
+        title: "Simu",
         value: "+243 82 9495 919",
       },
       hours: {
-        title: "Opening Hours",
-        value: "Monday - Friday: 8:00 AM - 5:00 PM",
+        title: "Saa za kazi",
+        value: "Jumatatu - Ijumaa: 8:00 - 17:00",
       },
     },
 
     form: {
-      title: "Send us a message",
-      name: "Full Name",
-      name_placeholder: "Your name",
-      email: "Email",
-      email_placeholder: "email@exemple.com",
-      subject: "Subject",
-      subject_placeholder: "Subject of your message",
-      message: "Message",
-      message_placeholder: "Your message...",
-      btn: "Send Message",
+      title: "Tutumie ujumbe",
+      name: "Jina kamili",
+      name_placeholder: "Jina lako",
+      email: "Barua pepe",
+      email_placeholder: "barua_pepe@mfano.com",
+      subject: "Mada",
+      subject_placeholder: "Mada ya ujumbe wako",
+      message: "Ujumbe",
+      message_placeholder: "Ujumbe wako...",
+      btn: "Tuma ujumbe",
     },
     map: {
-      title: "Find us on map",
+      title: "Tupate kwenye ramani",
       text: "N° 5 Av. Des Etangs, Q/ Joli Parc, C/ Ngaliema, Kinshasa - RDC",
     },
   },
@@ -873,38 +914,44 @@ export const sw = {
         {
           name: "Dr. Jean-Baptiste Mukendi",
           role: "Mkurugenzi Mkuu",
-          bio: "Mtaalamu wa maendeleo endelevu mwenye uzoefu wa zaidi ya miaka 15 katika uhifadhi wa mazingira katika Afrika ya Kati.",
+          bio: "Mtaalamu wa maendeleo endelevu mwenye uzoefu wa zaidi ya miaka 15 katika uhifadhi wa mazingira katika Afrika ya Kati. Mpenzi na ulindaji wa bioanuwai na maendeleo ya jamii za kijiji.",
           expertise: ["Uongozi", "Mkakati", "Uhifadhi"],
+          mail: "delegue@betterlife.cd"
         },
         {
           name: "Marie-Claire Kabamba",
           role: "Mkurugenzi wa Operesheni",
           bio: "Mtaalamu wa usimamizi wa miradi ya mazingira na maendeleo ya jamii, mwenye shauku ya kuwezesha jamii za asili.",
           expertise: ["Usimamizi wa Miradi", "Maendeleo", "Mafunzo"],
+          mail: "marie.claire@betterlife.cd"
         },
         {
           name: "Prof. André Tshiala",
           role: "Mshauri wa Kisayansi",
           bio: "Mwanabiolojia mashuhuri aliyebobea katika bioanuwai ya kitropiki na mifumo ya ikolojia ya misitu ya Bonde la Kongo.",
           expertise: ["Bioanuwai", "Utafiti", "Mifumo ya Ikolojia"],
+          mail: "andre.tshiala@betterlife.cd"
         },
         {
           name: "Sylvie Mbuyi",
           role: "Meneja wa Kilimo Endelevu",
           bio: "Mtaalamu wa kilimo mwenye ujuzi wa kilimo kinachozingatia tabianchi na mbinu za kilimo hai zilizobadilishwa kwa hali ya hewa ya kitropiki.",
           expertise: ["Kilimo", "Kilimo Hai", "Ubunifu"],
+          mail: "sylvie.mbuyi@betterlife.cd"
         },
         {
           name: "Patrick Nsimba",
           role: "Mratibu wa Uoteshaji Miti",
           bio: "Mhandisi wa misitu anayeratibu programu zetu za uoteshaji miti na kurejesha misitu iliyoharibiwa.",
           expertise: ["Misitu", "Uoteshaji Miti", "Vituo vya Miche"],
+          mail: "patrick.nsimba@betterlife.cd"
         },
         {
           name: "Grâce Lumingu",
           role: "Meneja wa Mawasiliano",
           bio: "Mtaalamu wa mawasiliano ya mazingira na uhamasishaji jamii, anayetoa elimu juu ya changamoto za kiikolojia.",
           expertise: ["Mawasiliano", "Uhamasishaji", "Vyombo vya Habari"],
+          mail: "grace.lumingu@betterlife.cd"
         },
       ],
       advisory: {
@@ -1046,57 +1093,43 @@ export const sw = {
         btn: "Wasiliana Nasi",
       },
     },
-  footer: {
-    location: "Joli Parc, C/Ngaliema",
-    tagline: "Maendeleo Endelevu kwa Vizazi Vijavyo",
-    description: "Ulinzi wa Mazingira, Bioanuwai na Maendeleo Endelevu katika Jamhuri ya Kidemokrasia ya Kongo.",
-    nav_title: "Maelekezo",
-    contact_title: "Mawasiliano",
-    rights: "Haki zote zimehifadhiwa © Better Life",
-    activities_title: "Shughuli",
-    newsletter: {
-      title: "Jiandikishe kwa Jarida Letu",
-      placeholder: "Barua pepe yako",
-      button: "Jiandikisha"
-    },
-    quick_links: "Viungulo Haraka",
-    contact_info: "Mawasiliano",
-    social_media: "Mitandao ya Kijamii"
-  },
-  Actions: {
-    environment: "Mazingira & Hali ya Hewa",
-    index: {
-      kicker: "Vitendo Vyetu",
-      title: "Vitendo Vyetu",
-      subtitle: "Vichocheo vya Athari Inayodumu",
-      approach: {
-        kicker: "Njia Iliyounganishwa"
-      },
-      objectives: {
-        kicker: "Malengo Muhimu"
-      },
-      cards: {
-        agriculture: {
-          title: "Kilimo",
-          desc: "Kubadilisha kilimo na kufuata mazoea mahiri kwa ajili ya usalama wa chakula."
+    // Moved footer to top level
+
+    Actions: {
+      environement: "Mazingira & Hali ya Hewa",
+      Environement: "Mazingira & Hali ya Hewa",
+      index: {
+        kicker: "Vitendo Vyetu",
+        title: "Vitendo Vyetu",
+        subtitle: "Vichocheo vya Athari Inayodumu",
+        approach: {
+          kicker: "Njia Iliyounganishwa"
         },
-        elevage: {
-          title: "Ufugaji",
-          desc: "Mifumo mahiri inayopunguza uzalishaji wa gesi chafu."
+        objectives: {
+          kicker: "Malengo Muhimu"
         },
-        communautaire: {
-          title: "Maendeleo ya Jamii",
-          desc: "Kukuza ustawi wa watu, afya, elimu na maendeleo shirikishi vijijini."
-        },
-        equipements: {
-          title: "Vifaa & Mafunzo",
-          desc: "Usaidizi wa kiufundi na vifaa kwa wazalishaji wa ndani."
-        },
-        environment_section: {
-          title: "Mazingira",
-          desc: "Vichocheo shuleni, uoteshaji miti, na kupambana na ongezeko la joto duniani."
+        cards: {
+          agriculture: {
+            title: "Kilimo",
+            desc: "Kubadilisha kilimo na kufuata mazoea mahiri kwa ajili ya usalama wa chakula."
+          },
+          elevage: {
+            title: "Ufugaji",
+            desc: "Mifumo mahiri inayopunguza uzalishaji wa gesi chafu."
+          },
+          communautaire: {
+            title: "Maendeleo ya Jamii",
+            desc: "Kukuza ustawi wa watu, afya, elimu na maendeleo shirikishi vijijini."
+          },
+          mecanisation: {
+            title: "Umekanizaji",
+            desc: "Ufumbuzi wa zana za uzalishaji kwa kilimo chenye tija zaidi."
+          },
+          environement: {
+            title: "Mazingira",
+            desc: "Vichocheo shuleni, uoteshaji miti, na kupambana na ongezeko la joto duniani."
+          }
         }
-      }
       },
       agriculture: {
         hero: {
@@ -1123,7 +1156,7 @@ export const sw = {
           title: "Mipango ya Kilimo",
           items: [
             {
-              title: "Agroforestry",
+              title: "Kilimo mseto",
               desc: "Ushirikiano wa miti katika mazao ili kurejesha udongo na kubadilisha mapato.",
               benefits: ["Ulinzi wa udongo", "Utofauti", "Bioanuwai"]
             },
@@ -1136,6 +1169,21 @@ export const sw = {
               title: "Usimamizi wa Maji",
               desc: "Mbinu bora za umwagiliaji na uhifadhi wa maji.",
               benefits: ["Uchumi", "Ustahimilivu", "Uzalishaji wa mwaka mzima"]
+            },
+            {
+              title: "Mbegu Zilizoboreshwa",
+              desc: "Usambazaji wa mbegu zinazostahimili na kurekebishwa kulingana na mabadiliko ya tabianchi.",
+              benefits: ["Mavuno bora", "Upinzani dhidi ya magonjwa", "Marekebisho"]
+            },
+            {
+              title: "Urejelezaji & Mboji",
+              desc: "Ubadilishaji wa taka za kilimo kuwa mbolea ya asili ya ubora wa juu.",
+              benefits: ["Rutuba ya asili", "Taka sifuri", "Uchumi wa pembejeo"]
+            },
+            {
+              title: "Uhifadhi wa Udongo",
+              desc: "Mazoea ya kupambana na mmomonyoko wa udongo na kuboresha mfumo wa udongo.",
+              benefits: ["Uendelevu", "Uhifadhi wa maji", "Mimea ya udongo"]
             }
           ]
         },
@@ -1224,10 +1272,10 @@ export const sw = {
           impact: { title: "Athari", stats: [{ value: "20", label: "Bustani za afya" }, { value: "10k", label: "Wagonjwa waliosaidiwa" }] }
         }
       },
-      environment: {
+      environement: {
         hero: {
           title: "Ulinzi wa Mazingira",
-          subtitle: "Kuhifadhi urithi wetu wa asili kwa vizazi vijavyo"
+          subtitle: "Kulinda mazingira yetu na rasilimali zetu za asili"
         },
         protection_foret: {
           hero: {
@@ -1248,7 +1296,7 @@ export const sw = {
         intro: {
           kicker: "Ahadi Yetu",
           title: "Kutenda kwa Ajili ya Bioanuwai",
-          text: "Tunatekeleza vitendo halisi vya uhifadhi wa mifumo ikolojia, usimamizi endelevu wa rasilimali za asili, na kupambana na mabadiliko ya tabia nchi.",
+          text: "Tunatekeleza vitendo halisi vya uhifadhi wa mifumo ikolojia, usimamizi endelevu kwa rasilimali za asili, na kupambana na mabadiliko ya tabia nchi.",
           stats: {
             planted: { number: "450k", label: "Miti" },
             survival: { number: "85%", label: "Kiwango cha Ustawi" }
@@ -1279,424 +1327,393 @@ export const sw = {
         },
         // Ukurasa wa chini
         protection_foret_section: {
-          hero: { 
-            title: "Ulinzi wa Msitu", 
-            subtitle: "Mapafu ya sayari" 
+          hero: {
+            title: "Ulinzi wa Msitu",
+            subtitle: "Mapafu ya sayari"
           },
-          intro: { 
-            title: "Uhifadhi", 
-            text: "Kupambana na ukataji miti na uwindaji haramu." 
+          intro: {
+            title: "Uhifadhi",
+            text: "Kupambana na ukataji miti na uwindaji haramu."
           },
           features: ["Ulinzi wa walezi wa mazingira", "Ramani ya ushiriki", "Urejeshaji", "Maeneo yaliyohifadhiwa"]
         },
         credit_carbone: {
-          hero: { 
-            title: "Stakabadhi ya Kaboni", 
-            subtitle: "Kuongeza thamani ya kufyonza gesi chafu" 
+          hero: {
+            title: "Stakabadhi ya Kaboni",
+            subtitle: "Kuongeza thamani ya kufyonza gesi chafu"
           },
-          intro: { 
-            title: "Fedha za Hali ya Hewa", 
-            text: "Pata mapato kupitia uhifadhi wa misitu." 
+          intro: {
+            title: "Fedha za Hali ya Hewa",
+            text: "Pata mapato kupitia uhifadhi wa misitu."
           },
           features: ["Uthibitisho", "Uuzaji wa stakabadhi", "Mapato ya jamii", "Ufuatiliaji wa kaboni"]
         },
         eco_kelasi: {
-          hero: { 
-            title: "Eko-Shule", 
-            subtitle: "Shule ya kimazingira" 
+          hero: {
+            title: "Eko-Shule",
+            subtitle: "Shule ya kimazingira"
           },
-          intro: { 
-            title: "Elimu ya Mazingira", 
-            text: "Kujifunza kupenda na kulinda asili tangu utotoni." 
+          intro: {
+            title: "Elimu ya Mazingira",
+            text: "Kujifunza kupenda na kulinda asili tangu utotoni."
           },
           features: ["Bustani za shule", "Vikundi vya asili", "Uchambuzi wa taka", "Safari za kielimu"]
         }
       },
+
       mecanisation: {
-        hero: { title: "Agricultural Mechanization", subtitle: "Modernizing for efficient agriculture" },
+        hero: { title: "Umekanizaji wa Kilimo", subtitle: "Kisasa kwa ajili ya kilimo chenye tija" },
         intro: {
-          kicker: "Our Vision",
-          title: "The Future is Mechanization",
-          text: "We facilitate access to modern equipment to increase productivity while reducing the arduousness of agricultural work.",
+          kicker: "Maono Yetu",
+          title: "Mustakabali ni Umekanizaji",
+          text: "Tunarahisisha ufikiaji wa vifaa vya kisasa ili kuongeza tija huku tukipunguza ugumu wa kazi ya kilimo.",
           stats: [
-            { value: "200+", label: "Tractors deployed" },
-            { value: "1000+", label: "Hectares plowed" },
-            { value: "50+", label: "Mobile workshops" },
-            { value: "500+", label: "Operators trained" }
+            { value: "200+", label: "Matrekta yaliyotumwa" },
+            { value: "1000+", label: "Hekta zilizolimwa" },
+            { value: "50+", label: "Warsha za kutembea" },
+            { value: "500+", label: "Waendeshaji waliofunzwa" }
           ]
         },
         programs: {
-          kicker: "Our Programs",
-          title: "Mechanization Solutions",
+          kicker: "Programu Zetu",
+          title: "Suluhisho za Umekanizaji",
           items: [
             {
-              title: "Agricultural Tractors",
-              desc: "Rental and sale of tractors adapted to local farms.",
-              impact: "100+ farms"
+              title: "Matrekta ya Kilimo",
+              desc: "Kukodisha na kuuza matrekta yaliyorekebishwa kwa mashamba ya ndani.",
+              impact: "100+ mashamba"
             },
             {
-              title: "Processing Units",
-              desc: "Equipment for processing agricultural products (mills, presses).",
-              impact: "50+ units"
+              title: "Vitengo vya Usindikaji",
+              desc: "Vifaa vya usindikaji wa bidhaa za kilimo (vinu, mashine za kukamua).",
+              impact: "50+ vitengo"
             },
             {
-              title: "Maintenance & Repair",
-              desc: "Service and repair to ensure equipment longevity.",
-              impact: "200+ interventions"
+              title: "Matengenezo na Ukarabati",
+              desc: "Huduma na ukarabati ili kuhakikisha maisha marefu ya vifaa.",
+              impact: "200+ hatua"
             },
             {
-              title: "Operator Training",
-              desc: "Training on the use and maintenance of agricultural equipment.",
-              impact: "500+ operators"
+              title: "Mafunzo ya Waendeshaji",
+              desc: "Mafunzo juu ya matumizi na matengenezo ya vifaa vya kilimo.",
+              impact: "500+ waendeshaji"
             }
           ]
         },
-        benefits: { title: "Benefits", items: ["Increased productivity", "Reduced drudgery", "Youth attractiveness", "Precision"] },
+        benefits: { title: "Faida", items: ["Kuongezeka kwa tija", "Kupunguza kazi ngumu", "Uvutiaji wa vijana", "Usahihi"] },
         cta: {
-          title: "Modernize Your Farm",
-          text: "Invest in mechanization to improve your productivity and profitability.",
-          btn_contact: "Contact us",
-          btn_more: "Learn more"
+          title: "Gesi Shamba Lako",
+          text: "Wekeza katika umekanizaji ili kuboresha tija na faida yako.",
+          btn_contact: "Wasiliana nasi",
+          btn_more: "Soma zaidi"
         },
         // Sub-pages
         tracteur: {
-          hero: { title: "Our Tractors", subtitle: "Power and reliability at the service of the fields" },
-          intro: { title: "Modern Fleet", text: "Equipment adapted to our territories." },
-          features: ["All-Terrain Tractors", "Low Consumption", "Parts available", "Integrated GPS"]
+          hero: { title: "Matrekta Yetu", subtitle: "Nguvu na uaminifu katika huduma ya mashamba" },
+          intro: { title: "Meli ya Kisasa", text: "Vifaa vilivyorekebishwa kwa maeneo yetu." },
+          features: ["Matrekta ya Kila Mahali", "Matumizi ya Chini", "Vifaa vinavyopatikana", "GPS iliyojumuishwa"]
         },
         accessoires: {
-          hero: { title: "Agricultural Accessories", subtitle: "The right tool for every task" },
-          intro: { title: "Equipment", text: "Seeders, plows, and trailers to optimize every step." },
-          features: ["Disc plows", "Precision seeders", "5T Trailers", "Irrigation systems"]
+          hero: { title: "Vifaa vya Kilimo", subtitle: "Chombo sahihi kwa kila kazi" },
+          intro: { title: "Vifaa", text: "Wapanda mbegu, jembe, na trela ili kuboresha kila hatua." },
+          features: ["Jembe la diski", "Wapanda mbegu wa usahihi", "Trela za 5T", "Mifumo ya umwagiliaji"]
         },
         autres: {
-          hero: { title: "Other Equipment", subtitle: "Continuous innovation" },
-          intro: { title: "Diversification", text: "Drones, sensors, and small motorized tools." },
-          features: ["Surveillance drones", "Moisture sensors", "Power tillers", "Chippers"]
+          hero: { title: "Vifaa Vingine", subtitle: "Ubunifu unaoendelea" },
+          intro: { title: "Utofauti", text: "Droni, vitambuzi, na vifaa vidogo vya injini." },
+          features: ["Droni za ufuatiliaji", "Vitambuzi vya unyevu", "Power tillers", "Chippers"]
         }
       },
       elevage: {
         hero: {
-          title: "Sustainable Livestock",
-          subtitle: "Respectful and profitable practices"
+          title: "Ufugaji Endelevu",
+          subtitle: "Mazoea ya heshima na yenye faida"
         },
         intro: {
-          kicker: "Our Approach",
-          title: "Modern and Responsible Breeding",
-          text: "We develop livestock methods that combine productivity, animal welfare, and respect for the environment for sustainable food security.",
+          kicker: "Njia Yetu",
+          title: "Ufugaji wa Kisasa na Uwajibikaji",
+          text: "Tunatengeneza mbinu za ufugaji zinazochanganya tija, ustawi wa wanyama, na heshima kwa mazingira kwa ajili ya usalama wa chakula endelevu.",
           stats: [
-            { value: "5000+", label: "Head of livestock" },
-            { value: "15+", label: "Species raised" },
-            { value: "3", label: "Veterinary centers" },
-            { value: "100+", label: "Trained breeders" }
+            { value: "5000+", label: "Mifugo" },
+            { value: "15+", label: "Spishi zinazofugwa" },
+            { value: "3", label: "Vituo vya mifugo" },
+            { value: "100+", label: "Wafugaji waliofunzwa" }
           ]
         },
         types: {
-          kicker: "Our Sectors",
-          title: "Supported Livestock Types",
+          kicker: "Sekta Zetu",
+          title: "Aina za Ufugaji Zinazoungwa Mkono",
           items: [
             {
-              title: "Dog Breeding",
-              desc: "Professional breeding of pedigree and companion dogs for security and assistance.",
-              production: "Pets & Security"
+              title: "Ufugaji wa Mbwa",
+              desc: "Ufugaji wa kitaalamu wa mbwa wa asili na marafiki kwa ajili ya usalama na usaidizi.",
+              production: "Wanyama wa ndani & Usalama"
             },
             {
-              title: "Snake Breeding",
-              desc: "Research and conservation program for local snake species.",
-              production: "Research & Conservation"
+              title: "Ufugaji wa Nyoka",
+              desc: "Mpango wa utafiti na uhifadhi kwa spishi za nyoka wa ndani.",
+              production: "Utafiti & Uhifadhi"
             },
             {
-              title: "Large Livestock",
-              desc: "Modern cattle breeding focused on meat quality and milk production.",
-              production: "Milk & Meat"
+              title: "Mifugo Mikubwa",
+              desc: "Ufugaji wa kisasa wa ng'ombe unaozingatia ubora wa nyama na uzalishaji wa maziwa.",
+              production: "Maziwa & Nyama"
             },
             {
-              title: "Beekeeping",
-              desc: "Organic honey production and preservation of local bees.",
-              production: "Honey & Derived products"
+              title: "Ufugaji Nyuki",
+              desc: "Uzalishaji wa asali ya asili na uhifadhi wa nyuki wa ndani.",
+              production: "Asali & Bidhaa zinazotokana nayo"
             },
             {
-              title: "Fish Farming",
-              desc: "Sustainable freshwater fish production in managed ponds.",
-              production: "Fresh fish & Fingerlings"
+              title: "Ufugaji wa Samaki",
+              desc: "Uzalishaji endelevu wa samaki wa maji baridi katika mabwawa yaliyosimamiwa.",
+              production: "Samaki wabichi & Vifaranga"
             }
           ]
         },
-      Actions: {
-          kicker: "Services",
-          title: "Support for Breeders",
+        actions: {
+          kicker: "Huduma",
+          title: "Usaidizi kwa Wafugaji",
           items: [
-            { title: "Animal Health", features: ["Vaccination", "Veterinary care", "Disease prevention"] },
-            { title: "Genetic Improvement", features: ["Crossbreeding", "Selection", "High-performance breeds"] },
-            { title: "Training", features: ["Livestock management", "Hygiene", "Nutrition"] },
-            { title: "Infrastructure", features: ["Shelter construction", "Feeders", "Drinkers"] }
+            { title: "Afya ya Wanyama", features: ["Chanjo", "Huduma za mifugo", "Kuzuia magonjwa"] },
+            { title: "Uboreshaji wa Kinasaba", features: ["Uvukishaji", "Uteuzi", "Mifugo yenye utendaji wa juu"] },
+            { title: "Mafunzo", features: ["Usimamizi wa mifugo", "Usafi", "Lishe"] },
+            { title: "Miundombinu", features: ["Ujenzi wa makazi", "Mabirika ya kulia", "Mabirika ya kunywa"] }
           ]
         },
         story: {
-          tag: "Testimony",
-          title: "Local Success",
-          text: "The installation of modern poultry units allowed 50 women from the cooperative to double their income in one year.",
-          benefits: ["Financial autonomy", "Nutritional security", "Capacity building"],
+          tag: "Ushuhuda",
+          title: "Mafanikio ya Ndani",
+          text: "Ufungaji wa vitengo vya kisasa vya kuku uliruhusu wanawake 50 kutoka chama cha ushirika kuongeza mapato yao mara mbili kwa mwaka mmoja.",
+          benefits: ["Uhuru wa kifedha", "Usalama wa lishe", "Kujenga uwezo"],
           stats: [
-            { label: "Poultry", value: "5000+", color: "green" },
-            { label: "Income", value: "+100%", color: "blue" }
+            { label: "Kuku", value: "5000+", color: "green" },
+            { label: "Mapato", value: "+100%", color: "blue" }
           ]
         },
         stats: {
-          title: "Key Figures",
+          title: "Takwimu Muhimu",
           items: [
-            { number: "250", label: "Supported breeders" },
-            { number: "10k", label: "Head of livestock" },
-            { number: "5T", label: "Honey produced" },
-            { number: "12", label: "Fish units" }
+            { number: "250", label: "Wafugaji wanaoungwa mkono" },
+            { number: "10k", label: "Mifugo" },
+            { number: "5T", label: "Asali inayozalishwa" },
+            { number: "12", label: "Vitengo vya samaki" }
           ]
         },
         cta: {
-          title: "Join Our Program",
-          text: "Develop your livestock activity with our personalized support",
-          btn_join: "Become a partner breeder",
-          btn_partner: "Become a partner"
+          title: "Jiunge na Programu Yetu",
+          text: "Endeleza shughuli yako ya ufugaji kwa usaidizi wetu wa kibinafsi",
+          btn_join: "Kuwa mfugaji mshirika",
+          btn_partner: "Kuwa mshirika"
         },
         // Sub-pages
         gros_betail: {
-          hero: { title: "Large Livestock Breeding", subtitle: "Development of the bovine sector in DRC" },
+          hero: { title: "Ufugaji wa Mifugo Mikubwa", subtitle: "Maendeleo ya sekta ya ng'ombe katika RDC" },
           intro: {
-            kicker: "Our Bovine Expertise",
-            title: "Modern and Productive Livestock",
-            text: "We support breeders in the genetic improvement of their herd, pasture management, and optimization of milk and meat production.",
-            highlights: ["Selection of breeds adapted to local climate", "Sustainable breeding techniques", "Access to veterinary care", "Product marketing"]
+            kicker: "Utaalamu Wetu wa Ng'ombe",
+            title: "Ufugaji wa Kisasa na Wenye Tija",
+            text: "Tunasaidia wafugaji katika uboreshaji wa kinasaba wa mifugo yao, usimamizi wa malisho, na uboreshaji wa uzalishaji wa maziwa na nyama.",
+            highlights: ["Uteuzi wa mifugo inayofaa hali ya hewa ya ndani", "Mbinu endelevu za ufugaji", "Ufikiaji wa huduma za mifugo", "Masoko ya bidhaa"]
           },
           features: [
-            { title: "Genetic Improvement", desc: "Selection and reproduction of bovine breeds with high productive potential." },
-            { title: "Animal Health", desc: "Complete vaccination program and preventive veterinary care." },
-            { title: "Balanced Nutrition", desc: "Formulation of food rations adapted to nutritional needs." },
-            { title: "Pasture Management", desc: "Rotation and regeneration techniques for pastures." }
+            { title: "Uboreshaji wa Kinasaba", desc: "Uteuzi na uzalishaji wa mifugo ya ng'ombe yenye uwezo mkubwa wa uzalishaji." },
+            { title: "Afya ya Wanyama", desc: "Programu kamili ya chanjo na huduma za kuzuia mifugo." },
+            { title: "Lishe Bora", desc: "Uundaji wa chakula kinachofaa mahitaji ya lishe." },
+            { title: "Usimamizi wa Malisho", desc: "Mbinu za mzunguko na urejeshaji wa malisho." }
           ],
           stats: [
-            { value: "2x", label: "Increase in milk production" },
-            { value: "-30%", label: "Reduction in animal mortality" },
-            { value: "50+", label: "Trained breeders" },
-            { value: "100%", label: "Animals vaccinated" }
+            { value: "2x", label: "Kuongezeka kwa uzalishaji wa maziwa" },
+            { value: "-30%", label: "Kupunguza vifo vya wanyama" },
+            { value: "50+", label: "Wafugaji waliofunzwa" },
+            { value: "100%", label: "Wanyama waliopewa chanjo" }
           ]
         },
         apiculture: {
-          hero: { title: "Sustainable Beekeeping", subtitle: "The liquid gold of our forests" },
+          hero: { title: "Ufugaji Nyuki Endelevu", subtitle: "Dhahabu ya maji ya misitu yetu" },
           intro: {
-            kicker: "Our Beekeeping Approach",
-            title: "Bee Protection, Community Wealth",
-            text: "Our sustainable beekeeping program combines biodiversity preservation and income creation for local communities.",
-            highlights: ["Improved traditional hives", "Sustainable harvesting methods", "Processing of hive products", "Local and export markets"]
+            kicker: "Njia Yetu ya Ufugaji Nyuki",
+            title: "Ulinzi wa Nyuki, Utajiri wa Jamii",
+            text: "Programu yetu endelevu ya ufugaji nyuki inachanganya uhifadhi wa bioanuwai na uundaji wa mapato kwa jamii za mahali hapo.",
+            highlights: ["Mizinga ya jadi iliyoboreshwa", "Mbinu endelevu za uvunaji", "Usindikaji wa bidhaa za mzinga", "Masoko ya ndani na nje"]
           },
           features: [
-            { title: "Modern Hives", desc: "Design of hives adapted to local conditions and respectful of bees." },
-            { title: "Certified Bio Honey", desc: "100% natural honey production without chemicals." },
-            { title: "Beeswax", desc: "Valorization of wax for cosmetic and artisanal products." },
-            { title: "Pollination", desc: "Contribution to ecosystem preservation and increased agricultural yields." }
+            { title: "Mizinga ya Kisasa", desc: "Ubunifu wa mizinga inayofaa hali ya hewa ya ndani na yenye heshima kwa nyuki." },
+            { title: "Asali ya Bio Iliyothibitishwa", desc: "Uzalishaji wa asali 100% ya asili bila kemikali." },
+            { title: "Nta", desc: "Uhamishaji wa nta kwa ajili ya vipodozi na bidhaa za sanaa." },
+            { title: "Uchavushaji", desc: "Mchango katika uhifadhi wa mifumo ikolojia na kuongeza mavuno ya kilimo." }
           ]
         },
         pisciculture: {
-          hero: { title: "Sustainable Fish Farming", subtitle: "Responsible fish breeding" },
+          hero: { title: "Ufugaji Samaki Endelevu", subtitle: "Ufugaji wa samaki unaowajibika" },
           intro: {
-            kicker: "Our Aquaculture Expertise",
-            title: "Sustainable Fishing for Tomorrow",
-            text: "Development of inland aquaculture with methods respectful of the environment and water resources.",
-            highlights: ["Tilapia and Clarias breeding", "Pond and tank systems", "Optimized feeding", "Sustainable water management"]
+            kicker: "Utaalamu Wetu wa Ukulima wa Majini",
+            title: "Uvuvi Endelevu kwa Kesho",
+            text: "Maendeleo ya ukulima wa majini wa nchi kavu kwa mbinu zenye heshima kwa mazingira na rasilimali za maji.",
+            highlights: ["Ufugaji wa Tilapia na Clarias", "Mifumo ya mabwawa na matenki", "Lishe iliyoboreshwa", "Usimamizi endelevu wa maji"]
           },
           features: [
-            { title: "Quality Fingerlings", desc: "Rigorous selection of broodstock and controlled reproduction." },
-            { title: "Optimized Feeding", desc: "Rich in protein for fast and healthy growth." },
-            { title: "Water Management", desc: "Filtration and renewal systems for quality water." },
-            { title: "Continuous Training", desc: "Technical support to fish farmers for optimal production." }
+            { title: "Vifaranga vya Ubora", desc: "Uteuzi mkali wa wazazi na uzalishaji unaodhibitiwa." },
+            { title: "Lishe Iliyoboreshwa", desc: "Inayotajiriwa na protini kwa ukuaji wa haraka na afya." },
+            { title: "Usimamizi wa Maji", desc: "Mifumo ya uchujaji na urejeshaji kwa maji ya ubora." },
+            { title: "Mafunzo Yanayoendelea", desc: "Usaidizi wa kiufundi kwa wakulima wa samaki kwa uzalishaji bora." }
           ]
         },
         chiens: {
-          hero: { title: "Professional Dog Breeding", subtitle: "Security, Companionship and Rescue" },
+          hero: { title: "Ufugaji wa Mbwa wa Kitaalamu", subtitle: "Usalama, Urafiki na Uokoaji" },
           intro: {
-            kicker: "Our Canine Commitment",
-            title: "Educated Dogs for All Needs",
-            text: "Breeding pedigree dogs with a particular focus on animal welfare and specific skills for each breed.",
-            highlights: ["German and Belgian Shepherds", "Guard and defense dogs", "Assistance dogs", "Pets"]
+            kicker: "Ahadi Yetu ya Mbwa",
+            title: "Mbwa Walioelimika kwa Mahitaji Yote",
+            text: "Ufugaji wa mbwa wa asili kwa kuzingatia sana ustawi wa wanyama na ujuzi maalum kwa kila asili.",
+            highlights: ["Shepherds wa Kijerumani mna wa Ubelgiji", "Mbwa wa ulinzi na ulinzi", "Mbwa wa usaidizi", "Wanyama wa nyumbani"]
           },
           features: [
-            { title: "Ethical Breeding", desc: "Optimal living conditions and respect for animal welfare." },
-            { title: "Certified Pedigree", desc: "Animals registered with LOF with controlled genealogy." },
-            { title: "Early Education", desc: "Socialization and education basics from an early age." },
-            { title: "Veterinary Follow-up", desc: "Up-to-date vaccines and complete health check." }
+            { title: "Ufugaji wa Kimaadili", desc: "Hali bora za maisha na heshima kwa ustawi wa wanyama." },
+            { title: "Pedigree Iliyothibitishwa", desc: "Wanyama walioandikishwa na LOF na nasaba iliyodhibitiwa." },
+            { title: "Elimu ya Mapema", desc: "Uhusiano wa kijamii na misingi ya elimu tangu umri mdogo." },
+            { title: "Ufuatiliaji wa Mifugo", desc: "Chanjo za sasa na ripoti kamili ya afya." }
           ]
         },
         serpents: {
-          hero: { title: "Snake Breeding Center", subtitle: "Research and Anti-venom Production" },
+          hero: { title: "Kituo cha Ufugaji wa Nyoka", subtitle: "Utafiti na Uzalishaji wa Dawa za Sumu" },
           intro: {
-            kicker: "Our Scientific Mission",
-            title: "Preservation and Research on Snakes",
-            text: "Our specialized center contributes to venom research and the production of anti-venom serums to save lives.",
-            highlights: ["Controlled breeding of venomous species", "Safe venom extraction", "Medical research", "Awareness programs"]
+            kicker: "Dhamira Yetu ya Kisayansi",
+            title: "Uhifadhi na Utafiti juu ya Nyoka",
+            text: "Kituo chetu maalum kinachangia utafiti juu ya sumu na uzalishaji wa seramu za kuzuia sumu ili kuokoa maisha.",
+            highlights: ["Ufugaji uliodhibitiwa wa spishi za sumu", "Uchimbaji salama wa sumu", "Utafiti wa matibabu", "Programu za uhamasishaji"]
           },
           features: [
-            { title: "Safe Extraction", desc: "Strict protocols for handling and traceability." },
-            { title: "Scientific Research", desc: "Study of therapeutic properties of venoms." },
-            { title: "Conservation", desc: "Protection programs for endangered species." },
-            { title: "Training", desc: "Workshops on prevention and first aid in case of bite." }
+            { title: "Uchimbaji Salama", desc: "Itifaki kali kwa ushughulikiaji and ufuatiliaji." },
+            { title: "Utafiti wa Kisayansi", desc: "Utafiti wa sifa za matibabu ya sumu." },
+            { title: "Uhifadhi", desc: "Programu za ulinzi wa spishi zilizo hatarini." },
+            { title: "Mafunzo", desc: "Warsha juu ya kuzuia na huduma ya kwanza ikiwa kuna kuumwa." }
           ]
         }
       },
-      community: {
+      communautaire: {
         hero: {
           title: "Maendeleo ya Jamii",
-          subtitle: "Kuwawezesha jamii kwa mustakabali endelevu"
-        },
-        energie: {
-          hero: {
-            title: "Nishati Endelevu",
-            subtitle: "Nishati safi kwa maendeleo endelevu"
-          },
-          intro: {
-            title: "Nishati kwa Wote",
-            text: "Suluhisho za nishati zinazoweza kudumu kwa ajili ya jamii za vijijini na mjini.",
-            highlights: [
-              "Vyanzo vya nishati mbadala",
-              "Teknolojia nafuu",
-              "Uwezeshaji wa kijamii",
-              "Uboreshaji wa maisha"
-            ]
-          },
-          programs: {
-            title: "Mipango ya Nishati",
-            items: [
-              "Jiko bora za mkaa",
-              "Mifumo ya nishati ya jua",
-              "Biogesi ya nyumbani",
-              "Minara ya taa za jua"
-            ]
-          }
+          subtitle: "Kuwezesha jamii kwa mustakabali endelevu"
         },
         intro: {
-          kicker: "Our Approach",
-          title: "At the heart of local communities",
-          text: "We work hand in hand with communities to develop sustainable solutions that improve living conditions while preserving the environment.",
+          kicker: "Njia Yetu",
+          title: "Katika moyo wa jamii za mahali hapo",
+          text: "Tunafanya kazi bega kwa bega na jamii kukuza suluhisho endelevu zinazoboresha hali ya maisha huku zikihifadhi mazingira.",
           highlights: [
-            "Participatory approach",
-            "Integrated local development",
-            "Capacity building",
-            "Empowerment of women and youth"
+            "Njia ya ushiriki",
+            "Maendeleo ya mtaa yaliyounganishwa",
+            "Kuimarisha uwezo",
+            "Kuwezesha wanawake na vijana"
           ],
           stats: [
-            { value: "50+", label: "Supported communities" },
-            { value: "10k+", label: "Direct beneficiaries" },
-            { value: "200+", label: "Completed projects" },
-            { value: "5", label: "Provinces covered" }
+            { value: "50+", label: "Jamii zinazoungwa mkono" },
+            { value: "10k+", label: "Wanufaika wa moja kwa moja" },
+            { value: "200+", label: "Miradi iliyokamilika" },
+            { value: "5", label: "Mikoa iliyofikiwa" }
           ]
         },
         programs: {
-          kicker: "Our Programs",
-          title: "Local Initiatives",
+          kicker: "Programu Zetu",
+          title: "Mipango ya Ndani",
           items: [
             {
-              title: "Micro-credit and Entrepreneurship",
-              desc: "Financial and technical support for the development of income-generating activities.",
-              impact: "500+ micro-businesses supported"
+              title: "Mikopo Midogo na Ukuzaji Biashara",
+              desc: "Usaidizi wa kifedha na kiufundi kwa ajili ya kuunda shughuli zinazozalisha mapato.",
+              impact: "500+ biashara ndogo zinazoungwa mkono"
             },
             {
-              title: "Education and Training",
-              desc: "Construction of schools, teacher training, and scholarships for underprivileged children.",
-              impact: "2000+ beneficiary students"
+              title: "Elimu na Mafunzo",
+              desc: "Ujenzi wa shule, mafunzo ya walimu na ufadhili wa masomo kwa watoto maskini.",
+              impact: "2000+ wanafunzi wanufaika"
             },
             {
-              title: "Community Health",
-              desc: "Mobile clinics, vaccination campaigns, and basic hygiene awareness.",
-              impact: "10,000+ patients treated"
+              title: "Afya ya Jamii",
+              desc: "Kliniki zinazotembea, kampeni za chanjo na uhamasishaji juu ya usafi wa kimsingi.",
+              impact: "10 000+ wagonjwa waliotibiwa"
             },
             {
-              title: "Access to Drinking Water",
-              desc: "Boreholes, standpipes, and sanitation systems for rural communities.",
-              impact: "15,000+ people served"
+              title: "Ufikiaji wa Maji Safi",
+              desc: "Uchoraji wa visima na mifumo ya usafi kwa jamii za vijijini.",
+              impact: "15 000+ watu waliopata huduma"
             },
             {
-              title: "Food Security",
-              desc: "Nutrition and food diversification programs to fight malnutrition.",
-              impact: "5000+ families supported"
+              title: "Usalama wa Chakula",
+              desc: "Programu za lishe na mseto wa chakula kupambana na utapiamlo.",
+              impact: "5000+ familia zinazoungwa mkono"
             },
             {
-              title: "Women Empowerment",
-              desc: "Professional training and support for female entrepreneurial initiatives.",
-              impact: "2000+ women trained"
+              title: "Kuwezesha Wanawake",
+              desc: "Mafunzo ya ufundi na msaada kwa mipango ya biashara ya wanawake.",
+              impact: "2000+ wanawake waliofunzwa"
             }
           ]
         },
         women: {
-          title: "Women's Empowerment",
-          text: "We believe that empowering women is the key to sustainable community development. Our programs aim to strengthen their leadership, skills, and economic independence.",
+          title: "Kuwezesha Wanawake",
+          text: "Tunaamini kuwa kuwezesha wanawake ndio ufunguo wa maendeleo endelevu ya jamii. Programu zetu zinalenga kuimarisha uongozi wao, ujuzi na uhuru wa kiuchumi.",
           items: [
-            "Business management training",
-            "Adult literacy",
-            "Female market gardening",
-            "Savings and credit cooperatives"
+            "Mafunzo katika usimamizi wa biashara",
+            "Kujifunza kusoma na kuandika kwa watu wazima",
+            "Kilimo cha mboga cha wanawake",
+            "Vyama vya ushirika vya kuweka akiba na mikopo"
           ],
           stats: [
-            { number: "2,000+", label: "Women trained" },
-            { number: "300+", label: "Micro-businesses created" },
-            { number: "85%", label: "Success rate" },
-            { number: "10", label: "Cooperatives supported" }
+            { number: "2,000+", label: "Wanawake waliofunzwa" },
+            { number: "300+", label: "Biashara ndogo zilizoundwa" },
+            { number: "85%", label: "Kiwango cha mafanikio" },
+            { number: "10", label: "Vyama vya ushirika vinavyoungwa mkono" }
           ],
           testimonial: {
-            text: "Thanks to the entrepreneurship training, I was able to create my small business and provide for my family.",
-            author: "Marie K., Program beneficiary"
+            text: "Shukrani kwa mafunzo ya ujasiriamali, nimeweza kuanzisha biashara yangu ndogo na kukidhi mahitaji ya familia yangu.",
+            author: "Marie K., Mnufaika wa programu"
           }
         },
         stories: {
-          kicker: "Success Stories",
-          title: "Our Successes",
+          kicker: "Hadithi za Mafanikio",
+          title: "Mafanikio Yetu",
           items: [
             {
-              title: "The School of Hope in Kibumba",
-              achievement: "Infrastructure & Education",
-              desc: "Construction and equipment of a primary school for 500 children in a remote village in North Kivu.",
-              impact: "500 children enrolled, 15 teachers trained, 1 library equipped"
+              title: "Shule ya matumaini huko Kibumba",
+              text: "Ujenzi na vifaa vya shule ya msingi kwa watoto 500 katika kijiji cha mbali cha Kivu Kaskazini.",
+              impact: "500 watoto shuleni, walimu 15 waliofunzwa, maktaba 1 yenye vifaa"
             },
             {
-              title: "Water, Source of Life in Tshikapa",
-              achievement: "Health & Access",
-              desc: "Installation of 5 boreholes equipped with hand pumps, serving 3,000 people.",
-              impact: "3,000 beneficiaries, 5 water points installed, 10 committees trained in maintenance"
+              title: "Maji, chemchemi ya uzima huko Tshikapa",
+              text: "Ufungaji wa visima 5 vyenye pampu, vinavyohudumia watu 3,000.",
+              impact: "3,000 wanufaika, vituo 5 vya maji vilivyowekwa, kamati 10 zilizofunzwa matengenezo"
             },
             {
-              title: "Women Entrepreneurs of Goma",
-              achievement: "Economy & Autonomy",
-              desc: "Training and microcredit program for 200 women entrepreneurs in the informal sector.",
-              impact: "200 women trained, 150 micro-businesses launched, 80% repayment rate"
+              title: "Wanawake wajasiriamali wa Goma",
+              text: "Programu ya mafunzo na mikopo midogo kwa wanawake wajasiriamali 200 katika sekta isiyo rasmi.",
+              impact: "Wanawake 200 waliofunzwa, biashara ndogo 150 zilizinduliwa, 80% kiwango cha kurejesha"
             }
           ]
         },
-        cta: {
-          title: "Participate",
-          text: "Help us build a better world for everyone.",
-          btn_donate: "Make a donation",
-          btn_volunteer: "Volunteer"
-        },
+        cta: { title: "Shiriki", text: "Tusaidie kujenga", btn_donate: "Toa msaada", btn_volunteer: "Ujitoleaji" },
         // Sub-pages
         sante: {
-          hero: { title: "Afya ya Jamii", subtitle: "Upatikanaji wa huduma kwa wote" },
-          intro: { title: "Huduma za Karibu", text: "Mapambano dhidi ya magonjwa ya kawaida na huduma za uzazi." },
-          features: ["Kampeni za chanjo", "Kliniki zinazotembea", "Afya ya uzazi", "Mapambano dhidi ya utapiamlo"]
+          hero: { title: "Afya ya Jamii", subtitle: "Ufikiaji wa huduma kwa wote" },
+          intro: { title: "Huduma za Karibu", text: "Kupambana na magonjwa na huduma za mama." },
+          features: ["Kampeni za chanjo", "Kliniki zinazotembea", "Afya ya mama", "Kupambana na utapiamlo"]
         },
-        energie_subpage: {hero: { title: "Nishati Jadidifu", subtitle: "Mwanga na Nguvu" },
-          intro: { title: "Umeme wa Vijijini", text: "Mabwawa madogo ya kuzalisha umeme na paneli za jua." },
-          features: ["Nishati ya jua ya nyumbani", "Umeme mdogo wa maji", "Biogesi", "Usimamizi wa ndani"]
+        energie: {
+          hero: { title: "Nishati Jadidifu", subtitle: "Mwanga na Nguvu" },
+          intro: { title: "Umeme Vijijini", text: "Mabwawa madogo na paneli za jua." },
+          features: ["Jua la nyumbani", "Umeme mdogo wa maji", "Biogas", "Matengenezo ya ndani"]
         },
         education: {
           hero: { title: "Elimu", subtitle: "Mustakabali wa watoto wetu" },
           intro: { title: "Maarifa kwa Wote", text: "Ujenzi wa shule na ufadhili wa masomo." },
-          features: ["Miundombinu ya shule", "Vifaa vya shule", "Mafunzo ya walimu", "Kujua kusoma na kuandika"]
+          features: ["Miundombinu ya shule", "Vifaa", "Mafunzo ya walimu", "Kujifunza kusoma na kuandika"]
         },
         routes_desserte: {
-          hero: { title: "Barabara za Vijijini", subtitle: "Kufungua maeneo ya vijijini" },
-          intro: { title: "Miundombinu", text: "Ukarabati wa njia kwa ajili ya usafirishaji wa bidhaa." },
-          features: ["Ufyatuzi wa mikono", "Daraja na mifereji", "Matengenezo endelevu", "Upatikanaji wa masoko"]
+          hero: { title: "Barabara za Kilimo", subtitle: "Kufungua maeneo ya vijijini" },
+          intro: { title: "Miundombinu", text: "Ukarabati wa nyimbo kwa mtiririko wa bidhaa." },
+          features: ["Cantonage ya mwongozo", "Madaraja", "Matengenezo endelevu", "Ufikiaji wa masoko"]
         },
         habitation: {
-          hero: { title: "Makazi ya Jamii", subtitle: "Paa la heshima" },
-          intro: { title: "Makazi Endelevu", text: "Ujenzi wa nyumba kwa kutumia rasilimali za ndani zilizoboreshwa." },
-          features: ["Matofali yaliyoimarishwa", "Paa endelevu", "Usafi wa mazingira", "Mipango ya mijini"]
+          hero: { title: "Makazi ya Kijamii", subtitle: "Paa la heshima" },
+          intro: { title: "Nyumba Endelevu", text: "Ujenzi wa nyumba kwa kutumia vifaa vya ndani vilivyoboreshwa." },
+          features: ["Matofali yaliyoimarishwa", "Paa za kudumu", "Usafi", "Mipango ya miji"]
         }
       }
     },
@@ -1901,25 +1918,7 @@ export const sw = {
         },
       },
     },
-    donation: {
-      hero: {
-        title: "Toa Msaada",
-        subtitle: "Saidia matendo yetu kwa ajili ya mustakabali endelevu."
-      },
-      kicker: "Msaada",
-      title: "Msaada Wako ni wa Thamani",
-      description: "Kila mchango unatuwezesha kupanua programu zetu na kuwa na athari halisi mashinani.",
-      support: {
-        title: "Kwa nini utusaidie?",
-        text: "Michango yako inafadhili moja kwa moja upandaji miti, kilimo endelevu, na msaada kwa jamii."
-      },
-      methods: {
-        title: "Njia za Malipo",
-        text: "Tunakubali uhamisho wa benki, kadi za mkopo, na pesa za simu."
-      },
-      cta: {
-      }
-    },
+
     communautaire: {
       energie: {
         hero: {
@@ -1941,6 +1940,24 @@ export const sw = {
       }
     }
   },
+
+  footer: {
+    location: "Joli Parc, C/Ngaliema",
+    tagline: "Maendeleo Endelevu kwa Vizazi Vijavyo",
+    description: "Ulinzi wa Mazingira, Bioanuwai na Maendeleo Endelevu katika Jamhuri ya Kidemokrasia ya Kongo.",
+    nav_title: "Maelekezo",
+    contact_title: "Mawasiliano",
+    rights: "Haki zote zimehifadhiwa © Better Life",
+    activities_title: "Shughuli",
+    newsletter: {
+      title: "Jiandikishe kwa Jarida Letu",
+      placeholder: "Barua pepe yako",
+      button: "Jiandikisha"
+    },
+    quick_links: "Viungulo Haraka",
+    contact_info: "Mawasiliano",
+    social_media: "Mitandao ya Kijamii"
+  },
   donation: {
     hero: {
       title: "Toa Msaada",
@@ -1961,6 +1978,35 @@ export const sw = {
       title: "Chukua Hatua Sasa",
       text: "Wasiliana nasi kukamilisha mchango wako au kwa swali lolote.",
       btn: "Wasiliana Nasi"
+    }
+  },
+  testimonialSection: {
+    title: "Ushuhuda",
+    subtitle: "Gundua hadithi za mabadiliko na athari kutoka kwa washirika na wanufaika wetu",
+    items: [
+      {
+        id: 1,
+        name: "KABAMBA KABAMBA Chrétien",
+        shortQuote: "Kupitia Better Life, tunasaidia kilimo endelevu, upandaji miti na maendeleo ya kijamii katika maeneo kadhaa ya Kongo. Miradi yetu inalenga kuboresha hali ya maisha ya jamii, hasa upatikanaji wa elimu na huduma za afya.",
+        fullQuote: "Tumeona hali ngumu ya maisha katika maeneo mengi ya Kongo: ukosefu wa maji safi, shule zisizotosheleza, upatikanaji mdogo wa huduma za afya. Kukabiliana na changamoto hizi, tunafanya utetezi ili wafadhili wa kitaifa na kimataifa wasaidie miradi yetu inayolenga kuboresha maendeleo ya kijamii na kiuchumi ya jamii, vijijini na mijini.\n\nTukiwa na Better Life, tunaingilia kati katika nyanja kadhaa: kilimo endelevu (mazao ya karanga), upandaji miti, ulinzi wa maeneo ya ardhi oevu na uhamasishaji wa fedha. Njia hii inayoweza kutofautiana inatuwezesha kujibu kwa vitendo mahitaji ya idadi ya watu na kusaidia mipango inayoweza kudumu.",
+        location: "Lomami"
+      },
+      {
+        id: 2,
+        name: "MWAMBA SELEMANI Gérard",
+        shortQuote: "Huko Moubambé, tulizindua mradi wa \"Watoto Sifuri katika Migodi\", tukichanganya kilimo endelevu na upatikanaji wa elimu. Kupitia Better Life, watoto wanaondoka migodini kwenda kusoma na jamii inafuata mbinu endelevu.",
+        fullQuote: "Huko Moubambé, eneo la mbali la Haut-Katanga, tulianzisha mradi wa kilimo endelevu kwa ushirikiano na Better Life. Idadi ya watu, ambao hapo awali walitegemea uchimbaji mdogo wa madini, walihamasishwa kuhusu kilimo endelevu. Tuliweka vitalu na kuhamasisha jamii ya mahali hapo ili watoto waweze kuondoka migodini na kupata elimu.\n\nMradi wa \"Watoto Sifuri katika Migodi\" pia unatoa fursa ya ujenzi wa shule na vituo vya mafunzo ya ufundi kwa vijana na watu wazima. Ushuhuda huu unaonyesha jinsi ahadi ya pamoja na usaidizi wa kiufundi unavyoweza kubadilisha maisha ya jamii za vijijini kwa namna endelevu.",
+        location: "Haut-Katanga"
+      }
+    ],
+    btn_video: "Tazama Video",
+    btn_more: "Soma zaidi",
+    btn_less: "Soma kidogo",
+    btn_more_section: "Tazama ushuhuda zaidi",
+    modal: {
+      title: "Ushuhuda wa Video",
+      info_title: "Ushuhuda wa Better Life",
+      info_text: "Gundua athari halisi ya miradi yetu kupitia ushuhuda wa washirika na wanufaika wetu."
     }
   }
 };

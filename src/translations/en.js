@@ -435,38 +435,44 @@ export const en = {
       {
         name: "Dr. Jean-Baptiste Mukendi",
         role: "Director General",
-        bio: "Sustainable development expert with over 15 years of experience in environmental conservation in Central Africa.",
+        bio: "Sustainable development expert with over 15 years of experience in environmental conservation in Central Africa. Passionate about biodiversity protection and local community development.",
         expertise: ["Leadership", "Strategy", "Conservation"],
+        mail: "delegue@betterlife.cd"
       },
       {
         name: "Marie-Claire Kabamba",
         role: "Operations Director",
         bio: "Specialist in environmental project management and community development, passionate about empowering local communities.",
         expertise: ["Project Management", "Development", "Training"],
+        mail: "marie.claire@betterlife.cd"
       },
       {
         name: "Prof. André Tshiala",
         role: "Scientific Advisor",
         bio: "Renowned biologist specializing in tropical biodiversity and Congo Basin forest ecosystems.",
         expertise: ["Biodiversity", "Research", "Ecosystems"],
+        mail: "andre.tshiala@betterlife.cd"
       },
       {
         name: "Sylvie Mbuyi",
         role: "Sustainable Agriculture Head",
         bio: "Agronomist with expertise in climate-smart agriculture and permaculture techniques adapted to tropical climates.",
         expertise: ["Agriculture", "Permaculture", "Innovation"],
+        mail: "sylvie.mbuyi@betterlife.cd"
       },
       {
         name: "Patrick Nsimba",
         role: "Reforestation Coordinator",
         bio: "Forestry engineer coordinating our reforestation and degraded forest restoration programs.",
         expertise: ["Forestry", "Reforestation", "Nurseries"],
+        mail: "patrick.nsimba@betterlife.cd"
       },
       {
         name: "Grâce Lumingu",
         role: "Communication Manager",
         bio: "Expert in environmental communication and community mobilization, raising awareness on ecological issues.",
         expertise: ["Communication", "Awareness", "Media"],
+        mail: "grace.lumingu@betterlife.cd"
       },
     ],
     advisory: {
@@ -883,16 +889,18 @@ export const en = {
       },
       members: [
         {
-          name: "Dr. Jean-Baptiste Mukendi",
-          role: "General Director",
-          bio: "Sustainable development expert with over 15 years of experience in environmental conservation in Central Africa.",
-          expertise: ["Leadership", "Strategy", "Conservation"],
+          name: "Ir DEKEY MOLO Blaise",
+          role: "National Coordinator",
+          bio: "Ensures global coordination of the NGO's activities at the national level.",
+          expertise: ["Coordination", "Strategy", "Management"],
+          mail: "coordination@betterlife-ong.org"
         },
         {
-          name: "Marie-Claire Kabamba",
-          role: "Operations Director",
-          bio: "Specialist in environmental project management and community development, passionate about local community empowerment.",
-          expertise: ["Project Management", "Development", "Training"],
+          name: "Ir KILUNGU KASONGO Bernard",
+          role: "National Delegate",
+          bio: "Represents the organization to institutions and supervises provincial delegations.",
+          expertise: ["Institutional Relations", "Leadership", "Development"],
+          mail: "bernardkilungu@betterlife-ong.org"
         },
         {
           name: "Prof. André Tshiala",
@@ -1792,6 +1800,35 @@ export const en = {
       title: "Act Now",
       text: "Contact us to finalize your donation or for any questions.",
       btn: "Contact Us"
+    }
+  },
+  testimonialSection: {
+    title: "Testimonials",
+    subtitle: "Discover stories of transformation and impact from our partners and beneficiaries",
+    items: [
+      {
+        id: 1,
+        name: "KABAMBA KABAMBA Chrétien",
+        shortQuote: "Thanks to Better Life, we support sustainable agriculture, reforestation, and social development in several regions of the Congo. Our projects aim to improve community living conditions, particularly access to education and healthcare.",
+        fullQuote: "We have observed difficult living conditions in many regions of the Congo: lack of drinking water, inadequate schools, limited access to healthcare. Faced with these challenges, we advocate for national and international donors to support our projects aimed at improving the social and economic development of communities, both rural and urban.\n\nWith Better Life, we intervene in several areas: sustainable agriculture (peanut crops), reforestation, protection of peat bogs, and fundraising. This versatile approach allows us to respond concretely to the needs of the population and support sustainable initiatives.",
+        location: "Lomami"
+      },
+      {
+        id: 2,
+        name: "MWAMBA SELEMANI Gérard",
+        shortQuote: "In Moubambé, we launched the 'Zero Children in Mines' project, combining sustainable agriculture and access to education. Thanks to Better Life, children are leaving the mines to study and the community is adopting sustainable practices.",
+        fullQuote: "In Moubambé, a remote region of Haut-Katanga, we initiated a permanent agricultural project in collaboration with Better Life. The population, previously dependent on artisanal mining, was sensitized to sustainable agriculture. We set up nurseries and mobilized the local community so that children could leave the mines and access education.\n\nThe 'Zero Children in Mines' project also provides for the construction of schools and vocational training centers for young adults. This testimony illustrates how collective commitment and technical support can sustainably transform the lives of rural communities.",
+        location: "Haut-Katanga"
+      }
+    ],
+    btn_video: "Watch Video",
+    btn_more: "See more",
+    btn_less: "See less",
+    btn_more_section: "See more testimonials",
+    modal: {
+      title: "Video Testimony",
+      info_title: "Better Life Testimony",
+      info_text: "Discover the real impact of our projects through the testimonies of our partners and beneficiaries."
     }
   }
 };

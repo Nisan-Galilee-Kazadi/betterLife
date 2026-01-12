@@ -254,9 +254,9 @@ export function Home() {
             <img
               src={slide.src}
               alt={slide.alt}
-              className="absolute inset-0 h-full w-full object-cover brightness-[0.5]"
+              className="absolute inset-0 h-full w-full object-cover brightness-[0.6] contrast-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/40" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/30 to-black/20" />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 pb-48 sm:pb-0">
               <h1 className="text-4xl md:text-6xl font-bold mb-4 max-w-4xl">
                 {slide.title}
@@ -491,10 +491,12 @@ export function Home() {
         </FadeIn>
 
         {/* Recent Projects Section removed per new nav */}
+      </div>
 
-        {/* Testimonials Section */}
-        <TestimonialSection />
+      {/* Testimonials Section */}
+      <TestimonialSection />
 
+      <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24">
         {/* CTA Section */}
         <div className="relative isolate overflow-hidden bg-gradient-to-r from-[#0f70b7] to-[#63b32e] py-24 sm:py-32">
           <div className="absolute inset-0 bg-black/20" />

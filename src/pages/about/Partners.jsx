@@ -184,13 +184,13 @@ export function Partners() {
         </div>
 
         {/* Partners Grid */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {/* <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {filteredPartners.map((partner, index) => (
             <div
               key={index}
               className="group relative rounded-2xl border-2 border-slate-200 bg-gradient-to-br from-white to-slate-50 p-8 hover:border-[#63b32e] hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 overflow-hidden"
             >
-              {/* Background decoration */}
+              
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#63b32e]/5 to-[#0f70b7]/5 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-500" />
 
               <div className="relative">
@@ -251,7 +251,7 @@ export function Partners() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* CTA */}
         <div className="text-center mt-20">

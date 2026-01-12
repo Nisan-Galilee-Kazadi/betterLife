@@ -1,8 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { SectionTitle } from "../../../components/SectionTitle";
-import { FaAppleAlt, FaLemon, FaTree, FaLeaf } from "react-icons/fa";
-import { GiFruitBowl } from "react-icons/gi";
 import { useLanguage } from "../../../contexts/LanguageContext";
 
 import imgHero from "./images/hero_arboriculture.webp";
@@ -11,91 +8,249 @@ export default function Arboriculture() {
     const { t } = useLanguage();
 
     return (
-        <div className="bg-white">
-            {/* Hero Section */}
-            <div className="relative isolate overflow-hidden bg-zinc-900 py-32 sm:py-48">
-                <img
-                    src={imgHero}
-                    alt="Vergers arboricoles"
-                    className="absolute inset-0 h-full w-full object-cover object-center"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-                    <div className="mx-auto max-w-2xl text-center">
-                        <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl drop-shadow-2xl">
-                            {t("Actions.agricultures.arboriculture.hero.title")}
-                        </h1>
-                        <p className="mt-6 text-xl leading-8 text-white font-medium drop-shadow-xl">
-                            {t("Actions.agricultures.arboriculture.hero.subtitle")}
-                        </p>
-                    </div>
+        <div className="bg-white" style={{ fontFamily: 'Times New Roman, serif' }}>
+            {/* Breadcrumb Section */}
+            <div className="border-b-4 border-black py-6">
+                <div className="max-w-6xl mx-auto px-4">
+                    <h1 className="text-5xl font-bold text-gray-900 text-center">
+                        ARBORICULTURE
+                    </h1>
+                    <h2 className="text-3xl text-gray-700 text-center mt-2">Forêts Durables et Productives</h2>
                 </div>
             </div>
 
-            <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24">
-                {/* Intro */}
-                <div className="text-center mb-16 max-w-3xl mx-auto">
-                    <SectionTitle
-                        kicker={t("Actions.agricultures.arboriculture.intro.kicker")}
-                        title={t("Actions.agricultures.arboriculture.intro.title")}
-                    >
-                        {t("Actions.agricultures.arboriculture.intro.text")}
-                    </SectionTitle>
-                </div>
+            {/* Main Content - Two Column Journal Layout */}
+            <main className="max-w-6xl mx-auto px-4 py-8">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    
+                    {/* Main Column - 2/3 width */}
+                    <div className="lg:col-span-2 space-y-8">
+                        
+                        {/* Article Principal */}
+                        <article className="border-b-4 border-black pb-6">
+                            <h3 className="text-3xl font-bold mb-4 text-gray-900">
+                                La Révolution de l'Arboriculture au Congo
+                            </h3>
+                            <div className="text-gray-600 text-sm mb-4">
+                                Par <span className="font-semibold">Dr. Jean-Baptiste Mukendi</span> • 
+                                Agriculture Durable • 
+                                <span className="italic"> 5 min de lecture</span>
+                            </div>
+                            
+                            <div className="prose prose-lg max-w-none text-gray-800 leading-relaxed">
+                                <p className="text-lg mb-4 first-letter:text-6xl first-letter:font-bold first-letter:float-left first-letter:mr-2 first-letter:mt-1">
+                                    Notre programme d'arboriculture transforme les terres dégradées en forêts productives tout en créant des emplois durables.
+                                </p>
+                                
+                                <p className="mb-4">
+                                    Le programme d'Arboriculture de Better Life représente une avancée majeure dans l'agriculture durable congolaise. 
+                                    Nos fermes partenaires développent désormais des forêts productives qui préservent la biodiversité 
+                                    tout en générant des revenus durables pour les communautés locales.
+                                </p>
 
-                {/* Fruit Gallery / Varieties */}
-                <div className="mb-20">
-                    <div className="text-center mb-10">
-                        <h3 className="text-2xl font-bold text-slate-900">{t("Actions.agricultures.arboriculture.features.title")}</h3>
-                    </div>
-                    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                        {t("Actions.agricultures.arboriculture.features.items").map((item, idx) => {
-                            // Adding some random consistent icons for variety
-                            const icons = [GiFruitBowl, FaLemon, FaLeaf, FaAppleAlt];
-                            const Icon = icons[idx % icons.length];
-                            return (
-                                <div key={idx} className="group relative overflow-hidden rounded-2xl bg-[#fff8e1] p-8 text-center transition hover:bg-[#ffecb3]">
-                                    <Icon className="mx-auto text-5xl text-[#ffb300] mb-4 transition group-hover:scale-110" />
-                                    <h4 className="font-bold text-slate-800">{item}</h4>
+                                <div className="my-6">
+                                    <img 
+                                        src={imgHero} 
+                                        alt="Pépinière forestière" 
+                                        className="w-full h-64 object-cover rounded-lg"
+                                    />
+                                    <p className="text-sm text-gray-600 mt-2 italic text-center">
+                                        Vue de notre pépinière forestière dans la région de l'Équateur
+                                    </p>
                                 </div>
-                            )
-                        })}
-                    </div>
-                </div>
 
-                {/* Practices & Impact Split */}
-                <div className="grid gap-12 lg:grid-cols-2 items-start">
-                    <div className="bg-slate-50 rounded-3xl p-8">
-                        <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-                            <FaTree className="text-[#7cb342]" />
-                            {t("Actions.agricultures.arboriculture.technique.title")}
-                        </h3>
-                        <ul className="space-y-4">
-                            {t("Actions.agricultures.arboriculture.technique.items").map((item, idx) => (
-                                <li key={idx} className="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm">
-                                    <span className="w-6 h-6 flex items-center justify-center rounded-full bg-[#7cb342] text-white text-xs font-bold">✓</span>
-                                    <span className="text-slate-700">{item}</span>
+                                <h4 className="text-2xl font-bold mb-3 text-gray-900">Techniques Innovantes</h4>
+                                <p className="mb-4">
+                                    Nos agriculteurs utilisent des techniques agroforestières avancées qui préservent la biodiversité 
+                                    tout en augmentant les rendements. L'association d'espèces forestières avec des cultures vivrières 
+                                    crée un écosystème résilient et productif.
+                                </p>
+
+                                <div className="bg-gray-100 p-4 border-l-4 border-black my-6">
+                                    <p className="text-lg italic">
+                                        "L'arboriculture a transformé nos terres en véritables forêts nourricières. 
+                                        C'est le futur de l'agriculture congolaise."
+                                    </p>
+                                    <p className="text-sm mt-2 text-right font-semibold">— Marie Nkulu, Fermière partenaire</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        {/* Article Secondaire */}
+                        <article className="border-b-2 border-gray-300 pb-6">
+                            <h3 className="text-2xl font-bold mb-3 text-gray-900">
+                                Impact Économique et Social
+                            </h3>
+                            <div className="text-gray-600 text-sm mb-3">
+                                Économie Rurale • <span className="italic"> 3 min de lecture</span>
+                            </div>
+                            
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <img 
+                                    src={imgHero} 
+                                    alt="Plantation forestière" 
+                                    className="w-full h-48 object-cover rounded-lg"
+                                />
+                                <img 
+                                    src={imgHero} 
+                                    alt="Reboisement" 
+                                    className="w-full h-48 object-cover rounded-lg"
+                                />
+                            </div>
+
+                            <div className="prose text-gray-800 leading-relaxed">
+                                <p className="mb-4">
+                                    Le programme a déjà transformé la vie de plus de 2,000 familles d'agriculteurs. 
+                                    Les revenus moyens ont augmenté de 280%, permettant aux enfants de poursuivre leurs études 
+                                    et aux familles d'accéder aux soins de santé.
+                                </p>
+                                
+                                <p>
+                                    La formation continue et l'accès aux marchés internationaux garantissent la durabilité 
+                                    économique de ce modèle agricole innovant.
+                                </p>
+                            </div>
+                        </article>
+
+                        {/* Article Transformation */}
+                        <article className="pb-6">
+                            <h3 className="text-2xl font-bold mb-3 text-gray-900">
+                                De la Forêt aux Produits Forestiers
+                            </h3>
+                            <div className="text-gray-600 text-sm mb-3">
+                                Transformation Locale • <span className="italic"> 4 min de lecture</span>
+                            </div>
+                            
+                            <img 
+                                src={imgHero} 
+                                alt="Transformation forestière" 
+                                className="w-full h-64 object-cover rounded-lg mb-4"
+                            />
+
+                            <div className="prose text-gray-800 leading-relaxed">
+                                <p className="mb-4">
+                                    Notre nouvelle unité de transformation permet de maîtriser toute la chaîne de valeur, 
+                                    de la forêt aux produits forestiers. Cette approche garantit une qualité exceptionnelle 
+                                    et maximise les bénéfices pour nos agriculteurs.
+                                </p>
+                                
+                                <p>
+                                    Les produits forestiers Better Life sont désormais disponibles dans les boutiques spécialisées 
+                                    de Kinshasa et exportés vers plusieurs pays européens.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    {/* Sidebar Column - 1/3 width */}
+                    <aside className="space-y-6">
+                        
+                        {/* Encadré Statistiques */}
+                        <div className="bg-black text-white p-6">
+                            <h4 className="text-xl font-bold mb-4 text-center">CHIFFRES CLÉS</h4>
+                            <div className="space-y-3">
+                                <div className="text-center border-b border-white/30 pb-2">
+                                    <div className="text-2xl font-bold text-yellow-400">2,000+</div>
+                                    <div className="text-sm">Familles d'agriculteurs</div>
+                                </div>
+                                <div className="text-center border-b border-white/30 pb-2">
+                                    <div className="text-2xl font-bold text-yellow-400">280%</div>
+                                    <div className="text-sm">Augmentation des revenus</div>
+                                </div>
+                                <div className="text-center border-b border-white/30 pb-2">
+                                    <div className="text-2xl font-bold text-yellow-400">10,000 ha</div>
+                                    <div className="text-sm">Surfaces reboisées</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Encadré Caractéristiques */}
+                        <div className="bg-yellow-50 border-2 border-yellow-200 p-6">
+                            <h4 className="text-xl font-bold mb-4 text-gray-900">CARACTÉRISTIQUES</h4>
+                            <ul className="space-y-2 text-gray-800">
+                                <li className="flex items-start gap-2">
+                                    <span className="text-yellow-600 mt-1">▸</span>
+                                    <span className="text-sm">Pépinières forestières</span>
                                 </li>
-                            ))}
-                        </ul>
-                    </div>
+                                <li className="flex items-start gap-2">
+                                    <span className="text-yellow-600 mt-1">▸</span>
+                                    <span className="text-sm">Reboisement actif</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <span className="text-yellow-600 mt-1">▸</span>
+                                    <span className="text-sm">Essences locales</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <span className="text-yellow-600 mt-1">▸</span>
+                                    <span className="text-sm">Formation continue</span>
+                                </li>
+                            </ul>
+                        </div>
 
-                    <div className="bg-gradient-to-br from-[#7cb342] to-[#558b2f] rounded-3xl p-8 text-white">
-                        <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
-                            <GiFruitBowl />
-                            {t("Actions.agricultures.arboriculture.impact.title")}
-                        </h3>
-                        <div className="space-y-8">
-                            {t("Actions.agricultures.arboriculture.impact.stats").map((stat, idx) => (
-                                <div key={idx}>
-                                    <p className="text-4xl font-black mb-1">{stat.value}</p>
-                                    <p className="text-white/80 font-medium">{stat.label}</p>
+                        {/* Publicité Style */}
+                        <div className="bg-gray-100 p-6 text-center">
+                            <div className="text-xs text-gray-500 mb-2">PUBLICITÉ</div>
+                            <div className="bg-white p-4 border border-gray-300">
+                                <h5 className="font-bold mb-2">Soutenez nos agriculteurs</h5>
+                                <p className="text-sm text-gray-600 mb-3">
+                                    Achetez des produits forestiers Better Life et soutenez l'agriculture durable
+                                </p>
+                                <Link
+                                    to="/contact"
+                                    className="inline-block bg-black text-white px-4 py-2 text-sm font-semibold hover:bg-gray-800"
+                                >
+                                    Commander
+                                </Link>
+                            </div>
+                        </div>
+
+                        {/* Articles Connexes */}
+                        <div className="border-2 border-black p-6">
+                            <h4 className="text-xl font-bold mb-4">ARTICLES CONNEXES</h4>
+                            <div className="space-y-3">
+                                <div className="pb-3 border-b">
+                                    <Link to="/Actions/agriculture/cacao" className="hover:text-blue-600">
+                                        <h5 className="font-semibold text-sm">Cacao Criollo : L'Or Noir du Congo</h5>
+                                        <p className="text-xs text-gray-600">Il y a 2 jours</p>
+                                    </Link>
                                 </div>
-                            ))}
+                                <div className="pb-3 border-b">
+                                    <Link to="/Actions/agriculture/cafe" className="hover:text-blue-600">
+                                        <h5 className="font-semibold text-sm">Café Arabica : L'Excellence Congolaise</h5>
+                                        <p className="text-xs text-gray-600">Il y a 5 jours</p>
+                                    </Link>
+                                </div>
+                                <div>
+                                    <Link to="/Actions/agriculture/plantes-medicinales" className="hover:text-blue-600">
+                                        <h5 className="font-semibold text-sm">Plantes Médicinales : Santé Naturelle</h5>
+                                        <p className="text-xs text-gray-600">Il y a 1 semaine</p>
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+
+                {/* Footer Article */}
+                <div className="mt-12 pt-8 border-t-2 border-black">
+                    <div className="text-center">
+                        <p className="text-sm text-gray-600 mb-4">
+                            Cet article vous a plu ? Partagez-le avec votre réseau
+                        </p>
+                        <div className="flex justify-center gap-4 mb-6">
+                            <button className="bg-blue-600 text-white px-4 py-2 text-sm font-semibold hover:bg-blue-700">
+                                Partager
+                            </button>
+                            <Link
+                                to="/contact"
+                                className="bg-green-600 text-white px-4 py-2 text-sm font-semibold hover:bg-green-700"
+                            >
+                                S'engager
+                            </Link>
                         </div>
                     </div>
                 </div>
-            </div>
+            </main>
         </div>
     );
 }

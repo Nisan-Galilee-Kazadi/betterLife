@@ -226,7 +226,7 @@ function MobileNavItem({
         <div
           id={`submenu-${id}`}
           className={`${isScrolled ? "bg-slate-50" : "bg-white/10 backdrop-blur-md"
-            } overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? "max-h-[2000px] opacity-100 py-2" : "max-h-0 opacity-0 py-0"
+            } overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? "max-h-[2000px] opacity-100 py-2 visible" : "max-h-0 opacity-0 py-0 invisible"
             }`}
           aria-hidden={!isOpen}
         >
@@ -624,8 +624,8 @@ export function Shell({ children }) {
         {/* Mobile Menu */}
         <div
           className={`absolute left-0 top-full w-full overflow-hidden shadow-xl transition-all duration-300 lg:hidden ${mobileOpen
-            ? "max-h-[85vh] opacity-100 overflow-y-auto"
-            : "max-h-0 opacity-0"
+            ? "max-h-[85vh] opacity-100 overflow-y-auto visible"
+            : "max-h-0 opacity-0 invisible"
             } ${isScrolled ? "bg-white" : "bg-white/10 backdrop-blur-md"}
             ${isScrolled ? "text-slate-800" : "text-white"}
                         }`}

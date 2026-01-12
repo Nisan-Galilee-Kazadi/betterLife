@@ -352,40 +352,60 @@ export const fr = {
       },
       members: [
         {
-          name: "Dr. Jean-Baptiste Mukendi",
-          role: "Directeur Général",
-          bio: "Expert en développement durable avec plus de 15 ans d'expérience dans la conservation environementale en Afrique centrale.",
-          expertise: ["Leadership", "Stratégie", "Conservation"],
+          name: "Ir DEKEY MOLO Blaise",
+          role: "Coordonnateur National",
+          bio: "Assure la coordination globale des activités de l'ONG au niveau national.",
+          expertise: ["Coordination", "Stratégie", "Management"],
+          mail: "coordination@betterlife-ong.org"
         },
         {
-          name: "Marie-Claire Kabamba",
-          role: "Directrice des Opérations",
-          bio: "Spécialiste en gestion de projets environementaux et développement communautaire, passionnée par l'autonomisation des communautés locales.",
-          expertise: ["Gestion de Projets", "Développement", "Formation"],
+          name: "Ir KILUNGU KASONGO Bernard",
+          role: "Délégué National",
+          bio: "Représente l'organisation auprès des institutions et supervise les délégations provinciales.",
+          expertise: ["Relations Institutionnelles", "Leadership", "Développement"],
+          mail: "bernardkilungu@betterlife-ong.org"
         },
         {
-          name: "Prof. André Tshiala",
-          role: "Conseiller Scientifique",
-          bio: "Biologiste renommé spécialisé dans la biodiversité tropicale et les écosystèmes forestiers du bassin du Congo.",
-          expertise: ["Biodiversité", "Recherche", "Écosystèmes"],
+          name: "Mme MPOYI NGALULA Sarah",
+          role: "Directrice RH",
+          bio: "Gère le capital humain, le recrutement et le développement des compétences de l'équipe.",
+          expertise: ["Ressources Humaines", "Recrutement", "Formation"],
+          mail: "rh@betterlife-ong.org"
         },
         {
-          name: "Sylvie Mbuyi",
-          role: "Responsable Agriculture Durable",
-          bio: "Agronome avec une expertise en agriculture climato-intelligente et techniques de permaculture adaptées au climat tropical.",
-          expertise: ["Agriculture", "Permaculture", "Innovation"],
+          name: "Mme YANGA LUBULU Déborah",
+          role: "Secrétaire",
+          bio: "Assure le support administratif et la gestion documentaire de l'organisation.",
+          expertise: ["Administration", "Organisation", "Secrétariat"],
+          mail: "secretariat@betterlife-ong.org"
         },
         {
-          name: "Patrick Nsimba",
-          role: "Coordinateur Reboisement",
-          bio: "Ingénieur forestier coordonnant nos programmes de reboisement et de restauration des forêts dégradées.",
-          expertise: ["Foresterie", "Reboisement", "Pépinières"],
+          name: "Mme LUTONADIO NSIMBA Florence",
+          role: "Directrice Financière",
+          bio: "Supervise la gestion financière, budgétaire et comptable de Better Life.",
+          expertise: ["Finance", "Comptabilité", "Audit"],
+          mail: "compta@betterlife-ong.org"
         },
         {
-          name: "Grâce Lumingu",
-          role: "Responsable Communication",
-          bio: "Experte en communication environementale et mobilisation communautaire, elle sensibilise aux enjeux écologiques.",
-          expertise: ["Communication", "Sensibilisation", "Médias"],
+          name: "Mme META NYEMABU Ornella",
+          role: "Gestionnaire de Projet",
+          bio: "Responsable de la planification, de l'exécution et du suivi des projets de l'ONG.",
+          expertise: ["Gestion de Projet", "Planification", "Suivi & Évaluation"],
+          mail: "gestionprojet@betterlife-ong.org"
+        },
+        {
+          name: "Mme BAKAKUWA NGALULA Marceline",
+          role: "Directrice Technique",
+          bio: "Supervise les aspects techniques et scientifiques des programmes environnementaux et agricoles.",
+          expertise: ["Expertise Technique", "Agronomie", "Environnement"],
+          mail: "dt@betterlife-ong.org"
+        },
+        {
+          name: "LUMUMBA MPUMPU Nathan",
+          role: "Directeur Communication & Marketing",
+          bio: "Pilote la stratégie de communication et la visibilité des actions de l'ONG.",
+          expertise: ["Communication", "Marketing", "Relations Publiques"],
+          mail: "betterlifeorg@gmail.com"
         },
       ],
       advisory: {
@@ -1485,6 +1505,35 @@ export const fr = {
       title: "Agissez maintenant",
       text: "Contactez-nous pour finaliser votre don ou pour toute question.",
       btn: "Contacter"
+    }
+  },
+  testimonialSection: {
+    title: "Témoignages",
+    subtitle: "Découvrez les histoires de transformation et d'impact de nos partenaires et bénéficiaires",
+    items: [
+      {
+        id: 1,
+        name: "KABAMBA KABAMBA Chrétien",
+        shortQuote: "Grâce à Better Life, nous soutenons l'agriculture pérenne, le reboisement et le développement social dans plusieurs régions du Congo. Nos projets visent à améliorer les conditions de vie des communautés, en particulier l'accès à l'éducation et aux soins de santé.",
+        fullQuote: "Nous avons constaté les conditions de vie difficiles dans de nombreuses régions du Congo : manque d'eau potable, écoles inadéquates, accès limité aux soins de santé. Face à ces défis, nous menons un plaidoyer pour que les bailleurs de fonds, nationaux et internationaux, soutiennent nos projets visant à améliorer le développement social et économique des communautés, rurales et urbaines.\n\nAvec Better Life, nous intervenons dans plusieurs domaines : agriculture pérenne (cultures de cacahuètes), reboisement, protection des tourbières et mobilisation de fonds. Cette approche polyvalente nous permet de répondre de manière concrète aux besoins de la population et de soutenir des initiatives durables.",
+        location: "Lomami"
+      },
+      {
+        id: 2,
+        name: "MWAMBA SELEMANI Gérard",
+        shortQuote: "À Moubambé, nous avons lancé le projet \"Zéro enfant dans les mines\", combinant agriculture pérenne et accès à l'éducation. Grâce à Better Life, les enfants quittent les mines pour étudier et la communauté adopte des pratiques durables.",
+        fullQuote: "À Moubambé, une région reculée du Haut-Katanga, nous avons initié un projet agricole pérenne en collaboration avec Better Life. La population, auparavant dépendante de l'exploitation minière artisanale, a été sensibilisée à l'agriculture durable. Nous avons mis en place des pépinières et mobilisé la communauté locale pour que les enfants puissent quitter les mines et accéder à l'éducation.\n\nLe projet \"Zéro enfant dans les mines\" prévoit également la construction d'écoles et de centres de formation professionnelle pour les jeunes adultes. Ce témoignage illustre comment l'engagement collectif et l'accompagnement technique peuvent transformer durablement la vie des communautés rurales.",
+        location: "Haut-Katanga"
+      }
+    ],
+    btn_video: "Voir vidéo",
+    btn_more: "Voir plus",
+    btn_less: "Voir moins",
+    btn_more_section: "Voir plus de témoignages",
+    modal: {
+      title: "Témoignage vidéo",
+      info_title: "Témoignage de Better Life",
+      info_text: "Découvrez l'impact réel de nos projets à travers les témoignages de nos partenaires et bénéficiaires."
     }
   }
 };

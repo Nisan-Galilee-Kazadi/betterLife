@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom'
 import { SectionTitle } from '../../components/SectionTitle'
 import { useLanguage } from '../../contexts/LanguageContext'
 import team_hero from "../../images/team_hero.webp";
+import rhPhoto from "../../images/Rh.jpg";
+import gestionProjetPhoto from "../../images/Gp.jpg";
+import secretariatPhoto from "../../images/Sec.jpg";
+import dircomPhoto from "../../images/dircom.jpg";
+import financierePhoto from "../../images/finaciere.jpg";
 
 export function Team() {
     const { t } = useLanguage()
@@ -46,39 +51,81 @@ export function Team() {
 
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-20">
                     {Array.isArray(teamMembers) && teamMembers.map((member) => (
-                        <div key={member.name} className="rounded-2xl bg-white p-8 shadow-lg ring-1 ring-slate-900/5 transition hover:shadow-xl hover:ring-[#63b32e]/20">
-                            {/* Avatar Placeholder */}
-                            <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#63b32e] to-[#0f70b7] mx-auto mb-6 flex items-center justify-center text-white text-3xl font-bold">
-                                {member.name.split(' ').map(n => n[0]).join('')}
+                        <div key={member.name} className="rounded-t-2xl bg-white shadow-lg ring-1 ring-slate-900/5 transition hover:shadow-xl hover:ring-[#63b32e]/20 overflow-hidden">
+                            {/* Photo en haut avec padding */}
+                            <div className="p-2 pt-2">
+                                <div className="w-full h-56 md:h-96 overflow-hidden rounded-t-xl">
+                                    {member.role.includes('RH') || member.role.includes('Ressources Humaines') ? (
+                                        <img
+                                            src={rhPhoto}
+                                            alt={member.name}
+                                            className="w-full h-full object-cover object-center"
+                                        />
+                                    ) : member.role.includes('Gestionnaire') || member.role.includes('Gestion') ? (
+                                        <img
+                                            src={gestionProjetPhoto}
+                                            alt={member.name}
+                                            className="w-full h-full object-cover object-[center_40%]"
+                                        />
+                                    ) : member.role.includes('Secrétaire') || member.role.includes('Secrétariat') ? (
+                                        <img
+                                            src={secretariatPhoto}
+                                            alt={member.name}
+                                            className="w-full h-full object-cover object-[center_30%]"
+                                        />
+                                    ) : member.role.includes('Communication') || member.role.includes('Marketing') ? (
+                                        <img
+                                            src={dircomPhoto}
+                                            alt={member.name}
+                                            className="w-full h-full object-cover object-center"
+                                        />
+                                    ) : member.role.includes('Finance') || member.role.includes('Financière') || member.role.includes('Comptabilité') ? (
+                                        <img
+                                            src={financierePhoto}
+                                            alt={member.name}
+                                            className="w-full h-full object-cover object-center"
+                                        />
+                                    ) : (
+                                        <div className="w-full h-full bg-gradient-to-br from-[#63b32e] to-[#0f70b7] flex items-center justify-center text-white text-3xl font-bold">
+                                            {member.name.split(' ').map(n => n[0]).join('')}
+                                        </div>
+                                    )}
+                                </div>
                             </div>
 
-                            <h3 className="text-xl font-bold text-slate-900 text-center mb-2">
-                                {member.name}
-                            </h3>
-                            <p className="text-[#63b32e] font-semibold text-center mb-4">
-                                {member.role}
-                            </p>
-                            <p className="text-slate-600 mb-6 text-sm leading-relaxed">
-                                {member.bio}
-                            </p>
+                            {/* Contenu */}
+                            <div className="p-6">
+                                <h3 className="text-xl font-bold text-slate-900 text-center mb-2">
+                                    {member.name}
+                                </h3>
+                                <p className="text-[#63b32e] font-semibold text-center mb-4">
+                                    {member.role}
+                                </p>
+                                <p className="text-slate-600 mb-6 text-sm leading-relaxed">
+                                    {member.bio}
+                                </p>
 
-                            {/* Expertise Tags */}
-                            <div className="flex flex-wrap gap-2 justify-center">
-                                {member.expertise && member.expertise.map((skill) => (
-                                    <span
-                                        key={skill}
-                                        className="px-3 py-1 bg-green-50 text-[#63b32e] text-xs font-medium rounded-full border border-green-200"
-                                    >
-                                        {skill}
-                                    </span>
-                                ))}
+                                {/* Expertise Tags */}
+                                <div className="flex flex-wrap gap-2 justify-center">
+                                    {member.expertise && member.expertise.map((skill) => (
+                                        <span
+                                            key={skill}
+                                            className="px-3 py-1 bg-green-50 text-[#63b32e] text-xs font-medium rounded-full border border-green-200"
+                                        >
+                                            {skill}
+                                        </span>
+                                    ))}
+                                </div>
+                                <p className="text-gray-500 font-semibold text-center mb-4 pt-5">
+                                    {member.mail}
+                                </p>
                             </div>
                         </div>
                     ))}
                 </div>
 
-                {/* Advisory Board */}
-                <div className="mb-20">
+                {/* Advisory Board - Temporarily Commented */}
+                {/* <div className="mb-20">
                     <div className="text-center mb-12">
                         <SectionTitle
                             kicker={t('about.team.advisory.kicker')}
@@ -97,6 +144,107 @@ export function Team() {
                                 <h3 className="font-bold text-slate-900 mb-1">{advisor.name}</h3>
                                 <p className="text-sm text-[#0f70b7] font-semibold mb-2">{advisor.role}</p>
                                 <p className="text-xs text-slate-600">{advisor.org}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div> */}
+
+                {/* Provincial Delegates Section */}
+                <div className="mt-16 pb-16">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                            Délégués Provinciaux
+                        </h2>
+                        <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+                            Nos délégués représentent Better Life dans les six provinces de la République Démocratique du Congo,
+                            assurant la coordination de nos actions sur tout le territoire national.
+                        </p>s
+                    </div>
+
+                    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                        {[
+                            {
+                                name: "Justin Ngandu",
+                                province: "Grand Katanga",
+                                role: "Délégué Provincial",
+                                bio: "Supervise les actions de Better Life dans la région du Grand Katanga, avec un focus sur le développement durable et l'agriculture.",
+                                expertise: ["Développement", "Coordination", "Agriculture"],
+                                mail: "admin-lushi@betterlife-ong.org"
+                            },
+                            {
+                                name: "À préciser",
+                                province: "Kongo Central",
+                                role: "Délégué Provincial",
+                                bio: "Coordination des programmes environnementaux et agricoles dans la province du Kongo Central.",
+                                expertise: ["Environnement", "Gestion", "Développement"],
+                                mail: "boma@betterlife-ong.org"
+                            },
+                            {
+                                name: "À préciser",
+                                province: "Grand Bandundu",
+                                role: "Délégué Provincial",
+                                bio: "Responsable de la mise en œuvre des initiatives communautaires dans la région du Grand Bandundu.",
+                                expertise: ["Communauté", "Agriculture", "Projets"],
+                                mail: "grad-bandundu@betterlife-ong.org"
+                            },
+                            {
+                                name: "À préciser",
+                                province: "Grand Oriental",
+                                role: "Délégué Provincial",
+                                bio: "Supervise le développement des programmes de conservation et de sécurité alimentaire dans le Grand Oriental.",
+                                expertise: ["Conservation", "Sécurité Alimentaire", "Terrain"],
+                                mail: "grand-oriental@betterlife-ong.org"
+                            },
+                            {
+                                name: "À préciser",
+                                province: "Grand Kasaï",
+                                role: "Délégué Provincial",
+                                bio: "Coordination des actions de reboisement et de soutien aux agriculteurs dans la zone du Grand Kasaï.",
+                                expertise: ["Reboisement", "Soutien Agricole", "Impact"],
+                                mail: "grand-kasai@betterlife-ong.org"
+                            }
+                        ].map((delegate, index) => (
+                            <div
+                                key={index}
+                                className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-slate-100"
+                            >
+                                {/* Background decoration */}
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#63b32e]/5 to-[#0f70b7]/5 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-500" />
+
+                                <div className="relative p-8">
+                                    {/* Province Badge */}
+                                    <div className="flex justify-center mb-4">
+                                        <span className="px-4 py-2 bg-gradient-to-r from-[#0f70b7] to-[#63b32e] text-white text-sm font-semibold rounded-full">
+                                            {delegate.province}
+                                        </span>
+                                    </div>
+
+                                    <h3 className="font-bold text-slate-900 text-center mb-2">{delegate.name}</h3>
+                                    <p className="text-sm text-[#0f70b7] font-semibold text-center mb-4">{delegate.role}</p>
+
+                                    <p className="text-slate-600 text-sm mb-6 leading-relaxed">
+                                        {delegate.bio}
+                                    </p>
+
+                                    {/* Expertise Tags */}
+                                    <div className="flex flex-wrap gap-2 justify-center mb-6">
+                                        {delegate.expertise.map((skill, skillIndex) => (
+                                            <span
+                                                key={skillIndex}
+                                                className="px-3 py-1 bg-green-50 text-[#63b32e] text-xs font-medium rounded-full border border-green-200"
+                                            >
+                                                {skill}
+                                            </span>
+                                        ))}
+                                    </div>
+
+                                    {/* Contact Info */}
+                                    <div className="text-center">
+                                        <p className="text-gray-500 font-semibold text-sm">
+                                            {delegate.mail}
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         ))}
                     </div>
