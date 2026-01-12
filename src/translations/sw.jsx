@@ -43,7 +43,6 @@ export const sw = {
     coton_caoutchouc: "Pamba & Mpira",
     arboriculture: "Matunda",
     plantes_medicinales: "Mimea ya Dawa",
-    Environement: "Mazingira & Hali ya Hewa",
     biodiversity: "Bioanuwai",
     community: "Mradi wa Jamii",
     breeding: "Ufugaji",
@@ -1097,7 +1096,6 @@ export const sw = {
 
     Actions: {
       environement: "Mazingira & Hali ya Hewa",
-      Environement: "Mazingira & Hali ya Hewa",
       index: {
         kicker: "Vitendo Vyetu",
         title: "Vitendo Vyetu",
