@@ -5,7 +5,7 @@ import { useLanguage } from '../../contexts/LanguageContext'
 import team_hero from "../../images/team_hero.webp";
 import rhPhoto from "../../images/Rh.jpg";
 import gestionProjetPhoto from "../../images/GP.jpg";
-import secretariatPhoto from "../../images/Sec.jpg";
+import secretariatPhoto from "../../images/sec.jpg";
 import dircomPhoto from "../../images/dircom.jpg";
 import financierePhoto from "../../images/finaciere.jpg";
 
