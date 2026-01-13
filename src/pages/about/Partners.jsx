@@ -7,13 +7,453 @@ import {
   FaUser,
   FaUsers,
   FaBuilding,
+  FaChartLine,
+  FaCalendarAlt,
 } from "react-icons/fa";
-import partners_hero from "../../images/partners_hero.webp";
 import { useLanguage } from "../../contexts/LanguageContext";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+  ArcElement,
+} from 'chart.js';
+import { Line, Bar, Doughnut } from 'react-chartjs-2';
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+  ArcElement
+);
 
 export function Partners() {
   const { t } = useLanguage();
   const [selectedRegion, setSelectedRegion] = useState("all");
+
+  // Progression data - partenaires par année, mois et province (2021-2026)
+  const progressionData = [
+    {
+      year: 2021,
+      months: [
+        {
+          month: "Juin",
+          provinces: {
+            "haut-katanga": 3,
+            "kongo-central": 2,
+            "kinshasa": 4,
+            "autres": 1
+          },
+          total: 10
+        },
+        {
+          month: "Juillet",
+          provinces: {
+            "haut-katanga": 7,
+            "kongo-central": 6,
+            "kinshasa": 9,
+            "autres": 2
+          },
+          total: 24
+        },
+        {
+          month: "Août",
+          provinces: {
+            "haut-katanga": 10,
+            "kongo-central": 9,
+            "kinshasa": 14,
+            "autres": 3
+          },
+          total: 36
+        },
+        {
+          month: "Septembre",
+          provinces: {
+            "haut-katanga": 13,
+            "kongo-central": 12,
+            "kinshasa": 18,
+            "autres": 4
+          },
+          total: 47
+        },
+        {
+          month: "Octobre",
+          provinces: {
+            "haut-katanga": 16,
+            "kongo-central": 15,
+            "kinshasa": 21,
+            "autres": 5
+          },
+          total: 57
+        },
+        {
+          month: "Novembre",
+          provinces: {
+            "haut-katanga": 18,
+            "kongo-central": 18,
+            "kinshasa": 24,
+            "autres": 6
+          },
+          total: 66
+        },
+        {
+          month: "Décembre",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        }
+      ]
+    },
+    {
+      year: 2022,
+      months: [
+        {
+          month: "Janvier",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        },
+        {
+          month: "Février",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        },
+        {
+          month: "Mars",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        },
+        {
+          month: "Avril",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        },
+        {
+          month: "Mai",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        },
+        {
+          month: "Juin",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        },
+        {
+          month: "Juillet",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        },
+        {
+          month: "Août",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        },
+        {
+          month: "Septembre",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        },
+        {
+          month: "Octobre",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        },
+        {
+          month: "Novembre",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        },
+        {
+          month: "Décembre",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        }
+      ]
+    },
+    {
+      year: 2023,
+      months: [
+        {
+          month: "Janvier",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        },
+        {
+          month: "Février",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        },
+        {
+          month: "Mars",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        },
+        {
+          month: "Avril",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        },
+        {
+          month: "Mai",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        },
+        {
+          month: "Juin",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        }
+      ]
+    },
+    {
+      year: 2024,
+      months: [
+        {
+          month: "Janvier",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        },
+        {
+          month: "Février",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        },
+        {
+          month: "Mars",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        },
+        {
+          month: "Avril",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        },
+        {
+          month: "Mai",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        },
+        {
+          month: "Juin",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        }
+      ]
+    },
+    {
+      year: 2025,
+      months: [
+        {
+          month: "Janvier",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        },
+        {
+          month: "Février",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        },
+        {
+          month: "Mars",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        },
+        {
+          month: "Avril",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        },
+        {
+          month: "Mai",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        },
+        {
+          month: "Juin",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        }
+      ]
+    },
+    {
+      year: 2026,
+      months: [
+        {
+          month: "Janvier",
+          provinces: {
+            "haut-katanga": 21,
+            "kongo-central": 20,
+            "kinshasa": 26,
+            "autres": 8
+          },
+          total: 75
+        }
+      ]
+    }
+  ];
 
   // Real partner data extracted from PDF
   const partnersByRegion = {
@@ -123,24 +563,6 @@ export function Partners() {
 
   return (
     <div className="bg-white">
-      {/* Hero Section */}
-      <div className="relative isolate overflow-hidden bg-gray-900 py-32 sm:py-48">
-        <img
-          src={partners_hero}
-          alt="Better Life Partners"
-          className="absolute inset-0 -z-10 h-full w-full object-cover object-center opacity-30"
-        />
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
-          <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              {t("about.partners.hero.title")}
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-white/90">
-              Un réseau solide de {totalPartners} partenaires à travers la RDC
-            </p>
-          </div>
-        </div>
-      </div>
 
       {/* Intro */}
       <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24">
@@ -268,6 +690,373 @@ export function Partners() {
             >
               Devenir Partenaire
             </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Progression Chart Section */}
+      <div className="bg-gradient-to-br from-slate-50 to-blue-50 py-16">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="text-center mb-12">
+            <SectionTitle
+              kicker="Croissance"
+              title="Charte de Progression"
+            >
+              Évolution de notre réseau de partenaires par année, mois et province
+            </SectionTitle>
+          </div>
+
+          {progressionData.map((yearData) => (
+            <div key={yearData.year} className="mb-16">
+              <div className="flex items-center gap-3 mb-8">
+                <FaCalendarAlt className="text-[#0f70b7] text-2xl" />
+                <h3 className="text-2xl font-bold text-slate-900">{yearData.year}</h3>
+                <div className="h-px bg-gradient-to-r from-[#63b32e] to-[#0f70b7] flex-1"></div>
+              </div>
+
+              <div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
+                {yearData.months.map((monthData, index) => (
+                  <div
+                    key={monthData.month}
+                    className="bg-white rounded-2xl shadow-lg border border-slate-100 p-6 hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"
+                  >
+                    <div className="flex items-center justify-between mb-4">
+                      <h4 className="text-lg font-bold text-slate-900">{monthData.month}</h4>
+                      <div className="flex items-center gap-2">
+                        <FaChartLine className="text-[#63b32e]" />
+                        <span className="text-2xl font-bold text-[#0f70b7]">{monthData.total}</span>
+                      </div>
+                    </div>
+
+                    <div className="space-y-3">
+                      {Object.entries(monthData.provinces).map(([province, count]) => (
+                        <div key={province} className="flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <FaMapMarkerAlt className="text-[#63b32e] text-sm" />
+                            <span className="text-sm font-medium text-slate-700 capitalize">
+                              {province.replace('-', ' ')}
+                            </span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <div className="w-20 bg-slate-200 rounded-full h-2">
+                              <div
+                                className="bg-gradient-to-r from-[#63b32e] to-[#0f70b7] h-2 rounded-full transition-all duration-500"
+                                style={{ width: `${(count / monthData.total) * 100}%` }}
+                              ></div>
+                            </div>
+                            <span className="text-sm font-bold text-slate-900 w-8 text-right">
+                              {count}
+                            </span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Progress indicator */}
+                    <div className="mt-4 pt-4 border-t border-slate-100">
+                      <div className="flex items-center justify-between text-xs text-slate-500">
+                        <span>Croissance mensuelle</span>
+                        <span className="font-semibold text-[#63b32e]">
+                          {index > 0 
+                            ? `+${monthData.total - yearData.months[index - 1].total}`
+                            : 'Initial'
+                          }
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+
+          {/* Summary Statistics */}
+          <div className="mt-16 bg-white rounded-3xl shadow-xl p-8 border border-slate-100">
+            <h3 className="text-xl font-bold text-slate-900 mb-6 text-center">Résumé de la Progression</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-[#0f70b7] mb-2">
+                  {progressionData[progressionData.length - 1].months[progressionData[progressionData.length - 1].months.length - 1].total}
+                </div>
+                <div className="text-sm font-semibold text-slate-700">Total Actuel</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-[#63b32e] mb-2">
+                  +{progressionData[progressionData.length - 1].months[progressionData[progressionData.length - 1].months.length - 1].total - progressionData[0].months[0].total}
+                </div>
+                <div className="text-sm font-semibold text-slate-700">Croissance Totale</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-[#63b32e] mb-2">
+                  {Math.round(((progressionData[progressionData.length - 1].months[progressionData[progressionData.length - 1].months.length - 1].total - progressionData[0].months[0].total) / progressionData[0].months[0].total) * 100)}%
+                </div>
+                <div className="text-sm font-semibold text-slate-700">Pourcentage</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-[#0f70b7] mb-2">
+                  {progressionData.length}
+                </div>
+                <div className="text-sm font-semibold text-slate-700">Années Suivies</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Chart.js Graphs Section */}
+          <div className="mt-16">
+            <div className="text-center mb-12">
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Visualisations Avancées</h3>
+              <p className="text-lg text-slate-600">Graphiques interactifs pour analyser l'évolution de notre réseau</p>
+            </div>
+
+            <div className="grid gap-8 lg:grid-cols-2">
+              {/* Line Chart - Évolution temporelle */}
+              <div className="bg-white rounded-2xl shadow-lg p-6">
+                <h4 className="text-lg font-bold text-slate-900 mb-4">Évolution Mensuelle</h4>
+                <div className="h-80">
+                  <Line
+                    data={{
+                      labels: progressionData.flatMap(year => 
+                        year.months.map(month => `${month.month.substring(0, 3)} ${year.year}`)
+                      ),
+                      datasets: [
+                        {
+                          label: 'Total Partenaires',
+                          data: progressionData.flatMap(year => year.months.map(month => month.total)),
+                          borderColor: '#0f70b7',
+                          backgroundColor: 'rgba(15, 112, 183, 0.1)',
+                          tension: 0.4,
+                          fill: true,
+                        },
+                        {
+                          label: 'Haut-Katanga',
+                          data: progressionData.flatMap(year => year.months.map(month => month.provinces['haut-katanga'])),
+                          borderColor: '#63b32e',
+                          backgroundColor: 'rgba(99, 179, 46, 0.1)',
+                          tension: 0.4,
+                          fill: false,
+                        }
+                      ]
+                    }}
+                    options={{
+                      responsive: true,
+                      maintainAspectRatio: false,
+                      plugins: {
+                        legend: {
+                          position: 'top',
+                        },
+                        tooltip: {
+                          mode: 'index',
+                          intersect: false,
+                        }
+                      },
+                      scales: {
+                        y: {
+                          beginAtZero: true,
+                          title: {
+                            display: true,
+                            text: 'Nombre de Partenaires'
+                          }
+                        }
+                      }
+                    }}
+                  />
+                </div>
+              </div>
+
+              {/* Bar Chart - Comparaison par province */}
+              <div className="bg-white rounded-2xl shadow-lg p-6">
+                <h4 className="text-lg font-bold text-slate-900 mb-4">Comparaison par Province (2021-2026)</h4>
+                <div className="h-80">
+                  <Bar
+                    data={{
+                      labels: ['Haut-Katanga', 'Kongo Central', 'Kinshasa', 'Autres'],
+                      datasets: [
+                        {
+                          label: '2021',
+                          data: [
+                            progressionData[0].months[progressionData[0].months.length - 1].provinces['haut-katanga'],
+                            progressionData[0].months[progressionData[0].months.length - 1].provinces['kongo-central'],
+                            progressionData[0].months[progressionData[0].months.length - 1].provinces['kinshasa'],
+                            progressionData[0].months[progressionData[0].months.length - 1].provinces['autres']
+                          ],
+                          backgroundColor: 'rgba(15, 112, 183, 0.6)',
+                        },
+                        {
+                          label: '2022',
+                          data: [
+                            progressionData[1].months[progressionData[1].months.length - 1].provinces['haut-katanga'],
+                            progressionData[1].months[progressionData[1].months.length - 1].provinces['kongo-central'],
+                            progressionData[1].months[progressionData[1].months.length - 1].provinces['kinshasa'],
+                            progressionData[1].months[progressionData[1].months.length - 1].provinces['autres']
+                          ],
+                          backgroundColor: 'rgba(30, 136, 229, 0.6)',
+                        },
+                        {
+                          label: '2023',
+                          data: [
+                            progressionData[2].months[progressionData[2].months.length - 1].provinces['haut-katanga'],
+                            progressionData[2].months[progressionData[2].months.length - 1].provinces['kongo-central'],
+                            progressionData[2].months[progressionData[2].months.length - 1].provinces['kinshasa'],
+                            progressionData[2].months[progressionData[2].months.length - 1].provinces['autres']
+                          ],
+                          backgroundColor: 'rgba(66, 165, 245, 0.6)',
+                        },
+                        {
+                          label: '2024',
+                          data: [
+                            progressionData[3].months[progressionData[3].months.length - 1].provinces['haut-katanga'],
+                            progressionData[3].months[progressionData[3].months.length - 1].provinces['kongo-central'],
+                            progressionData[3].months[progressionData[3].months.length - 1].provinces['kinshasa'],
+                            progressionData[3].months[progressionData[3].months.length - 1].provinces['autres']
+                          ],
+                          backgroundColor: 'rgba(99, 179, 46, 0.6)',
+                        },
+                        {
+                          label: '2025',
+                          data: [
+                            progressionData[4].months[progressionData[4].months.length - 1].provinces['haut-katanga'],
+                            progressionData[4].months[progressionData[4].months.length - 1].provinces['kongo-central'],
+                            progressionData[4].months[progressionData[4].months.length - 1].provinces['kinshasa'],
+                            progressionData[4].months[progressionData[4].months.length - 1].provinces['autres']
+                          ],
+                          backgroundColor: 'rgba(76, 175, 80, 0.6)',
+                        },
+                        {
+                          label: '2026',
+                          data: [
+                            progressionData[5].months[progressionData[5].months.length - 1].provinces['haut-katanga'],
+                            progressionData[5].months[progressionData[5].months.length - 1].provinces['kongo-central'],
+                            progressionData[5].months[progressionData[5].months.length - 1].provinces['kinshasa'],
+                            progressionData[5].months[progressionData[5].months.length - 1].provinces['autres']
+                          ],
+                          backgroundColor: 'rgba(102, 187, 106, 0.6)',
+                        }
+                      ]
+                    }}
+                    options={{
+                      responsive: true,
+                      maintainAspectRatio: false,
+                      plugins: {
+                        legend: {
+                          position: 'top',
+                        }
+                      },
+                      scales: {
+                        y: {
+                          beginAtZero: true,
+                          title: {
+                            display: true,
+                            text: 'Nombre de Partenaires'
+                          }
+                        }
+                      }
+                    }}
+                  />
+                </div>
+              </div>
+
+              {/* Doughnut Chart - Répartition actuelle */}
+              <div className="bg-white rounded-2xl shadow-lg p-6">
+                <h4 className="text-lg font-bold text-slate-900 mb-4">Répartition Actuelle (Juin 2026)</h4>
+                <div className="h-80">
+                  <Doughnut
+                    data={{
+                      labels: ['Haut-Katanga', 'Kongo Central', 'Kinshasa', 'Autres'],
+                      datasets: [
+                        {
+                          data: [
+                            progressionData[5].months[progressionData[5].months.length - 1].provinces['haut-katanga'],
+                            progressionData[5].months[progressionData[5].months.length - 1].provinces['kongo-central'],
+                            progressionData[5].months[progressionData[5].months.length - 1].provinces['kinshasa'],
+                            progressionData[5].months[progressionData[5].months.length - 1].provinces['autres']
+                          ],
+                          backgroundColor: [
+                            '#63b32e',
+                            '#0f70b7',
+                            '#1e88e5',
+                            '#42a5f5'
+                          ],
+                          borderWidth: 2,
+                          borderColor: '#ffffff'
+                        }
+                      ]
+                    }}
+                    options={{
+                      responsive: true,
+                      maintainAspectRatio: false,
+                      plugins: {
+                        legend: {
+                          position: 'bottom',
+                        },
+                        tooltip: {
+                          callbacks: {
+                            label: function(context) {
+                              const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                              const percentage = ((context.parsed / total) * 100).toFixed(1);
+                              return `${context.label}: ${context.parsed} (${percentage}%)`;
+                            }
+                          }
+                        }
+                      }
+                    }}
+                  />
+                </div>
+              </div>
+
+              {/* Combined Chart - Croissance mensuelle */}
+              <div className="bg-white rounded-2xl shadow-lg p-6">
+                <h4 className="text-lg font-bold text-slate-900 mb-4">Croissance Mensuelle</h4>
+                <div className="h-80">
+                  <Bar
+                    data={{
+                      labels: progressionData.flatMap(year => 
+                        year.months.slice(1).map((month, index) => 
+                          `${month.month.substring(0, 3)} ${year.year}`
+                        )
+                      ),
+                      datasets: [
+                        {
+                          label: 'Nouveaux Partenaires',
+                          data: progressionData.flatMap(year => 
+                            year.months.slice(1).map((month, index) => 
+                              month.total - year.months[index].total
+                            )
+                          ),
+                          backgroundColor: [
+                            '#0f70b7',
+                            '#1e88e5',
+                            '#42a5f5',
+                            '#90caf9',
+                            '#63b32e',
+                            '#4caf50',
+                            '#66bb6a',
+                            '#81c784'
+                          ],
+                        }
+                      ]
+                    }}
+                    options={{
+                      responsive: true,
+                      maintainAspectRatio: false,
+                      plugins: {
+                        legend: {
+                          display: false
+                        }
+                      },
+                      scales: {
+                        y: {
+                          beginAtZero: true,
+                          title: {
+                            display: true,
+                            text: 'Nouveaux Partenaires'
+                          }
+                        }
+                      }
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

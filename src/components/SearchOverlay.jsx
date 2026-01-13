@@ -243,7 +243,7 @@ function useSearchData() {
         // Actions pages
         { title: "Agriculture", content: "Programmes agricoles et formation des agriculteurs", path: "/Actions/agriculture", section: "Actions" },
         { title: "Cacaoyer", content: "Culture du cacao Criollo de haute qualité", path: "/Actions/agriculture/cacao", section: "Actions" },
-        { title: "Café Arabica", content: "Production de café Arabica de spécialité", path: "/Actions/agriculture/cafe", section: "Actions" },
+        { title: "bica", content: "Production de bica de spécialité", path: "/Actions/agriculture/cafe", section: "Actions" },
         { title: "Théier", content: "Culture du thé et transformation", path: "/Actions/agriculture/theier", section: "Actions" },
         { title: "Coton Caoutchouc", content: "Culture du coton et de l'hévéa", path: "/Actions/agriculture/coton-caoutchouc", section: "Actions" },
         { title: "Arboriculture", content: "Culture des arbres fruitiers et forestiers", path: "/Actions/agriculture/arboriculture", section: "Actions" },

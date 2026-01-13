@@ -29,10 +29,10 @@ export default function Cafe() {
                         {/* Article Principal */}
                         <article className="border-b-4 border-black pb-6">
                             <h3 className="text-3xl font-bold mb-4 text-gray-900">
-                                La Révolution du Café Arabica au Congo
+                                Richesse de terroire et moteur des économies locales
                             </h3>
                             <div className="text-gray-600 text-sm mb-4">
-                                Par <span className="font-semibold">Dr. Jean-Baptiste Mukendi</span> • 
+                                Par <span className="font-semibold">Ir. Meta Nyemabu Ornella</span> • 
                                 Agriculture Durable • 
                                 <span className="italic"> 5 min de lecture</span>
                             </div>

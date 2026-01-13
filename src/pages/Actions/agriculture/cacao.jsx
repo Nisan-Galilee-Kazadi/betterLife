@@ -35,10 +35,10 @@ export default function Cacao() {
                         {/* Article Principal */}
                         <article className="border-b-4 border-black pb-6">
                             <h3 className="text-3xl font-bold mb-4 text-gray-900">
-                                La Révolution du Cacao Criollo au Congo
+                                La Révolution du Cacao <i>Criollo</i> au Congo
                             </h3>
                             <div className="text-gray-600 text-sm mb-4">
-                                Par <span className="font-semibold">Dr. Jean-Baptiste Mukendi</span> • 
+                                Par <span className="font-semibold">Ir. Meta Nyemabu Ornella</span> • 
                                 Agriculture Durable • 
                                 <span className="italic"> 5 min de lecture</span>
                             </div>
@@ -49,7 +49,7 @@ export default function Cacao() {
                                 </p>
                                 
                                 <p className="mb-4">
-                                    Le programme Cacao Criollo de Better Life représente une avancée majeure dans l'agriculture durable congolaise. 
+                                    Le programme d'accompagnement de prodducteur de Cacao <i>Criollo</i> de Better Life représente une avancée majeure dans l'agriculture durable congolaise. 
                                     Nos fermes partenaires produisent désormais une qualité supérieure de cacao, reconnue sur les marchés internationaux 
                                     pour son arôme exceptionnel et ses notes fruitées uniques.
                                 </p>
@@ -72,13 +72,7 @@ export default function Cacao() {
                                     forestières crée un écosystème résilient et productif.
                                 </p>
 
-                                <div className="bg-gray-100 p-4 border-l-4 border-black my-6">
-                                    <p className="text-lg italic">
-                                        "Le passage au cacao Criollo a triplé nos revenus tout en protégeant nos forêts. 
-                                        C'est le futur de l'agriculture congolaise."
-                                    </p>
-                                    <p className="text-sm mt-2 text-right font-semibold">— Marie Nkulu, Fermière partenaire</p>
-                                </div>
+                                
                             </div>
                         </article>
 
@@ -90,6 +84,7 @@ export default function Cacao() {
                             <div className="text-gray-600 text-sm mb-3">
                                 Économie Rurale • <span className="italic"> 3 min de lecture</span>
                             </div>
+                            
                             
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                                 <img 
@@ -103,12 +98,18 @@ export default function Cacao() {
                                     className="w-full h-48 object-cover rounded-lg"
                                 />
                             </div>
+                            <div className="bg-gray-100 p-4 border-l-4 border-black my-6">
+                                    <p className="text-lg italic">
+                                        " Better Life nous a aidé dans l'acquisition des sémences de Cacaoyer <b>criollo</b> à hauteur de 80%, ce qui a permit de reduire notre charge finacière ."
+                                    </p>
+                                    <p className="text-sm mt-2 text-right font-semibold">— Marie Nkulu, Fermière partenaire</p>
+                                </div>
 
                             <div className="prose text-gray-800 leading-relaxed">
                                 <p className="mb-4">
-                                    Le programme a déjà transformé la vie de plus de 1,200 familles d'agriculteurs. 
+                                     1,200 Emplois direct et indirect ont pu être crée depuis le lancement de ce programme.                              
                                     Les revenus moyens ont augmenté de 250%, permettant aux enfants de poursuivre leurs études 
-                                    et aux familles d'accéder aux soins de santé.
+                                    et aux familles d'accéder aux soins de santé. 
                                 </p>
                                 
                                 <p>
@@ -119,7 +120,7 @@ export default function Cacao() {
                         </article>
 
                         {/* Article Transformation */}
-                        <article className="pb-6">
+                        {/* <article className="pb-6">
                             <h3 className="text-2xl font-bold mb-3 text-gray-900">
                                 De la Fève au Chocolat Artisanal
                             </h3>
@@ -145,7 +146,7 @@ export default function Cacao() {
                                     de Kinshasa et exportés vers plusieurs pays européens.
                                 </p>
                             </div>
-                        </article>
+                        </article> */}
                     </div>
 
                     {/* Sidebar Column - 1/3 width */}

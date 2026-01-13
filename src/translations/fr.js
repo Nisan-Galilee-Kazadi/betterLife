@@ -352,6 +352,13 @@ export const fr = {
       },
       members: [
         {
+          name: "Ir KILUNGU KASONGO Bernard",
+          role: "Délégué National",
+          bio: "Représente l'organisation et supervise les délégations provinciales.",
+          expertise: ["Relations Institutionnelles", "Leadership", "Développement"],
+          mail: "bernardkilungu@betterlife-ong.org"
+        },
+        {
           name: "Ir DEKEY MOLO Blaise",
           role: "Coordonnateur National",
           bio: "Assure la coordination globale des activités de l'ONG au niveau national.",
@@ -359,31 +366,31 @@ export const fr = {
           mail: "coordination@betterlife-ong.org"
         },
         {
-          name: "Ir KILUNGU KASONGO Bernard",
-          role: "Délégué National",
-          bio: "Représente l'organisation auprès des institutions et supervise les délégations provinciales.",
-          expertise: ["Relations Institutionnelles", "Leadership", "Développement"],
-          mail: "bernardkilungu@betterlife-ong.org"
-        },
-        {
-          name: "Mme MPOYI NGALULA Sarah",
-          role: "Directrice RH",
-          bio: "Gère le capital humain, le recrutement et le développement des compétences de l'équipe.",
-          expertise: ["Ressources Humaines", "Recrutement", "Formation"],
-          mail: "rh@betterlife-ong.org"
-        },
-        {
           name: "Mme YANGA LUBULU Déborah",
-          role: "Secrétaire",
+          role: "Secrétaire Administative",
           bio: "Assure le support administratif et la gestion documentaire de l'organisation.",
           expertise: ["Administration", "Organisation", "Secrétariat"],
           mail: "secretariat@betterlife-ong.org"
         },
         {
+          name: "LUMUMBA MPUMPU Nathan",
+          role: "Directeur Communication ",
+          bio: "Pilote la stratégie de communication et la visibilité des actions de l'ONG.",
+          expertise: ["Communication", "Marketing", "Relations Publiques"],
+          mail: "betterlifeorg@gmail.com"
+        },
+        {
+          name: "Mme MPOYI NGALULA Sarah",
+          role: "Directrice RH",
+          bio: "Gère le capital humain, le recrutement et le développement des compétences.",
+          expertise: ["Ressources Humaines", "Recrutement", "Formation"],
+          mail: "rh@betterlife-ong.org"
+        },
+        {
           name: "Mme LUTONADIO NSIMBA Florence",
           role: "Directrice Financière",
           bio: "Supervise la gestion financière, budgétaire et comptable de Better Life.",
-          expertise: ["Finance", "Comptabilité", "Audit"],
+          expertise: ["Finance", "Comptabilité", "Audit", "Gestion"],
           mail: "compta@betterlife-ong.org"
         },
         {
@@ -396,16 +403,9 @@ export const fr = {
         {
           name: "Mme BAKAKUWA NGALULA Marceline",
           role: "Directrice Technique",
-          bio: "Supervise les aspects techniques et scientifiques des programmes environnementaux et agricoles.",
+          bio: "Supervise les aspects techniques et scientifiques des programmes.",
           expertise: ["Expertise Technique", "Agronomie", "Environnement"],
           mail: "dt@betterlife-ong.org"
-        },
-        {
-          name: "LUMUMBA MPUMPU Nathan",
-          role: "Directeur Communication & Marketing",
-          bio: "Pilote la stratégie de communication et la visibilité des actions de l'ONG.",
-          expertise: ["Communication", "Marketing", "Relations Publiques"],
-          mail: "betterlifeorg@gmail.com"
         },
       ],
       advisory: {
@@ -1022,7 +1022,7 @@ export const fr = {
       cacao: {
         hero: { title: "Cacao (Criollo)", subtitle: "L'Or Brun de la RDC" },
         intro: { kicker: "Origine", title: "Le Cacao Criollo", text: "Une variété rare et prisée pour ses arômes fins et délicats." },
-        features: { kicker: "Caractéristiques", title: "Pourquoi le Criollo ?", items: ["Arômes fruités", "Fèves blanches", "Fermentation courte", "Grande valeur"] },
+        features: { kicker: "Caractéristiques", title: "Pourquoi le Criollo ?", items: ["Arômes fruités", "Fèves blanches", "Fermentation courte", "Grande valeur (soit 1T = 29,000$) "] },
         technique: { title: "Technique Culturale", items: ["Sous ombrage forestier", "Association avec bananiers", "Récolte manuelle sélective"] },
         impact: { title: "Impact", stats: [{ value: "500T", label: "Production" }, { value: "1200", label: "Producteurs" }] }
       },
