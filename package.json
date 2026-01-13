@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/convert-images.mjs && vite build",
+    "build": "vite build",
+    "convert": "node scripts/convert-images.mjs",
     "check:translations": "node ./scripts/check-translations.js",
     "lint": "eslint .",
     "preview": "vite preview"
