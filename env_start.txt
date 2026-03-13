@@ -1,0 +1,29 @@
+# =========================================
+# BetterLife Environment Configuration - START
+# =========================================
+
+# Server Configuration
+PORT=5000
+NODE_ENV=development
+
+# =========================================
+# MySQL Database Configuration (XAMPP)
+# =========================================
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=
+DB_NAME=betterlife_db
+
+# =========================================
+# Translation APIs (optionnel pour commencer)
+# =========================================
+# GOOGLE_TRANSLATE_API_KEY=your_google_translate_api_key_here
+# DEEPL_API_KEY=your_deepl_api_key_here
+
+# =========================================
+# Instructions pour activer la traduction
+# =========================================
+# 1. Renommer ce fichier en .env
+# 2. Ajouter vos clés API Google/DeepL
+# 3. Décommenter setupAutoTranslation dans backend/index.js
+# 4. Redémarrer le serveur
