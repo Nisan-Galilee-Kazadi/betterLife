@@ -8,4 +8,4 @@ Header set X-XSS-Protection "1; mode=block"
 # Passer les requêtes à l'application Node.js
 # Note: Sur certains hébergeurs cPanel, la redirection se fait via "Setup Node.js App"
 # Cette règle sert de fallback pour un reverse proxy local si configuré manuellement.
-RewriteRule ^(.*)$ http://localhost:5000/$1 [P,L]
+RewriteRule ^(.*)$ http://localhost:3000/$1 [P,L]

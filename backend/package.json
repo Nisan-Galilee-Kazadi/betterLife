@@ -8,7 +8,10 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "prod": "NODE_ENV=production node index.js",
-    "deploy": "node ../deploy-backend.js"
+    "deploy": "node ../deploy-backend.js",
+    "restore:hero": "node restore_hero_slides.js",
+    "rebuild:hero": "node rebuild_hero_slides.js",
+    "rebuild:testimonials": "node rebuild_testimonials.js"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +26,7 @@
     "mongoose": "^9.1.5",
     "multer": "^2.0.2",
     "mysql2": "^3.16.2",
+    "nodemailer": "^8.0.3",
     "nodemon": "^3.1.11",
     "pg": "^8.17.2"
   }
